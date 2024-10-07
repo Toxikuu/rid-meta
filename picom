@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="picom"
+VERS=12.1
+LINK="https://github.com/yshui/picom/archive/refs/tags/v$VERS.tar.gz"
+DEPS="xorg-libraries pixman libconfig libpcre2 libev uthash"  # INCOMPLETE
+
+
+IDIR=$(cat <<EOF
+
+mn
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+echo not implemented
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)
