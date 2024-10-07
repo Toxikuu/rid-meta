@@ -4,9 +4,12 @@ VERS=9999
 LINK="https://github.com/Toxikuu/rid/archive/refs/heads/master.tar.gz"
 DEPS="rustc"
 
+# this meta file may need to be updated depending on the trajectory of rid's future development
 
 IDIR=$(cat <<EOF
 
+# # commented out for testing convenience
+# # feel free to uncomment and build from source
 # if cargo -V > /dev/null; then
 #   cargo build --release
 #   install -v -m755 target/release/rid /usr/bin
@@ -14,18 +17,30 @@ IDIR=$(cat <<EOF
 
 install -v -Dm666 meta/* /etc/rid/meta/
 install -v -Dm755 rbin/* /etc/rid/rbin/
-install -v -m666 env /etc/rid/
+install -v -Dm666 env    /etc/rid/
+
+if [ -e /etc/rid-packages.bak ]; then
+  mv -vf /etc/rid-packages.bak /etc/rid/packages.txt
+  echo "restored packages backup"
+fi
 
 EOF
 )
 
 RDIR=$(cat <<EOF
 
-echo not implemented
+cp -vf /etc/rid/packages.txt /etc/rid-packages.bak
+rm -rvf /etc/rid
+echo "The rid binary has not been deleted"
+echo "A backup of packages.txt has been made"
+echo "This is done in case you want a clean rid reinstall"
+echo "To get rid of rid, run the following commands:
+echo "rm -vf /usr/bin/rid /etc/rid-packages.bak"
 
 EOF
 )
 
+# i may update udir to house the backups currently done in rdir
 UDIR=$(cat <<EOF
 EOF
 )
