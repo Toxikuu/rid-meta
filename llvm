@@ -2,7 +2,7 @@
 NAME="llvm"
 VERS=19.1.0
 ver="${VERS%.*.*}"
-LINK="https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v$VERS/v$VERS.tar.gz"
+LINK="https://github.com/llvm/llvm-project/releases/download/llvmorg-$VERS/llvm-$VERS.src.tar.xz"
 DEPS="cmake"
 
 
@@ -44,7 +44,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr               \
       -W no-dev -G Ninja .. &&
 
 ninja &&
-ninja DESTDIR= install &&
+DESTDIR= ninja install &&
 cp -v bin/FileCheck /usr/bin
 
 rm -rf *
@@ -71,9 +71,9 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr                      \
       -W no-dev -G Ninja .. &&
 
 ninja &&
-ninja install
-cp -vr $DESTDIR/usr/lib32/* /usr/lib32
-rm -rf $DESTDIR
+DESTDIR=/tmp/rid/dest ninja install
+cp -vr /tmp/rid/dest/usr/lib32/* /usr/lib32
+rm -rf /tmp/rid/dest
 ldconfig
 
 mkdir -pv /etc/clang &&
