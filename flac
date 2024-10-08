@@ -8,11 +8,9 @@ DEPS=""
 IDIR=$(cat <<EOF
 
 cm   --disable-thorough-tests \
-     --disable-oggtest        \
-     --docdir=/tmp/rid/trash  \
+     --docdir=/tmp/rid/trash
 
-32cm --disable-oggtest      \
-     --disable-thorough-tests
+32cm --disable-thorough-tests
 
 EOF
 )
