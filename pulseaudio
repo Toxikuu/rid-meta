@@ -4,7 +4,7 @@ VERS=17.0
 LINK="https://www.freedesktop.org/software/$NAME/releases/$NAME-$VERS.tar.xz"
 DEPS="libsndfile alsa-lib check"
 
-
+# i havent been able to get 32 bit pulse to build. ill mess around with it later but for now note that this package will fail
 IDIR=$(cat <<EOF
 
 mn   -D database=gdbm \
