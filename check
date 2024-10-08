@@ -1,7 +1,7 @@
 #!/bin/bash
 NAME="check"
-VERS=
-LINK=""
+VERS=0.15.2
+LINK="https://github.com/libcheck/check/releases/download/$VERS/check-$VERS.tar.gz"
 DEPS=""
 
 

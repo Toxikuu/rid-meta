@@ -7,8 +7,8 @@ DEPS="flac opus libvorbis alsa-lib"
 
 IDIR=$(cat <<EOF
 
-cm --docdir=/tmp/rid/trash
-32cm
+cm   --disable-mpeg --docdir=/tmp/rid/trash 
+32cm --disable-mpeg
 
 EOF
 )

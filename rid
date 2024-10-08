@@ -15,7 +15,6 @@ IDIR=$(cat <<EOF
 #   install -v -m755 target/release/rid /usr/bin
 # fi
 
-install -v -Dm666 meta/* /etc/rid/meta/
 install -v -Dm755 rbin/* /etc/rid/rbin/
 install -v -Dm666 env    /etc/rid/
 
