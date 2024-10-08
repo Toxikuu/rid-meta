@@ -1,0 +1,38 @@
+#!/bin/bash
+NAME="alsa-utils"
+VERS=1.2.12
+LINK="https://www.alsa-project.org/files/pub/utils/alsa-utils-$VERS.tar.bz2"
+DEPS="alsa-lib"
+
+
+IDIR=$(cat <<EOF
+
+cm --disable-alsaconf \
+   --disable-bat      \
+   --disable-xmlto    \
+   --with-curses=ncursesw
+
+alsactl init
+alsactl -L store
+cat > /etc/asound.conf << "hi"
+# Begin /etc/asound.conf
+
+defaults.pcm.card 1
+defaults.ctl.card 1
+
+# End /etc/asound.conf
+hi
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+echo not implemented
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

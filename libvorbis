@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libvorbis"
+VERS=1.3.7
+LINK="https://downloads.xiph.org/releases/vorbis/libvorbis-$VERS.tar.xz"
+DEPS="libogg"
+
+
+IDIR=$(cat <<EOF
+
+cm
+32cm
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+echo not implemented
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

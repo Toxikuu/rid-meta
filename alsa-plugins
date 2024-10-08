@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="alsa-plugins"
+VERS=1.2.12
+LINK="https://www.alsa-project.org/files/pub/plugins/alsa-plugins-$VERS.tar.bz2"
+DEPS="alsa-lib"
+
+
+IDIR=$(cat <<EOF
+
+cm   --sysconfdir=/etc --disable-libav
+32cm --sysconfdir=/etc --disable-libav
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+echo not implemented
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

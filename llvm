@@ -44,7 +44,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr               \
       -W no-dev -G Ninja .. &&
 
 ninja &&
-ninja install &&
+ninja DESTDIR= install &&
 cp -v bin/FileCheck /usr/bin
 
 rm -rf *
@@ -71,9 +71,9 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr                      \
       -W no-dev -G Ninja .. &&
 
 ninja &&
-DESTDIR=$PWD/DESTDIR ninja install
-cp -vr DESTDIR/usr/lib32/* /usr/lib32
-rm -rf DESTDIR
+ninja install
+cp -vr $DESTDIR/usr/lib32/* /usr/lib32
+rm -rf $DESTDIR
 ldconfig
 
 mkdir -pv /etc/clang &&

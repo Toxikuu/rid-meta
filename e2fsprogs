@@ -8,23 +8,27 @@ DEPS=""
 
 IDIR=$(cat <<EOF
 
-pwd
+cm --sysconfdir=/etc    \
+   --enable-elf-shlibs  \
+   --disable-libblkid   \
+   --disable-libuuid    \
+   --disable-uuidd      \
+   --disable-fsck
+
+rm -fv /usr/lib/{libcom_err,libe2p,libext2fs,libss}.a
+gunzip -v /usr/share/info/libext2fs.info.gz
+install-info --dir-file=/usr/share/info/dir /usr/share/info/libext2fs.info
 
 EOF
 )
 
 RDIR=$(cat <<EOF
 
-# The below line is a placeholder
-echo "Removing $NAME-$VERS woo"
+echo not implemented
 
 EOF
 )
 
 UDIR=$(cat <<EOF
-
-#
-echo "Awesome custom update directions"
-
 EOF
 )

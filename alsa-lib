@@ -1,13 +1,14 @@
 #!/bin/bash
-NAME="libarchive"
-VERS=3.7.6
-LINK="https://github.com/$NAME/$NAME/releases/download/v$VERS/$NAME-$VERS.tar.xz"
+NAME="alsa-lib"
+VERS=1.2.12
+LINK="https://www.alsa-project.org/files/pub/lib/alsa-lib-$VERS.tar.bz2"
 DEPS=""
 
 
 IDIR=$(cat <<EOF
 
 cm
+32cm
 
 EOF
 )

@@ -5,7 +5,7 @@ VERS=0.388
 LINK="https://github.com/vcrhonek/$NAME/archive/v$VERS/$NAME-$VERS.tar.gz"
 DEPS=""
 
-
+# cant use cm because no make
 IDIR=$(cat <<EOF
 
 ./configure --prefix=/usr --disable-blacklist

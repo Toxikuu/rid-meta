@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="opus"
+VERS=1.5.2
+LINK="https://downloads.xiph.org/releases/opus/opus-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat <<EOF
+
+mn -D docdir=/tmp/rid/trash
+32mn
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+echo not implemented
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

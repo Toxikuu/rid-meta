@@ -8,9 +8,7 @@ DEPS=""
 
 IDIR=$(cat <<EOF
 
-./configure --prefix=/usr --disable-static &&
-make
-make install
+cm
 
 EOF
 )

@@ -10,33 +10,30 @@ IDIR=$(cat <<EOF
 raw https://www.linuxfromscratch.org/patches/blfs/svn/ffmpeg-$VERS-chromium_method-1.patch
 patch -Np1 -i /etc/rid/sources/ffmpeg-$VERS-chromium_method-1.patch
 
-./configure --prefix=/usr        \
-            --enable-gpl         \
-            --enable-version3    \
-            --enable-nonfree     \
-            --disable-static     \
-            --enable-shared      \
-            --disable-debug      \
-            --enable-libaom      \
-            --enable-libpulse    \
-            --enable-libass      \
-            --enable-libfdk-aac  \
-            --enable-libfreetype \
-            --enable-libmp3lame  \
-            --enable-libopus     \
-            --enable-libvorbis   \
-            --enable-libvpx      \
-            --enable-libx264     \
-            --enable-libx265     \
-            --enable-openssl     \
-            --disable-doc        \
-            --disable-large-tests              \
-            --ignore-tests=enhanced-flv-av1   &&
-make &&
+
+cm --enable-gpl                       \
+   --enable-version3                  \
+   --enable-nonfree                   \
+   --disable-static                   \
+   --enable-shared                    \
+   --disable-debug                    \
+   --enable-libaom                    \
+   --enable-libpulse                  \
+   --enable-libass                    \
+   --enable-libfdk-aac                \
+   --enable-libfreetype               \
+   --enable-libmp3lame                \
+   --enable-libopus                   \
+   --enable-libvorbis                 \
+   --enable-libvpx                    \
+   --enable-libx264                   \
+   --enable-libx265                   \
+   --enable-openssl                   \
+   --disable-doc                      \
+   --disable-large-tests              \
+   --ignore-tests=enhanced-flv-av1
 
 gcc tools/qt-faststart.c -o tools/qt-faststart
-
-make install &&
 install -v -m755    tools/qt-faststart /usr/bin &&
 
 EOF

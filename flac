@@ -1,0 +1,32 @@
+#!/bin/bash
+NAME="flac"
+VERS=1.4.3
+LINK="https://downloads.xiph.org/releases/flac/flac-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat <<EOF
+
+cm   --disable-thorough-tests \
+     --disable-oggtest        \
+     --docdir=/tmp/rid/trash  \
+
+32cm --disable-oggtest      \
+     --disable-thorough-tests
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -rvf /usr/bin/{meta,}flac   \
+        /usr/include/FLAC{,++} \
+        /usr/lib{,32}/libFLAC* \
+        /usr/share/doc/flac-$VERS
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

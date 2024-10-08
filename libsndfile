@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libsndfile"
+VERS=1.2.2
+LINK="https://github.com/$NAME/$NAME/releases/download/$VERS/$NAME-$VERS.tar.xz"
+DEPS="flac opus libvorbis alsa-lib"
+
+
+IDIR=$(cat <<EOF
+
+cm --docdir=/tmp/rid/trash
+32cm
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+echo not implemented
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

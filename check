@@ -1,13 +1,16 @@
 #!/bin/bash
-NAME="libarchive"
-VERS=3.7.6
-LINK="https://github.com/$NAME/$NAME/releases/download/v$VERS/$NAME-$VERS.tar.xz"
+NAME="check"
+VERS=
+LINK=""
 DEPS=""
 
 
 IDIR=$(cat <<EOF
 
+export docdir=/tmp/rid/trash
 cm
+32cm
+unset docdir
 
 EOF
 )

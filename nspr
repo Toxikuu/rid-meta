@@ -16,9 +16,6 @@ cm --with-mozilla    \
    --with-pthreads   \
    $([ $(uname -m) = x86_64 ] && echo --enable-64bit)
 
-pwd
-make distclean
-
 32cm --with-mozilla  \
      --with-pthreads \
      --disable-64bit

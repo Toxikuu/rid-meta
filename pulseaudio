@@ -1,0 +1,32 @@
+#!/bin/bash
+NAME="pulseaudio"
+VERS=17.0
+LINK="https://www.freedesktop.org/software/$NAME/releases/$NAME-$VERS.tar.xz"
+DEPS="libsndfile alsa-lib check"
+
+
+IDIR=$(cat <<EOF
+
+mn   -D database=gdbm \
+     -D doxygen=false \
+     -D bluez5=disabled
+
+rm /usr/share/dbus-1/system.d/pulseaudio-system.conf
+
+32mn -D database=gdbm \
+     -D doxygen=false \
+     -D bluez5=disabled
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+echo not implemented
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

@@ -7,6 +7,8 @@ DEPS="cmake spirv-headers"
 
 IDIR=$(cat <<EOF
 
+export DESTDIR=/tmp/rid/dest
+
 mkdir -v build &&
 cd       build &&
 
@@ -17,9 +19,8 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr     \
       -D SPIRV_TOOLS_BUILD_STATIC=OFF  \
       -D SPIRV-Headers_SOURCE_DIR=/usr \
       -G Ninja .. &&
-ninja
-
-ninja install
+ninja &&
+ninja DESTDIR= install
 
 rm -rf *
 CC="gcc -m32" CXX="g++ -m32"           \
@@ -33,11 +34,13 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr     \
       -D SPIRV-Headers_SOURCE_DIR=/usr \
       -G Ninja .. &&
 
-ninja
-DESTDIR=$PWD/DESTDIR ninja install
-cp -vr DESTDIR/usr/lib32/* /usr/lib32
-rm -rf DESTDIR
+ninja &&
+ninja install
+cp -vr $DESTDIR/usr/lib32/* /usr/lib32
+rm -rf $DESTDIR
 ldconfig
+
+unset DESTDIR
 
 EOF
 )
