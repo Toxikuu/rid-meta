@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="util-macros"
+VERS=1.20.1
+LINK="https://www.x.org/pub/individual/util/util-macros-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat <<EOF
+
+./configure $XORG_CONFIG
+make install
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -rvf $XORG_PREFIX/share/util-macros
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

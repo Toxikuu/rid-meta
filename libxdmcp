@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libxdmcp"
+VERS=1.1.5
+LINK="https://www.x.org/pub/individual/lib/libXdmcp-$VERS.tar.xz"
+DEPS="xorgproto"
+
+
+IDIR=$(cat <<EOF
+
+cm $XORG_CONFIG --docdir=/tmp/rid/trash
+32cm $XORG_CONFIG
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -rvf /usr/lib{,32}/libXdmcp.*
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="xorgproto"
+VERS=2024.1
+LINK="https://xorg.freedesktop.org/archive/individual/proto/xorgproto-$VERS.tar.xz"
+DEPS="util-macros"
+
+
+IDIR=$(cat <<EOF
+
+mn
+mv -v /usr/share/doc/xorgproto{,-2024.1}
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -vf /usr/share/doc/xorgproto-2024.1/
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

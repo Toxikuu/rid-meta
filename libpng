@@ -1,0 +1,32 @@
+#!/bin/bash
+NAME="libpng"
+VERS=1.6.44
+LINK="https://github.com/pnggroup/libpng/archive/refs/tags/v$VERS.tar.gz"
+DEPS="wget"
+
+
+IDIR=$(cat <<EOF
+
+wget https://downloads.sourceforge.net/sourceforge/libpng-apng/libpng-$VERS-apng.patch.gz &&
+  mv -vf *.patch.gz /etc/rid/sources/
+gzip -cd /etc/rid/sources/libpng-$VERS-apng.patch.gz | patch -p1
+
+cm
+32cm
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -rvf /usr/bin/libpng{,16}-config \
+  /usr/bin/{pngfix,png-fix-itxt}    \
+  /usr/include/libpng16             \
+  /usr/lib/libpng{,16}.*
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

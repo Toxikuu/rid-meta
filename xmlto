@@ -1,0 +1,27 @@
+#!/bin/bash
+NAME="xmlto"
+VERS=0.0.29
+LINK="https://pagure.io/xmlto/archive/$VERS/xmlto-$VERS.tar.gz"
+DEPS="docbook-xml docbook-xsl-nons libxslt"
+
+
+IDIR=$(cat <<EOF
+
+autoreconf -fiv &&
+LINKS="/usr/bin/links" cm
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -rvf /usr/share/xmlto  \
+  /usr/bin/xmlif          \
+  /usr/bin/xmlto          
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

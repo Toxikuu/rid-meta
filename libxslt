@@ -1,0 +1,33 @@
+#!/bin/bash
+NAME="libxslt"
+VERS=1.1.42
+ver="${VERS%.*}"
+LINK="https://download.gnome.org/sources/libxslt/$ver/libxslt-$VERS.tar.xz"
+DEPS="libxml2 docbook-xml docbook-xsl-nons"
+
+
+IDIR=$(cat <<EOF
+
+cm --docdir=/tmp/rid/trash
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -vf /usr/bin/xslt-config \
+       /usr/bin/xsltproc    \
+       /usr/lib/libexslt.*  \
+       /usr/lib/libxslt.*
+
+rm -rvf /usr/include/libexslt    \
+        /usr/include/libxslt     \
+        /usr/lib/cmake/libxslt   \
+        /usr/lib/libxslt-plugins
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

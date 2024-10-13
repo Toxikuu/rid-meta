@@ -1,0 +1,35 @@
+#!/bin/bash
+NAME="unzip"
+VERS=6.0
+ver="${VERS//./}"
+LINK="https://downloads.sourceforge.net/infozip/unzip$ver.tar.gz"
+DEPS="wget"
+
+
+IDIR=$(cat <<EOF
+
+raw https://www.linuxfromscratch.org/patches/blfs/svn/unzip-$VERS-consolidated_fixes-1.patch
+raw https://www.linuxfromscratch.org/patches/blfs/svn/unzip-$VERS-gcc14-1.patch
+
+patch -Np1 -i /etc/rid/sources/unzip-$VERS-consolidated_fixes-1.patch
+patch -Np1 -i /etc/rid/sources/unzip-$VERS-gcc14-1.patch
+
+make -f unix/Makefile generic
+make prefix=/usr MANDIR=/usr/share/man/man1 \
+ -f unix/Makefile install
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -vf /usr/bin/{,f}unzip \
+  /usr/bin/unzipsfx       \
+  /usr/bin/zip{grep,info}
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

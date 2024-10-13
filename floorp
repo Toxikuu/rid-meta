@@ -1,0 +1,38 @@
+#!/bin/bash
+NAME="floorp"
+VERS=11.19.1
+LINK="https://github.com/Floorp-Projects/Floorp/releases/download/v$VERS/floorp-$VERS.linux-x86_64.tar.bz2"
+DEPS=""  # floorp has a bunch of dependencies that i dont feel like finding rn
+
+
+IDIR=$(cat <<EOF
+
+rm -rf /usr/src/floorp-$VERS
+
+cd ..
+cp -rv floorp-$VERS /usr/src/
+ln -sfv /usr/src/floorp-$VERS /usr/src/floorp
+
+cat << 'hi' > /usr/bin/floorp.sh
+#!/bin/bash
+
+DEF="--force-device-scale-factor=1"
+
+exec /usr/src/floorp/floorp "\$DEF" "\$@"
+hi
+
+chmod +x /usr/bin/floorp.sh
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+echo not implemented
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

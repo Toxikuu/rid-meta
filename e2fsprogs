@@ -2,7 +2,7 @@
 
 NAME="e2fsprogs"
 VERS=1.47.1
-LINK="https://downloads.sourceforge.net/project/$NAME/$NAME/v$VERS/$NAME-$VERS.tar.gz"
+LINK="https://github.com/tytso/e2fsprogs/archive/refs/tags/v$VERS.tar.gz"
 DEPS=""
 
 

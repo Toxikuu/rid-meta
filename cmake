@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="cmake"
-VERS=3.30.4
+VERS=3.30.5
 ver="${VERS%.*}"
 LINK="https://cmake.org/files/v$ver/cmake-$VERS.tar.gz"
 DEPS="curl libarchive libuv nghttp2"
@@ -19,7 +19,7 @@ sed -i '/"lib64"/s/64//' Modules/GNUInstallDirs.cmake &&
             --no-system-librhash   \
             --docdir=/share/doc/cmake-$VERS &&
 make
-make-install
+make DESTDIR= install
 
 EOF
 )

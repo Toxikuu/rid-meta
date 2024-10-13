@@ -1,0 +1,26 @@
+#!/bin/bash
+NAME="xcb-proto"
+VERS=1.17.0
+LINK="https://xorg.freedesktop.org/archive/individual/proto/xcb-proto-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat <<EOF
+
+PYTHON=python3 ./configure $XORG_CONFIG
+make install
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -rvf /usr/share/xcb/ \
+        /usr/lib/python3.12/site-packages/xcbgen
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

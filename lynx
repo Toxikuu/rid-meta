@@ -1,0 +1,36 @@
+#!/bin/bash
+NAME="lynx"
+VERS=2.9.2
+LINK="https://invisible-mirror.net/archives/lynx/tarballs/lynx$VERS.tar.bz2"
+DEPS=""
+
+
+IDIR=$(cat <<EOF
+
+./configure --prefix=/usr           \
+            --sysconfdir=/etc/lynx  \
+            --with-zlib             \
+            --with-bzlib            \
+            --with-ssl              \
+            --with-screen=ncursesw  \
+            --enable-locale-charset \
+            --datadir=/usr/share/doc/lynx-$VERS &&
+make
+make install-full
+chgrp -v -R root /usr/share/doc/lynx-$VERS/lynx_doc
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -vf /usr/bin/lynx
+rm -rvf /etc/lynx \
+  /usr/share/doc/lynx-$VERS
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

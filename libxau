@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libxau"
+VERS=1.0.11
+LINK="https://www.x.org/pub/individual/lib/libXau-$VERS.tar.xz"
+DEPS="xorgproto"
+
+
+IDIR=$(cat <<EOF
+
+cm $XORG_CONFIG
+32cm $XORG_CONFIG
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -vf /usr/lib{,32}/libXau.*
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="which"
+VERS=2.21
+LINK="https://ftp.gnu.org/gnu/which/which-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat <<EOF
+
+cm
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -vf /usr/bin/which
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

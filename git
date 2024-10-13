@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="git"
-VERS=2.46.2
+VERS=2.47.0
 perlvers=5.40
 LINK="https://www.kernel.org/pub/software/scm/git/git-$VERS.tar.xz"
 DEPS="curl perl"
