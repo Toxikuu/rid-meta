@@ -1,0 +1,33 @@
+#!/bin/bash
+NAME="wayland"
+VERS=1.23.1
+LINK="https://gitlab.freedesktop.org/wayland/wayland/-/releases/$VERS/downloads/wayland-$VERS.tar.xz"
+DEPS="libxml2"
+
+
+IDIR=$(cat <<EOF
+
+mn   -D documentation=false
+32mn -D documentation=false
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -vf \
+    /usr/bin/wayland-scanner       \
+    /usr/lib{,32}/libwayland-client.so* \
+    /usr/lib{,32}/libwayland-cursor.so* \
+    /usr/lib{,32}/libwayland-server.so* \
+    /usr/lib{,32}/libwayland-egl.so*
+
+rm -rvf /usr/share/wayland
+    
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

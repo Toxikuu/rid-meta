@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="xkeyboard-config"
+VERS=2.43
+LINK="https://www.x.org/pub/individual/data/xkeyboard-config/$NAME-$VERS.tar.xz"
+DEPS="xorg-libraries"
+
+
+IDIR=$(cat <<EOF
+
+mn
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -rvf /usr/share/X11/xkb
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

@@ -1,0 +1,28 @@
+#!/bin/bash
+NAME="harfbuzz"
+VERS=10.0.1
+LINK="https://github.com/harfbuzz/harfbuzz/releases/download/$VERS/harfbuzz-$VERS.tar.xz"
+DEPS="freetype1"
+
+
+IDIR=$(cat <<EOF
+
+mn   -D graphite2=disabled
+32mn -D graphite2=disabled \
+     -D glib=disabled      \
+     -D cairo=disabled     \
+     -D gobject=disabled
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+echo not implemented
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

@@ -1,0 +1,51 @@
+#!/bin/bash
+NAME="fontconfig"
+VERS=2.15.0
+LINK="https://www.freedesktop.org/software/fontconfig/release/fontconfig-$VERS.tar.xz"
+DEPS="freetype2"
+
+
+IDIR=$(cat <<EOF
+
+cm \
+    --sysconfdir=/etc    \
+    --localstatedir=/var \
+    --disable-docs       \
+    --docdir=/tmp/rid/trash
+
+32cm \
+    --sysconfdir=/etc    \
+    --localstatedir=/var \
+    --disable-docs       \
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+pushd /usr/bin
+rm -vf \
+    fc-cache    \
+    fc-cat      \
+    fc-conflist \
+    fc-list     \
+    fc-match    \
+    fc-pattern  \
+    fc-query    \
+    fc-scan     \
+    fc-validate
+popd
+rm -vf /usr/lib{,32}/libfontconfig.*
+rm -rvf \
+    /etc/fonts              \
+    /usr/include/fontconfig \
+    /usr/share/fontconfig   \
+    /var/cache/fontconfig   \
+    /usr/share/xml/fontconfig 
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

@@ -1,0 +1,30 @@
+#!/bin/bash
+NAME="libxkbcommon"
+VERS=1.7.0
+LINK="https://xkbcommon.org/download/$NAME-$VERS.tar.xz"
+DEPS="xkeyboard-config libxcb wayland wayland-protocols"
+
+
+IDIR=$(cat <<EOF
+
+mn   -D enable-docs=false
+32mn -D enable-docs=false
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -rvf \
+    /usr/bin/xkbcli               \
+    /usr/lib{,32}/libxkbcommon*   \
+    /usr/lib{,32}/libxkbregistry* \
+    /usr/include/xkbcommon        \
+    /usr/libexec/xkbcommon
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

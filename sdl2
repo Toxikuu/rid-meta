@@ -1,0 +1,27 @@
+#!/bin/bash
+NAME="sdl2"
+VERS=2.30.8
+LINK="https://www.libsdl.org/release/SDL2-$VERS.tar.gz"
+DEPS="libxkbcommon wayland-protocols"  # also xorg-libraries
+
+
+IDIR=$(cat <<EOF
+
+cm
+rm -v /usr/lib/libSDL2*.a
+32cm
+rm -v /usr/lib32/libSDL2*.a
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+echo not implemented
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

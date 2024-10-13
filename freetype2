@@ -1,0 +1,27 @@
+#!/bin/bash
+NAME="freetype2"
+VERS=2.13.3
+LINK="https://downloads.sourceforge.net/freetype/freetype-$VERS.tar.xz"
+DEPS="wget libpng which"
+
+IDIR=$(cat <<EOF
+
+cm   --enable-freetype-config
+32cm --enable-freetype-config --with-brotli=no
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -rvf 
+    /usr/bin/freetype-config    \
+    /usr/lib{,32}/libfreetype.* \
+    /usr/include/freetype2
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="wayland-protocols"
+VERS=1.37
+LINK="https://gitlab.freedesktop.org/wayland/$NAME/-/releases/$VERS/downloads/$NAME-$VERS.tar.xz"
+DEPS="wayland"
+
+
+IDIR=$(cat <<EOF
+
+mn
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -rvf /usr/share/wayland-protocols
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)
