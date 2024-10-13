@@ -9,7 +9,7 @@ IDIR=$(cat <<EOF
 
 raw https://www.docbook.org/xml/$VERS/docbook-xml-$VERS.zip
 mkdir docbook-xml-$VERS
-cd $_
+cd docbook-xml-$VERS
 unzip /etc/rid/sources/docbook-xml-$VERS.zip
 
 
