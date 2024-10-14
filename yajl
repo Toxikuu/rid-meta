@@ -1,0 +1,40 @@
+#!/bin/bash
+NAME="yajl"
+VERS=2.1.0
+LINK="https://github.com/lloyd/yajl/archive/refs/tags/$VERS.tar.gz"
+DEPS="cmake"
+
+
+IDIR=$(cat << '~fin.'
+
+raw https://gitlab.archlinux.org/archlinux/packaging/packages/yajl/-/raw/main/yajl-2.1.0-CVE-2017-16516.patch
+raw https://gitlab.archlinux.org/archlinux/packaging/packages/yajl/-/raw/main/yajl-2.1.0-CVE-2022-24795.patch
+raw https://gitlab.archlinux.org/archlinux/packaging/packages/yajl/-/raw/main/yajl-2.1.0-memory_leak.patch
+
+patch -Np1 -i /etc/rid/sources/yajl-2.1.0-CVE-2017-16516.patch
+patch -Np1 -i /etc/rid/sources/yajl-2.1.0-CVE-2022-24795.patch
+patch -Np1 -i /etc/rid/sources/yajl-2.1.0-memory_leak.patch
+
+cmake \
+    -B build                        \
+    -D CMAKE_BUILD_TYPE=None        \
+    -D CMAKE_INSTALL_PRERFIX=/usr   \
+    -W no-dev
+
+cmake --build build --verbose
+DESTDIR= cmake --install build
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf  /usr/lib/libyajl.so* \
+        /usr/lib/libyajl_s.a
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

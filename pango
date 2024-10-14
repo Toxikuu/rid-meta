@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="pango"
+VERS=1.54.0
+ver="${VERS%.*}"
+LINK="https://download.gnome.org/sources/pango/$ver/pango-$VERS.tar.xz"
+DEPS="fontconfig freetype2 fribidi glib cairo xorg-libraries"  # cairo built after harfbuzz
+
+
+IDIR=$(cat << '~fin.'
+
+mn --wrap-mode=nofallback
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

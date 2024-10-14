@@ -1,0 +1,32 @@
+#!/bin/bash
+NAME="pcre2"
+VERS=10.44
+LINK="https://github.com/PCRE2Project/pcre2/releases/download/pcre2-$VERS/pcre2-$VERS.tar.bz2"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm \
+    --docdir=/tmp/rid/trash         \
+    --enable-unicode                \
+    --enable-jit                    \
+    --enable-pcre2-16               \
+    --enable-pcre2-32               \
+    --enable-pcre2grep-libz         \
+    --enable-pcre2grep-libbz2       \
+    --enable-pcre2test-libreadline
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

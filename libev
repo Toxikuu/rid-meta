@@ -1,0 +1,26 @@
+#!/bin/bash
+NAME="libev"
+VERS=4.33
+LINK="http://dist.schmorp.de/$NAME/$NAME-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+rm -vf /usr/include/event.h
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf  /usr/lib/libev.{l,}a \
+        /usr/lib/libev.so*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

@@ -1,12 +1,16 @@
 #!/bin/bash
-NAME="glib-no-gobject"
+NAME="glib"
 VERS=2.82.1
 ver="${VERS%.*}"
+gobjver=1.82.0
+gobjv="${gobjver%.*}"
 LINK="https://download.gnome.org/sources/glib/$ver/glib-$VERS.tar.xz"
-DEPS=""
+DEPS="libxslt pcre2 glib-no-gobject"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
+
+raw https://download.gnome.org/sources/gobject-introspection/$gobjv/gobject-introspection-$gobjver.tar.xz
 
 if [ -e /usr/include/glib-2.0 ]; then
     rm -rf /usr/include/glib-2.0.old &&
@@ -16,19 +20,33 @@ fi
 mn \
     -D introspection=disabled \
     -D glib_debug=disabled    \
-    -D man-pages=disabled     \
+    -D man-pages=enabled      \
     -D sysprof=disabled
 
-EOF
+rm -rf ridbuild
+
+tar xf /etc/rid/sources/gobject-introspection-$gobjver.tar.xz &&
+meson setup gobject-introspection-$gobjver gi-build \
+            --prefix=/usr --buildtype=release --strip &&
+ninja -C gi-build
+ninja -C gi-build install
+
+mn \
+    -D introspection=enabled  \
+    -D glib_debug=disabled    \
+    -D man-pages=enabled      \
+    -D sysprof=disabled
+
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )
