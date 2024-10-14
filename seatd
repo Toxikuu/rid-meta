@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="seatd"
+VERS=0.8.0
+LINK="https://git.sr.ht/~kennylevinsen/seatd/archive/$VERS.tar.gz"
+DEPS="elogind"
+
+
+IDIR=$(cat <<EOF
+
+mn
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -vf /usr/bin/seatd{,-launch} \
+       /usr/lib/libseat.so*
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

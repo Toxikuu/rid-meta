@@ -1,0 +1,28 @@
+#!/bin/bash
+NAME="libinput"
+VERS=1.26.2
+LINK="https://gitlab.freedesktop.org/libinput/libinput/-/archive/$VERS/libinput-$VERS.tar.gz"
+DEPS="libevdev mtdev"
+
+
+IDIR=$(cat << '~fin.'
+
+mn \
+    -D debug-gui=false        \
+    -D tests=false            \
+    -D libwacom=false         \
+    -D udev-dir=/usr/lib/udev
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

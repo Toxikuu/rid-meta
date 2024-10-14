@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="libyaml"
+VERS=0.2.5
+LINK="https://github.com/yaml/libyaml/releases/download/$VERS/yaml-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib/libyaml.*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

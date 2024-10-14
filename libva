@@ -1,0 +1,30 @@
+#!/bin/bash
+NAME="libva"
+VERS=2.22.0
+LINK="https://github.com/intel/libva/archive/$VERS/libva-$VERS.tar.gz"
+DEPS="libdrm"
+
+
+IDIR=$(cat <<EOF
+
+mn
+32mn
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -rvf /usr/lib/libva-drm.so*      \
+       /usr/lib/libva-glx.so*       \
+       /usr/lib/libva.so*           \
+       /usr/lib/libva-wayland.so*   \
+       /usr/lib/libva-x11.so*       \
+       /usr/include/va
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

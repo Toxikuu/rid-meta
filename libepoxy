@@ -1,0 +1,26 @@
+#!/bin/bash
+NAME="libepoxy"
+VERS=1.5.10
+ver="${VERS%.*}"
+LINK="https://download.gnome.org/sources/libepoxy/$ver/libepoxy-$VERS.tar.xz"
+DEPS="mesa"
+
+
+IDIR=$(cat << '~fin.'
+
+mn
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/lib/libepoxy.so*   \
+        /usr/include/epoxy
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

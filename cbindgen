@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="cbindgen"
+VERS=0.27.0
+LINK="https://github.com/mozilla/cbindgen/archive/v$VERS/cbindgen-$VERS.tar.gz"
+DEPS="rustc"
+
+
+IDIR=$(cat <<EOF
+
+cargo build --release
+install -Dm755 target/release/cbindgen /usr/bin/
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -vf /usr/bin/cbindgen
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

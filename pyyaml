@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="pyyaml"
+VERS=6.0.2
+LINK="https://files.pythonhosted.org/packages/source/P/PyYAML/pyyaml-$VERS.tar.gz"
+DEPS="cython libyaml"
+
+
+IDIR=$(cat << '~fin.'
+
+pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
+pip3 install --no-index --find-links=dist --no-cache-dir --no-user PyYAML
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

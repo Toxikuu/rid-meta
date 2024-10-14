@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="libevdev"
+VERS=1.13.3
+LINK="https://www.freedesktop.org/software/libevdev/libevdev-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+mn -D documentation=disabled
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

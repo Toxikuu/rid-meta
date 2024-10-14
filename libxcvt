@@ -1,0 +1,28 @@
+#!/bin/bash
+NAME="libxcvt"
+VERS=0.1.2
+LINK="https://www.x.org/pub/individual/lib/libxcvt-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat <<EOF
+
+mn
+32mn
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -rvf                         \
+    /usr/bin/cvt                \
+    /usr/lib{,32}/libxcvt.so*   \
+    /usr/include/libxcvt
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

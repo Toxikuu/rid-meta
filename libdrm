@@ -1,0 +1,30 @@
+#!/bin/bash
+NAME="libdrm"
+VERS=2.4.123
+LINK="https://dri.freedesktop.org/libdrm/libdrm-$VERS.tar.xz"
+DEPS="xorg-libraries"
+
+
+IDIR=$(cat <<EOF
+
+mn   \
+    -D udev=true          \
+    -D valgrind=disabled
+
+32mn \
+    -D udev=true          \
+    -D valgrind=disabled
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+echo not implemented
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

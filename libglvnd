@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libglvnd"
+VERS=1.7.0
+LINK="https://gitlab.freedesktop.org/glvnd/libglvnd/-/archive/v$VERS/libglvnd-v$VERS.tar.gz"
+DEPS="xorg-libraries"
+
+
+IDIR=$(cat <<EOF
+
+mn
+32mn
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+echo not implemented
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

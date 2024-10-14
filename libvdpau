@@ -1,0 +1,26 @@
+#!/bin/bash
+NAME="libvdpau"
+VERS=1.5
+LINK="https://gitlab.freedesktop.org/vdpau/libvdpau/-/archive/$VERS/libvdpau-$VERS.tar.bz2"
+DEPS="xorg-libraries"
+
+
+IDIR=$(cat <<EOF
+
+mn   -D documentation=false
+32mn -D documentation=false
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -rvf /usr/{lib,include}/vdpau
+rm -vf /usr/lib{,32}/libvdpau.so*
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

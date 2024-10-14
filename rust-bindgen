@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="rust-bindgen"
+VERS=0.70.1
+LINK="https://github.com/rust-lang/rust-bindgen/archive/v$VERS.tar.gz"
+DEPS="llvm rustc"  # llvm with clang
+
+
+IDIR=$(cat <<EOF
+
+cargo build --release
+install -Dm755 target/release/bindgen /usr/bin/
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -vf /usr/bin/bindgen
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

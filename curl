@@ -20,13 +20,14 @@ find docs \( -name Makefile\* -o  \
 
 cp -v -R docs -T /usr/share/doc/curl-$VERS
 
-cd /tmp/building
+cd /tmp/rid/building
 rm -rf curl-$VERS
-tar xvf /etc/rid/sources/curl-$VERS.tar.xz
+tar xvf /etc/rid/sources/curl-$VERS.tar
 cd curl-$VERS
 
-32cm --with-openssl \
-   --with-ca-path=/etc/ssl/certs
+32cm --with-openssl                \
+     --with-ca-path=/etc/ssl/certs \
+     --without-brotli
 
 EOF
 )

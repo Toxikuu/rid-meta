@@ -1,0 +1,32 @@
+#!/bin/bash
+NAME="xwayland"
+VERS=24.1.3
+LINK="https://www.x.org/pub/individual/xserver/xwayland-$VERS.tar.xz"
+DEPS="libxcvt pixman wayland-protocols xorg-applications xorg-fonts libepoxy mesa"
+
+
+IDIR=$(cat << '~fin.'
+
+sed -i '/install_man/,$d' meson.build &&
+
+mn \
+    -D xkb_output_dir=/var/lib/xkb \
+    -D secure-rpc=false
+
+cat >> /etc/sysconfig/createfiles << "EOF"
+/tmp/.X11-unix dir 1777 root root
+EOF
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/bin/Xwayland
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

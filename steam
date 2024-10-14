@@ -1,0 +1,29 @@
+#!/bin/bash
+NAME="steam"
+VERS=1.0.0.82
+LINK="https://repo.steampowered.com/steam/pool/steam/s/steam/steam_$VERS.tar.gz"
+DEPS=""  # steam dependencies
+
+
+# namespaces support in kernel is necessary
+IDIR=$(cat << '~fin.'
+
+ln -sf /usr/bin/true steamdeps
+make install
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/lib/steam          \
+        /usr/share/doc/steam    \
+        /usr/bin/steam          \
+        /usr/bin/steamdeps
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

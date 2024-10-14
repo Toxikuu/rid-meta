@@ -1,0 +1,32 @@
+#!/bin/bash
+NAME="libclc"
+VERS=19.1.0
+LINK="https://github.com/llvm/llvm-project/releases/download/llvmorg-$VERS/libclc-$VERS.src.tar.xz"
+DEPS="llvm spirv-llvm-translator"  # llvm with clang
+
+
+IDIR=$(cat << '~fin.'
+
+mkdir build &&
+cd    build &&
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_BUILD_TYPE=Release  \
+      -G Ninja .. &&
+
+ninja
+DESTDIR= ninja install
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/{share,include}/clc
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="pixman"
+VERS=0.43.4
+LINK="https://www.cairographics.org/releases/pixman-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat <<EOF
+
+mn
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -rvf /usr/include/pixman-1
+rm -vf /usr/lib/libpixman-1.*
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

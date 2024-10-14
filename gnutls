@@ -1,0 +1,26 @@
+#!/bin/bash
+NAME="gnutls"
+VERS=3.8.7.1
+ver="${VERS%.*.*.*}"
+LINK="https://www.gnupg.org/ftp/gcrypt/gnutls/v$ver/gnutls-$VERS.tar.xz"
+DEPS="nettle make-ca libunistring libtasn1 p11-kit"
+
+
+IDIR=$(cat <<EOF
+
+cm --docdir=/tmp/rid/trash \
+   --with-default-trust-store-pkcs11="pkcs11:"
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+echo not implemented
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

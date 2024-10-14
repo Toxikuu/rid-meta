@@ -1,0 +1,28 @@
+#!/bin/bash
+NAME="desktop-file-utils"
+VERS=0.27
+LINK="https://www.freedesktop.org/software/$NAME/releases/$NAME-$VERS.tar.xz"
+DEPS="glib-no-gobject"
+
+
+IDIR=$(cat <<EOF
+
+mn
+
+install -vdm755 /usr/share/applications &&
+update-desktop-database /usr/share/applications
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -vf /usr/bin/desktop-file-{edit,install,validate} \
+       /usr/bin/update-desktop-database
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

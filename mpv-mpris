@@ -10,6 +10,9 @@ IDIR=$(cat <<EOF
 make
 make PREFIX=/usr install
 
+echo "/etc/mpv/scripts/mpris.so has been installed"
+echo "this may cause issues"
+
 EOF
 )
 

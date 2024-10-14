@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="mtdev"
+VERS=1.1.7
+LINK="https://bitmath.org/code/mtdev/mtdev-$VERS.tar.bz2"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf  /usr/bin/mtdev-test \
+        /usr/lib/libmtdev.*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

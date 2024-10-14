@@ -1,0 +1,62 @@
+#!/bin/bash
+NAME="mesa"
+VERS=24.2.4
+LINK="https://mesa.freedesktop.org/archive/mesa-$VERS.tar.xz"
+DEPS="xorg-libraries libdrm mako pyyaml cbindgen rust-bindgen rustc glslang libclc libglvnd libva libvdpau llvm ply vulkan-loader nettle"
+
+
+# instructions disable mesa support
+IDIR=$(cat << '~fin.'
+
+mn \
+    -D osmesa=true              \
+    -D platforms=x11            \
+    -D gallium-drivers=llvmpipe \
+    -D vulkan-drivers=""        \
+    -D valgrind=disabled        \
+    -D libunwind=disabled       \
+    -D glvnd=enabled
+
+rm -rvf  ridbuild
+mkdir -v ridbuild
+cd       ridbuild
+
+CC="gcc -m32" CXX="g++ -m32"                 \
+PKG_CONFIG_PATH=$XORG_PREFIX/lib32/pkgconfig \
+meson setup                                  \
+    --prefix=$XORG_PREFIX                    \
+    --libdir=$XORG_PREFIX/lib32              \
+    --buildtype=release                      \
+    -D osmesa=true                           \
+    -D platforms=x11                         \
+    -D gallium-drivers=llvmpipe              \
+    -D vulkan-drivers=""                     \
+    -D valgrind=disabled                     \
+    -D libunwind=disabled                    \
+    -D glvnd=enabled                         \
+    .. &&
+    sed -i 's/\/usr\/lib\//\/usr\/lib32\//g' ./build.ninja &&
+
+ninja
+
+DESTDIR=$PWD/DESTDIR ninja install
+cp -vr DESTDIR/$XORG_PREFIX/lib32/* $XORG_PREFIX/lib32
+if [ -f DESTDIR/$XORG_PREFIX/share/vulkan ]; then
+     cp -vr DESTDIR/$XORG_PREFIX/share/vulkan/* $XORG_PREFIX/share/vulkan
+fi
+rm -rf DESTDIR
+ldconfig
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

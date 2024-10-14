@@ -1,14 +1,12 @@
 #!/bin/bash
 
 NAME="spirv-llvm-translator"
-VERS=18.1.4
+VERS=19.1.0
 LINK="https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v$VERS/SPIRV-LLVM-Translator-$VERS.tar.gz"
 DEPS="cmake libxml2 llvm spirv-headers spirv-tools"
 
 
 IDIR=$(cat <<EOF
-
-export DESTDIR=/tmp/rid/dest
 
 mkdir build &&
 cd    build &&
@@ -19,7 +17,8 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr                   \
       -D CMAKE_SKIP_INSTALL_RPATH=ON                 \
       -D LLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr \
       -G Ninja ..                                    &&
-ninja && ninja DESTDIR= install &&
+ninja &&
+DESTDIR= ninja install &&
 
 rm -rvf * &&
 CC="gcc -m32" CXX="g++ -m32"                         \
@@ -32,12 +31,10 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr                   \
       -D LLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr \
       -G Ninja ..                                    &&
 ninja &&
-ninja install
-cp -vr $DESTDIR/usr/lib32/* /usr/lib32
-rm -rf $DESTDIR
+DESTDIR=/tmp/rid/dest ninja install
+cp -vr /tmp/rid/dest/usr/lib32/* /usr/lib32
+rm -rf /tmp/rid/dest
 ldconfig
-
-unset DESTDIR
 
 EOF
 )

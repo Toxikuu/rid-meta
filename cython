@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="cython"
+VERS=3.0.11
+LINK="https://github.com/cython/cython/releases/download/$VERS-1/cython-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
+pip3 install --no-index --find-links=dist --no-cache-dir --no-user Cython
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

@@ -1,0 +1,26 @@
+#!/bin/bash
+NAME="duktape"
+VERS=2.7.0
+LINK="https://duktape.org/duktape-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat <<EOF
+
+sed -i 's/-Os/-O2/' Makefile.sharedlibrary
+make -f Makefile.sharedlibrary INSTALL_PREFIX=/usr
+make -f Makefile.sharedlibrary INSTALL_PREFIX=/usr install
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -vf /usr/lib/libduktape{,d}.so*
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

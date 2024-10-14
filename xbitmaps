@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="xbitmaps"
+VERS=1.1.3
+LINK="https://www.x.org/pub/individual/data/$NAME-$VERS.tar.xz"
+DEPS="util-macros"
+
+
+IDIR=$(cat << '~fin.'
+
+./configure $XORG_CONFIG
+make install
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/include/X11/bitmaps
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

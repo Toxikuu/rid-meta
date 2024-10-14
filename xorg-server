@@ -1,0 +1,35 @@
+#!/bin/bash
+NAME="xorg-server"
+VERS=21.1.13
+LINK="https://www.x.org/pub/individual/xserver/xorg-server-$VERS.tar.xz"
+DEPS="libxcvt pixman xorg-fonts xkeyboard-config dbus elogind libepoxy libunwind nettle xcb-util-keysyms xcb-util-image xcb-util-renderutil xcb-util-wm"
+
+
+IDIR=$(cat << '~fin.'
+
+mn \
+    --localstatedir=/var    \
+    -D glamor=true          \
+    -D secure-rpc=false     \
+    -D xkb_output_dir=/var/lib/xkb
+
+mkdir -pv /etc/X11/xorg.conf.d &&
+install -v -d -m1777 /tmp/.{ICE,X11}-unix &&
+cat >> /etc/sysconfig/createfiles << "EOF"
+/tmp/.ICE-unix dir 1777 root root
+/tmp/.X11-unix dir 1777 root root
+EOF
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

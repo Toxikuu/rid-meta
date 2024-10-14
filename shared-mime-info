@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="shared-mime-info"
+VERS=2.4
+LINK="https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/$VERS/shared-mime-info-$VERS.tar.gz"
+DEPS="glib-no-gobject libxml2"
+
+
+IDIR=$(cat <<EOF
+
+mn -D update-mimedb=true
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -rvf /usr/bin/update-mime-database \
+        /usr/share/mime
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

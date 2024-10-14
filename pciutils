@@ -1,0 +1,40 @@
+#!/bin/bash
+NAME="pciutils"
+VERS=3.13.0
+LINK="https://mj.ucw.cz/download/linux/pci/pciutils-3.13.0.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat <<EOF
+
+sed -r '/INSTALL.*(PCI_IDS|update-pciids)/d' \
+    -i Makefile
+
+make PREFIX=/usr                \
+     SHAREDIR=/usr/share/hwdata \
+     SHARED=yes
+
+make PREFIX=/usr                \
+     SHAREDIR=/usr/share/hwdata \
+     SHARED=yes                 \
+     install install-lib        &&
+
+chmod -v 755 /usr/lib/libpci.so
+
+EOF
+)
+
+RDIR=$(cat <<EOF
+
+rm -rvf /usr/bin/lspci   \
+        /usr/bin/pcilmr  \
+        /usr/bin/setpci  \
+        /usr/include/pci \
+        /usr/lib/libpci.so*
+
+EOF
+)
+
+UDIR=$(cat <<EOF
+EOF
+)

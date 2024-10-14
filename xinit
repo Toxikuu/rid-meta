@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="xinit"
+VERS=1.4.2
+LINK="https://www.x.org/pub/individual/app/xinit-$VERS.tar.xz"
+DEPS="xorg-libraries"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG --with-xinitdir=/etc/X11/app-defaults
+ldconfig
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

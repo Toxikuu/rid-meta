@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="luit"
+VERS=20240910
+LINK="https://invisible-mirror.net/archives/luit/luit-$VERS.tgz"
+DEPS="xorg-applications"
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/bin/luit
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
