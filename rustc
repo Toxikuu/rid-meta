@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="rustc"
-VERS=1.81.0
+VERS=1.82.0
 LINK="https://static.rust-lang.org/dist/rustc-$VERS-src.tar.xz"
 DEPS="cmake curl llvm"
 
@@ -46,12 +46,12 @@ tools = ["cargo", "clippy", "rustdoc", "rustfmt"]
 vendor = true
 
 [install]
-prefix = "/opt/rustc-1.81.0"
-docdir = "share/doc/rustc-1.81.0"
+prefix = "/opt/rustc-$VERS"
+docdir = "share/doc/rustc-$VERS"
 
 [rust]
 channel = "stable"
-description = "for GLFS #47e07"
+description = "for rid"
 
 # Uncomment if FileCheck has been installed.
 #codegen-tests = false
@@ -82,9 +82,9 @@ python3 x.py build
 python3 x.py install rustc std &&
 python3 x.py install --stage=1 cargo clippy rustfmt
 
-rm -fv /opt/rustc-1.81.0/share/doc/rustc-1.81.0/*.old   &&
+rm -fv /opt/rustc-$VERS/share/doc/rustc-$VERS/*.old   &&
 install -vm644 README.md                                \
-               /opt/rustc-1.81.0/share/doc/rustc-1.81.0 &&
+               /opt/rustc-$VERS/share/doc/rustc-$VERS &&
 
 install -vdm755 /usr/share/zsh/site-functions      &&
 ln -sfv /opt/rustc/share/zsh/site-functions/_cargo \
@@ -145,12 +145,12 @@ tools = ["cargo", "clippy", "rustdoc", "rustfmt"]
 vendor = true
 
 [install]
-prefix = "/opt/rustc-1.81.0"
-docdir = "share/doc/rustc-1.81.0"
+prefix = "/opt/rustc-$VERS"
+docdir = "share/doc/rustc-$VERS"
 
 [rust]
 channel = "stable"
-description = "for GLFS #47e07"
+description = "for rid"
 
 # Uncomment if FileCheck has been installed.
 #codegen-tests = false
@@ -181,9 +181,9 @@ python3 x.py build
 python3 x.py install rustc std &&
 python3 x.py install --stage=1 cargo clippy rustfmt
 
-rm -fv /opt/rustc-1.81.0/share/doc/rustc-1.81.0/*.old   &&
+rm -fv /opt/rustc-$VERS/share/doc/rustc-$VERS/*.old   &&
 install -vm644 README.md                                \
-               /opt/rustc-1.81.0/share/doc/rustc-1.81.0 &&
+               /opt/rustc-$VERS/share/doc/rustc-$VERS &&
 
 install -vdm755 /usr/share/zsh/site-functions      &&
 ln -sfv /opt/rustc/share/zsh/site-functions/_cargo \
