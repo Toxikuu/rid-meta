@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="eza"
+VERS=0.20.2
+LINK="https://github.com/eza-community/eza/archive/refs/tags/v$VERS.tar.gz"
+DEPS="rust"
+
+
+IDIR=$(cat << '~fin.'
+
+cargo build --release
+install -v -Dm755 "target/release/eza" "/usr/bin/eza"
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

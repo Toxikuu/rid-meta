@@ -1,0 +1,30 @@
+#!/bin/bash
+NAME="ripgrep"
+VERS=14.1.1
+LINK="https://github.com/BurntSushi/ripgrep/archive/refs/tags/$VERS.tar.gz"
+DEPS="rust"
+
+
+IDIR=$(cat << '~fin.'
+
+RUSTFLAGS="-C target-cpu=native" \
+cargo build --release
+
+install -v -Dm755 "target/release/rg" "/usr/bin/rg"
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf \
+    /usr/bin/rg                 \
+    /usr/share/man/man1/rg.1    \
+    /usr/share/bash-completion/completions/rg
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

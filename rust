@@ -1,0 +1,84 @@
+#!/bin/bash
+NAME="rust"  # rustup
+VERS=9999
+LINK=""
+DEPS="curl"
+
+
+IDIR=$(cat << '~fin.'
+
+if [ "$VERS" = "9999" ]; then
+    export VERS="stable"
+fi
+
+export CARGO_HOME=/opt/cargo
+export RUSTUP_HOME=/opt/rustup
+
+mkdir -pv /opt/cargo /opt/rustup
+chown -Rv $USER:$USER /opt/cargo /opt/rustup
+
+if ! command -v rustup &> /dev/null; then
+    curl https://sh.rustup.rs -sSf | sh -s -- -y --no-modify-path
+fi
+
+. /opt/cargo/env
+
+rustup toolchain install $VERS
+rustup default $VERS
+rustup component add cargo clippy rustfmt
+
+mv -v /etc/bash_completion.d/cargo /usr/share/bash-completion/completions
+
+if ! grep -q "/opt/cargo/bin" /etc/profile; then
+    echo "export PATH=\$PATH:/opt/cargo/bin" | sudo tee -a /etc/profile
+fi
+
+export PATH=$PATH:/opt/cargo/bin
+
+echo "You should now run the following command:"
+echo ". /opt/cargo/env"
+
+~fin.
+)
+
+RDIR=$(cat <<EOF
+
+rm -rvf /opt/{cargo,rustup}
+
+if grep -q "/opt/cargo/bin" /etc/profile; then
+    sed -i '/\/opt\/cargo\/bin/d' /etc/profile
+fi
+
+if [ -f /usr/share/bash-completion/completions/cargo ]; then
+    rm -v /usr/share/bash-completion/completions/cargo
+fi
+
+EOF
+)
+
+UDIR=$(cat << '~fin.'
+
+if [ "$VERS" = "9999" ]; then
+    export VERS="stable"
+fi
+
+export CARGO_HOME=/opt/cargo
+export RUSTUP_HOME=/opt/rustup
+chown -R $USER:$USER /opt/cargo /opt/rustup
+
+rustup update $VERS
+rustup default $VERS
+rustup component add cargo clippy rustfmt
+
+if [ -f /etc/bash_completion.d/cargo ]; then
+    mv -v /etc/bash_completion.d/cargo /usr/share/bash-completion/completions
+fi
+
+if ! grep -q "/opt/cargo/bin" /etc/profile; then
+    echo "export PATH=\$PATH:/opt/cargo/bin" | sudo tee -a /etc/profile
+fi
+
+export PATH=$PATH:/opt/cargo/bin
+
+~fin.
+)

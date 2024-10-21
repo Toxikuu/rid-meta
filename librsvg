@@ -1,0 +1,33 @@
+#!/bin/bash
+NAME="librsvg"
+VERS=2.59.1
+ver="${VERS%.*}"
+LINK="https://download.gnome.org/sources/librsvg/$ver/librsvg-$VERS.tar.xz"
+DEPS="cairo cargo-c gdk-pixbuf pango rust glib vala"
+
+
+IDIR=$(cat << '~fin.'
+
+sed -e "/OUTDIR/s|,| / 'librsvg-2.59.1', '--no-namespace-dir',|" \
+    -e '/output/s|Rsvg-2.0|librsvg-2.59.1|'                      \
+    -i doc/meson.build
+
+mn
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf                             \
+    /usr/include/librsvg-2.0        \
+    /usr/share/doc/librsvg-$VERS    \
+    /usr/lib/librsvg-2.*            \
+    /usr/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

@@ -1,0 +1,27 @@
+#!/bin/bash
+NAME="fribidi"
+VERS=1.0.16
+LINK="https://github.com/fribidi/fribidi/releases/download/v$VERS/fribidi-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+mn
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf \
+    /usr/lib/libfribidi.so* \
+    /usr/include/fribidi    \
+    /usr/bin/fribidi
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
