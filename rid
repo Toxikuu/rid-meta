@@ -2,7 +2,7 @@
 NAME="rid"
 VERS=9999
 LINK="https://github.com/Toxikuu/rid/archive/refs/heads/master.tar.gz"
-DEPS="rustc"
+DEPS="rust"
 
 # this meta file may need to be updated depending on the trajectory of rid's future development
 
