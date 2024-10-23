@@ -1,0 +1,52 @@
+#!/bin/bash
+NAME="cups"
+VERS=2.4.11
+LINK="https://github.com/OpenPrinting/cups/releases/download/v2.4.11/cups-2.4.11-source.tar.gz"
+DEPS="gnutls"
+
+
+IDIR=$(cat << '~fin.'
+
+useradd -c "Print Service User" -d /var/spool/cups -g lp -s /bin/false -u 9 lp
+groupadd -g 19 lpadmin
+usermod -a -G lpadmin $USER
+
+./configure --libdir=/usr/lib            \
+            --with-rcdir=/tmp/cupsinit   \
+            --with-rundir=/run/cups      \
+            --with-system-groups=lpadmin \
+            --disable-libusb             \
+            --with-docdir=/tmp/rid/trash &&
+make
+make install
+
+rm -rf /tmp/cupsinit
+echo "ServerName /run/cups/cups.sock" > /etc/cups/client.conf
+gtk-update-icon-cache -qtf /usr/share/icons/hicolor
+
+cat > /etc/pam.d/cups << "EOF"
+# Begin /etc/pam.d/cups
+
+auth    include system-auth
+account include system-account
+session include system-session
+
+# End /etc/pam.d/cups
+EOF
+
+# make install-cups from blfs-bootscripts is not used here because i dont use cups much
+# i just need cups to satisfy an electron library dependency for discord
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

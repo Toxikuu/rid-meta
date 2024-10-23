@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libunistring"
-VERS=1.2
+VERS=1.3
 LINK="https://ftp.gnu.org/gnu/$NAME/$NAME-$VERS.tar.xz"
 DEPS=""
 

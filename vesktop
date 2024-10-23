@@ -1,0 +1,66 @@
+#!/bin/bash
+NAME="vesktop"
+VERS=1.5.3
+LINK="https://github.com/Vencord/Vesktop/archive/refs/tags/v$VERS.tar.gz"
+DEPS="pnpm cups"
+
+
+IDIR=$(cat << '~fin.'
+
+pnpm i
+pnpm package --linux dir
+
+[ -d /usr/lib/vesktop ] && rm -rvf /usr/lib/vesktop
+
+mv -vf dist/linux-unpacked /usr/lib/vesktop
+
+cat << 'EOF' > /usr/bin/vesktop.sh
+#!/bin/sh
+
+XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-~/.config}
+
+# Allow users to override command-line options
+if [[ -f $XDG_CONFIG_HOME/vesktop-flags.conf ]]; then
+    VESKTOP_USER_FLAGS="$(grep -v '^#' $XDG_CONFIG_HOME/vesktop-flags.conf)"
+fi
+
+# Launch
+exec /usr/lib/vesktop/vesktop $VESKTOP_USER_FLAGS "$@"
+EOF
+
+chmod 755 /usr/bin/vesktop.sh
+
+cat << 'EOF' > /usr/share/applications/vesktop.desktop
+[Desktop Entry]
+Name=Vesktop
+Exec=/usr/bin/vesktop
+Terminal=false
+Type=Application
+Icon=vesktop
+StartupWMClass=vesktop
+GenericName=Internet Messenger
+Categories=Network;
+Keywords=discord;vencord;electron;chat;
+Comment=Vesktop is a custom Discord App aiming to give you better performance and improve linux support. Vencord comes pre-installed
+EOF
+
+chmod 644 /usr/share/applications/vesktop.desktop
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/bin/vesktop.sh \
+        /usr/lib/vesktop    \
+        /usr/share/applications/vesktop.desktop
+
+echo "Not removing ~/.config/vesktop"
+echo "You may do so yourself if you like"
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

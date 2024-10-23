@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xf86-input-libinput"
-VERS=1.4.0
+VERS=1.5.0
 LINK="https://www.x.org/pub/individual/driver/$NAME-$VERS.tar.xz"
 DEPS="libinput xorg-server"
 

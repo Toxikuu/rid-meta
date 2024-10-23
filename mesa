@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="mesa"
-VERS=24.2.4
+VERS=24.2.5
 LINK="https://mesa.freedesktop.org/archive/mesa-$VERS.tar.xz"
 DEPS="xorg-libraries libdrm mako pyyaml cbindgen rust-bindgen rustc glslang libclc libglvnd libva libvdpau llvm ply vulkan-loader nettle"
 
@@ -15,7 +15,8 @@ mn \
     -D vulkan-drivers=""        \
     -D valgrind=disabled        \
     -D libunwind=disabled       \
-    -D glvnd=enabled
+    -D glvnd=enabled            \
+    -D video-codecs=all         
 
 rm -rvf  ridbuild
 mkdir -v ridbuild
@@ -34,6 +35,7 @@ meson setup                                  \
     -D valgrind=disabled                     \
     -D libunwind=disabled                    \
     -D glvnd=enabled                         \
+    -D video-codecs=all                      \
     .. &&
     sed -i 's/\/usr\/lib\//\/usr\/lib32\//g' ./build.ninja &&
 

@@ -15,7 +15,7 @@ setxkbmap-1.3.4.tar.xz
 smproxy-1.0.7.tar.xz
 x11perf-1.6.1.tar.bz2
 xauth-1.1.3.tar.xz
-xcmsdb-1.0.6.tar.xz
+xcmsdb-1.0.7.tar.xz
 xcursorgen-1.0.8.tar.xz
 xdpyinfo-1.3.4.tar.xz
 xdriinfo-1.0.7.tar.xz
@@ -41,7 +41,7 @@ xsetroot-1.1.3.tar.xz
 xvinfo-1.1.5.tar.xz
 xwd-1.0.9.tar.xz
 xwininfo-1.1.6.tar.xz
-xwud-1.0.6.tar.xz
+xwud-1.0.7.tar.xz
 EOF
 
 mkdir app &&

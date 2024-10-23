@@ -2,7 +2,7 @@
 NAME="sdl2"
 VERS=2.30.8
 LINK="https://www.libsdl.org/release/SDL2-$VERS.tar.gz"
-DEPS="libxkbcommon wayland-protocols"  # also xorg-libraries
+DEPS="libxkbcommon wayland-protocols xorg-libraries"
 
 
 IDIR=$(cat <<EOF
@@ -17,7 +17,10 @@ EOF
 
 RDIR=$(cat <<EOF
 
-echo not implemented
+rm -vf /usr/lib{,32}/libSDL2.{la,so*}   \
+    /usr/bin/sdl2-config
+rm -rvf /usr/include/SDL2               \
+    /usr/lib/cmake/SDL2
 
 EOF
 )

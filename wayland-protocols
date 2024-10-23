@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="wayland-protocols"
-VERS=1.37
+VERS=1.38
 LINK="https://gitlab.freedesktop.org/wayland/$NAME/-/releases/$VERS/downloads/$NAME-$VERS.tar.xz"
 DEPS="wayland"
 

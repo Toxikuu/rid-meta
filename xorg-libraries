@@ -8,7 +8,7 @@ DEPS="fontconfig libxcb wget"
 IDIR=$(cat << '~fin.'
 
 cat > lib-7-list << "EOF"
-xtrans-1.5.0.tar.xz
+xtrans-1.5.1.tar.xz
 libX11-1.8.10.tar.xz
 libXext-1.3.6.tar.xz
 libFS-1.0.10.tar.xz
