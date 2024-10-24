@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="less"
+VERS=661
+LINK="https://www.greenwoodsoftware.com/less/less-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm --sysconfdir=/etc
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/bin/less{,echo,key}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

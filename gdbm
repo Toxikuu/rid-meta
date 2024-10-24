@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="gdbm"
+VERS=1.24
+LINK="https://ftp.gnu.org/gnu/gdbm/gdbm-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm --enable-libgdbm-compat
+32cm --enable-libgdbm-compat
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

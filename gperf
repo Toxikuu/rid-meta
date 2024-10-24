@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="gperf"
+VERS=3.1
+LINK="https://ftp.gnu.org/gnu/gperf/gperf-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm --docdir=/tmp/rid/trash
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/bin/gperf
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

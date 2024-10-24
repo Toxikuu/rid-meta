@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="expat"
+VERS=2.6.3
+LINK="https://prdownloads.sourceforge.net/expat/expat-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm --docdir=/tmp/rid/trash
+32cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

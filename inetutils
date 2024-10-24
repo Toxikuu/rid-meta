@@ -1,0 +1,51 @@
+#!/bin/bash
+NAME="inetutils"
+VERS=2.5
+LINK="https://ftp.gnu.org/gnu/inetutils/inetutils-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+sed -i 's/def HAVE_TERMCAP_TGETENT/ 1/' telnet/telnet.c
+
+cm \
+    --bindir=/usr/bin       \
+    --localstatedir=/var    \
+    --disable-logger        \
+    --disable-whois         \
+    --disable-rcp           \
+    --disable-rexec         \
+    --disable-rlogin        \
+    --disable-rsh           \
+    --disable-servers
+
+mv -v /usr/{,s}bin/ifconfig
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+pushd /usr/bin
+
+rm -vf \
+    dnsdomainname   \
+    ftp             \
+    hostname        \
+    ifconfig        \
+    ping            \
+    ping6           \
+    talk            \
+    telnet          \
+    tftp            \
+    traceroute
+
+popd
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
