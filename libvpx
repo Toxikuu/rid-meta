@@ -1,0 +1,28 @@
+#!/bin/bash
+NAME="libvpx"
+VERS=1.14.1
+LINK="https://github.com/webmproject/libvpx/archive/v$VERS/libvpx-$VERS.tar.gz"
+DEPS="yasm which"
+
+
+IDIR=$(cat << '~fin.'
+
+sed -i 's/cp -p/cp/' build/make/Makefile &&
+
+cm --enable-shared
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/bin/vpx{de,en}c    \
+        /usr/lib/libvpx.so*     \
+        /usr/include/vpx
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

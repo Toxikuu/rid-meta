@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="x264"
+VERS=20240812
+LINK="https://anduin.linuxfromscratch.org/BLFS/x264/x264-$VERS.tar.xz"
+DEPS="nasm"
+
+
+IDIR=$(cat << '~fin.'
+
+cm --enable-shared --disable-cli
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib/libx264.so*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

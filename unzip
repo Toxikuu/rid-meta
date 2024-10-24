@@ -2,7 +2,7 @@
 NAME="unzip"
 VERS=6.0
 ver="${VERS//./}"
-LINK="https://downloads.sourceforge.net/infozip/unzip$ver.tar.gz"
+LINK="https://downloads.sourceforge.net/project/infozip/UnZip%206.x%20%28latest%29/UnZip%20$VERS/unzip$ver.tar.gz"
 DEPS="wget"
 
 

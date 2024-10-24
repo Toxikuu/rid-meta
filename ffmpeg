@@ -2,7 +2,7 @@
 NAME="ffmpeg"
 VERS=7.1
 LINK="https://ffmpeg.org/releases/ffmpeg-$VERS.tar.xz"
-DEPS="libaom libass fdk-aac freetype lame libvorbis libvpx opus x264 x265 yasm alsa-lib libva sdl2 pulseaudio"
+DEPS="libaom libass fdk-aac freetype2 lame libvorbis libvpx opus x264 x265 yasm alsa-lib libva sdl2 pulseaudio"
 
 
 IDIR=$(cat <<EOF

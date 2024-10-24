@@ -2,13 +2,12 @@
 NAME="libpng"
 VERS=1.6.44
 LINK="https://github.com/pnggroup/libpng/archive/refs/tags/v$VERS.tar.gz"
-DEPS="wget"
+DEPS=""
 
 
 IDIR=$(cat <<EOF
 
-wget https://downloads.sourceforge.net/sourceforge/libpng-apng/libpng-$VERS-apng.patch.gz &&
-  mv -vf *.patch.gz /etc/rid/sources/
+raw https://downloads.sourceforge.net/project/libpng-apng/libpng16/$VERS/libpng-$VERS-apng.patch.gz
 gzip -cd /etc/rid/sources/libpng-$VERS-apng.patch.gz | patch -p1
 
 cm

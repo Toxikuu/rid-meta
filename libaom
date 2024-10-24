@@ -1,0 +1,35 @@
+#!/bin/bash
+NAME="libaom"
+VERS=3.9.1
+LINK="https://storage.googleapis.com/aom-releases/libaom-$VERS.tar.gz"
+DEPS="yasm"
+
+
+IDIR=$(cat << '~fin.'
+
+mkdir aom-build &&
+cd    aom-build &&
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_BUILD_TYPE=Release  \
+      -D BUILD_SHARED_LIBS=1       \
+      -D ENABLE_DOCS=no            \
+      -G Ninja .. &&
+ninja
+
+ninja install &&
+rm -v /usr/lib/libaom.a
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/include/aom /usr/lib/libaom.so*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

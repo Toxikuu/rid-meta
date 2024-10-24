@@ -1,0 +1,31 @@
+#!/bin/bash
+NAME="lame"
+VERS=3.100
+LINK="https://downloads.sourceforge.net/project/lame/lame/$VERS/lame-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+sed -i -e 's/^\(\s*hardcode_libdir_flag_spec\s*=\).*/\1/' configure
+
+./configure --prefix=/usr --enable-mp3rtp --disable-static &&
+make
+
+make pkghtmldir=/tmp/rid/trash install
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/bin/{lame,mp3rtp}  \
+        /usr/lib/libmp3lame.*   \
+        /usr/include/lame
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="fdk-aac"
+VERS=2.0.3
+LINK="https://downloads.sourceforge.net/project/opencore-amr/fdk-aac/fdk-aac-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/include/fdk-aac /usr/lib/libfdk-aac.*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

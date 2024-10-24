@@ -1,0 +1,32 @@
+#!/bin/bash
+NAME="uchardet"
+VERS=0.0.8
+LINK="https://www.freedesktop.org/software/uchardet/releases/uchardet-$VERS.tar.xz"
+DEPS="cmake"
+
+
+IDIR=$(cat << '~fin.'
+
+mkdir build &&
+cd    build &&
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D BUILD_STATIC=OFF          \
+      -W no-dev ..                 &&
+make
+make install
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/include/uchardet /usr/lib/libuchardet.so*
+rm -vf /usr/bin/uchardet
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

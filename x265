@@ -1,0 +1,33 @@
+#!/bin/bash
+NAME="x265"
+VERS=3.6
+LINK="https://bitbucket.org/multicoreware/x265_git/downloads/x265_$VERS.tar.gz"
+DEPS="cmake nasm"
+
+
+IDIR=$(cat << '~fin.'
+
+mkdir bld &&
+cd    bld &&
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D GIT_ARCHETYPE=1           \
+      -W no-dev ../source          &&
+make
+
+make install &&
+rm -vf /usr/lib/libx265.a
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/bin/x265 /usr/lib/libx265.so*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

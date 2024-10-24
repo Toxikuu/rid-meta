@@ -22,7 +22,7 @@ cp -v -R docs -T /usr/share/doc/curl-$VERS
 
 cd /tmp/rid/building
 rm -rf curl-$VERS
-tar xvf /etc/rid/sources/curl-$VERS.tar
+tar xf /etc/rid/sources/curl-$VERS.tar
 cd curl-$VERS
 
 32cm --with-openssl                \

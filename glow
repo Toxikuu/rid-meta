@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="glow"
+VERS=2.0.0
+LINK="https://github.com/charmbracelet/glow/archive/refs/tags/v$VERS.tar.gz"
+DEPS="go"
+
+
+IDIR=$(cat << '~fin.'
+
+go build
+install -v -m 755 glow /usr/bin/glow
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/bin/glow
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

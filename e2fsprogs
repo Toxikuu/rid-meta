@@ -13,7 +13,8 @@ cm --sysconfdir=/etc    \
    --disable-libblkid   \
    --disable-libuuid    \
    --disable-uuidd      \
-   --disable-fsck
+   --disable-fsck       \
+   --disable-fuse2fs
 
 rm -fv /usr/lib/{libcom_err,libe2p,libext2fs,libss}.a
 gunzip -v /usr/share/info/libext2fs.info.gz

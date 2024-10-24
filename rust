@@ -42,6 +42,10 @@ if ! grep -q "# cargo end" /etc/toxenv ; then
 EOF
 fi
 
+chgrp -R users  /opt/cargo
+chmod g+s       /opt/cargo
+chmod 775       /opt/cargo
+
 ~fin.
 )
 
