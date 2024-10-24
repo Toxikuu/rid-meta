@@ -1,0 +1,69 @@
+#!/bin/bash
+NAME="gmp"
+VERS=6.3.0
+LINK="https://ftp.gnu.org/gnu/gmp/gmp-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+./configure --prefix=/usr    \
+            --enable-cxx     \
+            --disable-static \
+            --docdir=/tmp/rid/trash
+
+make
+make check 2>&1 | tee gmp-check-log
+NUMPASSED=$(awk '/# PASS:/{total+=$3} ; END{print total}' gmp-check-log)
+
+echo "Number gmp tests passed: $NUMPASSED"
+
+if [ NUMPASSED -gt 198 ]; then
+    die "Only $NUMPASSED gmp tests passed!"
+fi
+
+make install
+
+make distclean
+cp -v configfsf.guess config.guess
+cp -v configfsf.sub   config.sub
+ABI="32" \
+CFLAGS="-m32 -O2 -pedantic -fomit-frame-pointer -mtune=generic -march=i686" \
+CXXFLAGS="$CFLAGS" \
+PKG_CONFIG_PATH="/usr/lib32/pkgconfig" \
+./configure                      \
+    --host=i686-pc-linux-gnu     \
+    --prefix=/usr                \
+    --disable-static             \
+    --enable-cxx                 \
+    --libdir=/usr/lib32          \
+    --includedir=/usr/include/m32/gmp
+
+sed -i 's/$(exec_prefix)\/include/$\(includedir\)/' Makefile
+make
+
+make check 2>&1 | tee gmp-check-log
+NUMPASSED=$(awk '/# PASS:/{total+=$3} ; END{print total}' gmp-check-log)
+
+if [ NUMPASSED -lt 197 ]; then
+    echo "Only $NUMPASSED gmp tests passed!"
+fi
+
+make DESTDIR=$PWD/DESTDIR install
+cp -Rv DESTDIR/usr/lib32/* /usr/lib32
+cp -Rv DESTDIR/usr/include/m32/* /usr/include/m32/
+rm -rf DESTDIR
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib{,32}/libgmp{,xx}.so*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

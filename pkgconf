@@ -1,0 +1,29 @@
+#!/bin/bash
+NAME="pkgconf"
+VERS=2.3.0
+LINK="https://distfiles.ariadne.space/pkgconf/pkgconf-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm --docdir=/tmp/rid/trash
+ln -sv pkgconf   /usr/bin/pkg-config
+ln -sv pkgconf.1 /usr/share/man/man1/pkg-config.1
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf  /usr/bin/{pkgconf,bomtool}  \
+        /usr/lib/libpkgconf.so*     \
+        /usr/bin/pkg-config
+        
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

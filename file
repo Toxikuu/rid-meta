@@ -1,0 +1,26 @@
+#!/bin/bash
+NAME="file"
+VERS=5.45
+LINK="https://astron.com/pub/file/file-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+32cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/bin/file    \
+    /usr/lib{,32}/libmagic.so*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

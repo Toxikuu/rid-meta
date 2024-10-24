@@ -1,0 +1,35 @@
+#!/bin/bash
+NAME="psmisc"
+VERS=23.7
+LINK="https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+pushd /usr/bin
+
+rm -vf \
+    fuser   \
+    killall \
+    peekfd  \
+    prtstat \
+    pslog   \
+    pstree  \
+    pstree.x11
+
+popd
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

@@ -1,0 +1,26 @@
+#!/bin/bash
+NAME="bc"
+VERS=7.0.3
+LINK="https://github.com/gavinhoward/bc/releases/download/$VERS/bc-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+CC=gcc ./configure --prefix=/usr -G -O3 -r
+make
+make install
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/bin/{b,d}c
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

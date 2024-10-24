@@ -1,0 +1,52 @@
+#!/bin/bash
+NAME="binutils"
+VERS=2.43.1
+LINK="https://sourceware.org/pub/binutils/releases/binutils-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+mkdir -v build
+cd       build
+
+../configure --prefix=/usr       \
+             --sysconfdir=/etc   \
+             --enable-gold       \
+             --enable-ld=default \
+             --enable-plugins    \
+             --enable-shared     \
+             --disable-werror    \
+             --enable-64-bit-bfd \
+             --with-system-zlib  \
+             --enable-default-hash-style=gnu \
+             --enable-multilib
+
+make tooldir=/usr
+
+make -k check
+NUMFAILED=$(grep '^FAIL:' $(find -name '*.log') | wc -l)
+
+echo "Number of binutils tests failed: $NUMFAILED"
+echo "Acceptable number: 12"
+
+if [ NUMFAILED -gt 12 ]; then
+    die "More than 12 binutils tests failed!"
+fi
+
+make tooldir=/usr install
+rm -fv /usr/lib/lib{bfd,ctf,ctf-nobfd,gprofng,opcodes,sframe}.a
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

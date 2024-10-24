@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="acl"
+VERS=2.3.2
+LINK="https://download.savannah.gnu.org/releases/acl/acl-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm --docdir=/tmp/rid/trash
+32cm --libexecdir=/usr/lib32
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

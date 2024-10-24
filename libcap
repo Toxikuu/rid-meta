@@ -1,0 +1,35 @@
+#!/bin/bash
+NAME="libcap"
+VERS=2.70
+LINK="https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+sed -i '/install -m.*STA/d' libcap/Makefile
+
+make prefix=/usr lib=lib
+make prefix=/usr lib=lib install
+
+make distclean
+make CC="gcc -m32 -march=i686"
+make CC="gcc -m32 -march=i686" lib=lib32 prefix=$PWD/DESTDIR/usr -C libcap install
+cp -Rv DESTDIR/usr/lib32/* /usr/lib32
+sed -e "s|^libdir=.*|libdir=/usr/lib32|" -i /usr/lib32/pkgconfig/lib{cap,psx}.pc
+chmod -v 755 /usr/lib32/libcap.so.$VERS
+rm -rf DESTDIR
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

@@ -1,0 +1,27 @@
+#!/bin/bash
+NAME="libtool"
+VERS=2.5.3
+LINK="https://ftp.gnu.org/gnu/libtool/libtool-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+rm -vf /usr/lib/libltdl.a
+
+32cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

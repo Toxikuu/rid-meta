@@ -1,0 +1,33 @@
+#!/bin/bash
+NAME="dejagnu"
+VERS=1.6.3
+LINK="https://ftp.gnu.org/gnu/dejagnu/dejagnu-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+mkdir -v build
+cd       build
+
+../configure --prefix=/usr
+makeinfo --html --no-split -o doc/dejagnu.html ../doc/dejagnu.texi
+makeinfo --plaintext       -o doc/dejagnu.txt  ../doc/dejagnu.texi
+
+make install
+install -v -dm755  /usr/share/doc/dejagnu-$VERS
+install -v -m644   doc/dejagnu.{html,txt} /usr/share/doc/dejagnu-$VERS
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/bin/{dejagnu,runtest}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

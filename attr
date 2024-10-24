@@ -1,0 +1,44 @@
+#!/bin/bash
+NAME="attr"
+VERS=2.5.2
+LINK="https://download.savannah.gnu.org/releases/attr/attr-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+./configure --prefix=/usr     \
+            --disable-static  \
+            --sysconfdir=/etc \
+            --docdir=/tmp/rid/trash
+
+make
+make install
+
+make distclean
+
+CC="gcc -m32" ./configure \
+    --prefix=/usr         \
+    --disable-static      \
+    --sysconfdir=/etc     \
+    --libdir=/usr/lib32   \
+    --host=i686-pc-linux-gnu
+
+make
+make DESTDIR=$PWD/DESTDIR install
+cp -Rv DESTDIR/usr/lib32/* /usr/lib32
+rm -rf DESTDIR
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

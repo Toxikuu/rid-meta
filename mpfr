@@ -1,0 +1,30 @@
+#!/bin/bash
+NAME="mpfr"
+VERS=4.2.1
+LINK="https://ftp.gnu.org/gnu/mpfr/mpfr-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+./configure --prefix=/usr        \
+            --disable-static     \
+            --enable-thread-safe \
+            --docdir=/tmp/rid/trash
+
+make
+make install
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib/libmpfr.so*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

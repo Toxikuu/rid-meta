@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="gettext"
+VERS=0.22.5
+LINK="https://ftp.gnu.org/gnu/gettext/gettext-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm --docdir=/tmp/rid/trash
+chmod -v 0755 /usr/lib/preloadable_libintl.so
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

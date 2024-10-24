@@ -1,0 +1,50 @@
+#!/bin/bash
+NAME="xz"
+VERS=5.6.2
+LINK="https://github.com//tukaani-project/xz/releases/download/v$VERS/xz-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm --disable-doc
+32cm --disable-doc
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+pushd /usr/bin
+rm -vf \
+    lzcat       \
+    lzcmp       \
+    lzdiff      \
+    lzegrep     \
+    lzfgrep     \
+    lzgrep      \
+    lzless      \
+    lzma        \
+    lzmadec     \
+    lzmainfo    \
+    lzmore      \
+    unlzma      \
+    unxz        \
+    xz          \
+    xzcat       \
+    xzcmp       \
+    xzdec       \
+    xzdiff      \
+    xzegrep     \
+    xzfgrep     \
+    xzgrep      \
+    xzless      \
+    xzmore      \
+    /usr/lib{,32}/liblzma.so*
+popd
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

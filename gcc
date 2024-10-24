@@ -1,0 +1,70 @@
+#!/bin/bash
+NAME="gcc"
+VERS=14.2.0
+LINK="https://ftp.gnu.org/gnu/gcc/gcc-$VERS/gcc-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+sed -e '/m64=/s/lib64/lib/' \
+    -e '/m32=/s/m32=.*/m32=..\/lib32$(call if_multiarch,:i386-linux-gnu)/' \
+    -i.orig gcc/config/i386/t-linux64
+
+mkdir -v build
+cd       build
+
+mlist=m64,m32
+../configure --prefix=/usr               \
+             LD=ld                       \
+             --enable-languages=c,c++    \
+             --enable-default-pie        \
+             --enable-default-ssp        \
+             --enable-host-pie           \
+             --enable-multilib           \
+             --with-multilib-list=$mlist \
+             --disable-bootstrap         \
+             --disable-fixincludes       \
+             --with-system-zlib
+
+make
+make install
+
+ln -svr /usr/bin/cpp /usr/lib
+ln -sv gcc.1 /usr/share/man/man1/cc.1
+
+ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/14.2.0/liblto_plugin.so \
+        /usr/lib/bfd-plugins/
+
+echo 'int main(){}' > dummy.c
+cc dummy.c -v -Wl,--verbose &> dummy.log
+readelf -l a.out | grep ': /lib'
+
+grep -E -o '/usr/lib.*/S?crt[1in].*succeeded' dummy.log | grep succeeded || die "GCC sanity check failure!"
+
+grep -B4 '^ /usr/include' dummy.log
+
+grep 'SEARCH.*/usr/lib' dummy.log |sed 's|; |\n|g'
+
+grep "/lib.*/libc.so.6 " dummy.log | grep succeeded || die "GCC sanity check failure!"
+
+grep found dummy.log | grep found || die "GCC sanity check failure!"
+
+rm -v dummy.c a.out dummy.log
+
+mkdir -pv /usr/share/gdb/auto-load/usr/lib
+mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

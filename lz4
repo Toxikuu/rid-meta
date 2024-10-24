@@ -1,0 +1,35 @@
+#!/bin/bash
+NAME="lz4"
+VERS=1.10.0
+LINK="https://github.com/lz4/lz4/releases/download/v$VERS/lz4-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+make BUILD_STATIC=no PREFIX=/usr
+make BUILD_STATIC=no PREFIX=/usr install
+
+make clean
+
+CC="gcc -m32" make BUILD_STATIC=no
+make BUILD_STATIC=no PREFIX=/usr LIBDIR=/usr/lib32 DESTDIR=$(pwd)/m32 install &&
+cp -a m32/usr/lib32/* /usr/lib32/
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf \
+    /usr/bin/lz4{,c,cat}    \
+    /usr/bin/unlz4          \
+    /usr/lib{,32}/liblz4.so*
+    
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

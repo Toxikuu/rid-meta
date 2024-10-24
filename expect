@@ -1,0 +1,34 @@
+#!/bin/bash
+NAME="expect"
+VERS=5.45.4
+LINK="https://prdownloads.sourceforge.net/expect/expect$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+patch -Np1 -i /etc/rid/sources/expect-5.45.4-gcc14-1.patch
+
+cm  \
+    --with-tcl=/usr/lib     \
+    --enable-shared         \
+    --disable-rpath         \
+    --mandir=/usr/share/man \
+    --with-tclinclude=/usr/include
+
+ln -svf expect5.45.4/libexpect5.45.4.so /usr/lib
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf  /usr/bin/expect  \
+        /usr/lib/libexpect$VERS.so
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
