@@ -6,7 +6,7 @@ DEPS="rust"
 
 # this meta file may need to be updated depending on the trajectory of rid's future development
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 # # commented out for testing convenience
 # # feel free to uncomment and build from source
@@ -23,10 +23,10 @@ if [ -e /etc/rid-packages.bak ]; then
   echo "restored packages backup"
 fi
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 cp -vf /etc/rid/packages.txt /etc/rid-packages.bak
 rm -rvf /etc/rid
@@ -36,10 +36,10 @@ echo "This is done in case you want a clean rid reinstall"
 echo "To get rid of rid, run the following commands:
 echo "rm -vf /usr/bin/rid /etc/rid-packages.bak"
 
-EOF
+~fin.
 )
 
 # i may update udir to house the backups currently done in rdir
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

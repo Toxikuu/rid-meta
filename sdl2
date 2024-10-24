@@ -5,26 +5,26 @@ LINK="https://www.libsdl.org/release/SDL2-$VERS.tar.gz"
 DEPS="libxkbcommon wayland-protocols xorg-libraries"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 cm
 rm -v /usr/lib/libSDL2*.a
 32cm
 rm -v /usr/lib32/libSDL2*.a
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -vf /usr/lib{,32}/libSDL2.{la,so*}   \
     /usr/bin/sdl2-config
 rm -rvf /usr/include/SDL2               \
     /usr/lib/cmake/SDL2
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

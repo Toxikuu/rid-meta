@@ -6,21 +6,21 @@ LINK="http://ftp.rpm.org/popt/releases/popt-$ver.x/popt-$VERS.tar.gz"
 DEPS=""
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 cm
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -vf /usr/lib/libpopt.la \
        /usr/lib/libpopt.so*
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

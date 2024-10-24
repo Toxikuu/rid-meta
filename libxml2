@@ -27,13 +27,13 @@ rm -vf /usr/lib32/libxml2.la
 ~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

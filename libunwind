@@ -25,17 +25,17 @@ rm -rf /tmp/rid/dest/*
 ldconfig
 unset DESTDIR
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -vf  /usr/lib/libunwind.* \
         /usr/lib/libunwind-*
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

@@ -181,13 +181,13 @@ done
 ~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

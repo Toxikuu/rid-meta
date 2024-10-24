@@ -5,21 +5,21 @@ LINK="https://github.com/rhboot/efibootmgr/archive/$VERS/efibootmgr-$VERS.tar.gz
 DEPS="efivar popt"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 make EFIDIR=LFS EFI_LOADER=tox64.efi
 make install EFIDIR=LFS
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

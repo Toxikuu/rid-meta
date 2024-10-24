@@ -5,20 +5,20 @@ LINK="https://ftp.gnu.org/gnu/which/which-$VERS.tar.gz"
 DEPS=""
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 cm
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -vf /usr/bin/which
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

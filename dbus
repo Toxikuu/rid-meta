@@ -6,7 +6,7 @@ LINK="https://dbus.freedesktop.org/releases/dbus/dbus-$VERS.tar.xz"
 DEPS=""  # xorg-libraries for dbus-launch
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 cm                                  \
     --sysconfdir=/etc               \
@@ -32,16 +32,16 @@ cd blfs-bootscripts-$blfsbsver
 make install-dbus
 popd
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

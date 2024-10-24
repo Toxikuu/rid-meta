@@ -5,7 +5,7 @@ LINK="https://invisible-mirror.net/archives/lynx/tarballs/lynx$VERS.tar.bz2"
 DEPS=""
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 ./configure --prefix=/usr           \
             --sysconfdir=/etc/lynx  \
@@ -19,18 +19,18 @@ make
 make install-full
 chgrp -v -R root /usr/share/doc/lynx-$VERS/lynx_doc
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -vf /usr/bin/lynx
 rm -rvf /etc/lynx \
   /usr/share/doc/lynx-$VERS
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

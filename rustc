@@ -98,11 +98,11 @@ echo "pathprepend /opt/rustc/bin" >> /etc/profile
 ~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
 UDIR=$(cat << '~fin.'

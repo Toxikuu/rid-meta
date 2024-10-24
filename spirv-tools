@@ -5,7 +5,7 @@ LINK="https://github.com/KhronosGroup/SPIRV-Tools/archive/vulkan-sdk-$VERS/SPIRV
 DEPS="cmake spirv-headers"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 mkdir -v build &&
 cd       build &&
@@ -40,16 +40,16 @@ ldconfig
 
 unset DESTDIR
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

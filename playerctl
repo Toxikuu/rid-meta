@@ -5,23 +5,23 @@ LINK="https://github.com/altdesktop/$NAME/archive/refs/tags/v$VERS.tar.gz"
 DEPS=""
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 mn -D zsh-completions=false \
    -D bash-completions=true \
    -D introspection=true    \
    -D gtk-doc=false
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

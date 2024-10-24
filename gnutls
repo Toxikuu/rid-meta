@@ -6,21 +6,21 @@ LINK="https://www.gnupg.org/ftp/gcrypt/gnutls/v$ver/gnutls-$VERS.tar.xz"
 DEPS="nettle make-ca libunistring libtasn1 p11-kit"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 cm --docdir=/tmp/rid/trash \
    --with-default-trust-store-pkcs11="pkcs11:"
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

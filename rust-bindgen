@@ -5,21 +5,21 @@ LINK="https://github.com/rust-lang/rust-bindgen/archive/v$VERS.tar.gz"
 DEPS="llvm rustc"  # llvm with clang
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 cargo build --release
 install -Dm755 target/release/bindgen /usr/bin/
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -vf /usr/bin/bindgen
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

@@ -49,7 +49,7 @@ chmod 775       /opt/cargo
 ~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -rvf /opt/{cargo,rustup}
 
@@ -63,7 +63,7 @@ fi
 
 sed -i '/# cargo/,/# cargo end/d' /etc/toxenv
 
-EOF
+~fin.
 )
 
 UDIR=$(cat << '~fin.'

@@ -6,7 +6,7 @@ LINK="https://downloads.sourceforge.net/project/infozip/UnZip%206.x%20%28latest%
 DEPS="wget"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 raw https://www.linuxfromscratch.org/patches/blfs/svn/unzip-$VERS-consolidated_fixes-1.patch
 raw https://www.linuxfromscratch.org/patches/blfs/svn/unzip-$VERS-gcc14-1.patch
@@ -18,18 +18,18 @@ make -f unix/Makefile generic
 make prefix=/usr MANDIR=/usr/share/man/man1 \
  -f unix/Makefile install
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -vf /usr/bin/{,f}unzip \
   /usr/bin/unzipsfx       \
   /usr/bin/zip{grep,info}
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

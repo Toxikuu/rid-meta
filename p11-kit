@@ -30,13 +30,13 @@ ln -sfv ./pkcs11/p11-kit-trust.so /usr/lib32/libnssckbi.so
 ~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

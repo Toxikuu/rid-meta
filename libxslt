@@ -6,14 +6,14 @@ LINK="https://download.gnome.org/sources/libxslt/$ver/libxslt-$VERS.tar.xz"
 DEPS="libxml2 docbook-xml docbook-xsl-nons"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 cm --docdir=/tmp/rid/trash
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -vf /usr/bin/xslt-config \
        /usr/bin/xsltproc    \
@@ -25,9 +25,9 @@ rm -rvf /usr/include/libexslt    \
         /usr/lib/cmake/libxslt   \
         /usr/lib/libxslt-plugins
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

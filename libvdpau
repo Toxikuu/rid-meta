@@ -5,22 +5,22 @@ LINK="https://gitlab.freedesktop.org/vdpau/libvdpau/-/archive/$VERS/libvdpau-$VE
 DEPS="xorg-libraries"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 mn   -D documentation=false
 32mn -D documentation=false
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -rvf /usr/{lib,include}/vdpau
 rm -vf /usr/lib{,32}/libvdpau.so*
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

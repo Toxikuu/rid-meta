@@ -6,7 +6,7 @@ LINK="https://download.gnome.org/sources/glib/$ver/glib-$VERS.tar.xz"
 DEPS=""
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 if [ -e /usr/include/glib-2.0 ]; then
     rm -rf /usr/include/glib-2.0.old &&
@@ -19,16 +19,16 @@ mn \
     -D man-pages=disabled     \
     -D sysprof=disabled
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

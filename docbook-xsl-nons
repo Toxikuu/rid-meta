@@ -5,7 +5,7 @@ LINK="https://github.com/docbook/xslt10-stylesheets/releases/download/release/$V
 DEPS="libxml2"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 raw https://www.linuxfromscratch.org/patches/blfs/svn/docbook-xsl-nons-$VERS-stack_fix-1.patch
 
@@ -84,17 +84,17 @@ xmlcatalog --noout --add "rewriteURI" \
            "/usr/share/xml/docbook/xsl-stylesheets-nons-$VERS" \
     /etc/xml/catalog
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -rvf /usr/share/xml/docbook/xsl-stylesheets-nons-$VERS \
         /usr/share/doc/docbook-xsl-nons-$VERS
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

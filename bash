@@ -16,10 +16,10 @@ IDIR=$(cat << '~fin.'
 make
 make install
 
+rm -vf /usr/bin/bashbug
+
 echo "You should now run:" 
 echo "exec /usr/bin/bash --login"
-
-rm -vf /usr/bin/bashbug
 
 ~fin.
 )

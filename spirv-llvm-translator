@@ -6,7 +6,7 @@ LINK="https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v$VERS/SPIRV
 DEPS="cmake libxml2 llvm spirv-headers spirv-tools"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 mkdir build &&
 cd    build &&
@@ -36,17 +36,17 @@ cp -vr /tmp/rid/dest/usr/lib32/* /usr/lib32
 rm -rf /tmp/rid/dest
 ldconfig
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
+UDIR=$(cat << '~fin.'
 
-EOF
+~fin.
 )

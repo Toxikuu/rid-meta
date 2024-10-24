@@ -19,15 +19,15 @@ install -vdm755 /etc/ssl/local
 ~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -rvf /usr/bin/make-ca            \
         /etc/ssl/{certs,local}      \
         /etc/pki/{nssdb,anchors,tls/{certs,java}}
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

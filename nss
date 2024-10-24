@@ -6,7 +6,7 @@ LINK="https://archive.mozilla.org/pub/security/nss/releases/NSS_${ver}_RTM/src/n
 DEPS="nspr"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 raw https://www.linuxfromscratch.org/patches/blfs/svn/nss-standalone-1.patch
 patch -Np1 -i /etc/rid/sources/nss-standalone-1.patch &&
@@ -57,16 +57,16 @@ install -v -m644 Linux*/lib/{*.chk,libcrmf.a} /usr/lib32              &&
 sed -i 's/lib/lib32/g' Linux*/lib/pkgconfig/nss.pc                    &&
 install -v -m644 Linux*/lib/pkgconfig/nss.pc  /usr/lib32/pkgconfig
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

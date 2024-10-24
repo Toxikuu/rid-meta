@@ -5,16 +5,16 @@ LINK="https://gitlab.freedesktop.org/xdg/xdg-utils/-/archive/v$VERS/xdg-utils-v$
 DEPS="xmlto lynx xorg-applications"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 ./configure --prefix=/usr &&
 make &&
 make install
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 pushd /usr/bin
   rm -vf \
@@ -28,9 +28,9 @@ pushd /usr/bin
     xdg-settings     &&
 popd
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

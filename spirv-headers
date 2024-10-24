@@ -5,7 +5,7 @@ LINK="https://github.com/KhronosGroup/SPIRV-Headers/archive/vulkan-sdk-$VERS/SPI
 DEPS="cmake"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 mkdir build &&
 cd    build &&
@@ -15,16 +15,16 @@ ninja
 
 DESTDIR= ninja install
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

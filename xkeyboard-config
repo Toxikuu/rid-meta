@@ -5,20 +5,20 @@ LINK="https://www.x.org/pub/individual/data/xkeyboard-config/$NAME-$VERS.tar.xz"
 DEPS="xorg-libraries"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 mn
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -rvf /usr/share/X11/xkb
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

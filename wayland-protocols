@@ -5,20 +5,20 @@ LINK="https://gitlab.freedesktop.org/wayland/$NAME/-/releases/$VERS/downloads/$N
 DEPS="wayland"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 mn
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -rvf /usr/share/wayland-protocols
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

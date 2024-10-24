@@ -5,14 +5,14 @@ LINK="https://ftp.gnu.org/gnu/nettle/nettle-$VERS.tar.gz"
 DEPS=""
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 cm
 chmod   -v   755 /usr/lib/lib{hogweed,nettle}.so &&
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -vf \
     /usr/bin/nettle-hash        \
@@ -25,9 +25,9 @@ rm -vf \
 
 rm -rvf /usr/include/nettle
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

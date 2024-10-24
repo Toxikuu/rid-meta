@@ -5,7 +5,7 @@ LINK="https://www.freedesktop.org/software/$NAME/releases/$NAME-$VERS.tar.xz"
 DEPS="libsndfile alsa-lib check"
 
 # i havent been able to get 32 bit pulse to build. ill mess around with it later but for now note that this package will fail
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 mn   -D database=gdbm \
      -D doxygen=false \
@@ -17,16 +17,16 @@ rm /usr/share/dbus-1/system.d/pulseaudio-system.conf
      -D doxygen=false \
      -D bluez5=disabled
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

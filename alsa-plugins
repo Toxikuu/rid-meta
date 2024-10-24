@@ -5,21 +5,21 @@ LINK="https://www.alsa-project.org/files/pub/plugins/alsa-plugins-$VERS.tar.bz2"
 DEPS="alsa-lib"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 cm   --sysconfdir=/etc --disable-libav
 32cm --sysconfdir=/etc --disable-libav
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

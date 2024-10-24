@@ -4,7 +4,7 @@ VERS=2.13.3
 LINK="https://downloads.sourceforge.net/project/freetype/freetype2/$VERS/freetype-$VERS.tar.xz"
 DEPS="libpng which"
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 sed -ri "s:.*(AUX_MODULES.*valid):\1:" modules.cfg &&
 
@@ -14,16 +14,16 @@ sed -r "s:.*(#.*SUBPIXEL_RENDERING) .*:\1:" \
 cm   --enable-freetype-config --with-harfbuzz=no
 32cm --enable-freetype-config --with-harfbuzz=no --with-brotli=no
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

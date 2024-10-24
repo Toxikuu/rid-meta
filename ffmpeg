@@ -5,7 +5,7 @@ LINK="https://ffmpeg.org/releases/ffmpeg-$VERS.tar.xz"
 DEPS="libaom libass fdk-aac freetype2 lame libvorbis libvpx opus x264 x265 yasm alsa-lib libva sdl2 pulseaudio"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 raw https://www.linuxfromscratch.org/patches/blfs/svn/ffmpeg-$VERS-chromium_method-1.patch
 patch -Np1 -i /etc/rid/sources/ffmpeg-$VERS-chromium_method-1.patch
@@ -36,16 +36,16 @@ cm --enable-gpl                       \
 gcc tools/qt-faststart.c -o tools/qt-faststart
 install -v -m755    tools/qt-faststart /usr/bin &&
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

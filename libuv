@@ -5,23 +5,23 @@ LINK="https://dist.libuv.org/dist/v$VERS/libuv-v$VERS.tar.gz"
 DEPS=""
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 sh autogen.sh                              &&
 ./configure --prefix=/usr --disable-static &&
 make
 make install
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

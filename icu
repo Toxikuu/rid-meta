@@ -6,23 +6,23 @@ ver2="${VERS//./_}"
 LINK="https://github.com/unicode-org/icu/releases/download/release-$ver1/icu4c-$ver2-src.tgz"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 cd source                                    &&
 
 cm
 32cm
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

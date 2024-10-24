@@ -6,7 +6,7 @@ LINK="https://cmake.org/files/v$ver/cmake-$VERS.tar.gz"
 DEPS="curl libarchive libuv nghttp2"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 sed -i '/"lib64"/s/64//' Modules/GNUInstallDirs.cmake &&
 
@@ -21,16 +21,16 @@ sed -i '/"lib64"/s/64//' Modules/GNUInstallDirs.cmake &&
 make
 make DESTDIR= install
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

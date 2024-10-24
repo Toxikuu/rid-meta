@@ -5,24 +5,24 @@ LINK="https://www.x.org/pub/individual/lib/libxcvt-$VERS.tar.xz"
 DEPS=""
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 mn
 32mn
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -rvf                         \
     /usr/bin/cvt                \
     /usr/lib{,32}/libxcvt.so*   \
     /usr/include/libxcvt
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

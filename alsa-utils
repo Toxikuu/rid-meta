@@ -5,7 +5,7 @@ LINK="https://www.alsa-project.org/files/pub/utils/alsa-utils-$VERS.tar.bz2"
 DEPS="alsa-lib"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 cm --disable-alsaconf \
    --disable-bat      \
@@ -23,16 +23,16 @@ defaults.ctl.card 1
 # End /etc/asound.conf
 hi
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

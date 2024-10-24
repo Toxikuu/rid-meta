@@ -5,22 +5,22 @@ LINK="https://duktape.org/duktape-$VERS.tar.xz"
 DEPS=""
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 sed -i 's/-Os/-O2/' Makefile.sharedlibrary
 make -f Makefile.sharedlibrary INSTALL_PREFIX=/usr
 make -f Makefile.sharedlibrary INSTALL_PREFIX=/usr install
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -vf /usr/lib/libduktape{,d}.so*
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

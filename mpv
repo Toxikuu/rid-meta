@@ -5,7 +5,7 @@ LINK="https://github.com/mpv-player/mpv/archive/v0.39.0/mpv-0.39.0.tar.gz"
 DEPS="alsa-lib ffmpeg libass libplacebo mesa pulseaudio libjpeg-turbo libva libvdpau luajit uchardet vulkan-loader"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 sed -i 's/AV_OPT_TYPE_CHANNEL_LAYOUT/AV_OPT_TYPE_CHLAYOUT/' filters/f_lavfi.c
 
@@ -40,16 +40,16 @@ mn -D x11=enabled                     \
 gtk-update-icon-cache -qtf /usr/share/icons/hicolor &&
 update-desktop-database -q
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

@@ -6,7 +6,7 @@ LINK="https://www.kernel.org/pub/software/scm/git/git-$VERS.tar.xz"
 DEPS="curl perl"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 export RIDBUILD=0
 export perllibdir=/usr/lib/perl5/$perlvers/site_perl
@@ -16,10 +16,10 @@ cm --with-gitconfig=/etc/gitconfig \
 
 unset RIDBUILD perllibdir
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -rvf ~/.gitconfig                                          \
          /etc/gitconfig                                       \
@@ -28,9 +28,9 @@ rm -rvf ~/.gitconfig                                          \
          /usr/bin/git-upload-{archive,pack}                   \
          /usr/bin/scalar             
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

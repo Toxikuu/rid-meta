@@ -5,23 +5,23 @@ LINK="https://github.com/libcheck/check/releases/download/$VERS/check-$VERS.tar.
 DEPS=""
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 export docdir=/tmp/rid/trash
 cm
 32cm
 unset docdir
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

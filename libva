@@ -5,15 +5,15 @@ LINK="https://github.com/intel/libva/archive/$VERS/libva-$VERS.tar.gz"
 DEPS="libdrm"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 mn
 32mn
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -rvf /usr/lib/libva-drm.so*      \
        /usr/lib/libva-glx.so*       \
@@ -22,9 +22,9 @@ rm -rvf /usr/lib/libva-drm.so*      \
        /usr/lib/libva-x11.so*       \
        /usr/include/va
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

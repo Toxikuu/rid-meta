@@ -5,21 +5,21 @@ LINK="https://github.com/rockdaboot/$NAME/releases/download/$VERS/$NAME-$VERS.ta
 DEPS="libidn2 libunistring"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 mn
 32mn
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

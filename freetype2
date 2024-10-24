@@ -4,24 +4,24 @@ VERS=2.13.3
 LINK="https://downloads.sourceforge.net/project/freetype/freetype2/$VERS/freetype-$VERS.tar.xz"
 DEPS="libpng which"
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 cm   --enable-freetype-config
 32cm --enable-freetype-config --with-brotli=no
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -rvf 
     /usr/bin/freetype-config    \
     /usr/lib{,32}/libfreetype.* \
     /usr/include/freetype2
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

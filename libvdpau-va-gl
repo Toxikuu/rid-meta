@@ -32,13 +32,13 @@ echo "export VDPAU_DRIVER=va_gl" >> /etc/profile
 ~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -vf /usr/lib/vdpau/libvdpau_va_gl.so*
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

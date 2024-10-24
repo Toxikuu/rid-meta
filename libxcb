@@ -5,15 +5,15 @@ LINK="https://xorg.freedesktop.org/archive/individual/lib/libxcb-$VERS.tar.xz"
 DEPS="libxau xcb-proto libxdmcp"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 cm $XORG_CONFIG --without-doxygen --docdir=/tmp/rid/trash
 32cm $XORG_CONFIG
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 pushd /usr/lib
 rm -vf \
@@ -27,9 +27,9 @@ popd
 rm -rvf /usr/include/xcb/
 
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

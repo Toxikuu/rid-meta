@@ -6,11 +6,10 @@ LINK="https://www.cpan.org/src/$ver.0/perl-$VERS.tar.xz"
 DEPS=""
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 export BUILD_ZLIB=False
 export BUILD_BZIP2=0
-unset DESTDIR
 
 sh Configure -des                                          \
              -D prefix=/usr                                \
@@ -31,16 +30,16 @@ make
 make install
 unset BUILD_ZLIB BUILD_BZIP2
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

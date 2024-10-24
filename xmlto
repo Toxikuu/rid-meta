@@ -5,23 +5,23 @@ LINK="https://pagure.io/xmlto/archive/$VERS/xmlto-$VERS.tar.gz"
 DEPS="docbook-xml docbook-xsl-nons libxslt"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 autoreconf -fiv &&
 LINKS="/usr/bin/links" cm
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -rvf /usr/share/xmlto  \
   /usr/bin/xmlif          \
   /usr/bin/xmlto          
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

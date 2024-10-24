@@ -5,22 +5,22 @@ LINK="https://xorg.freedesktop.org/archive/individual/proto/xcb-proto-$VERS.tar.
 DEPS=""
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 PYTHON=python3 ./configure $XORG_CONFIG
 make install
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -rvf /usr/share/xcb/ \
         /usr/lib/python3.12/site-packages/xcbgen
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

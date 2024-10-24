@@ -5,22 +5,22 @@ LINK="https://files.pythonhosted.org/packages/source/M/Mako/Mako-1.3.5.tar.gz"
 DEPS=""
 
 
-IDIR=$(cat << 'EOF'
+IDIR=$(cat << '~fin.'
 
 pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
 pip3 install --no-index --find-links=dist --no-cache-dir --no-user Mako
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -vf /usr/bin/mako-render
 rm -rvf /usr/lib/python3.12/site-packages/{mako,Mako-$VERS.dist-info}
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

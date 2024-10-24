@@ -6,7 +6,7 @@ LINK="https://github.com/llvm/llvm-project/releases/download/llvmorg-$VERS/llvm-
 DEPS="cmake"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 raw \
   https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-cmake-$ver.src.tar.xz                     \
@@ -81,16 +81,16 @@ for i in clang clang++; do
   echo -fstack-protector-strong > /etc/clang/$i.cfg
 done
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

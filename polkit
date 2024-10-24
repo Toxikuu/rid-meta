@@ -5,7 +5,7 @@ LINK="https://github.com/polkit-org/polkit/archive/$VERS/polkit-$VERS.tar.gz"
 DEPS="duktape glib-no-gobject linux-pam elogind"
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 groupadd -fg 27 polkitd &&
 useradd -c "PolicyKit Daemon Owner" -d /etc/polkit-1 -u 27 \
@@ -20,16 +20,16 @@ mn \
     -D introspection=false      \
     -D tests=false
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

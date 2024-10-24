@@ -5,7 +5,7 @@ LINK="https://github.com/Floorp-Projects/Floorp/releases/download/v$VERS/floorp-
 DEPS=""  # floorp has a bunch of dependencies that i dont feel like finding rn
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 rm -rf /usr/src/floorp-$VERS
 
@@ -23,16 +23,16 @@ hi
 
 chmod +x /usr/bin/floorp.sh
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )

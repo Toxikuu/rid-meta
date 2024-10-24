@@ -6,22 +6,22 @@ LINK="https://github.com/vcrhonek/$NAME/archive/v$VERS/$NAME-$VERS.tar.gz"
 DEPS=""
 
 # cant use cm because no make
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 ./configure --prefix=/usr --disable-blacklist
 make install
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 rm -rvf /usr/share/hwdata
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
+UDIR=$(cat << '~fin.'
 
-EOF
+~fin.
 )

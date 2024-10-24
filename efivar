@@ -5,21 +5,21 @@ LINK="https://github.com/rhboot/efivar/archive/$VERS/efivar-$VERS.tar.gz"
 DEPS="" # doc dep on mandoc
 
 
-IDIR=$(cat <<EOF
+IDIR=$(cat << '~fin.'
 
 make ENABLE_DOCS=0
 make install ENABLE_DOCS=0 LIBDIR=/usr/lib
 
-EOF
+~fin.
 )
 
-RDIR=$(cat <<EOF
+RDIR=$(cat << '~fin.'
 
 echo not implemented
 
-EOF
+~fin.
 )
 
-UDIR=$(cat <<EOF
-EOF
+UDIR=$(cat << '~fin.'
+~fin.
 )
