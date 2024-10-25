@@ -15,6 +15,12 @@ cm  --sysconfdir=/etc            \
     --disable-privsep
 unset RIDBUILD
 
+[ -e /etc/rid/sources/blfs-bootscripts-20240913.tar* ] || raw https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20240913.tar.xz
+
+tar xvf /etc/rid/sources/blfs-bootscripts-20240913.tar*
+cd blfs-bootscripts-20240913
+make install-service-dhcpcd
+
 ~fin.
 )
 
