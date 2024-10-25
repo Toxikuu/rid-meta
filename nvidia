@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="nvidia"
-VERS=550.127.05
+VERS=560.35.03
 LINK=""
 DEPS=""
 
