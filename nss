@@ -3,7 +3,7 @@ NAME="nss"
 VERS=3.105
 ver="${VERS//./_}"
 LINK="https://archive.mozilla.org/pub/security/nss/releases/NSS_${ver}_RTM/src/nss-$VERS.tar.gz"
-DEPS="nspr"
+DEPS="nspr" # maybe sqlite
 
 
 IDIR=$(cat << '~fin.'
@@ -12,6 +12,15 @@ IDIR=$(cat << '~fin.'
 
 patch -Np1 -i /etc/rid/sources/nss-standalone-1.patch               ||
 die "Patch failed"
+
+sqlite3 --version > /dev/null 2>&1 && echo -e "\nDetected an SQLite install. You may continue." || 
+if [ -f /usr/lib/libsqlite3.so -o -f /usr/lib32/libsqlite3.so ]; then
+    echo -e "\nDetected an incomplete SQLite installation!" >&2
+    rm -vf /usr/lib{,32}/libsqlite3.so
+    echo "Removed any problematic SQLite libraries. You may continue."
+else
+    echo -e "\nNo SQLite install (complete or otherwise) detected. You may continue."
+fi
 
 cd nss
 
