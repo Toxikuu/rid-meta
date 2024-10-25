@@ -1,0 +1,44 @@
+#!/bin/bash
+NAME="dbus2"
+VERS=1.14.10
+LINK="https://dbus.freedesktop.org/releases/dbus/dbus-$VERS.tar.xz"
+DEPS="dbus1 xorg-libraries"
+
+
+IDIR=$(cat << '~fin.'
+
+make distclean
+cm \
+    --sysconfdir=/etc               \
+    --localstatedir=/var            \
+    --runstatedir=/run              \
+    --disable-doxygen-docs          \
+    --disable-xml-docs              \
+    --with-systemduserunitdir=no    \
+    --with-systemdsystemunitdir=no  \
+    --docdir=/tmp/rid/trash         \
+    --with-system-socket=/run/dbus/system_bus_socket
+
+chown -v root:messagebus /usr/libexec/dbus-daemon-launch-helper
+chmod -v      4750       /usr/libexec/dbus-daemon-launch-helper
+
+[ -e /etc/rid/sources/blfs-bootscripts-20240913.tar.xz ] || raw https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20240913.tar.xz
+
+tar xf /etc/rid/sources/blfs-bootscripts-20240913.tar.xz
+
+cd blfs-bootscripts-20240913
+make install-dbus
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
