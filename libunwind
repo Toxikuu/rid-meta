@@ -7,10 +7,13 @@ DEPS=""
 
 IDIR=$(cat << '~fin.'
 
+RIDBUILD=false
 cm
+unset RIDBUILD
 
+make clean
 CC="gcc -m32" CXX="g++ -m32"                     \
-PKG_Cb32/pkgconfig             \
+PKG_CONFIG_PATH=/usr/lib32/pkgconfig             \
 CFLAGS+=" -Wno-error=incompatible-pointer-types" \
 ./configure --prefix=/usr                        \
             --libdir=/usr/lib32                  \
@@ -18,12 +21,12 @@ CFLAGS+=" -Wno-error=incompatible-pointer-types" \
             --disable-static &&
 
 make
-make DESTDIR=/tmp/rid/dest install
-cp -vr /tmp/rid/dest/usr/lib32/* /usr/lib32
-cp -v /tmp/rid/dest/usr/include/libunwind-x86.h /usr/include
-rm -rf /tmp/rid/dest/*
+
+make DESTDIR=$PWD/DESTDIR install
+cp -vr DESTDIR/usr/lib32/* /usr/lib32
+cp -v DESTDIR/usr/include/libunwind-x86.h /usr/include
+rm -rf DESTDIR
 ldconfig
-unset DESTDIR
 
 ~fin.
 )
