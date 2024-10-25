@@ -1,42 +1,32 @@
 #!/bin/bash
 NAME="kernel"
-VERS=6.12-rc4
-LINK="https://git.kernel.org/torvalds/t/linux-$VERS.tar.gz"
+VERS=6.12.0-rc4
+ver="${VERS//\.0/}"
+LINK="https://git.kernel.org/torvalds/t/linux-$ver.tar.gz"
 DEPS="efibootmgr"
 
 
 IDIR=$(cat << '~fin.'
 
 mkdir -pv /usr/src/linux-$VERS
-cp -rv *  /usr/src/linux-$VERS
-cd        /usr/src/linux-$VERS
+mv -vf *  /usr/src/linux-$VERS
+ln -sfv   /usr/src/linux-$VERS /usr/src/linux
+cd        /usr/src/linux
 
-if [ -e /usr/src/linux/.config ]; then
-  cp -v /usr/src/linux/.config .
-else
-  raw https://raw.githubusercontent.com/Toxikuu/rid/refs/heads/master/defaults/kernelconfig &&
-  cp -v /etc/rid/sources/kernelconfig .config
-fi
+[ -e .config ] || {
+    raw https://raw.githubusercontent.com/Toxikuu/rid/refs/heads/master/defaults/kernelconfig &&
+    cp -vf /etc/rid/sources/kernelconfig .config
+}
 
 make olddefconfig
 make && make modules_install
 
-cp -v arch/x86/boot/bzImage /boot/vmlinuz-$VERS-tox
-cp -v /boot/vmlinuz-$VERS-tox /efi/EFI/TOX/tox64.efi
-cp -v System.map /boot/System.map-$VERS
-cp -v .config /boot/config-$VERS
+cp -vf arch/x86/boot/bzImage /boot/vmlinuz-$VERS-tox
+cp -vf /boot/vmlinuz-$VERS-tox /efi/EFI/TOX/tox64.efi
+cp -vf System.map /boot/System.map-$VERS
+cp -vf .config /boot/config-$VERS
 
-cp -r Documentation -T /usr/share/doc/linux-$VERS
-
-if [ -L /usr/src/linux ]; then
-  rm -vf /usr/src/linux
-else
-  mv /usr/src/linux /usr/src/linux-bak
-fi
-
-ln -sv /usr/src/linux-$VERS /usr/src/linux
-
-chown -R 0:0 /usr/src/linux-$VERS
+cp -rf Documentation -T /usr/share/doc/linux-$VERS
 
 install -v -m755 -d /etc/modprobe.d
 
@@ -48,7 +38,6 @@ install uhci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i uhci_hcd ; true
 
 # End /etc/modprobe.d/usb.conf
 EOF
-
 
 ~fin.
 )
