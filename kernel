@@ -27,7 +27,7 @@ make olddefconfig
 make && make modules_install
 
 cp -vf arch/x86/boot/bzImage /boot/vmlinuz-$VERS-tox
-cp -vf /boot/vmlinuz-$VERS-tox /efi/EFI/LFS/tox64.efi
+cp -vf /boot/vmlinuz-$VERS-tox /efi/EFI/TOX/tox64.efi
 cp -vf System.map /boot/System.map-$VERS
 cp -vf .config /boot/config-$VERS
 
