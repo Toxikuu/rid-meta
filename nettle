@@ -8,7 +8,7 @@ DEPS=""
 IDIR=$(cat << '~fin.'
 
 cm
-chmod -v -m755 /usr/lib/lib{hogweed,nettle}.so
+chmod -v 755 /usr/lib/lib{hogweed,nettle}.so
 
 ~fin.
 )
