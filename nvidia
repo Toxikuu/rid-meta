@@ -1,0 +1,54 @@
+#!/bin/bash
+NAME="nvidia"
+VERS=550.127.05
+LINK=""
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+[ -f /etc/rid/sources/NVIDIA-Linux-x86_64-$VERS.run ] ||
+raw https://us.download.nvidia.com/XFree86/Linux-x86_64/$VERS/NVIDIA-Linux-x86_64-$VERS.run
+
+chmod +x /etc/rid/sources/NVIDIA-Linux-x86_64-$VERS.run
+kver=$(realpath /usr/src/linux | cut -d- -f2-)
+echo "Detected kernel version '$kver'"
+
+/etc/rid/sources/NVIDIA-Linux-x86_64-$VERS.run  \
+    --silent                                    \
+    --ui=none                                   \
+    --no-rpms                                   \
+    --no-x-check                                \
+    --no-peermem                                \
+    --no-systemd                                \
+    --no-questions                              \
+    --x-prefix=/usr                             \
+    --no-nouveau-check                          \
+    --no-ncurses-color                          \
+    --disable-nouveau                           \
+    --force-selinux=no                          \
+    --kernel-name=$kver                         \
+    --run-nvidia-xconfig                        \
+    --no-install-libglvnd                       \
+    --no-rebuild-initramfs                      \
+    --kernel-module-type=proprietary            \
+    --no-check-for-alternate-installs           \
+    --kernel-source-path=/usr/src/linux         \
+    --documentation-prefix=/tmp/rid/trash       \
+    --allow-installation-with-running-driver    \
+    --kernel-install-path=/lib/modules/$kver/kernel/drivers/video ||
+die "NVIDIA's .run failed"
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
