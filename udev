@@ -52,11 +52,15 @@ install -vm644 hwdb.d/*  ../hwdb.d/{*.hwdb,README} /usr/lib/udev/hwdb.d/
 install -vm755 $udev_helpers                       /usr/lib/udev
 install -vm644 ../network/99-default.link          /usr/lib/udev/network
 
+[ -f /etc/rid/sources/udev-lfs-20230818.tar.xz ] || raw https://anduin.linuxfromscratch.org/LFS/udev-lfs-20230818.tar.xz
+
 tar -xvf /etc/rid/sources/udev-lfs-20230818.tar.xz
 make -f udev-lfs-20230818/Makefile.lfs install
 
 
-tar -xf /etc/rid/sources/systemd-man-pages-256.5.tar.xz               \
+[ -f /etc/rid/sources/systemd-man-pages-$VERS.tar.xz ] || raw https://anduin.linuxfromscratch.org/LFS/systemd-man-pages-$VERS.tar.xz
+
+tar -xf /etc/rid/sources/systemd-man-pages-$VERS.tar.xz               \
     --no-same-owner --strip-components=1                              \
     -C /usr/share/man --wildcards '*/udev*' '*/libudev*'              \
                                   '*/systemd.link.5'                  \
@@ -76,6 +80,8 @@ sed 's|lib.*udevd|sbin/udevd|'                                        \
 rm /usr/share/man/man*/systemd*
 
 unset udev_helpers
+
+rm -rf *
 
 PKG_CONFIG_PATH="/usr/lib32/pkgconfig" \
 CC="gcc -m32 -march=i686"              \

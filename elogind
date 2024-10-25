@@ -2,19 +2,26 @@
 NAME="elogind"
 VERS=255.5
 LINK="https://github.com/elogind/elogind/archive/v$VERS/elogind-$VERS.tar.gz"
-DEPS="dbus linux-pam"
+DEPS="dbus1 linux-pam"
 
 
 IDIR=$(cat <<'~fin.'
 
 mn \
-    -D docdir=/tmp/rid/trash     \
-    -D cgroup-controller=elogind \
-    -D dev-kvm-mode=0660         \
+    -D docdir=/tmp/rid/trash        \
+    -D cgroup-controller=elogind    \
+    -D dev-kvm-mode=0660            \
     -D dbuspolicydir=/etc/dbus-1/system.d    
 
-ln -sfv  libelogind.pc /usr/lib/pkgconfig/libsystemd.pc &&
+ln -sfv  libelogind.pc /usr/lib/pkgconfig/libsystemd.pc
 ln -sfvn elogind /usr/include/systemd
+
+32mn \
+    -D cgroup-controller=elogind    \
+    -D dev-kvm-mode=0660            \
+    -D dbuspolicydir=/etc/dbus-1/system.d
+
+ln -sfv  libelogind.pc /usr/lib32/pkgconfig/libsystemd.pc
 
 sed -e '/\[Login\]/a KillUserProcesses=no' \
     -i /etc/elogind/logind.conf

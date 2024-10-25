@@ -1,0 +1,52 @@
+#!/bin/bash
+NAME="dbus1"
+VERS=1.14.10
+LINK="https://dbus.freedesktop.org/releases/dbus/dbus-$VERS.tar.xz"
+DEPS=""
+
+# dbus pass 1
+
+IDIR=$(cat << '~fin.'
+
+cm \
+    --sysconfdir=/etc               \
+    --localstatedir=/var            \
+    --runstatedir=/run              \
+    --disable-doxygen-docs          \
+    --disable-xml-docs              \
+    --disable-static                \
+    --with-systemduserunitdir=no    \
+    --with-systemdsystemunitdir=no  \
+    --docdir=/tmp/rid/trash         \
+    --with-system-socket=/run/dbus/system_bus_socket
+
+chown -v root:messagebus /usr/libexec/dbus-daemon-launch-helper &&
+chmod -v      4750       /usr/libexec/dbus-daemon-launch-helper
+
+dbus-uuidgen --ensure
+ln -sfv /var/lib/dbus/machine-id /etc
+
+32cm \
+    --sysconfdir=/etc               \
+    --localstatedir=/var            \
+    --runstatedir=/run              \
+    --disable-doxygen-docs          \
+    --disable-xml-docs              \
+    --disable-static                \
+    --with-systemduserunitdir=no    \
+    --with-systemdsystemunitdir=no  \
+    --with-system-socket=/run/dbus/system_bus_socket
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

@@ -2,20 +2,42 @@
 NAME="pulseaudio"
 VERS=17.0
 LINK="https://www.freedesktop.org/software/$NAME/releases/$NAME-$VERS.tar.xz"
-DEPS="libsndfile alsa-lib check"
+DEPS="libsndfile alsa-lib check dbus1"
 
 # i havent been able to get 32 bit pulse to build. ill mess around with it later but for now note that this package will fail
 IDIR=$(cat << '~fin.'
 
-mn   -D database=gdbm \
-     -D doxygen=false \
-     -D bluez5=disabled
+mkdir build && cd build
 
-rm /usr/share/dbus-1/system.d/pulseaudio-system.conf
+meson setup --prefix=/usr       \
+            --buildtype=release \
+            --strip             \
+            -D database=gdbm    \
+            -D doxygen=false    \
+            -D bluez5=disabled  \
+            ..
+ninja
+ninja install
 
-32mn -D database=gdbm \
-     -D doxygen=false \
-     -D bluez5=disabled
+rm -vf /usr/share/dbus-1/system.d/pulseaudio-system.conf
+
+
+rm -rf *
+meson setup --cross-file lib32       \
+            --prefix=/usr            \
+            --libdir=/usr/lib32      \
+            --buildtype=release      \
+            --strip                  \
+            -D database=gdbm         \
+            -D doxygen=false         \
+            -D bluez5=disabled       \
+            ..
+
+ninja
+DESTDIR=$PWD/DESTDIR ninja install
+cp -vr DESTDIR/usr/lib32/* /usr/lib32
+rm -rf DESTDIR
+ldconfig
 
 ~fin.
 )
