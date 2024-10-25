@@ -2,10 +2,9 @@
 NAME="mesa"
 VERS=24.2.5
 LINK="https://mesa.freedesktop.org/archive/mesa-$VERS.tar.xz"
-DEPS="xorg-libraries libdrm mako pyyaml cbindgen rust-bindgen rustc glslang libclc libglvnd libva libvdpau llvm ply vulkan-loader nettle"
+DEPS="xorg-libraries libdrm mako pyyaml libglvnd libva libvdpau libvdpau-va-gl nettle"
+# the deps need more testing
 
-
-# instructions disable mesa support
 IDIR=$(cat << '~fin.'
 
 mn \
