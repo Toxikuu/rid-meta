@@ -9,13 +9,13 @@ DEPS="xorg-libraries libdrm mako pyyaml cbindgen rust-bindgen rustc glslang libc
 IDIR=$(cat << '~fin.'
 
 mn \
-    -D osmesa=true              \
     -D platforms=x11            \
-    -D gallium-drivers=llvmpipe \
     -D vulkan-drivers=""        \
     -D valgrind=disabled        \
     -D libunwind=disabled       \
     -D glvnd=enabled            \
+    -D llvm=disabled            \
+    -D gallium-drivers=nouveau  \
     -D video-codecs=all         
 
 rm -rvf  ridbuild
@@ -28,14 +28,15 @@ meson setup                                  \
     --prefix=$XORG_PREFIX                    \
     --libdir=$XORG_PREFIX/lib32              \
     --buildtype=release                      \
-    -D osmesa=true                           \
+    --strip                                  \
     -D platforms=x11                         \
-    -D gallium-drivers=llvmpipe              \
+    -D gallium-drivers=nouveau               \
     -D vulkan-drivers=""                     \
     -D valgrind=disabled                     \
     -D libunwind=disabled                    \
     -D glvnd=enabled                         \
     -D video-codecs=all                      \
+    -D llvm=disabled                         \
     .. &&
     sed -i 's/\/usr\/lib\//\/usr\/lib32\//g' ./build.ninja &&
 
