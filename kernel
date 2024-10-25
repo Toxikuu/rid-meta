@@ -1,15 +1,20 @@
 #!/bin/bash
 NAME="kernel"
-VERS=6.12.0-rc4
-ver="${VERS//\.0/}"
-LINK="https://git.kernel.org/torvalds/t/linux-$ver.tar.gz"
-DEPS="efibootmgr"
+VERS=6.11.5
+# ver="${VERS//\.0/}"
+LINK="https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-$VERS.tar.gz"
+DEPS=""
 
 
 IDIR=$(cat << '~fin.'
 
 mkdir -pv /usr/src/linux-$VERS
 mv -vf *  /usr/src/linux-$VERS
+
+[ -e /usr/src/linux/.config ] &&
+cp /usr/src/linux/.config /usr/src/linux-$VERS/.config
+
+rm -rf    /usr/src/linux
 ln -sfv   /usr/src/linux-$VERS /usr/src/linux
 cd        /usr/src/linux
 
@@ -22,7 +27,7 @@ make olddefconfig
 make && make modules_install
 
 cp -vf arch/x86/boot/bzImage /boot/vmlinuz-$VERS-tox
-cp -vf /boot/vmlinuz-$VERS-tox /efi/EFI/TOX/tox64.efi
+cp -vf /boot/vmlinuz-$VERS-tox /efi/EFI/LFS/tox64.efi
 cp -vf System.map /boot/System.map-$VERS
 cp -vf .config /boot/config-$VERS
 
