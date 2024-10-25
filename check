@@ -17,7 +17,8 @@ unset docdir
 
 RDIR=$(cat << '~fin.'
 
-echo not implemented
+rm -vf  /usr/bin/checkmk    \
+        /usr/lib{,32}/libcheck.so*
 
 ~fin.
 )

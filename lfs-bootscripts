@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="lfs-bootscripts"
+VERS=20240825
+LINK="https://www.linuxfromscratch.org/lfs/downloads/development/lfs-bootscripts-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+make install
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

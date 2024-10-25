@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="procps-ng"
+VERS=4.0.4
+LINK="https://sourceforge.net/projects/procps-ng/files/Production/procps-ng-4.0.4.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm  --docdir=/tmp/rid/trash \
+    --disable-kill
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

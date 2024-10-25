@@ -1,0 +1,29 @@
+#!/bin/bash
+NAME="findutils"
+VERS=4.10.0
+LINK="https://ftp.gnu.org/gnu/findutils/findutils-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm --localstatedir=/var/lib/locate
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf  /usr/bin/find   \
+        /usr/bin/locate \
+        /usr/bin/xargs  \
+        /usr/bin/updatedb
+
+rm -rvf /var/lib/locate
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

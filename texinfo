@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="texinfo"
+VERS=7.1.1
+LINK="https://ftp.gnu.org/gnu/texinfo/texinfo-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+# make TEXMF=/usr/share/texmf install-tex
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

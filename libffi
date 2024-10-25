@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libffi"
+VERS=3.4.6
+LINK="https://github.com/libffi/libffi/releases/download/v$VERS/libffi-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm --with-gcc-arch=native
+32cm --with-gcc-arch=i686
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

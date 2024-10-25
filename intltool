@@ -1,0 +1,26 @@
+#!/bin/bash
+NAME="intltool"
+VERS=0.51.0
+LINK="https://launchpad.net/intltool/trunk/$VERS/+download/intltool-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+sed -i 's:\\\${:\\\$\\{:' intltool-update.in
+cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/share/intltool
+rm -vf /usr/bin/intltool{,ize,-update,-prepare,-merge,-extract}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

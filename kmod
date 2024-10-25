@@ -1,0 +1,44 @@
+#!/bin/bash
+NAME="kmod"
+VERS=33
+LINK="https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm \
+    --sysconfdir=/etc   \
+    --with-openssl      \
+    --with-xz           \
+    --with-zstd         \
+    --with-zlib         \
+    --disable-manpages
+
+for target in depmod insmod modinfo modprobe rmmod; do
+  ln -sfv ../bin/kmod /usr/sbin/$target
+  rm -fv /usr/bin/$target
+done
+
+32cm \
+    --sysconfdir=/etc             \
+    --with-openssl                \
+    --with-xz                     \
+    --with-zstd                   \
+    --with-zlib                   \
+    --disable-manpages            \
+    --with-rootlibdir=/usr/lib32
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

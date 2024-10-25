@@ -5,7 +5,7 @@ LINK="https://archive.mozilla.org/pub/nspr/releases/v$VERS/src/nspr-$VERS.tar.gz
 DEPS=""
 
 
-IDIR=$(cat <<'EOF'
+IDIR=$(cat << '~fin.'
 
 cd nspr &&
 

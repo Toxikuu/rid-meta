@@ -1,0 +1,33 @@
+#!/bin/bash
+NAME="python"
+VERS=3.12.7
+LINK="https://www.python.org/ftp/python/$VERS/Python-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm \
+    --enable-shared     \
+    --with-system-expat \
+    --enable-optimizations
+
+cat > /etc/pip.conf << EOF
+[global]
+root-user-action = ignore
+disable-pip-version-check = true
+EOF
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

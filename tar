@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="tar"
+VERS=1.35
+LINK="https://ftp.gnu.org/gnu/tar/tar-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+export FORCE_UNSAFE_CONFIGURE=1
+cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/bin/tar
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

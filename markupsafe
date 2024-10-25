@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="markupsafe"
+VERS=2.1.5
+LINK="https://pypi.org/packages/source/M/MarkupSafe/MarkupSafe-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
+pip3 install --no-index --no-user --find-links dist Markupsafe
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/lib/python3.12/site-packages/MarkupSafe-$VERS.dist-info
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

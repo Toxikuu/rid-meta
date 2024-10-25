@@ -1,0 +1,27 @@
+#!/bin/bash
+NAME="diffutils"
+VERS=3.10
+LINK="https://ftp.gnu.org/gnu/diffutils/diffutils-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf  /usr/bin/cmp        \
+        /usr/bin/diff{,3}   \
+        /usr/bin/sdiff
+        
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

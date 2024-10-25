@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="patch"
+VERS=2.7.6
+LINK="https://ftp.gnu.org/gnu/patch/patch-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/bin/patch
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

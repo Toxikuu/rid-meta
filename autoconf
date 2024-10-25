@@ -1,0 +1,26 @@
+#!/bin/bash
+NAME="autoconf"
+VERS=2.72
+LINK="https://ftp.gnu.org/gnu/autoconf/autoconf-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/share/autoconf
+rm -vf /usr/bin/auto{conf,header,m4te,reconf,scan,update}
+rm -vf /usr/bin/ifnames
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

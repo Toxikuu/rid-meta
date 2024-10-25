@@ -1,0 +1,30 @@
+#!/bin/bash
+NAME="meson"
+VERS=1.5.2
+LINK="https://github.com/mesonbuild/meson/releases/download/$VERS/meson-$VERS.tar.gz"
+DEPS="python"
+
+
+IDIR=$(cat << '~fin.'
+
+pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
+pip3 install --no-index --find-links dist meson
+install -vDm644 data/shell-completions/bash/meson /usr/share/bash-completion/completions/meson
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf  /usr/bin/meson  \
+    /usr/share/bash-completion/completions/meson
+
+rm -rvf /usr/lib/python3.12/site-packages/mesonbuild    \
+        /usr/lib/python3.12/site-packages/meson-$VERS.dist-info
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

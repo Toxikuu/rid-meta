@@ -1,15 +1,15 @@
 #!/bin/bash
 NAME="kernel"
-VERS=6.12-rc2
+VERS=6.12-rc4
 LINK="https://git.kernel.org/torvalds/t/linux-$VERS.tar.gz"
 DEPS="efibootmgr"
 
 
-IDIR=$(cat <<"EOF"
+IDIR=$(cat << '~fin.'
 
 mkdir -pv /usr/src/linux-$VERS
-cp -rv * $_
-cd $_
+cp -rv *  /usr/src/linux-$VERS
+cd        /usr/src/linux-$VERS
 
 if [ -e /usr/src/linux/.config ]; then
   cp -v /usr/src/linux/.config .
@@ -18,11 +18,11 @@ else
   cp -v /etc/rid/sources/kernelconfig .config
 fi
 
-yes "" | make oldconfig
+make olddefconfig
 make && make modules_install
 
 cp -v arch/x86/boot/bzImage /boot/vmlinuz-$VERS-tox
-cp -v /boot/vmlinuz-$VERS-tox /efi/EFI/LFS/tox64.efi
+cp -v /boot/vmlinuz-$VERS-tox /efi/EFI/TOX/tox64.efi
 cp -v System.map /boot/System.map-$VERS
 cp -v .config /boot/config-$VERS
 
@@ -39,14 +39,15 @@ ln -sv /usr/src/linux-$VERS /usr/src/linux
 chown -R 0:0 /usr/src/linux-$VERS
 
 install -v -m755 -d /etc/modprobe.d
-cat > /etc/modprobe.d/usb.conf << "eof"
+
+cat > /etc/modprobe.d/usb.conf << "EOF"
 # Begin /etc/modprobe.d/usb.conf
 
 install ohci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i ohci_hcd ; true
 install uhci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i uhci_hcd ; true
 
 # End /etc/modprobe.d/usb.conf
-eof
+EOF
 
 
 ~fin.

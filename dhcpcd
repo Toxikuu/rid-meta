@@ -1,0 +1,30 @@
+#!/bin/bash
+NAME="dhcpcd"
+VERS=10.1.0
+LINK="https://github.com/NetworkConfiguration/dhcpcd/releases/download/v$VERS/dhcpcd-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+export RIDBUILD=false
+cm  --sysconfdir=/etc            \
+    --libexecdir=/usr/lib/dhcpcd \
+    --dbdir=/var/lib/dhcpcd      \
+    --runstatedir=/run           \
+    --disable-privsep
+unset RIDBUILD
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

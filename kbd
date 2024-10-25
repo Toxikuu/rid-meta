@@ -1,0 +1,31 @@
+#!/bin/bash
+NAME="kbd"
+VERS=2.6.4
+LINK="https://www.kernel.org/pub/linux/utils/kbd/kbd-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+[ -e /etc/rid/sources/kbd-2.6.4-backspace-1.patch ] || raw https://www.linuxfromscratch.org/patches/lfs/development/kbd-2.6.4-backspace-1.patch
+
+patch -Np1 -i /etc/rid/sources/kbd-2.6.4-backspace-1.patch
+
+sed -i '/RESIZECONS_PROGS=/s/yes/no/' configure
+sed -i 's/resizecons.8 //' docs/man/man8/Makefile.in
+
+cm --disable-vlock
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

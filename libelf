@@ -1,0 +1,47 @@
+#!/bin/bash
+NAME="libelf"
+VERS=0.191
+LINK="https://sourceware.org/ftp/elfutils/$VERS/elfutils-$VERS.tar.bz2"
+DEPS=""
+
+# i may remove the link and just try to extract the tarball, downloading it if nonexistent
+# that'll only happen if i need something else from elfutils
+
+IDIR=$(cat << '~fin.'
+
+./configure --prefix=/usr                \
+            --disable-debuginfod         \
+            --enable-libdebuginfod=dummy
+
+make
+make -C libelf install
+install -vm644 config/libelf.pc /usr/lib/pkgconfig
+rm -vf /usr/lib/libelf.a
+
+make distclean
+CC="gcc -m32" CXX="g++ -m32" ./configure \
+    --host=i686-pc-linux-gnu \
+    --prefix=/usr            \
+    --libdir=/usr/lib32      \
+    --disable-debuginfod     \
+    --enable-libdebuginfod=dummy
+
+make
+make DESTDIR=$PWD/DESTDIR -C libelf install
+install -vDm644 config/libelf.pc DESTDIR/usr/lib32/pkgconfig/libelf.pc
+cp -Rv DESTDIR/usr/lib32/* /usr/lib32
+rm -rf DESTDIR
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

@@ -8,7 +8,7 @@ DEPS="nspr"
 
 IDIR=$(cat << '~fin.'
 
-raw https://www.linuxfromscratch.org/patches/blfs/svn/nss-standalone-1.patch
+[ -e /etc/rid/sources/nss-standalone-1.patch ] || raw https://www.linuxfromscratch.org/patches/blfs/svn/nss-standalone-1.patch
 patch -Np1 -i /etc/rid/sources/nss-standalone-1.patch &&
 cd nss &&
 

@@ -25,8 +25,19 @@ install-info --dir-file=/usr/share/info/dir /usr/share/info/libext2fs.info
 
 RDIR=$(cat << '~fin.'
 
-echo not implemented
+rm -vf /usr/bin/{badblocks,chattr,compile_et,debugfs,dumpe2fs,e2freefrag,e2fsck,e2image,e2label,e2mmpstatus,e2scrub,e2scrub_all,e2undo,e4crypt,e4defrag,filefrag,fsck.ext2,fsck.ext3,fsck.ext4,logsave,lsattr,mk_cmds,mke2fs,mkfs.ext2,mkfs.ext3,mkfs.ext4,mklost+found,resize2fs,tune2fs}
 
+rm -vf  /usr/lib/libcom_err.so* \
+        /usr/lib/libe2p.so*     \
+        /usr/lib/libext2fs.so*  \
+        /usr/lib/libss.so*
+
+rm -rvf /usr/lib/e2fsprogs      \
+        /usr/include/e2p        \
+        /usr/include/ext2fs     \
+        /usr/{share,include}/et \
+        /usr/{share,include}/ss
+        
 ~fin.
 )
 
