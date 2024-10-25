@@ -5,7 +5,7 @@ LINK="https://github.com/libunwind/libunwind/releases/download/v$VERS/libunwind-
 DEPS=""
 
 
-IDIR=$(cat << 'EOF'
+IDIR=$(cat << '~fin.'
 
 cm
 
