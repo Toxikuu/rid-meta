@@ -2,7 +2,7 @@
 NAME="freetype2"
 VERS=2.13.3
 LINK="https://downloads.sourceforge.net/project/freetype/freetype2/$VERS/freetype-$VERS.tar.xz"
-DEPS="libpng which"
+DEPS="freetype1 harfbuzz"
 
 IDIR=$(cat << '~fin.'
 

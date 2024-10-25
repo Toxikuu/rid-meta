@@ -7,16 +7,14 @@ DEPS="freetype2"
 
 IDIR=$(cat << '~fin.'
 
-cm \
-    --sysconfdir=/etc    \
+cm  --sysconfdir=/etc    \
     --localstatedir=/var \
     --disable-docs       \
     --docdir=/tmp/rid/trash
 
-32cm \
-    --sysconfdir=/etc    \
-    --localstatedir=/var \
-    --disable-docs       \
+32cm    --sysconfdir=/etc    \
+        --localstatedir=/var \
+        --disable-docs
 
 ~fin.
 )
