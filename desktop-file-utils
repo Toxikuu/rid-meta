@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="desktop-file-utils"
-VERS=0.27
+VERS=0.28
 LINK="https://www.freedesktop.org/software/$NAME/releases/$NAME-$VERS.tar.xz"
 DEPS="glib"
 
