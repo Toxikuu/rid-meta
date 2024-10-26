@@ -1,7 +1,7 @@
 #!/bin/bash
 NAME="imlib2"
 VERS=1.12.3
-LINK="https://downloads.sourceforge.net/enlightenment/imlib2-$VERS.tar.xz"
+LINK="https://downloads.sourceforge.net/project/enlightenment/imlib2-src/$VERS/imlib2-$VERS.tar.xz"
 DEPS="giflib librsvg xorg-libraries"
 
 
