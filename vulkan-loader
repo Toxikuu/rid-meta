@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="vulkan-loader"
-VERS=1.3.299
+VERS=1.3.300
 LINK="https://github.com/KhronosGroup/Vulkan-Loader/archive/v$VERS/Vulkan-Loader-$VERS.tar.gz"
 DEPS="cmake vulkan-headers xorg-libraries"
 
