@@ -1,0 +1,38 @@
+#!/bin/bash
+NAME="nvim"
+VERS=0.10.2
+LINK="https://github.com/neovim/neovim/archive/refs/tags/v$VERS.tar.gz"
+DEPS="cmake"
+
+
+IDIR=$(cat << '~fin.'
+
+cmake \
+    -B ridbuild                 \
+    -G ninja                    \
+    -D CMAKE_BUILD_TYPE=Release \
+    -D CMAKE_INSTALL_PREFIX=/usr    \
+    -W no-dev
+
+cmake --build ridbuild --verbose
+DESTDIR= cmake --install ridbuild
+
+install -Dm644 runtime/nvim.desktop -t /usr/share/applications/
+install -Dm644 runtime/nvim.appdata.xml -t /usr/share/metainfo/
+install -Dm644 runtime/nvim.png -t /usr/share/pixmaps/
+
+ln -sv /usr/lib/tree_sitter /usr/share/nvim/runtime/parser
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
