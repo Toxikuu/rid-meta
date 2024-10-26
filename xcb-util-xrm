@@ -2,7 +2,7 @@
 NAME="xcb-util-xrm"
 VERS=1.3
 LINK="https://github.com/Airblader/xcb-util-xrm/releases/download/v$VERS/xcb-util-xrm-$VERS.tar.gz"
-DEPS="xcb-util xorg-util-macros"
+DEPS="xcb-util util-macros"
 
 
 IDIR=$(cat << '~fin.'
