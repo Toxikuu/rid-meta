@@ -2,7 +2,7 @@
 NAME="tzdata"
 VERS=2024b
 LINK=""
-DEPS=""
+DEPS="glibc"  # provides tzselect zic etc
 
 
 IDIR=$(cat << '~fin.'
