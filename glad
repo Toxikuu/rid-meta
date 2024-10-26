@@ -1,0 +1,26 @@
+#!/bin/bash
+NAME="glad"
+VERS=2.0.8
+LINK="https://github.com/Dav1dde/glad/archive/v$VERS/glad-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
+pip3 install --no-index --find-links=dist --no-cache-dir --no-user glad2
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/lib/python3.12/site-packages/glad{,2-$VERS.dist-info}
+rm -vf /usr/bin/glad
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

@@ -1,0 +1,31 @@
+#!/bin/bash
+NAME="libplacebo"
+VERS=7.349.0
+LINK="https://github.com/haasn/libplacebo/archive/v$VERS/libplacebo-$VERS.tar.gz"
+DEPS="ffmpeg glad"
+
+
+IDIR=$(cat << '~fin.'
+
+sed -e "20s/$/,/"                                         \
+    -e "21i cxx.find_library('glslang', required: false)" \
+    -i src/glsl/meson.build
+
+mn \
+    -D tests=false  \
+    -D demos=false
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/include/libplacebo \
+        /usr/lib/libplacebo.so*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

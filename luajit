@@ -1,0 +1,31 @@
+#!/bin/bash
+NAME="luajit"
+VERS=20240917
+LINK="https://anduin.linuxfromscratch.org/BLFS/luajit/luajit-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+make PREFIX=/usr
+make PREFIX=/usr install
+
+rm -vf /usr/lib/libluajit-5.1.a
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf  /usr/bin/luajit{,-2.1.ROLLING}  \
+        /usr/lib/libluajit-5.1.so*
+
+rm -rvf /usr/include/luajit-2.1 \
+        /usr/share/luajit-2.1
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
