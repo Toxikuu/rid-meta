@@ -37,8 +37,7 @@ mn -D x11=enabled                     \
    -D macos-touchbar=disabled         \
    -D swift-build=disabled
 
-# gtk+ is currently not provided
-# gtk-update-icon-cache -qtf /usr/share/icons/hicolor &&
+gtk-update-icon-cache -qtf /usr/share/icons/hicolor || echo "skipping gtk-update-icon-cache"
 update-desktop-database -q
 
 ~fin.

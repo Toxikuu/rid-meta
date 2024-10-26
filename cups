@@ -22,7 +22,7 @@ make install
 
 rm -rf /tmp/cupsinit
 echo "ServerName /run/cups/cups.sock" > /etc/cups/client.conf
-gtk-update-icon-cache -qtf /usr/share/icons/hicolor
+gtk-update-icon-cache -qtf /usr/share/icons/hicolor || echo "skipping gtk-update-icon-cache"
 
 cat > /etc/pam.d/cups << "EOF"
 # Begin /etc/pam.d/cups
