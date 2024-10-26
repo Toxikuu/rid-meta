@@ -34,7 +34,7 @@ cm --enable-gpl                       \
    --ignore-tests=enhanced-flv-av1
 
 gcc tools/qt-faststart.c -o tools/qt-faststart
-install -v -m755    tools/qt-faststart /usr/bin &&
+install -v -m755    tools/qt-faststart /usr/bin
 
 ~fin.
 )
