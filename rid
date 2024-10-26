@@ -1,25 +1,23 @@
 #!/bin/bash
 NAME="rid"
-VERS=9999
-LINK="https://github.com/Toxikuu/rid/archive/refs/heads/master.tar.gz"
-DEPS="rust"
+VERS=0.7.16
+LINK=""
+DEPS="openssl tar xz bash coreutils glibc gcc"
 
 # this meta file may need to be updated depending on the trajectory of rid's future development
 
 IDIR=$(cat << '~fin.'
 
-# # commented out for testing convenience
-# # feel free to uncomment and build from source
-# if cargo -V > /dev/null; then
-#   cargo build --release
-#   install -v -m755 target/release/rid /usr/bin
-# fi
+if [ -e /etc/rid/pkgs.json ]; then
+    mv -vf /etc/rid/pkgs.json /etc/rid-pkgs.bak
+fi
 
-install -v -Dm755 rbin/* /etc/rid/rbin/
-install -v -Dm666 env    /etc/rid/
+raw https://github.com/Toxikuu/rid/releases/download/v$VERS/rid.tar.xz
+tar xvf /etc/rid/sources/rid.tar.xz -C /usr/bin
+/usr/bin/rid -b
 
-if [ -e /etc/rid-packages.bak ]; then
-  mv -vf /etc/rid-packages.bak /etc/rid/packages.txt
+if [ -e /etc/rid-pkgs.bak ]; then
+  mv -vf /etc/rid-pkgs.bak /etc/rid/pkgs.json
   echo "restored packages backup"
 fi
 
@@ -28,13 +26,8 @@ fi
 
 RDIR=$(cat << '~fin.'
 
-cp -vf /etc/rid/packages.txt /etc/rid-packages.bak
-rm -rvf /etc/rid
-echo "The rid binary has not been deleted"
-echo "A backup of packages.txt has been made"
-echo "This is done in case you want a clean rid reinstall"
-echo "To get rid of rid, run the following commands:
-echo "rm -vf /usr/bin/rid /etc/rid-packages.bak"
+rm -vf /usr/bin/raw
+rm -rvf /{tmp,etc}/rid
 
 ~fin.
 )
