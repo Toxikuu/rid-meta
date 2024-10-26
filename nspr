@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="nspr"
-VERS=4.35
+VERS=4.36
 LINK="https://archive.mozilla.org/pub/nspr/releases/v$VERS/src/nspr-$VERS.tar.gz"
 DEPS=""
 
