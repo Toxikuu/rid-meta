@@ -1,0 +1,27 @@
+#!/bin/bash
+NAME="gsettings-desktop-schemas"
+VERS=47.1
+LINK="https://download.gnome.org/sources/gsettings-desktop-schemas/${VERS%.*}/gsettings-desktop-schemas-$VERS.tar.xz"
+DEPS="glib"
+
+
+IDIR=$(cat << '~fin.'
+
+sed -i -r 's:"(/system):"/org/gnome\1:g' schemas/*.in
+mn
+glib-compile-schemas /usr/share/glib-2.0/schemas
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/include/gsettings-desktop-schemas  \
+        /usr/share/GConf/gsettings
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

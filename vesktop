@@ -2,7 +2,7 @@
 NAME="vesktop"
 VERS=1.5.3
 LINK="https://github.com/Vencord/Vesktop/archive/refs/tags/v$VERS.tar.gz"
-DEPS="nodejs cups pnpm"
+DEPS="nodejs cups pnpm gtk+"
 
 
 IDIR=$(cat << '~fin.'

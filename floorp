@@ -2,7 +2,7 @@
 NAME="floorp"
 VERS=11.19.1
 LINK="https://github.com/Floorp-Projects/Floorp/releases/download/v$VERS/floorp-$VERS.linux-x86_64.tar.bz2"
-DEPS=""  # floorp has a bunch of dependencies that i dont feel like finding rn
+DEPS="gtk+"  # floorp has a bunch of dependencies that i dont feel like finding rn
 
 
 IDIR=$(cat << '~fin.'

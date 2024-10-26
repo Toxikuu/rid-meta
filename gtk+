@@ -1,0 +1,30 @@
+#!/bin/bash
+NAME="gtk+"
+VERS=3.24.43
+LINK="https://download.gnome.org/sources/gtk+/${VERS%.*}/gtk+-$VERS.tar.xz"
+DEPS="at-spi2-core gdk-pixbuf libepoxy pango"
+
+
+IDIR=$(cat << '~fin.'
+
+mn \
+    -D man=false                \
+    -D broadway_backend=true    \
+    -D gtk_doc=false
+
+gtk-query-immodules-3.0 --update-cache
+glib-compile-schemas /usr/share/glib-2.0/schemas
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
