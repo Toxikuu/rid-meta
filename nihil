@@ -11,24 +11,30 @@ TARGETUSER="t"
 H="/home/$TARGETUSER"
 
 # Backup
-mv -fv $H/.config{,.bak}
-mv -fv $H/.xinitrc{,.bak}
-mv -fv $H/.bashrc{,.bak}
-mv -fv $H/Wallpapers{,.bak}
-mv -fv $H/.bash_profile{,.bak}
+[ -e $H/.config ]       && mv -Tfv $H/.config{,.bak}
+[ -e $H/.xinitrc ]      && mv -Tfv $H/.xinitrc{,.bak}
+[ -e $H/.bashrc ]       && mv -Tfv $H/.bashrc{,.bak}
+[ -e $H/Wallpapers ]    && mv -Tfv $H/Wallpapers{,.bak}
+[ -e $H/.bash_profile ] && mv -Tfv $H/.bash_profile{,.bak}
 
 # Cloning
 git clone https://github.com/toxikuu/nihil.git && cd nihil
 
+
 # Installation
+mkdir -pv $H/.config
 cp -rfv config/* $H/.config/
+
 cp -fv {,$H/.}bashrc
 cp -fv {,$H/.}bash_profile
 cp -rfv wallpapers $H/Wallpapers
 
+
+chown -vR $TARGETUSER:$TARGETUSER $H/{.config,Wallpapers,.bash*}
+
 # Configuration
-echo "exec i3" >> $H/.xinitrc
-cp -rfv extra/Obsidian/Nihil $H/Vault/.obsidian/themes/
+echo "exec i3" > $H/.xinitrc
+{ [ -e $H/Vault/.obsidian/themes ] && cp -rfv extra/Obsidian/Nihil $H/Vault/.obsidian/themes/ } || true
 
 ~fin.
 )
@@ -40,7 +46,9 @@ rm -rvf \
     $H/.xinitrc         \
     $H/.bashrc          \
     $H/Wallpapers       \
-    $H/.bash_profile    \
+    $H/.bash_profile
+
+# i need to add some commands to move .bak back
 
 ~fin.
 )

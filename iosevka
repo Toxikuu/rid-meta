@@ -1,14 +1,18 @@
 #!/bin/bash
 NAME="iosevka"
 VERS=9999
-LINK="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz"
+LINK=""
 DEPS=""
 
 
 IDIR=$(cat << '~fin.'
 
+[ -e /etc/rid/sources/iosevka-9999.tar ] || raw https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz
+
+mv -vf /etc/rid/sources/Iosevka.tar.xz /etc/rid/sources/iosevka-9999.tar
 mkdir -pv /usr/share/fonts/iosevka
-cp -rvf * /usr/share/fonts/iosevka
+
+tar xvf /etc/rid/sources/iosevka-9999.tar -C /usr/share/fonts/iosevka
 
 ~fin.
 )

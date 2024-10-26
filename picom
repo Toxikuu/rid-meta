@@ -2,7 +2,7 @@
 NAME="picom"
 VERS=12.1
 LINK="https://github.com/yshui/picom/archive/refs/tags/v$VERS.tar.gz"
-DEPS="xorg-libraries pixman libconfig libpcre2 libev uthash"  # INCOMPLETE
+DEPS="xorg-libraries pixman libconfig pcre2 libev uthash"  # INCOMPLETE
 
 
 IDIR=$(cat << '~fin.'
