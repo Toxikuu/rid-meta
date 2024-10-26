@@ -1,9 +1,9 @@
 #!/bin/bash
 NAME="nss"
-VERS=3.106
+VERS=3.105
 ver="${VERS//./_}"
 LINK="https://archive.mozilla.org/pub/security/nss/releases/NSS_${ver}_RTM/src/nss-$VERS.tar.gz"
-DEPS="nspr"  # optionally sqlite
+DEPS="nspr" # maybe sqlite
 
 
 IDIR=$(cat << '~fin.'
@@ -13,13 +13,13 @@ IDIR=$(cat << '~fin.'
 patch -Np1 -i /etc/rid/sources/nss-standalone-1.patch               ||
 die "Patch failed"
 
-sqlite3 --version > /dev/null 2>&1 && echo -e "\nDetected an SQLite install. You may continue." || 
+sqlite3 --version > /dev/null 2>&1 && echo -e "\nDetected an SQLite install." || 
 if [ -f /usr/lib/libsqlite3.so -o -f /usr/lib32/libsqlite3.so ]; then
     echo -e "\nDetected an incomplete SQLite installation!" >&2
     rm -vf /usr/lib{,32}/libsqlite3.so
-    echo "Removed any problematic SQLite libraries. You may continue."
+    echo "Removed problematic SQLite libraries."
 else
-    echo -e "\nNo SQLite install (complete or otherwise) detected. You may continue."
+    echo -e "\nNo SQLite install (complete or otherwise) detected."
 fi
 
 cd nss
@@ -31,7 +31,7 @@ make BUILD_OPT=1                      \
   ZLIB_LIBS=-lz                       \
   NSS_ENABLE_WERROR=0                 \
   $([ $(uname -m) = x86_64 ] && echo USE_64=1) \
-  $([ -f /usr/include/sqlite3.h ] && echo NSS_USE_SYSTEM_SQLITE=1)  ||
+  $([ -f /usr/lib/libsqlite3.so ] && echo NSS_USE_SYSTEM_SQLITE=1)  ||
 die "Make failed"
 
 cd ../dist                                                          &&
