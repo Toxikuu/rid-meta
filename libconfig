@@ -1,0 +1,28 @@
+#!/bin/bash
+NAME="libconfig"
+VERS=1.7.3
+LINK="https://github.com/hyperrealm/libconfig/releases/download/v$VERS/libconfig-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+autoreconf -fiv
+./configure --prefix=/usr
+sed -i -e 's/ -shared / -Wl,-O2,--as-needed\0/g' libtool
+make
+make install
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

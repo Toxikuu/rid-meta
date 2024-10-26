@@ -1,0 +1,26 @@
+#!/bin/bash
+NAME="uthash"
+VERS=2.3.0
+LINK="https://github.com/troydhanson/uthash/archive/refs/tags/v$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+for h in *.h; do
+    install -v -m644 $h /usr/include/
+done
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
