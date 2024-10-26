@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="iosevka"
+VERS=9999
+LINK="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+mkdir -pv /usr/share/fonts/iosevka
+cp -rvf * /usr/share/fonts/iosevka
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/share/fonts/iosevka
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

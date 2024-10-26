@@ -1,0 +1,33 @@
+#!/bin/bash
+NAME="nvchad"
+VERS=9999
+LINK=""
+DEPS="nvim git"
+
+
+IDIR=$(cat << '~fin.'
+
+TARGETUSER="t"
+H="/home/$TARGETUSER"
+
+git clone https://github.com/NvChad/starter  ~/.config/nvim
+rm -rvf $H/.config/nvim && cp -rvf ~/.config/nvim $H/.config/nvim
+chown -vR $TARGETUSER:$TARGETUSER $H/.config/nvim
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+TARGETUSER="t"
+H="/home/$TARGETUSER"
+
+rm -rvf {~,$H}/.config/nvim \
+        {~,$H}/.local/{state,share}/nvim
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

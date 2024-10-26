@@ -1,0 +1,50 @@
+#!/bin/bash
+NAME="nihil"
+VERS=0
+LINK=""
+DEPS="git iosevka obsidian vesktop"
+
+
+IDIR=$(cat << '~fin.'
+
+TARGETUSER="t"
+H="/home/$TARGETUSER"
+
+# Backup
+mv -fv $H/.config{,.bak}
+mv -fv $H/.xinitrc{,.bak}
+mv -fv $H/.bashrc{,.bak}
+mv -fv $H/Wallpapers{,.bak}
+mv -fv $H/.bash_profile{,.bak}
+
+# Cloning
+git clone https://github.com/toxikuu/nihil.git && cd nihil
+
+# Installation
+cp -rfv config/* $H/.config/
+cp -fv {,$H/.}bashrc
+cp -fv {,$H/.}bash_profile
+cp -rfv wallpapers $H/Wallpapers
+
+# Configuration
+echo "exec i3" >> $H/.xinitrc
+cp -rfv extra/Obsidian/Nihil $H/Vault/.obsidian/themes/
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf \
+    $H/.config          \
+    $H/.xinitrc         \
+    $H/.bashrc          \
+    $H/Wallpapers       \
+    $H/.bash_profile    \
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
