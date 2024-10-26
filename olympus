@@ -1,0 +1,33 @@
+#!/bin/bash
+NAME="olympus"
+VERS=9999
+LINK=""
+DEPS="unzip xdg-utils desktop-file-utils"
+
+
+IDIR=$(cat << '~fin.'
+
+raw 'https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds/4338/artifacts?artifactName=linux.main&api-version=5.0&%24format=zip'
+
+cp -vf /etc/rid/sources/artifacts?artifactName=linux.main&api-version=5.0&%24format=zip a
+
+unzip a        && cd linux.main
+unzip dist.zip && rm -vf dist.zip
+
+yes "y" | ./install.sh
+
+mv -vf /usr/share/applications/{O,o}lympus.desktop
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

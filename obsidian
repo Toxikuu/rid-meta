@@ -1,0 +1,42 @@
+#!/bin/bash
+NAME="obsidian"
+VERS=1.7.4
+LINK="https://github.com/obsidianmd/obsidian-releases/releases/download/v$VERS/obsidian-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+[ -e /usr/lib/obsidian ] && rm -rvf /usr/lib/obsidian
+
+mkdir -pv /usr/lib/obsidian
+cp -vf *  /usr/lib/obsidian
+
+cat << EOF > /usr/share/applications/obsidian.desktop
+[Desktop Entry]
+Name=Obsidian
+Exec=/usr/lib/obsidian/obsidian
+Terminal=false
+Type=Application
+Icon=obsidian
+StartupWMClass=obsidian
+X-AppImage-Version=1.6.7
+Comment=Markdown Note Application
+MimeType=x-scheme-handler/obsidian;
+Categories=Office;
+Keywords=markdown;md;notes;
+EOF
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
