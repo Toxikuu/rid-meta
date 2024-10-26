@@ -1,0 +1,29 @@
+#!/bin/bash
+NAME="dosfstools"
+VERS=4.2
+LINK="https://github.com/dosfstools/dosfstools/releases/download/v$VERS/dosfstools-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm \
+    --enable-compat-symlinks \
+    --mandir=/usr/share/man  \
+    --docdir=/tmp/rid/trash
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf  /bin/fatlabel   \
+        /bin/fsck.fat   \
+        /bin/mkfs.fat
+        
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
