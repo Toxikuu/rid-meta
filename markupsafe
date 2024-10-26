@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="markupsafe"
-VERS=2.1.5
+VERS=3.0.2
 LINK="https://pypi.org/packages/source/M/MarkupSafe/MarkupSafe-$VERS.tar.gz"
 DEPS=""
 

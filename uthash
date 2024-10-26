@@ -7,7 +7,7 @@ DEPS=""
 
 IDIR=$(cat << '~fin.'
 
-for h in *.h; do
+for h in src/*.h; do
     install -v -m644 $h /usr/include/
 done
 
