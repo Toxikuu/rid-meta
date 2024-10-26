@@ -1,0 +1,28 @@
+#!/bin/bash
+NAME="imlib2"
+VERS=1.12.3
+LINK="https://downloads.sourceforge.net/enlightenment/imlib2-$VERS.tar.xz"
+DEPS="giflib librsvg xorg-libraries"
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf  /usr/bin/imlib2_*           \
+        /usr/lib/libImlib2.*
+
+rm -rvf /usr/{lib,share}/imlib2     \
+        /usr/share/doc/imlib2-$VERS
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

@@ -1,0 +1,41 @@
+#!/bin/bash
+NAME="giflib"
+VERS=5.2.2
+LINK="https://sourceforge.net/projects/giflib/files/giflib-$VERS.tar.gz"
+DEPS="xmlto"
+
+
+IDIR=$(cat << '~fin.'
+
+[ -e /etc/rid/sources/giflib-$VERS-upstream_fixes-1.patch ] ||
+raw https://www.linuxfromscratch.org/patches/blfs/svn/giflib-$VERS-upstream_fixes-1.patch
+
+patch -Np1 -i /etc/rid/sources/giflib-$VERS-upstream_fixes-1.patch
+cp pic/gifgrid.gif doc/giflib-logo.gif
+make
+make PREFIX=/usr install
+
+rm -fv /usr/lib/libgif.a
+
+find doc \( -name Makefile\* -o -name \*.1 \
+         -o -name \*.xml \) -exec rm -v {} \; &&
+
+install -v -dm755 /usr/share/doc/giflib-$VERS &&
+cp -v -R doc/* /usr/share/doc/giflib-$VERS
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /bin/gif{2rgb,build,clrmp,fix,text,tool}    \
+        /lib/libgif.so*                             \
+        /usr/share/doc/giflib-$VERS
+        
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

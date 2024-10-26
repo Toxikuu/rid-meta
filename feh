@@ -1,0 +1,28 @@
+#!/bin/bash
+NAME="feh"
+VERS=3.10.3
+LINK="https://feh.finalrewind.org/feh-$VERS.tar.bz2"
+DEPS="libpng imlib2 curl"
+
+
+IDIR=$(cat << '~fin.'
+
+sed -i "s:doc/feh:&-3.10.3:" config.mk &&
+make PREFIX=/usr         || die "Make failed"
+make PREFIX=/usr install || die "Make install failed"
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/share/doc/feh-$VERS
+rm -rvf /usr/share/feh
+rm -vf /usr/bin/feh
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
