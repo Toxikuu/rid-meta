@@ -11,8 +11,8 @@ IDIR=$(cat << '~fin.'
 mkdir -pv /opt/go
 cp -rvf * /opt/go
 
-if ! grep -q "# go end" /etc/toxenv ; then
-    cat << 'EOF' >> /etc/toxenv
+if ! grep -q "# go end" /etc/env ; then
+    cat << 'EOF' >> /etc/env
 
     # go
     pathappend /opt/go/bin

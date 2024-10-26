@@ -8,10 +8,11 @@ DEPS="curl"
 IDIR=$(cat << '~fin.'
 
 curl -fsSL https://get.pnpm.io/install.sh | env PNPM_HOME=/opt/pnpm sh -
+echo "The output of pnpm's install.sh is a lie lol."
 sed -i '/# pnpm/,/# pnpm end/d' $HOME/.bashrc
 
-if ! grep -q "# pnpm end" /etc/toxenv ; then
-    cat << 'EOF' >> /etc/toxenv
+if ! grep -q "# pnpm end" /etc/env ; then
+    cat << 'EOF' >> /etc/env
 
     # pnpm
     export PNPM_HOME="/opt/pnpm"
@@ -28,7 +29,7 @@ RDIR=$(cat << '~fin.'
 
 rm -rvf /opt/pnpm
 
-sed -i '/# pnpm/,/# pnpm end/d' /etc/toxenv
+sed -i '/# pnpm/,/# pnpm end/d' /etc/env
 
 ~fin.
 )
@@ -36,8 +37,8 @@ sed -i '/# pnpm/,/# pnpm end/d' /etc/toxenv
 UDIR=$(cat << '~fin.'
 pnpm self-update
 
-if ! grep -q "# pnpm end" /etc/toxenv ; then
-    cat << 'EOF' >> /etc/toxenv
+if ! grep -q "# pnpm end" /etc/env ; then
+    cat << 'EOF' >> /etc/env
 
     # pnpm
     export PNPM_HOME="/opt/pnpm"

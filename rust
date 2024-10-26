@@ -30,8 +30,8 @@ rustup component add cargo clippy rustfmt
 mv -v /etc/bash_completion.d/cargo /usr/share/bash-completion/completions
 rm -vf /opt/cargo/env
 
-if ! grep -q "# cargo end" /etc/toxenv ; then
-    cat << EOF >> /etc/toxenv
+if ! grep -q "# cargo end" /etc/env ; then
+    cat << EOF >> /etc/env
 
     # cargo
     export CARGO_HOME="/opt/cargo"
@@ -61,7 +61,7 @@ if [ -f /usr/share/bash-completion/completions/cargo ]; then
     rm -v /usr/share/bash-completion/completions/cargo
 fi
 
-sed -i '/# cargo/,/# cargo end/d' /etc/toxenv
+sed -i '/# cargo/,/# cargo end/d' /etc/env
 
 ~fin.
 )
@@ -84,8 +84,8 @@ if [ -f /etc/bash_completion.d/cargo ]; then
     mv -v /etc/bash_completion.d/cargo /usr/share/bash-completion/completions
 fi
 
-if ! grep -q "# cargo end" /etc/toxenv ; then
-    cat << EOF >> /etc/toxenv
+if ! grep -q "# cargo end" /etc/env ; then
+    cat << EOF >> /etc/env
 
     # cargo
     export CARGO_HOME="/opt/cargo"
