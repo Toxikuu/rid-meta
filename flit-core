@@ -15,7 +15,7 @@ pip3 install --no-index --no-user --find-links dist flit_core
 
 RDIR=$(cat << '~fin.'
 
-rm -rvf /usr/lib/python3.12/site-packages/flit_core*
+rm -rvf /usr/lib/python3.13/site-packages/flit_core*
 
 ~fin.
 )

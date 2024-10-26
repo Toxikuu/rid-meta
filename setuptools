@@ -15,9 +15,9 @@ pip3 install --no-index --find-links dist setuptools
 
 RDIR=$(cat << '~fin.'
 
-rm -rvf /usr/lib/python3.12/site-packages/setuptools*       \
-        /usr/lib/python3.12/site-packages/_distutils_hack   \
-        /usr/lib/python3.12/site-packages/pkg_resources
+rm -rvf /usr/lib/python3.13/site-packages/setuptools*       \
+        /usr/lib/python3.13/site-packages/_distutils_hack   \
+        /usr/lib/python3.13/site-packages/pkg_resources
 
 ~fin.
 )

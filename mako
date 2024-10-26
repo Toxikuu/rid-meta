@@ -16,7 +16,7 @@ pip3 install --no-index --find-links=dist --no-cache-dir --no-user Mako
 RDIR=$(cat << '~fin.'
 
 rm -vf /usr/bin/mako-render
-rm -rvf /usr/lib/python3.12/site-packages/{mako,Mako-$VERS.dist-info}
+rm -rvf /usr/lib/python3.13/site-packages/{mako,Mako-$VERS.dist-info}
 
 ~fin.
 )

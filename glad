@@ -15,7 +15,7 @@ pip3 install --no-index --find-links=dist --no-cache-dir --no-user glad2
 
 RDIR=$(cat << '~fin.'
 
-rm -rvf /usr/lib/python3.12/site-packages/glad{,2-$VERS.dist-info}
+rm -rvf /usr/lib/python3.13/site-packages/glad{,2-$VERS.dist-info}
 rm -vf /usr/bin/glad
 
 ~fin.

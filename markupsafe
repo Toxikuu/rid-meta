@@ -15,7 +15,7 @@ pip3 install --no-index --no-user --find-links dist Markupsafe
 
 RDIR=$(cat << '~fin.'
 
-rm -rvf /usr/lib/python3.12/site-packages/MarkupSafe-$VERS.dist-info
+rm -rvf /usr/lib/python3.13/site-packages/MarkupSafe-$VERS.dist-info
 
 ~fin.
 )

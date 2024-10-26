@@ -19,8 +19,8 @@ RDIR=$(cat << '~fin.'
 rm -vf  /usr/bin/meson  \
     /usr/share/bash-completion/completions/meson
 
-rm -rvf /usr/lib/python3.12/site-packages/mesonbuild    \
-        /usr/lib/python3.12/site-packages/meson-$VERS.dist-info
+rm -rvf /usr/lib/python3.13/site-packages/mesonbuild    \
+        /usr/lib/python3.13/site-packages/meson-$VERS.dist-info
 
 ~fin.
 )

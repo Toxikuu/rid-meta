@@ -16,7 +16,7 @@ pip3 install --no-index --find-links=dist wheel
 RDIR=$(cat << '~fin.'
 
 rm -vf /usr/bin/wheel
-rm -rvf /usr/lib/python3.12/site-packages/wheel*
+rm -rvf /usr/lib/python3.13/site-packages/wheel*
 
 ~fin.
 )
