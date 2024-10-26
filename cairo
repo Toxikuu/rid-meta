@@ -1,7 +1,7 @@
 #!/bin/bash
 NAME="cairo"
 VERS=1.18.2
-LINK="https://www.cairographics.org/releases/cairo-$VERS.tar.xz"
+LINK="https://gitlab.freedesktop.org/cairo/cairo/-/archive/$VERS/cairo-$VERS.tar.bz2"
 DEPS="libpng pixman fontconfig glib xorg-libraries"
 
 

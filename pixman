@@ -1,7 +1,7 @@
 #!/bin/bash
 NAME="pixman"
 VERS=0.43.4
-LINK="https://www.cairographics.org/releases/pixman-$VERS.tar.gz"
+LINK="https://www.x.org/releases/individual/lib/pixman-$VERS.tar.xz"
 DEPS=""
 
 
