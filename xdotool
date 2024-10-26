@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="xdotool"
+VERS=3.20211022.1
+LINK="https://github.com/jordansissel/xdotool/releases/download/v$VERS/xdotool-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+make WITHOUT_RPATH_FIX=1
+make PREFIX=/usr INSTALLMAN=/usr/share/man install
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/bin/xdotool /usr/lib/libxdo.so*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
