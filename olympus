@@ -9,10 +9,12 @@ IDIR=$(cat << '~fin.'
 
 raw 'https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds/4338/artifacts?artifactName=linux.main&api-version=5.0&%24format=zip'
 
-cp -vf /etc/rid/sources/artifacts?artifactName=linux.main&api-version=5.0&%24format=zip a
+mv -vf '/etc/rid/sources/artifacts?artifactName=linux.main&api-version=5.0&%24format=zip' /etc/rid/sources/olympus.zip
 
-unzip a        && cd linux.main
-unzip dist.zip && rm -vf dist.zip
+cp -vf /etc/rid/sources/olympus.zip .
+
+unzip olympus.zip && cd   linux.main
+unzip    dist.zip && rm -vf dist.zip
 
 yes "y" | ./install.sh
 
