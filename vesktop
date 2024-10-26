@@ -2,13 +2,13 @@
 NAME="vesktop"
 VERS=1.5.3
 LINK="https://github.com/Vencord/Vesktop/archive/refs/tags/v$VERS.tar.gz"
-DEPS="pnpm cups"
+DEPS="nodejs cups pnpm"
 
 
 IDIR=$(cat << '~fin.'
 
-pnpm i
-pnpm package --linux dir
+pnpm i || die "pnpm failed to install dependencies"
+pnpm package --linux dir || die "pnpm build failed"
 
 [ -d /usr/lib/vesktop ] && rm -rvf /usr/lib/vesktop
 
