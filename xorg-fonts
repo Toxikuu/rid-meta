@@ -55,7 +55,10 @@ ln -svfn $XORG_PREFIX/share/fonts/X11/TTF /usr/share/fonts/X11-TTF
 
 RDIR=$(cat << '~fin.'
 
-echo not implemented
+rm -vf  /usr/bin/bdftruncate    \
+        /usr/bin/ucs2any        \
+
+rm -rvf /usr/share/fonts/X11{,-TTF,-OTF}
 
 ~fin.
 )
