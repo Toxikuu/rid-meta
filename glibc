@@ -87,7 +87,9 @@ rpc: files
 # End /etc/nsswitch.conf
 EOF
 
-tar -xf ../../tzdata2024b.tar.gz
+[ -e /etc/rid/sources/tzdata2024b ] ||
+raw https://data.iana.org/time-zones/releases/tzdata2024b.tar.gz
+tar -xf /etc/rid/sources/tzdata2024b.tar.gz
 
 ZONEINFO=/usr/share/zoneinfo
 mkdir -pv $ZONEINFO/{posix,right}

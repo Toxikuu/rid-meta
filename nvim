@@ -8,15 +8,18 @@ DEPS=""
 IDIR=$(cat << '~fin.'
 
 mv -vf bin/nvim /usr/bin/nvim
-mv -Tvf lib/nvim /usr/lib/nvim
-mv -Tvf share/nvim /usr/share/nvim
+
+rm -rf /usr/{lib,share}/nvim
+mv -vf lib/nvim /usr/lib/nvim
+mv -vf share/nvim /usr/share/nvim
 
 ~fin.
 )
 
 RDIR=$(cat << '~fin.'
 
-echo not implemented
+rm -vf /usr/bin/nvim
+rm -rvf /usr/{lib,share}/nvim
 
 ~fin.
 )
