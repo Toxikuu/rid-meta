@@ -9,11 +9,11 @@ IDIR=$(cat << '~fin.'
 
 mkdir -pv /dots && cd /dots
 
-[ -e $H/.config ] &&
 rm -rvf $H/.config
+rm -rvf whitepink
 
-[ -e whitepink ] ||
 git clone https://github.com/Toxikuu/whitepink
+chown -Rv $TARGET_USER:$TARGET_USER whitepink
 
 ln -sfv /dots/whitepink/config $H/.config
 echo "You should now set up files in extra manually. (/dots/whitepink/extra)"

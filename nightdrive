@@ -8,10 +8,11 @@ DEPS="git"
 IDIR=$(cat << '~fin.'
 
 mkdir -pv /dots && cd /dots
-git clone https://github.com/toxikuu/nightdrive
 
-[ -e $H/.config ] &&
 rm -rvf $H/.config
+rm -rvf nightdrive
+
+git clone https://github.com/toxikuu/nightdrive
 
 [ -e $H/wallpapers/nightdrive.mp4 ] ||
 {
