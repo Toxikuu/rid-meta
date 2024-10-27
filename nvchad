@@ -16,9 +16,6 @@ chown -vR $TARGET_USER:$TARGET_USER $H/.config/nvim
 
 RDIR=$(cat << '~fin.'
 
-TARGETUSER="t"
-H="/home/$TARGETUSER"
-
 rm -rvf {~,$H}/.config/nvim \
         {~,$H}/.local/{state,share}/nvim
 

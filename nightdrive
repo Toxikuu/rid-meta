@@ -13,6 +13,7 @@ rm -rvf $H/.config
 rm -rvf nightdrive
 
 git clone https://github.com/toxikuu/nightdrive
+chown -Rv $TARGET_USER:$TARGET_USER nightdrive 
 
 [ -e $H/wallpapers/nightdrive.mp4 ] ||
 {
