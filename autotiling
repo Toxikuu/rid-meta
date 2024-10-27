@@ -15,7 +15,7 @@ python -m venv venv         &&
 venv/bin/pip install i3ipc  ||
 die "pip failed"
 
-cat << EOF > /bin/autotiling.sh
+cat << 'EOF' > /bin/autotiling.sh
 #!/bin/bash
 
 exec /usr/lib/autotiling/venv/bin/python /usr/lib/autotiling/autotiling/main.py "$@"
