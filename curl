@@ -11,20 +11,6 @@ cm --with-openssl                \
    --with-ca-path=/etc/ssl/certs \
    --without-brotli
 
-rm -rf docs/examples/.deps &&
-
-find docs \( -name Makefile\* -o  \
-             -name \*.1       -o  \
-             -name \*.3       -o  \
-             -name CMakeLists.txt \) -delete &&
-
-cp -v -R docs -T /usr/share/doc/curl-$VERS
-
-cd /tmp/rid/building
-rm -rf curl-$VERS
-tar xf /etc/rid/sources/curl-$VERS.tar
-cd curl-$VERS
-
 32cm --with-openssl                \
      --with-ca-path=/etc/ssl/certs \
      --without-brotli

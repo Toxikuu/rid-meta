@@ -3,7 +3,7 @@ NAME="nss"
 VERS=3.106
 ver="${VERS//./_}"
 LINK="https://archive.mozilla.org/pub/security/nss/releases/NSS_${ver}_RTM/src/nss-$VERS.tar.gz"
-DEPS="nspr" # maybe sqlite
+DEPS="nspr"
 
 
 IDIR=$(cat << '~fin.'
@@ -13,13 +13,9 @@ IDIR=$(cat << '~fin.'
 patch -Np1 -i /etc/rid/sources/nss-standalone-1.patch               ||
 die "Patch failed"
 
-sqlite3 --version > /dev/null 2>&1 && echo -e "\nDetected an SQLite install." || 
-if [ -f /usr/lib/libsqlite3.so -o -f /usr/lib32/libsqlite3.so ]; then
-    echo -e "\nDetected an incomplete SQLite installation!" >&2
-    rm -vf /usr/lib{,32}/libsqlite3.so
-    echo "Removed problematic SQLite libraries."
-else
-    echo -e "\nNo SQLite install (complete or otherwise) detected."
+sqlite3 --version > /dev/null 2>&1 || 
+if [ -f /usr/lib/libsqlite3.so ]; then
+  rm -vf /usr/lib/libsqlite3.so
 fi
 
 cd nss
@@ -44,14 +40,14 @@ install -v -m755 Linux*/bin/{certutil,nss-config,pk12util} /usr/bin &&
 install -v -m644 Linux*/lib/pkgconfig/nss.pc  /usr/lib/pkgconfig    ||
 die "Install failed"
 
-cd ../..
-rm -rvf nss-$VERS
-tar xvf /etc/rid/sources/nss-$VERS.t*
+cd ../nss                                         &&
+find -name "Linux*.OBJ" -type d -exec rm -rf {} + &&
+rm -rf ../dist
 
-cd nss-$VERS
-patch -Np1 -i /etc/rid/sources/nss-standalone-1.patch               ||
-die "Patch failed"
-cd nss
+sqlite3 --version > /dev/null 2>&1 || 
+if [ -f /usr/lib32/libsqlite3.so ]; then
+  rm -vf /usr/lib32/libsqlite3.so
+fi
 
 CC="gcc -m32" CXX="g++ -m32"          \
 make BUILD_OPT=1                      \
