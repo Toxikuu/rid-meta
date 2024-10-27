@@ -1,0 +1,27 @@
+#!/bin/bash
+NAME="luarocks"
+VERS=3.11.1
+LINK="https://luarocks.org/releases/luarocks-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+# luarocks's configure treats unknown flags as errors
+./configure --prefix=/usr
+make
+make install
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
