@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="rid"
-VERS=0.9.0
+VERS=0.9.1
 LINK=""
 DEPS="openssl tar xz bash coreutils glibc gcc"
 
