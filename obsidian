@@ -7,10 +7,9 @@ DEPS=""
 
 IDIR=$(cat << '~fin.'
 
-[ -e /usr/lib/obsidian ] && rm -rvf /usr/lib/obsidian
-
-mkdir -pv /usr/lib/obsidian
-cp -rvf * /usr/lib/obsidian
+mkdir -pv      /usr/lib/obsidian
+cd     ..
+mo $NAME-$VERS /usr/lib/obsidian
 
 cat << EOF > /usr/share/applications/obsidian.desktop
 [Desktop Entry]

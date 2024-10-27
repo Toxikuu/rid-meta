@@ -9,7 +9,7 @@ DEPS="openssl tar xz bash coreutils glibc gcc"
 IDIR=$(cat << '~fin.'
 
 if [ -e /etc/rid/pkgs.json ]; then
-    mv -vf /etc/rid/pkgs.json /etc/rid-pkgs.bak
+    mo /etc/rid/pkgs.json /etc/rid-pkgs.bak
 fi
 
 raw https://github.com/Toxikuu/rid/releases/download/v$VERS/rid.tar.xz
@@ -17,7 +17,7 @@ tar xvf /etc/rid/sources/rid.tar.xz -C /usr/bin
 /usr/bin/rid -b
 
 if [ -e /etc/rid-pkgs.bak ]; then
-  mv -vf /etc/rid-pkgs.bak /etc/rid/pkgs.json
+  mo /etc/rid-pkgs.bak /etc/rid/pkgs.json
   echo "restored pkgs.json"
 fi
 

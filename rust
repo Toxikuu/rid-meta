@@ -27,7 +27,7 @@ rustup toolchain install $VERS
 rustup default $VERS
 rustup component add cargo clippy rustfmt
 
-mv -v /etc/bash_completion.d/cargo /usr/share/bash-completion/completions
+mv -vf /etc/bash_completion.d/cargo /usr/share/bash-completion/completions
 rm -vf /opt/cargo/env
 
 if ! grep -q "# cargo end" /etc/env ; then

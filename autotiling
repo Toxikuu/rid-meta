@@ -7,9 +7,10 @@ DEPS="python"
 
 IDIR=$(cat << '~fin.'
 
-mkdir -pv /usr/lib/autotiling
-mv -vf *  /usr/lib/autotiling
-cd        /usr/lib/autotiling
+mkdir -pv     /usr/lib/autotiling
+cd     ..
+m $NAME-$VERS /usr/lib/autotiling
+cd            /usr/lib/autotiling
 
 python -m venv venv         &&
 venv/bin/pip install i3ipc  ||

@@ -9,7 +9,7 @@ IDIR=$(cat << '~fin.'
 
 raw 'https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds/4338/artifacts?artifactName=linux.main&api-version=5.0&%24format=zip'
 
-mv -vf '/etc/rid/sources/artifacts?artifactName=linux.main&api-version=5.0&%24format=zip' /etc/rid/sources/olympus.zip
+mo '/etc/rid/sources/artifacts?artifactName=linux.main&api-version=5.0&%24format=zip' /etc/rid/sources/olympus.zip
 
 cp -vf /etc/rid/sources/olympus.zip .
 
@@ -18,7 +18,7 @@ unzip    dist.zip && rm -vf dist.zip
 
 yes "y" | ./install.sh
 
-mv -vf /usr/share/applications/{O,o}lympus.desktop
+mo /usr/share/applications/{O,o}lympus.desktop
 
 ~fin.
 )

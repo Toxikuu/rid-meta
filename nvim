@@ -7,11 +7,9 @@ DEPS=""
 # this is a binary install because im lazy and dont want to resolve nvim dependencies
 IDIR=$(cat << '~fin.'
 
-mv -vf bin/nvim /usr/bin/nvim
-
-rm -rf /usr/{lib,share}/nvim
-mv -vf lib/nvim /usr/lib/nvim
-mv -vf share/nvim /usr/share/nvim
+mo bin/nvim   /usr/bin/nvim
+mo lib/nvim   /usr/lib/nvim
+mo share/nvim /usr/share/nvim
 
 ~fin.
 )

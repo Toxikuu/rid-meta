@@ -17,7 +17,7 @@ make
 sed -i '/INSTALL_LIBS/s/libcrypto.a libssl.a//' Makefile
 make MANSUFFIX=ssl install
 
-mv -v /usr/share/doc/openssl /usr/share/doc/openssl-3.3.2
+mo /usr/share/doc/openssl /usr/share/doc/openssl-$VERS
 
 make distclean
 ./config --prefix=/usr         \
