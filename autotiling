@@ -1,0 +1,39 @@
+#!/bin/bash
+NAME="autotiling"
+VERS=1.9.3
+LINK="https://github.com/nwg-piotr/autotiling/archive/refs/tags/v$VERS.tar.gz"
+DEPS="python"
+
+
+IDIR=$(cat << '~fin.'
+
+mkdir -pv /usr/lib/autotiling
+mv -vf *  /usr/lib/autotiling
+cd        /usr/lib/autotiling
+
+python -m venv venv         &&
+venv/bin/pip install i3ipc  ||
+die "pip failed"
+
+cat << EOF > /bin/autotiling.sh
+#!/bin/bash
+
+exec /usr/lib/autotiling/venv/bin/python /usr/lib/autotiling/autotiling/main.py "$@"
+EOF
+
+chmod +x /bin/autotiling.sh
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf  /bin/autotiling.sh
+rm -rvf /usr/lib/autotiling
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

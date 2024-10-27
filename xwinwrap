@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="xwinwrap"
+VERS=0.9
+LINK="https://github.com/mmhobi7/xwinwrap/archive/refs/tags/v$VERS.tar.gz"
+DEPS="xorg-libraries"
+
+
+IDIR=$(cat << '~fin.'
+
+make PREFIX=/usr
+make PREFIX=/usr install
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /bin/xwinwrap
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
