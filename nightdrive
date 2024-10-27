@@ -2,7 +2,7 @@
 NAME="nightdrive"
 VERS=0
 LINK=""
-DEPS="git"
+DEPS="git wget mpv xwinwrap"
 
 
 IDIR=$(cat << '~fin.'
@@ -17,8 +17,8 @@ chown -Rv $TARGET_USER:$TARGET_USER nightdrive
 
 [ -e $H/wallpapers/nightdrive.mp4 ] ||
 {
-    raw https://files.catbox.moe/ia3b5p.mp4 &&
-    mv -vf /etc/rid/sources/ia3b5p.mp4 $H/wallpapers/nightdrive.mp4
+    wget https://files.catbox.moe/ia3b5p.mp4 &&
+    mv -vf ia3b5p.mp4 $H/wallpapers/nightdrive.mp4
 }
 
 ln -sfv config $H/.config
