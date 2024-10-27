@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="rid"
-VERS=0.8.1
+VERS=0.8.2
 LINK=""
 DEPS="openssl tar xz bash coreutils glibc gcc"
 
@@ -18,7 +18,7 @@ tar xvf /etc/rid/sources/rid.tar.xz -C /usr/bin
 
 if [ -e /etc/rid-pkgs.bak ]; then
   mv -vf /etc/rid-pkgs.bak /etc/rid/pkgs.json
-  echo "restored packages backup"
+  echo "restored pkgs.json"
 fi
 
 ~fin.
