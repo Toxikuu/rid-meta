@@ -7,12 +7,9 @@ DEPS="nvim git"
 
 IDIR=$(cat << '~fin.'
 
-TARGETUSER="t"
-H="/home/$TARGETUSER"
-
 git clone https://github.com/NvChad/starter  ~/.config/nvim
 rm -rvf $H/.config/nvim && cp -rvf ~/.config/nvim $H/.config/nvim
-chown -vR $TARGETUSER:$TARGETUSER $H/.config/nvim
+chown -vR $TARGET_USER:$TARGET_USER $H/.config/nvim
 
 ~fin.
 )
