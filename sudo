@@ -10,8 +10,12 @@ IDIR=$(cat << '~fin.'
 NORMAL=$(tput sgr0)
 BOLD=$(tput bold)
 RED=$(tput setaf 1)
+ITALIC=$(tput sitm)
+PINK=$(tput setaf 5)
+WHITE=$(tput setaf 7)
 
 SUDO_PROMPT=" ${BOLD}[${RED}#${NORMAL}${BOLD}]${NORMAL} "
+BADPASS_PROMPT="${BOLD}${ITALIC}${PINK}♡★  ✿ ,.♡${WHITE} ~ try again! ${PINK}՞ ${RED}⸝⸝${PINK}>  ̫ <${RED}⸝⸝${PINK} ՞⸜ ★ ♡⸝ ✿ ${NORMAL}"
 
 # Here's a cute cat I found while looking for sudo prompts:
 #  ╱|、
@@ -19,13 +23,12 @@ SUDO_PROMPT=" ${BOLD}[${RED}#${NORMAL}${BOLD}]${NORMAL} "
 #  |、˜〵          
 #  じしˍ,)ノ
 
-BADPASS_PROMPT = "${BOLD}~try again! ՞ ⸝⸝>  ̫ <⸝⸝ ՞⸜ ♡ ⸝${NORMAL}"
+    # --with-all-insults         \
+    # --with-insults             \
 
 cm  --libexecdir=/usr/lib      \
     --with-secure-path         \
     --with-editor=/bin/nvim    \
-    --with-all-insults         \
-    --with-insults             \
     --without-lecture          \
     --docdir=/tmp/rid/trash    \
     --disable-year2038         \
