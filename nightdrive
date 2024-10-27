@@ -1,0 +1,39 @@
+#!/bin/bash
+NAME="nightdrive"
+VERS=0
+LINK=""
+DEPS="git"
+
+
+IDIR=$(cat << '~fin.'
+
+mkdir -pv /dots && cd /dots
+git clone https://github.com/toxikuu/nightdrive
+
+[ -e $H/.config ] &&
+rm -rvf $H/.config
+
+[ -e $H/wallpapers/nightdrive.mp4 ] ||
+{
+    raw https://files.catbox.moe/ia3b5p.mp4 &&
+    mv -vf /etc/rid/sources/ia3b5p.mp4 $H/wallpapers/nightdrive.mp4
+}
+
+ln -sfv config $H/.config
+echo "You should now set up extra files manually. (/dots/nightdrive/extra)"
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf $H/.config  \
+        /dots/nightdrive
+echo "If you set up any files in /dots/nightdrive/extra, you're responsible for handling the removal of those."
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
