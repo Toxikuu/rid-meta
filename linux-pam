@@ -7,24 +7,12 @@ DEPS=""
 
 IDIR=$(cat << '~fin.'
 
-sed -e /service_DATA/d \
-    -i modules/pam_namespace/Makefile.am
-autoreconf -fi
-
-cm \
-    --sbindir=/usr/sbin                  \
-    --sysconfdir=/etc                    \
-    --libdir=/usr/lib                    \
-    --enable-securedir=/usr/lib/security \
-    --docdir=/tmp/rid/trash
+mn -D docs=disabled     -D logind=disabled
 
 chmod -v 4755 /usr/sbin/unix_chkpwd
+rm -rvf /usr/lib/systemd
 
-32cm \
-    --sbindir=/usr/sbin                  \
-    --sysconfdir=/etc                    \
-    --host=i686-pc-linux-gnu             \
-    --enable-securedir=/usr/lib/security
+32mn -D docs=disabled   -D logind=disabled
 
 install -vdm755 /etc/pam.d &&
 cat > /etc/pam.d/system-account << "EOF" &&
