@@ -8,13 +8,15 @@ DEPS=""
 IDIR=$(cat << '~fin.'
 
 mn \
-    -D docs=disabled
+    -D docs=disabled    \
+    -D logind=disabled
 
 chmod -v 4755 /usr/sbin/unix_chkpwd
 rm -rvf /usr/lib/systemd
 
 32mn \
-    -D docs=disabled
+    -D docs=disabled    \
+    -D logind=disabled
 
 install -vdm755 /etc/pam.d &&
 cat > /etc/pam.d/system-account << "EOF" &&
