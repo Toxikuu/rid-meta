@@ -14,14 +14,15 @@ cm --disable-alsaconf \
 
 alsactl init
 alsactl -L store
-cat > /etc/asound.conf << "hi"
+
+cat > /etc/asound.conf << "EOF"
 # Begin /etc/asound.conf
 
 defaults.pcm.card 1
 defaults.ctl.card 1
 
 # End /etc/asound.conf
-hi
+EOF
 
 ~fin.
 )

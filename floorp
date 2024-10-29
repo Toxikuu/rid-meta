@@ -13,13 +13,13 @@ cd ..
 cp -rv floorp-$VERS /usr/src/
 ln -sfv /usr/src/floorp-$VERS /usr/src/floorp
 
-cat << 'hi' > /usr/bin/floorp.sh
+cat << 'EOF' > /usr/bin/floorp.sh
 #!/bin/bash
 
 DEF="--force-device-scale-factor=1"
 
-exec /usr/src/floorp/floorp "\$DEF" "\$@"
-hi
+exec /usr/src/floorp/floorp "$DEF" "$@"
+EOF
 
 chmod +x /usr/bin/floorp.sh
 
