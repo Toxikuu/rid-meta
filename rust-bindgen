@@ -2,7 +2,7 @@
 NAME="rust-bindgen"
 VERS=0.70.1
 LINK="https://github.com/rust-lang/rust-bindgen/archive/v$VERS.tar.gz"
-DEPS="llvm rustc"  # llvm with clang
+DEPS="llvm rust"  # llvm with clang
 
 
 IDIR=$(cat << '~fin.'
