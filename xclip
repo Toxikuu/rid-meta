@@ -1,0 +1,29 @@
+#!/bin/bash
+NAME="xclip"
+VERS=0.13
+LINK="https://github.com/astrand/xclip/archive/refs/tags/$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+autoconf -fv
+# cm doesn't work because --disable-static throws an error
+./configure --prefix=/usr
+make
+make install
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf  /usr/bin/xclip{,-*}  \
+        /usr/share/man/man1/xclip{.1,-copyfile.1}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
