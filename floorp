@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="floorp"
-VERS=11.19.1
+VERS=11.20.0
 LINK="https://github.com/Floorp-Projects/Floorp/releases/download/v$VERS/floorp-$VERS.linux-x86_64.tar.bz2"
 DEPS="gtk+"  # floorp has a bunch of dependencies that i dont feel like finding rn
 
