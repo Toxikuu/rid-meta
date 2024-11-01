@@ -9,7 +9,7 @@ IDIR=$(cat << '~fin.'
 
 mkdir -pv     /usr/lib/autotiling
 cd     ..
-m $NAME-$VERS /usr/lib/autotiling
+mo $NAME-$VERS /usr/lib/autotiling
 cd            /usr/lib/autotiling
 
 python -m venv venv         &&

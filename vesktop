@@ -10,7 +10,7 @@ IDIR=$(cat << '~fin.'
 pnpm i || die "pnpm failed to install dependencies"
 pnpm package --linux dir || die "pnpm build failed"
 
-m dist/linux-unpacked /usr/lib/vesktop
+mo dist/linux-unpacked /usr/lib/vesktop
 
 cat << 'EOF' > /usr/bin/vesktop.sh
 #!/bin/sh

@@ -10,7 +10,7 @@ IDIR=$(cat << '~fin.'
 
 mkdir -pv      /usr/src/linux-$VERS
 cd ..
-m kernel-$VERS /usr/src/linux-$VERS
+mo kernel-$VERS /usr/src/linux-$VERS
 
 [ -e /usr/src/linux/.config ] &&
 cp /usr/src/linux/.config /usr/src/linux-$VERS/.config
