@@ -8,7 +8,7 @@ DEPS="libpng pixman fontconfig glib xorg-libraries"
 IDIR=$(cat << '~fin.'
 
 raw https://www.linuxfromscratch.org/patches/blfs/svn/cairo-$VERS-upstream_fixes-1.patch
-patch -Np1 -i /etc/rid/sources/cairo-$VERS-upstream_fixes-1.patch
+patch -Np1 -i "$RIDSOURCES"/cairo-$VERS-upstream_fixes-1.patch
 
 mn
 

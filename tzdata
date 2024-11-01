@@ -7,11 +7,11 @@ DEPS="glibc"  # provides tzselect zic etc
 
 IDIR=$(cat << '~fin.'
 
-[ -e /etc/rid/sources/tzdata$VERS.tar.gz ] ||
+[ -e "$RIDSOURCES"/tzdata$VERS.tar.gz ] ||
 raw https://data.iana.org/time-zones/releases/tzdata$VERS.tar.gz
 
 mkdir -pv tzdata-$VERS && cd tzdata-$VERS
-cp -vf /etc/rid/sources/tzdata$VERS.tar.gz .
+cp -vf "$RIDSOURCES"/tzdata$VERS.tar.gz .
 tar xvf tzdata$VERS.tar.gz
 
 ZONEINFO=/usr/share/zoneinfo

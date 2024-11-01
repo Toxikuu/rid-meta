@@ -22,9 +22,9 @@ cm \
 chown -v root:messagebus /usr/libexec/dbus-daemon-launch-helper
 chmod -v      4750       /usr/libexec/dbus-daemon-launch-helper
 
-[ -e /etc/rid/sources/blfs-bootscripts-20240913.tar.xz ] || raw https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20240913.tar.xz
+[ -e "$RIDSOURCES"/blfs-bootscripts-20240913.tar.xz ] || raw https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20240913.tar.xz
 
-tar xf /etc/rid/sources/blfs-bootscripts-20240913.tar.xz
+tar xf "$RIDSOURCES"/blfs-bootscripts-20240913.tar.xz
 
 cd blfs-bootscripts-20240913
 make install-dbus

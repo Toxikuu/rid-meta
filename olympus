@@ -9,9 +9,9 @@ IDIR=$(cat << '~fin.'
 
 raw 'https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds/4338/artifacts?artifactName=linux.main&api-version=5.0&%24format=zip'
 
-mo '/etc/rid/sources/artifacts?artifactName=linux.main&api-version=5.0&%24format=zip' /etc/rid/sources/olympus.zip
+mo '"$RIDSOURCES"/artifacts?artifactName=linux.main&api-version=5.0&%24format=zip' "$RIDSOURCES"/olympus.zip
 
-cp -vf /etc/rid/sources/olympus.zip .
+cp -vf "$RIDSOURCES"/olympus.zip .
 
 unzip olympus.zip && cd   linux.main
 unzip    dist.zip && rm -vf dist.zip

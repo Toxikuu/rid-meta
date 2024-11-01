@@ -7,9 +7,9 @@ DEPS=""
 
 IDIR=$(cat << '~fin.'
 
-[ -e /etc/rid/sources/sysvinit-3.10-consolidated-1.patch ] || raw https://www.linuxfromscratch.org/patches/lfs/development/sysvinit-3.10-consolidated-1.patch
+[ -e "$RIDSOURCES"/sysvinit-3.10-consolidated-1.patch ] || raw https://www.linuxfromscratch.org/patches/lfs/development/sysvinit-3.10-consolidated-1.patch
 
-patch -Np1 -i /etc/rid/sources/sysvinit-3.10-consolidated-1.patch
+patch -Np1 -i "$RIDSOURCES"/sysvinit-3.10-consolidated-1.patch
 
 make
 make install

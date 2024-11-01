@@ -7,10 +7,10 @@ DEPS="xmlto"
 
 IDIR=$(cat << '~fin.'
 
-[ -e /etc/rid/sources/giflib-$VERS-upstream_fixes-1.patch ] ||
+[ -e "$RIDSOURCES"/giflib-$VERS-upstream_fixes-1.patch ] ||
 raw https://www.linuxfromscratch.org/patches/blfs/svn/giflib-$VERS-upstream_fixes-1.patch
 
-patch -Np1 -i /etc/rid/sources/giflib-$VERS-upstream_fixes-1.patch
+patch -Np1 -i "$RIDSOURCES"/giflib-$VERS-upstream_fixes-1.patch
 cp pic/gifgrid.gif doc/giflib-logo.gif
 make
 make PREFIX=/usr install

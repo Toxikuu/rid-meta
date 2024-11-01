@@ -7,9 +7,9 @@ DEPS=""
 
 IDIR=$(cat << '~fin.'
 
-[ -e /etc/rid/sources/coreutils-$VERS-i18n-2.patch ] || raw https://www.linuxfromscratch.org/patches/lfs/development/coreutils-$VERS-i18n-2.patch
+[ -e "$RIDSOURCES"/coreutils-$VERS-i18n-2.patch ] || raw https://www.linuxfromscratch.org/patches/lfs/development/coreutils-$VERS-i18n-2.patch
 
-patch -Np1 -i /etc/rid/sources/coreutils-$VERS-i18n-2.patch
+patch -Np1 -i "$RIDSOURCES"/coreutils-$VERS-i18n-2.patch
 
 autoreconf -fiv
 FORCE_UNSAFE_CONFIGURE=1 cm --enable-no-install-program=kill,uptime

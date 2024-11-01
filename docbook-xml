@@ -10,7 +10,7 @@ IDIR=$(cat << '~fin.'
 raw https://www.docbook.org/xml/$VERS/docbook-xml-$VERS.zip
 mkdir docbook-xml-$VERS
 cd docbook-xml-$VERS
-unzip /etc/rid/sources/docbook-xml-$VERS.zip
+unzip "$RIDSOURCES"/docbook-xml-$VERS.zip
 
 
 install -v -d -m755 /usr/share/xml/docbook/xml-dtd-$VERS &&

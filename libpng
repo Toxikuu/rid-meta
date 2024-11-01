@@ -8,7 +8,7 @@ DEPS=""
 IDIR=$(cat << '~fin.'
 
 raw https://downloads.sourceforge.net/project/libpng-apng/libpng16/$VERS/libpng-$VERS-apng.patch.gz
-gzip -cd /etc/rid/sources/libpng-$VERS-apng.patch.gz | patch -p1
+gzip -cd "$RIDSOURCES"/libpng-$VERS-apng.patch.gz | patch -p1
 
 cm
 32cm

@@ -7,9 +7,9 @@ DEPS=""
 
 IDIR=$(cat << '~fin.'
 
-[ -f /etc/rid/sources/glibc-$VERS-fhs-1.patch ] || raw https://www.linuxfromscratch.org/patches/lfs/development/glibc-$VERS-fhs-1.patch
+[ -f "$RIDSOURCES"/glibc-$VERS-fhs-1.patch ] || raw https://www.linuxfromscratch.org/patches/lfs/development/glibc-$VERS-fhs-1.patch
 
-patch -Np1 -i /etc/rid/sources/glibc-$VERS-fhs-1.patch
+patch -Np1 -i "$RIDSOURCES"/glibc-$VERS-fhs-1.patch
 
 mkdir -v build
 cd       build
@@ -134,9 +134,9 @@ echo not implemented
 
 UDIR=$(cat << '~fin.'
 
-[ -f /etc/rid/sources/glibc-$VERS-fhs-1.patch ] || raw https://www.linuxfromscratch.org/patches/lfs/development/glibc-$VERS-fhs-1.patch
+[ -f "$RIDSOURCES"/glibc-$VERS-fhs-1.patch ] || raw https://www.linuxfromscratch.org/patches/lfs/development/glibc-$VERS-fhs-1.patch
 
-patch -Np1 -i /etc/rid/sources/glibc-$VERS-fhs-1.patch
+patch -Np1 -i "$RIDSOURCES"/glibc-$VERS-fhs-1.patch
 
 mkdir -v build
 cd       build

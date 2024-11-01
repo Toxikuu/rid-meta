@@ -11,7 +11,7 @@ raw https://github.com/PrismLauncher/PrismLauncher/releases/download/$VERS/Prism
 
 mkdir -pv $NAME-$VERS
 cd        $NAME-$VERS
-tar xvf /etc/rid/sources/PrismLauncher-Linux-Qt6-Portable-$VERS.tar.gz
+tar xvf "$RIDSOURCES"/PrismLauncher-Linux-Qt6-Portable-$VERS.tar.gz
 cd ..
 mo $NAME-$VERS  /usr/src/prism
 chmod 777       /usr/src/prism

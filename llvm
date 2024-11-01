@@ -13,14 +13,14 @@ raw \
   https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-third-party-$ver.src.tar.xz               \
   https://github.com/llvm/llvm-project/releases/download/llvmorg-$VERS/clang-$VERS.src.tar.xz &&
 
-tar -xf /etc/rid/sources/llvm-cmake-$ver.src.tar.xz
-tar -xf /etc/rid/sources/llvm-third-party-$ver.src.tar.xz
+tar -xf "$RIDSOURCES"/llvm-cmake-$ver.src.tar.xz
+tar -xf "$RIDSOURCES"/llvm-third-party-$ver.src.tar.xz
 sed "/LLVM_COMMON_CMAKE_UTILS/s@../cmake@llvm-cmake-${ver}.src@"          \
     -i CMakeLists.txt                                                  &&
 sed "/LLVM_THIRD_PARTY_DIR/s@../third-party@llvm-third-party-${ver}.src@" \
     -i cmake/modules/HandleLLVMOptions.cmake
 
-tar -xf /etc/rid/sources/clang-$VERS.src.tar.xz -C tools &&
+tar -xf "$RIDSOURCES"/clang-$VERS.src.tar.xz -C tools &&
 mv tools/clang-$VERS.src tools/clang
 
 grep -rl '#!.*python' | xargs sed -i '1s/python$/python3/'

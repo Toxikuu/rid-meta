@@ -7,14 +7,14 @@ DEPS=""
 
 IDIR=$(cat << '~fin.'
 
-[ -f /etc/rid/sources/NVIDIA-Linux-x86_64-$VERS.run ] ||
+[ -f "$RIDSOURCES"/NVIDIA-Linux-x86_64-$VERS.run ] ||
 raw https://us.download.nvidia.com/XFree86/Linux-x86_64/$VERS/NVIDIA-Linux-x86_64-$VERS.run
 
-chmod +x /etc/rid/sources/NVIDIA-Linux-x86_64-$VERS.run
+chmod +x "$RIDSOURCES"/NVIDIA-Linux-x86_64-$VERS.run
 kver=$(realpath /usr/src/linux | cut -d- -f2-)
 echo "Detected kernel version '$kver'"
 
-/etc/rid/sources/NVIDIA-Linux-x86_64-$VERS.run  \
+"$RIDSOURCES"/NVIDIA-Linux-x86_64-$VERS.run  \
     --silent                                    \
     --ui=none                                   \
     --no-rpms                                   \

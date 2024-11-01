@@ -9,7 +9,7 @@ IDIR=$(cat << '~fin.'
 
 raw https://www.linuxfromscratch.org/patches/blfs/svn/docbook-xsl-nons-$VERS-stack_fix-1.patch
 
-patch -Np1 -i /etc/rid/sources/docbook-xsl-nons-$VERS-stack_fix-1.patch
+patch -Np1 -i "$RIDSOURCES"/docbook-xsl-nons-$VERS-stack_fix-1.patch
 
 install -v -m755 -d /usr/share/xml/docbook/xsl-stylesheets-nons-$VERS &&
 

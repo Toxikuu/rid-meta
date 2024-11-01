@@ -31,7 +31,7 @@ meson setup ..                  \
 ninja                       || die "Ninja failed"
 ninja install               || die "Ninja install failed"
 
-tar xf /etc/rid/sources/gobject-introspection-$gobjver.tar.xz
+tar xf "$RIDSOURCES"/gobject-introspection-$gobjver.tar.xz
 
 meson setup gobject-introspection-$gobjver gi-build \
             --prefix=/usr --buildtype=release --strip &&

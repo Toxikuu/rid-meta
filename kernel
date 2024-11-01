@@ -21,7 +21,7 @@ cd        /usr/src/linux
 
 [ -e .config ] || {
     raw https://raw.githubusercontent.com/Toxikuu/rid/refs/heads/master/defaults/kernelconfig &&
-    cp -vf /etc/rid/sources/kernelconfig .config
+    cp -vf "$RIDSOURCES"/kernelconfig .config
 }
 
 make olddefconfig

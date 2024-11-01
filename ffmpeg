@@ -8,7 +8,7 @@ DEPS="libaom libass fdk-aac freetype2 lame libvorbis libvpx opus x264 x265 yasm 
 IDIR=$(cat << '~fin.'
 
 raw https://www.linuxfromscratch.org/patches/blfs/svn/ffmpeg-$VERS-chromium_method-1.patch
-patch -Np1 -i /etc/rid/sources/ffmpeg-$VERS-chromium_method-1.patch
+patch -Np1 -i "$RIDSOURCES"/ffmpeg-$VERS-chromium_method-1.patch
 
 
 cm --enable-gpl                       \
