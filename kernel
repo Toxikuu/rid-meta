@@ -19,10 +19,14 @@ rm -rf    /usr/src/linux
 ln -sfv   /usr/src/linux-$VERS /usr/src/linux
 cd        /usr/src/linux
 
-[ -e .config ] || {
-    raw https://raw.githubusercontent.com/Toxikuu/rid/refs/heads/master/defaults/kernelconfig &&
-    cp -vf "$RIDSOURCES"/kernelconfig .config
-}
+if [ ! -e .config ]; then
+    if [ -e "$RIDHOME/defaults/kernelconfig" ]; then
+        cp -vf "$RIDHOME/defaults/kernelconfig" .config
+    else
+        raw https://raw.githubusercontent.com/Toxikuu/rid/refs/heads/master/defaults/kernelconfig &&
+        cp -vf "$RIDSOURCES"/kernelconfig .config
+    fi
+fi
 
 make olddefconfig
 make && make modules_install
