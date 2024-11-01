@@ -11,6 +11,7 @@ rm -rf /usr/src/floorp-$VERS
 
 cd ..
 cp -rv floorp-$VERS /usr/src/
+[ -L /usr/src/floorp ] && rm -vf /usr/src/floorp
 ln -sfv /usr/src/floorp-$VERS /usr/src/floorp
 
 cat << 'EOF' > /usr/bin/floorp.sh
