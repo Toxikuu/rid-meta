@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xorg-server"
-VERS=21.1.13
+VERS=21.1.14
 LINK="https://www.x.org/pub/individual/xserver/xorg-server-$VERS.tar.xz"
 DEPS="libxcvt pixman xkeyboard-config dbus2 elogind libepoxy libunwind nettle xcb-util-keysyms xcb-util-image xcb-util-renderutil xcb-util-wm"
 
