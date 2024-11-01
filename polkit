@@ -15,17 +15,25 @@ sed -i '/systemd_sysusers_dir/s/^/#/' meson.build
 
 mn \
     -D man=false                \
-    -D man=false                \
+    -D tests=false              \
     -D session_tracking=elogind \
     -D introspection=false      \
-    -D tests=false
+    -D os_type=lfs
+
+rm -vf /tmp/*.service
+rm -rf /usr/lib/{sysusers,tmpfiles}.d
 
 ~fin.
 )
 
 RDIR=$(cat << '~fin.'
 
-echo not implemented
+rm -rvf /bin/pk{action,check,exec,ttyagent} \
+        /bin/polkitd                        \
+        /lib/polkit-1                       \
+        /etc/polkit-1                       \
+        /usr/include/polkit-1               \
+        /usr/share/polkit-1
 
 ~fin.
 )
