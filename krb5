@@ -1,0 +1,35 @@
+#!/bin/bash
+NAME="krb5"
+VERS=1.21.3
+LINK="https://kerberos.org/dist/krb5/${VERS%.*}/krb5-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cd src &&
+sed -i -e '/eq 0/{N;s/12 //}' plugins/kdb/db2/libdb2/test/run.test &&
+
+cm  \
+    --sysconfdir=/etc        \
+    --localstatedir=/var/lib \
+    --runstatedir=/run       \
+    --with-system-et         \
+    --with-system-ss         \
+    --with-system-verto=no   \
+    --enable-dns-for-realm   \
+    --disable-rpath
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
