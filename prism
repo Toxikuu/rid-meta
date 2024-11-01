@@ -1,0 +1,46 @@
+#!/bin/bash
+NAME="prism"
+VERS=9.1
+LINK=""
+DEPS="krb5"
+
+
+IDIR=$(cat << '~fin.'
+
+raw https://github.com/PrismLauncher/PrismLauncher/releases/download/$VERS/PrismLauncher-Linux-Qt6-Portable-$VERS.tar.gz
+
+mkdir -pv $NAME-$VERS
+cd        $NAME-$VERS
+tar xvf /etc/rid/sources/PrismLauncher-Linux-Qt6-Portable-$VERS.tar.gz
+cd ..
+mo $NAME-$VERS  /usr/src/prism
+chmod 777       /usr/src/prism
+
+cat << "EOF" > /usr/share/applications/prism.desktop
+[Desktop Entry]
+Type=Application
+Version=$VERS
+Name=PrismLauncher
+Comment=Minecraft Client
+Exec=/usr/src/prism/PrismLauncher
+Icon=/usr/src/prism/share/icons/hicolor/scalable/apps/org.prismlauncher.PrismLauncher.svg
+Terminal=false
+Categories=Game;Application;
+Keywords=minecraft;client;launcher;prism;
+StartupNotify=false
+EOF
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf  /usr/share/applications/prism.desktop
+rm -rvf /usr/src/prism
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
