@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="flit-core"
-VERS=3.9.0
+VERS=3.10.0
 LINK="https://pypi.org/packages/source/f/flit-core/flit_core-$VERS.tar.gz"
 DEPS="python"
 
