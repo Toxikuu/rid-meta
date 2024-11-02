@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="alacritty"
-VERS=0.13.2
+VERS=0.14.0
 LINK="https://github.com/alacritty/alacritty/archive/refs/tags/v$VERS.tar.gz"
 DEPS="rust freetype2 fontconfig xorg-libraries libxkbcommon desktop-file-utils"
 
