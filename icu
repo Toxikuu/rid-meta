@@ -1,17 +1,39 @@
 #!/bin/bash
 NAME="icu"
-VERS=75.1
+VERS=76.1
 ver1="${VERS//./-}"
 ver2="${VERS//./_}"
-LINK="https://github.com/unicode-org/icu/releases/download/release-$ver1/icu4c-$ver2-src.tgz"
+LINK=""  # the link just doesnt work for 76.1 and i have no idea why; until i figure it out, im using wget
+DEPS="wget"
 
 
 IDIR=$(cat << '~fin.'
 
-cd source                                    &&
+[ -e "$RIDSOURCES"/$NAME-$VERS.tar ] || {
+wget https://github.com/unicode-org/icu/releases/download/release-$ver1/icu4c-$ver2-src.tgz --directory-prefix="$RIDSOURCES"
+mv "$RIDSOURCES"/{icu4c-$ver2-src.tgz,$NAME-$VERS.tar}
+}
 
-cm
-32cm
+tar xf "$RIDSOURCES/$NAME-$VERS.tar" || die "Failed to extract tarball for $NAME-$VERS"
+cd icu
+
+cd source &&
+
+./configure --prefix=/usr &&
+make &&
+make install
+
+make clean
+CC="gcc -m32" CXX="g++ -m32"         \
+PKG_CONFIG_PATH=/usr/lib32/pkgconfig \
+./configure --prefix=/usr --libdir=/usr/lib32 --host=i686-pc-linux-gnu &&
+make
+make DESTDIR=$PWD/DESTDIR install     &&
+cp -Rv DESTDIR/usr/lib32/* /usr/lib32 &&
+rm -rf DESTDIR                        &&
+ldconfig
+
+# TODO: Add error handling or make it build with abstractions
 
 ~fin.
 )
