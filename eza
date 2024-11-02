@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="eza"
-VERS=0.20.2
+VERS=0.20.6
 LINK="https://github.com/eza-community/eza/archive/refs/tags/v$VERS.tar.gz"
 DEPS="rust"
 
