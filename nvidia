@@ -14,7 +14,13 @@ chmod +x "$RIDSOURCES"/NVIDIA-Linux-x86_64-$VERS.run
 kver=$(realpath /usr/src/linux | cut -d- -f2-)
 echo "Detected kernel version '$kver'"
 
-"$RIDSOURCES"/NVIDIA-Linux-x86_64-$VERS.run  \
+"$RIDSOURCES"/NVIDIA-Linux-x86_64-$VERS.run --extract-only || die "Failed to extract NVIDIA's .run"
+cd NVIDIA-Linux-x86_64-$VERS
+
+# fix currently necessary for 6.11 kernels
+sed -i 's/drm_fbdev_generic_setup/drm_fbdev_ttm_setup/g' kernel{,-open}/conftest.sh kernel/nvidia-drm/nvidia-drm-{drv.c,sources.mk} || die "Sed failed"
+
+./nvidia-installer                              \
     --silent                                    \
     --ui=none                                   \
     --no-rpms                                   \
