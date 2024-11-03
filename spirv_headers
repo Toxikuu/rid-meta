@@ -1,0 +1,30 @@
+#!/bin/bash
+NAME="spirv_headers"
+VERS="${NAME}_version"; VERS="${!VERS}"
+LINK="https://github.com/KhronosGroup/SPIRV-Headers/archive/vulkan-sdk-$VERS/SPIRV-Headers-$VERS.tar.gz"
+DEPS="cmake"
+
+
+IDIR=$(cat << '~fin.'
+
+mkdir build &&
+cd    build &&
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr -G Ninja .. &&
+ninja
+
+DESTDIR= ninja install
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

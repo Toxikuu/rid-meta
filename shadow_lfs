@@ -1,0 +1,58 @@
+#!/bin/bash
+NAME="shadow_lfs"
+VERS="${NAME}_version"; VERS="${!VERS}"
+LINK="https://github.com/shadow-maint/shadow/releases/download/$VERS/shadow-$VERS.tar.xz"
+UPST="https://github.com/shadow-maint/shadow/tags"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+if [ -e /usr/lib/libpam.so ]; then
+    die "Pam is installed. You should install shadow, not shadow-lfs."
+fi
+
+sed -i 's/groups$(EXEEXT) //' src/Makefile.in
+find man -name Makefile.in -exec sed -i 's/groups\.1 / /'   {} \;
+find man -name Makefile.in -exec sed -i 's/getspnam\.3 / /' {} \;
+find man -name Makefile.in -exec sed -i 's/passwd\.5 / /'   {} \;
+
+sed -e 's:#ENCRYPT_METHOD DES:ENCRYPT_METHOD YESCRYPT:' \
+    -e 's:/var/spool/mail:/var/mail:'                   \
+    -e '/PATH=/{s@/sbin:@@;s@/bin:@@}'                  \
+    -i etc/login.defs
+
+touch /usr/bin/passwd
+./configure --sysconfdir=/etc   \
+            --disable-static    \
+            --with-{b,yes}crypt \
+            --without-libbsd    \
+            --with-group-name-max-length=32
+
+make
+make exec_prefix=/usr install
+make -C man install-man
+
+pwconv
+grpconv
+
+mkdir -pv /etc/default
+useradd -D --gid 999
+
+sed -i '/MAIL/s/yes/no/' /etc/default/useradd
+
+echo "You may now set the root password with passwd root if you wish"
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

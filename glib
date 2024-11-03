@@ -5,7 +5,7 @@ ver="${VERS%.*}"
 gobjver=1.82.0
 gobjv="${gobjver%.*}"
 LINK="https://download.gnome.org/sources/glib/$ver/glib-$VERS.tar.xz"
-DEPS="meson-toolchain-files pcre2"
+DEPS="meson_toolchain_files pcre2"
 
 
 IDIR=$(cat << '~fin.'

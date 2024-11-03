@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="libgpg_error"
+VERS="${NAME}_version"; VERS="${!VERS}"
+LINK="https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-$VERS.tar.bz2"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

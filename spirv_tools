@@ -1,0 +1,55 @@
+#!/bin/bash
+NAME="spirv_tools"
+VERS="${NAME}_version"; VERS="${!VERS}"
+LINK="https://github.com/KhronosGroup/SPIRV-Tools/archive/vulkan-sdk-$VERS/SPIRV-Tools-$VERS.tar.gz"
+DEPS="cmake spirv_headers"
+
+
+IDIR=$(cat << '~fin.'
+
+mkdir -v build &&
+cd       build &&
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr     \
+      -D CMAKE_BUILD_TYPE=Release      \
+      -D SPIRV_WERROR=OFF              \
+      -D BUILD_SHARED_LIBS=ON          \
+      -D SPIRV_TOOLS_BUILD_STATIC=OFF  \
+      -D SPIRV-Headers_SOURCE_DIR=/usr \
+      -G Ninja .. &&
+ninja &&
+DESTDIR= ninja install
+
+rm -rf *
+CC="gcc -m32" CXX="g++ -m32"           \
+PKG_CONFIG_PATH=/usr/lib32/pkgconfig   \
+cmake -D CMAKE_INSTALL_PREFIX=/usr     \
+      -D CMAKE_INSTALL_LIBDIR=lib32    \
+      -D CMAKE_BUILD_TYPE=Release      \
+      -D SPIRV_WERROR=OFF              \
+      -D BUILD_SHARED_LIBS=ON          \
+      -D SPIRV_TOOLS_BUILD_STATIC=OFF  \
+      -D SPIRV-Headers_SOURCE_DIR=/usr \
+      -G Ninja .. &&
+
+ninja &&
+DESTDIR=/tmp/rid/dest ninja install
+cp -vr /tmp/rid/dest/usr/lib32/* /usr/lib32
+rm -rf /tmp/rid/dest/*
+ldconfig
+
+unset DESTDIR
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

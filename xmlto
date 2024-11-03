@@ -2,7 +2,7 @@
 NAME="xmlto"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://pagure.io/xmlto/archive/$VERS/xmlto-$VERS.tar.gz"
-DEPS="docbook-xml docbook-xsl-nons libxslt"
+DEPS="docbook_xml docbook_xsl_nons libxslt"
 
 
 IDIR=$(cat << '~fin.'

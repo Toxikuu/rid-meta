@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="xcb_util_errors"
+VERS="${NAME}_version"; VERS="${!VERS}"
+LINK="https://xcb.freedesktop.org/dist/xcb-util-errors-$VERS.tar.xz"
+DEPS="xcb_proto"
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib/libxcb-errors.*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

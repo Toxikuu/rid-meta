@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="xcb_util_xrm"
+VERS="${NAME}_version"; VERS="${!VERS}"
+LINK="https://github.com/Airblader/xcb-util-xrm/releases/download/v$VERS/xcb-util-xrm-$VERS.tar.gz"
+UPST="https://github.com/Airblader/xcb-util-xrm/tags"
+DEPS="xcb_util util_macros"
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

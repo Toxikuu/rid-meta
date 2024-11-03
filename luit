@@ -2,7 +2,7 @@
 NAME="luit"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://invisible-mirror.net/archives/luit/luit-$VERS.tgz"
-DEPS="xorg-applications"
+DEPS="xorg_applications"
 
 
 IDIR=$(cat << '~fin.'

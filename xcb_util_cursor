@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="xcb_util_cursor"
+VERS="${NAME}_version"; VERS="${!VERS}"
+LINK="https://xcb.freedesktop.org/dist/xcb-util-image-$VERS.tar.xz"
+DEPS="xcb_util_image xcb_util_renderutil"
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib/libxcb-cursor.*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

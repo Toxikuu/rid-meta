@@ -2,7 +2,7 @@
 NAME="gtk3"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://download.gnome.org/sources/gtk+/${VERS%.*}/gtk+-$VERS.tar.xz"
-DEPS="at-spi2-core gdk-pixbuf libepoxy pango"
+DEPS="at_spi2_core gdk_pixbuf libepoxy pango"
 
 
 IDIR=$(cat << '~fin.'

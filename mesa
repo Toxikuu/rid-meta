@@ -2,7 +2,7 @@
 NAME="mesa"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://mesa.freedesktop.org/archive/mesa-$VERS.tar.xz"
-DEPS="xorg-libraries libdrm mako pyyaml libglvnd libva libvdpau libvdpau-va-gl nettle"
+DEPS="xorg_libraries libdrm mako pyyaml libglvnd libva libvdpau libvdpau_va_gl nettle"
 # the deps need more testing
 
 IDIR=$(cat << '~fin.'

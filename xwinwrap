@@ -2,7 +2,7 @@
 NAME="xwinwrap"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/mmhobi7/xwinwrap/archive/refs/tags/v$VERS.tar.gz"
-DEPS="xorg-libraries"
+DEPS="xorg_libraries"
 
 
 IDIR=$(cat << '~fin.'

@@ -2,7 +2,7 @@
 NAME="xinit"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://www.x.org/pub/individual/app/xinit-$VERS.tar.xz"
-DEPS="xorg-libraries"
+DEPS="xorg_libraries"
 
 
 IDIR=$(cat << '~fin.'

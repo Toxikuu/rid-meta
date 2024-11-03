@@ -1,0 +1,63 @@
+#!/bin/bash
+NAME="util_linux"
+VERS="${NAME}_version"; VERS="${!VERS}"
+ver=${VERS%.*}
+LINK="https://www.kernel.org/pub/linux/utils/util-linux/v$ver/util-linux-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm \
+    ADJTIME_PATH=/var/lib/hwclock/adjtime \
+    --bindir=/usr/bin     \
+    --libdir=/usr/lib     \
+    --runstatedir=/run    \
+    --sbindir=/usr/sbin   \
+    --disable-chfn-chsh   \
+    --disable-login       \
+    --disable-nologin     \
+    --disable-su          \
+    --disable-setpriv     \
+    --disable-runuser     \
+    --disable-pylibmount  \
+    --disable-liblastlog2 \
+    --without-python      \
+    --without-systemd     \
+    --docdir=/tmp/rid/trash         \
+    --without-systemdsystemunitdir
+
+mv /usr/bin/ncursesw6-config{,.tmp}
+
+32cm \
+    ADJTIME_PATH=/var/lib/hwclock/adjtime \
+    --runstatedir=/run       \
+    --sbindir=/usr/sbin      \
+    --docdir=/tmp/rid/trash  \
+    --disable-chfn-chsh      \
+    --disable-login          \
+    --disable-nologin        \
+    --disable-su             \
+    --disable-setpriv        \
+    --disable-runuser        \
+    --disable-pylibmount     \
+    --disable-liblastlog2    \
+    --without-python         \
+    --without-systemd        \
+    --without-systemdsystemunitdir
+
+mv /usr/bin/ncursesw6-config{.tmp,}
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

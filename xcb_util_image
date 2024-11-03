@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="xcb_util_image"
+VERS="${NAME}_version"; VERS="${!VERS}"
+LINK="https://xcb.freedesktop.org/dist/xcb-util-image-$VERS.tar.xz"
+DEPS="xcb_util"
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib/libxcb-image.*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

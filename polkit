@@ -2,7 +2,7 @@
 NAME="polkit"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/polkit-org/polkit/archive/$VERS/polkit-$VERS.tar.gz"
-DEPS="duktape glib linux-pam elogind"
+DEPS="duktape glib linux_pam elogind"
 
 
 IDIR=$(cat << '~fin.'

@@ -2,7 +2,7 @@
 NAME="xorgproto"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://xorg.freedesktop.org/archive/individual/proto/xorgproto-$VERS.tar.xz"
-DEPS="util-macros"
+DEPS="util_macros"
 
 
 IDIR=$(cat << '~fin.'

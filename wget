@@ -2,7 +2,7 @@
 NAME="wget"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/wget/wget-$VERS.tar.gz"
-DEPS="libpsl make-ca libidn2"
+DEPS="libpsl make_ca libidn2"
 
 
 IDIR=$(cat << '~fin.'

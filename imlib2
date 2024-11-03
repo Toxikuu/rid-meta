@@ -2,7 +2,7 @@
 NAME="imlib2"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://downloads.sourceforge.net/project/enlightenment/imlib2-src/$VERS/imlib2-$VERS.tar.xz"
-DEPS="giflib librsvg xorg-libraries"
+DEPS="giflib librsvg xorg_libraries"
 
 
 IDIR=$(cat << '~fin.'

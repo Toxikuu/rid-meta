@@ -3,7 +3,7 @@ NAME="elogind"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/elogind/elogind/archive/v$VERS/elogind-$VERS.tar.gz"
 UPST="https://github.com/elogind/elogind/tags"
-DEPS="dbus1 linux-pam"
+DEPS="dbus1 linux_pam"
 
 
 IDIR=$(cat <<'~fin.'

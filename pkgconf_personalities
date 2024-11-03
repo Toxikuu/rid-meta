@@ -1,0 +1,79 @@
+#!/bin/bash
+NAME="pkgconf_personalities"
+VERS="${NAME}_version"; VERS="${!VERS}"
+LINK=""
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+mkdir -pv /usr/share/pkgconfig/personality.d
+
+cat > /usr/share/pkgconfig/personality.d/x86_64-pc-linux-gnu.personality << "EOF"
+Triplet: x86_64-pc-linux-gnu
+SysrootDir: /
+DefaultSearchPaths: /usr/lib/pkgconfig:/usr/share/pkgconfig
+SystemIncludePaths: /usr/include
+SystemLibraryPaths: /usr/lib
+EOF
+
+cat > /usr/share/pkgconfig/personality.d/i686-pc-linux-gnu.personality << "EOF"
+Triplet: i686-pc-linux-gnu
+SysrootDir: /
+DefaultSearchPaths: /usr/lib32/pkgconfig:/usr/share/pkgconfig
+SystemIncludePaths: /usr/include
+SystemLibraryPaths: /usr/lib32
+EOF
+
+ln -sfv pkgconf /usr/bin/x86_64-pc-linux-gnu-pkg-config
+ln -sfv pkgconf /usr/bin/i686-pc-linux-gnu-pkg-config
+
+x86_64-pc-linux-gnu-pkg-config --dump-personality > pp1
+i686-pc-linux-gnu-pkg-config --dump-personality > pp2
+
+cat > ref1 << EOF
+Triplet: x86_64-pc-linux-gnu
+SysrootDir: /
+DefaultSearchPaths: /usr/lib/pkgconfig /usr/share/pkgconfig
+SystemIncludePaths: /usr/include
+SystemLibraryPaths: /usr/lib
+EOF
+
+cat > ref2 << EOF
+Triplet: i686-pc-linux-gnu
+SysrootDir: /
+DefaultSearchPaths: /usr/lib32/pkgconfig /usr/share/pkgconfig
+SystemIncludePaths: /usr/include
+SystemLibraryPaths: /usr/lib32
+EOF
+
+if diff -wb pp1 ref1; then
+    echo "x86_64 pkgconf personality passed check"
+else
+    echo "x86_64 pkgconf personality failed check!" >&2
+    cat pp1
+fi
+
+
+if diff -wb pp2 ref2; then
+    echo "i686 pkgconf personality passed check"
+else
+    echo "i686 pkgconf personality failed check!" >&2
+    cat pp2
+fi
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/share/pkgconfig/personality.d
+rm -vf /usr/bin/x86_64-pc-linux-gnu-pkg-config
+rm -vf /usr/bin/i686-pc-linux-gnu-pkg-config
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

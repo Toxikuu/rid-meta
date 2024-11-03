@@ -3,7 +3,7 @@ NAME="librsvg"
 VERS="${NAME}_version"; VERS="${!VERS}"
 ver="${VERS%.*}"
 LINK="https://download.gnome.org/sources/librsvg/$ver/librsvg-$VERS.tar.xz"
-DEPS="cairo cargo-c gdk-pixbuf pango rust glib vala"
+DEPS="cairo cargo_c gdk_pixbuf pango rust glib vala"
 
 
 IDIR=$(cat << '~fin.'

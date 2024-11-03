@@ -1,0 +1,46 @@
+#!/bin/bash
+NAME="libjpeg_turbo"
+VERS="${NAME}_version"; VERS="${!VERS}"
+LINK="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/$VERS/libjpeg-turbo-$VERS.tar.gz"
+DEPS="cmake yasm"
+
+
+IDIR=$(cat << '~fin.'
+
+mkdir build &&
+cd    build &&
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr        \
+      -D CMAKE_BUILD_TYPE=RELEASE         \
+      -D ENABLE_STATIC=FALSE              \
+      -D CMAKE_INSTALL_DEFAULT_LIBDIR=lib \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON      \
+      -D CMAKE_INSTALL_DOCDIR=/usr/share/doc/libjpeg-turbo-3.0.1 \
+      .. &&
+make
+
+make install
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf \
+    /usr/bin/cjpeg          \
+    /usr/bin/djpeg          \
+    /usr/bin/jpegtran       \
+    /usr/bin/rdjpgcom       \
+    /usr/bin/tjbench        \
+    /usr/bin/wrjpgcom       \
+    /usr/lib/libjpeg.so*    \
+    /usr/lib/libturbojpeg.so*
+
+rm -rvf /usr/share/doc/libjpeg-turbo-$VERS
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

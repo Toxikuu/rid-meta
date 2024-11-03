@@ -2,7 +2,7 @@
 NAME="libdrm"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://dri.freedesktop.org/libdrm/libdrm-$VERS.tar.xz"
-DEPS="xorg-libraries"
+DEPS="xorg_libraries"
 
 
 IDIR=$(cat << '~fin.'

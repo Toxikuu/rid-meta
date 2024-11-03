@@ -2,7 +2,7 @@
 NAME="rofi"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/davatorium/rofi/releases/download/$VERS/rofi-$VERS.tar.xz"
-DEPS="pango cairo xcb-util xcb-util-wm xcb-util-cursor"
+DEPS="pango cairo xcb_util xcb_util_wm xcb_util_cursor"
 
 
 IDIR=$(cat << '~fin.'

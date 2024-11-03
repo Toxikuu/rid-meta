@@ -2,7 +2,7 @@
 NAME="sdl2"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://www.libsdl.org/release/SDL2-$VERS.tar.gz"
-DEPS="libxkbcommon wayland-protocols xorg-libraries"
+DEPS="libxkbcommon wayland_protocols xorg_libraries"
 
 
 IDIR=$(cat << '~fin.'

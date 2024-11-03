@@ -3,7 +3,7 @@ NAME="libxslt"
 VERS="${NAME}_version"; VERS="${!VERS}"
 ver="${VERS%.*}"
 LINK="https://download.gnome.org/sources/libxslt/$ver/libxslt-$VERS.tar.xz"
-DEPS="libxml2 docbook-xml docbook-xsl-nons"
+DEPS="libxml2 docbook_xml docbook_xsl_nons"
 
 
 IDIR=$(cat << '~fin.'

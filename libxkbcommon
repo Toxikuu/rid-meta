@@ -2,7 +2,7 @@
 NAME="libxkbcommon"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://xkbcommon.org/download/$NAME-$VERS.tar.xz"
-DEPS="xkeyboard-config libxcb wayland wayland-protocols"
+DEPS="xkeyboard_config libxcb wayland wayland_protocols"
 
 
 IDIR=$(cat << '~fin.'

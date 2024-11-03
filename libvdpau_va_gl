@@ -1,0 +1,45 @@
+#!/bin/bash
+NAME="libvdpau_va_gl"
+VERS="${NAME}_version"; VERS="${!VERS}"
+LINK="https://github.com/i-rinat/libvdpau-va-gl/archive/v$VERS/libvdpau-va-gl-$VERS.tar.gz"
+UPST="https://github.com/i-rinat/libvdpau-va-gl/tags"
+DEPS="cmake libvdpau libva"
+
+
+IDIR=$(cat << '~fin.'
+
+mkdir build &&
+cd    build &&
+
+cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr .. &&
+make
+make install
+
+rm -rf *
+CC="gcc -m32" CXX="g++ -m32"                 \
+PKG_CONFIG_PATH=/usr/lib32/pkgconfig         \
+cmake -D CMAKE_BUILD_TYPE=Release            \
+      -D CMAKE_INSTALL_PREFIX=/usr           \
+      .. &&
+
+make
+make DESTDIR=$PWD/DESTDIR install
+cp -vr DESTDIR/$XORG_PREFIX/lib/* $XORG_PREFIX/lib32
+rm -rf DESTDIR
+ldconfig
+
+echo "export VDPAU_DRIVER=va_gl" >> /etc/profile
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib/vdpau/libvdpau_va_gl.so*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
