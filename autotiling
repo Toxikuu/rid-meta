@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="autotiling"
-VERS=1.9.3
+VERS="${!NAME}_version"
 LINK="https://github.com/nwg-piotr/autotiling/archive/refs/tags/v$VERS.tar.gz"
 DEPS="python"
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libxml2"
-VERS=2.13.4
+VERS="${!NAME}_version"
 ver="${VERS%.*}"
 LINK="https://download.gnome.org/sources/libxml2/$ver/libxml2-$VERS.tar.xz"
 DEPS="icu"

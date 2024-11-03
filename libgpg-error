@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libgpg-error"
-VERS=1.50
+VERS="${!NAME}_version"
 LINK="https://www.gnupg.org/ftp/gcrypt/$NAME/$NAME-$VERS.tar.bz2"
 DEPS=""
 

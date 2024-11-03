@@ -1,7 +1,8 @@
 #!/bin/bash
 NAME="nvim"
-VERS=9999
+VERS="${!NAME}_version"
 LINK="https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz"
+UPST="https://github.com/neovim/neovim/tags"
 DEPS=""
 
 # this is a binary install because im lazy and dont want to resolve nvim dependencies

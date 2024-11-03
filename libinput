@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libinput"
-VERS=1.26.2
+VERS="${!NAME}_version"
 LINK="https://gitlab.freedesktop.org/libinput/libinput/-/archive/$VERS/libinput-$VERS.tar.gz"
 DEPS="libevdev mtdev"
 

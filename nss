@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="nss"
-VERS=3.106
+VERS="${!NAME}_version"
 ver="${VERS//./_}"
 LINK="https://archive.mozilla.org/pub/security/nss/releases/NSS_${ver}_RTM/src/nss-$VERS.tar.gz"
 DEPS="nspr"

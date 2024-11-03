@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libpng"
-VERS=1.6.44
+VERS="${!NAME}_version"
 LINK="https://github.com/pnggroup/libpng/archive/refs/tags/v$VERS.tar.gz"
 DEPS=""
 

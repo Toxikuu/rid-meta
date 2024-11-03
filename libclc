@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libclc"
-VERS=19.1.0
+VERS="${!NAME}_version"
 LINK="https://github.com/llvm/llvm-project/releases/download/llvmorg-$VERS/libclc-$VERS.src.tar.xz"
 DEPS="llvm spirv-llvm-translator"  # llvm with clang
 

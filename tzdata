@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="tzdata"
-VERS=2024b
+VERS="${!NAME}_version"
 LINK=""
 DEPS="glibc"  # provides tzselect zic etc
 

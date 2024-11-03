@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="dejagnu"
-VERS=1.6.3
+VERS="${!NAME}_version"
 LINK="https://ftp.gnu.org/gnu/dejagnu/dejagnu-$VERS.tar.gz"
 DEPS=""
 

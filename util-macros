@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="util-macros"
-VERS=1.20.1
+VERS="${!NAME}_version"
 LINK="https://www.x.org/pub/individual/util/util-macros-$VERS.tar.xz"
 DEPS=""
 

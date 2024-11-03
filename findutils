@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="findutils"
-VERS=4.10.0
+VERS="${!NAME}_version"
 LINK="https://ftp.gnu.org/gnu/findutils/findutils-$VERS.tar.xz"
 DEPS=""
 

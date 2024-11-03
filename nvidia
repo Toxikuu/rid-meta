@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="nvidia"
-VERS=565.57.01
+VERS="${!NAME}_version"
 LINK=""
 DEPS=""
 

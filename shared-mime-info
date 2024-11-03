@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="shared-mime-info"
-VERS=2.4
+VERS="${!NAME}_version"
 LINK="https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/$VERS/shared-mime-info-$VERS.tar.gz"
 DEPS="glib libxml2"
 

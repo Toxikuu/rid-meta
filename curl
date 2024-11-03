@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="curl"
-VERS=8.10.1
+VERS="${!NAME}_version"
 LINK="https://curl.se/download/curl-$VERS.tar.xz"
 DEPS="libpsl"
 

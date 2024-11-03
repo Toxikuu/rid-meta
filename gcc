@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="gcc"
-VERS=14.2.0
+VERS="${!NAME}_version"
 LINK="https://ftp.gnu.org/gnu/gcc/gcc-$VERS/gcc-$VERS.tar.xz"
 DEPS=""
 
@@ -33,7 +33,7 @@ make install
 ln -svr /usr/bin/cpp /usr/lib
 ln -sv gcc.1 /usr/share/man/man1/cc.1
 
-ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/14.2.0/liblto_plugin.so \
+ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/$VERS/liblto_plugin.so \
         /usr/lib/bfd-plugins/
 
 echo 'int main(){}' > dummy.c

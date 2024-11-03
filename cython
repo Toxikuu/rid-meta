@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="cython"
-VERS=3.0.11
+VERS="${!NAME}_version"
 LINK="https://github.com/cython/cython/releases/download/$VERS-1/cython-$VERS.tar.gz"
 DEPS=""
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libxkbcommon"
-VERS=1.7.0
+VERS="${!NAME}_version"
 LINK="https://xkbcommon.org/download/$NAME-$VERS.tar.xz"
 DEPS="xkeyboard-config libxcb wayland wayland-protocols"
 

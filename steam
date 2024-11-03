@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="steam"
-VERS=1.0.0.82
+VERS="${!NAME}_version"
 LINK="https://repo.steampowered.com/steam/pool/steam/s/steam/steam_$VERS.tar.gz"
 DEPS=""  # steam dependencies
 

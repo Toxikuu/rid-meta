@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="bash"
-VERS=5.2.37
+VERS="${!NAME}_version"
 LINK="https://ftp.gnu.org/gnu/bash/bash-$VERS.tar.gz"
 DEPS=""
 

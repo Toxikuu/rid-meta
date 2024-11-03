@@ -1,7 +1,8 @@
 #!/bin/bash
 NAME="fribidi"
-VERS=1.0.16
+VERS="${!NAME}_version"
 LINK="https://github.com/fribidi/fribidi/releases/download/v$VERS/fribidi-$VERS.tar.xz"
+UPST="https://github.com/fribidi/fribidi/tags"
 DEPS=""
 
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="bc"
-VERS=7.0.3
+VERS="${!NAME}_version"
 LINK="https://github.com/gavinhoward/bc/releases/download/$VERS/bc-$VERS.tar.xz"
 DEPS=""
 

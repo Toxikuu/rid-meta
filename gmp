@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="gmp"
-VERS=6.3.0
+VERS="${!NAME}_version"
 LINK="https://ftp.gnu.org/gnu/gmp/gmp-$VERS.tar.xz"
 DEPS=""
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="sdl2"
-VERS=2.30.9
+VERS="${!NAME}_version"
 LINK="https://www.libsdl.org/release/SDL2-$VERS.tar.gz"
 DEPS="libxkbcommon wayland-protocols xorg-libraries"
 

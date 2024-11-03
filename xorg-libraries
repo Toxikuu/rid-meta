@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xorg-libraries"
-VERS=0
+VERS="${!NAME}_version"
 LINK=""
 DEPS="fontconfig libxcb wget"
 

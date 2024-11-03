@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libarchive"
-VERS=3.7.7
+VERS="${!NAME}_version"
 LINK="https://github.com/$NAME/$NAME/releases/download/v$VERS/$NAME-$VERS.tar.xz"
 DEPS=""
 

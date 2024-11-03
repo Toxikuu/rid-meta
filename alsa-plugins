@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="alsa-plugins"
-VERS=1.2.12
+VERS="${!NAME}_version"
 LINK="https://www.alsa-project.org/files/pub/plugins/alsa-plugins-$VERS.tar.bz2"
 DEPS="alsa-lib"
 

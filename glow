@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="glow"
-VERS=2.0.0
+VERS="${!NAME}_version"
 LINK="https://github.com/charmbracelet/glow/archive/refs/tags/v$VERS.tar.gz"
 DEPS="go"
 

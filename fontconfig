@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="fontconfig"
-VERS=2.15.0
+VERS="${!NAME}_version"
 LINK="https://www.freedesktop.org/software/fontconfig/release/fontconfig-$VERS.tar.xz"
 DEPS="freetype2"
 

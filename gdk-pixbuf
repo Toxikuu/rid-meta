@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="gdk-pixbuf"
-VERS=2.42.12
+VERS="${!NAME}_version"
 ver="${VERS%.*}"
 LINK="https://download.gnome.org/sources/gdk-pixbuf/$ver/gdk-pixbuf-$VERS.tar.xz"
 DEPS="glib libjpeg-turbo libpng shared-mime-info"

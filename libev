@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libev"
-VERS=4.33
+VERS="${!NAME}_version"
 LINK="http://dist.schmorp.de/$NAME/$NAME-$VERS.tar.gz"
 DEPS=""
 

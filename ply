@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="ply"
-VERS=3.11
+VERS="${!NAME}_version"
 LINK="https://files.pythonhosted.org/packages/source/p/ply/ply-$VERS.tar.gz"
 DEPS=""
 

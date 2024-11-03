@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="cups"
-VERS=2.4.11
+VERS="${!NAME}_version"
 LINK="https://github.com/OpenPrinting/cups/releases/download/v2.4.11/cups-2.4.11-source.tar.gz"
 DEPS="gnutls"
 

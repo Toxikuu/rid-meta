@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="pnpm"
-VERS=9999
+VERS="${!NAME}_version"
 LINK=""
 DEPS="curl"
 

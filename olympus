@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="olympus"
-VERS=9999
+VERS="${!NAME}_version"
 LINK=""
 DEPS="unzip xdg-utils desktop-file-utils"
 

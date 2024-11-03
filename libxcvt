@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libxcvt"
-VERS=0.1.2
+VERS="${!NAME}_version"
 LINK="https://www.x.org/pub/individual/lib/libxcvt-$VERS.tar.xz"
 DEPS=""
 

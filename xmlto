@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xmlto"
-VERS=0.0.29
+VERS="${!NAME}_version"
 LINK="https://pagure.io/xmlto/archive/$VERS/xmlto-$VERS.tar.gz"
 DEPS="docbook-xml docbook-xsl-nons libxslt"
 

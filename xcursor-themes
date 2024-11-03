@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xcursor-themes"
-VERS=1.0.7
+VERS="${!NAME}_version"
 LINK="https://www.x.org/pub/individual/data/$NAME-$VERS.tar.xz"
 DEPS="xorg-applications"
 

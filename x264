@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="x264"
-VERS=20240812
+VERS="${!NAME}_version"
 LINK="https://anduin.linuxfromscratch.org/BLFS/x264/x264-$VERS.tar.xz"
 DEPS="nasm"
 

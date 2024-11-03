@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="cmake"
-VERS=3.30.5
+VERS="${!NAME}_version"
 ver="${VERS%.*}"
 LINK="https://cmake.org/files/v$ver/cmake-$VERS.tar.gz"
 DEPS="curl libarchive libuv nghttp2"

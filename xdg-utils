@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xdg-utils"
-VERS=1.2.1
+VERS="${!NAME}_version"
 LINK="https://gitlab.freedesktop.org/xdg/xdg-utils/-/archive/v$VERS/xdg-utils-v$VERS.tar.gz"
 DEPS="xmlto lynx xorg-applications"
 

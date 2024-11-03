@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="expect"
-VERS=5.45.4
+VERS="${!NAME}_version"
 LINK="https://prdownloads.sourceforge.net/expect/expect$VERS.tar.gz"
 DEPS=""
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="efivar"
-VERS=39
+VERS="${!NAME}_version"
 LINK="https://github.com/rhboot/efivar/archive/$VERS/efivar-$VERS.tar.gz"
 DEPS="" # doc dep on mandoc
 

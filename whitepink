@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="whitepink"
-VERS=0
+VERS="${!NAME}_version"
 LINK=""
 DEPS=""
 

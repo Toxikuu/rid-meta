@@ -1,7 +1,8 @@
 #!/bin/bash
 NAME="acl"
-VERS=2.3.2
+VERS="${!NAME}_version"
 LINK="https://download.savannah.gnu.org/releases/acl/acl-$VERS.tar.xz"
+UPST="https://archlinux.org/packages/core/x86_64/acl/"
 DEPS=""
 
 

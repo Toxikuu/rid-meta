@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="inetutils"
-VERS=2.5
+VERS="${!NAME}_version"
 LINK="https://ftp.gnu.org/gnu/inetutils/inetutils-$VERS.tar.xz"
 DEPS=""
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xdg-user-dirs"
-VERS=0.18
+VERS="${!NAME}_version"
 LINK="https://user-dirs.freedesktop.org/releases/$NAME-$VERS.tar.gz"
 DEPS=""
 

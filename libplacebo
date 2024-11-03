@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libplacebo"
-VERS=7.349.0
+VERS="${!NAME}_version"
 LINK="https://github.com/haasn/libplacebo/archive/v$VERS/libplacebo-$VERS.tar.gz"
 DEPS="ffmpeg glad"
 

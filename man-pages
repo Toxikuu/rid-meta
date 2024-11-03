@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="man-pages"
-VERS=6.9.1
+VERS="${!NAME}_version"
 LINK="https://www.kernel.org/pub/linux/docs/man-pages/man-pages-$VERS.tar.xz"
 DEPS=""
 

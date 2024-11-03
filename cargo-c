@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="cargo-c"
-VERS=0.10.5
+VERS="${!NAME}_version"
 LINK="https://github.com/lu-zero/cargo-c/archive/v$VERS/cargo-c-$VERS.tar.gz"
 DEPS="rust"
 

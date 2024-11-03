@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="popt"
-VERS=1.19
+VERS="${!NAME}_version"
 ver="${VERS%.*}"
 LINK="http://ftp.rpm.org/popt/releases/popt-$ver.x/popt-$VERS.tar.gz"
 DEPS=""

@@ -1,7 +1,8 @@
 #!/bin/bash
 NAME="xcb-util-xrm"
-VERS=1.3
+VERS="${!NAME}_version"
 LINK="https://github.com/Airblader/xcb-util-xrm/releases/download/v$VERS/xcb-util-xrm-$VERS.tar.gz"
+UPST="https://github.com/Airblader/xcb-util-xrm/tags"
 DEPS="xcb-util util-macros"
 
 

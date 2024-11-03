@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="docbook-xsl-nons"
-VERS=1.79.2
+VERS="${!NAME}_version"
 LINK="https://github.com/docbook/xslt10-stylesheets/releases/download/release/$VERS/docbook-xsl-nons-$VERS.tar.bz2"
 DEPS="libxml2"
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="gettext"
-VERS=0.22.5
+VERS="${!NAME}_version"
 LINK="https://ftp.gnu.org/gnu/gettext/gettext-$VERS.tar.xz"
 DEPS=""
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xdotool"
-VERS=3.20211022.1
+VERS="${!NAME}_version"
 LINK="https://github.com/jordansissel/xdotool/releases/download/v$VERS/xdotool-$VERS.tar.gz"
 DEPS=""
 

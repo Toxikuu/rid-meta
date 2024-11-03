@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="prism"
-VERS=9.1
+VERS="${!NAME}_version"
 LINK=""
 DEPS="krb5"
 

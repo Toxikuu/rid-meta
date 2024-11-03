@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libsndfile"
-VERS=1.2.2
+VERS="${!NAME}_version"
 LINK="https://github.com/$NAME/$NAME/releases/download/$VERS/$NAME-$VERS.tar.xz"
 DEPS="flac opus libvorbis alsa-lib"
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="harfbuzz"
-VERS=10.0.1
+VERS="${!NAME}_version"
 LINK="https://github.com/harfbuzz/harfbuzz/releases/download/$VERS/harfbuzz-$VERS.tar.xz"
 DEPS="freetype1"
 

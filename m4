@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="m4"
-VERS=1.4.19
+VERS="${!NAME}_version"
 LINK="https://ftp.gnu.org/gnu/m4/m4-$VERS.tar.xz"
 DEPS=""
 

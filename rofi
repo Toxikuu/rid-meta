@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="rofi"
-VERS=1.7.5
+VERS="${!NAME}_version"
 LINK="https://github.com/davatorium/rofi/releases/download/$VERS/rofi-$VERS.tar.xz"
 DEPS="pango cairo xcb-util xcb-util-wm xcb-util-cursor"
 

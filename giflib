@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="giflib"
-VERS=5.2.2
+VERS="${!NAME}_version"
 LINK="https://downloads.sourceforge.net/project/giflib/giflib-$VERS.tar.gz"
 DEPS="xmlto"
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="expat"
-VERS=2.6.3
+VERS="${!NAME}_version"
 LINK="https://prdownloads.sourceforge.net/expat/expat-$VERS.tar.xz"
 DEPS=""
 

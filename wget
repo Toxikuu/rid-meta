@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="wget"
-VERS=1.24.5
+VERS="${!NAME}_version"
 LINK="https://ftp.gnu.org/gnu/wget/wget-$VERS.tar.gz"
 DEPS="libpsl make-ca libidn2"
 

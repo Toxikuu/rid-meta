@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libdrm"
-VERS=2.4.123
+VERS="${!NAME}_version"
 LINK="https://dri.freedesktop.org/libdrm/libdrm-$VERS.tar.xz"
 DEPS="xorg-libraries"
 

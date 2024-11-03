@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="lz4"
-VERS=1.10.0
+VERS="${!NAME}_version"
 LINK="https://github.com/lz4/lz4/releases/download/v$VERS/lz4-$VERS.tar.gz"
 DEPS=""
 

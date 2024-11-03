@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="krb5"
-VERS=1.21.3
+VERS="${!NAME}_version"
 LINK="https://kerberos.org/dist/krb5/${VERS%.*}/krb5-$VERS.tar.gz"
 DEPS=""
 

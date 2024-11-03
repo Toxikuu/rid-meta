@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xcb-proto"
-VERS=1.17.0
+VERS="${!NAME}_version"
 LINK="https://xorg.freedesktop.org/archive/individual/proto/xcb-proto-$VERS.tar.xz"
 DEPS=""
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="uchardet"
-VERS=0.0.8
+VERS="${!NAME}_version"
 LINK="https://www.freedesktop.org/software/uchardet/releases/uchardet-$VERS.tar.xz"
 DEPS="cmake"
 

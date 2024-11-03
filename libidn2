@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libidn2"
-VERS=2.3.7
+VERS="${!NAME}_version"
 LINK="https://ftp.gnu.org/gnu/libidn/$NAME-$VERS.tar.gz"
 DEPS="libunistring"
 

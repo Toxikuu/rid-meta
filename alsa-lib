@@ -1,7 +1,8 @@
 #!/bin/bash
 NAME="alsa-lib"
-VERS=1.2.12
+VERS="${!NAME}_version"
 LINK="https://www.alsa-project.org/files/pub/lib/alsa-lib-$VERS.tar.bz2"
+UPST="https://archlinux.org/packages/extra/x86_64/alsa-lib"
 DEPS=""
 
 

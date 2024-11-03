@@ -1,7 +1,8 @@
 #!/bin/bash
 NAME="libvdpau-va-gl"
-VERS=0.4.2
+VERS="${!NAME}_version"
 LINK="https://github.com/i-rinat/$NAME/archive/v$VERS/$NAME-$VERS.tar.gz"
+UPST="https://github.com/i-rinat/$NAME/tags"
 DEPS="cmake libvdpau libva"
 
 

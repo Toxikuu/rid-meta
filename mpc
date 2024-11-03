@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="mpc"
-VERS=1.3.1
+VERS="${!NAME}_version"
 LINK="https://ftp.gnu.org/gnu/mpc/mpc-$VERS.tar.gz"
 DEPS=""
 

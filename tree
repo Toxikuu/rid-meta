@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NAME="tree"
-VERS=2.1.3
+VERS="${!NAME}_version"
 LINK="https://gitlab.com/OldManProgrammer/unix-tree/-/archive/$VERS/unix-tree-$VERS.tar.bz2"
 
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="python"
-VERS=3.13.0
+VERS="${!NAME}_version"
 LINK="https://www.python.org/ftp/python/$VERS/Python-$VERS.tar.xz"
 DEPS=""
 

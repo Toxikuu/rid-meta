@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="util-linux"
-VERS=2.40.2
+VERS="${!NAME}_version"
 ver=${VERS%.*}
 LINK="https://www.kernel.org/pub/linux/utils/util-linux/v$ver/util-linux-$VERS.tar.xz"
 DEPS=""

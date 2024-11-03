@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="nodejs"
-VERS=9999
+VERS="${!NAME}_version"
 LINK=""
 DEPS="pnpm"
 

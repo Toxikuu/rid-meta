@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="pixman"
-VERS=0.43.4
+VERS="${!NAME}_version"
 LINK="https://www.x.org/releases/individual/lib/pixman-$VERS.tar.xz"
 DEPS=""
 

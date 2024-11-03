@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="sudo"
-VERS=1.9.16
+VERS="${!NAME}_version"
 LINK="https://www.sudo.ws/dist/sudo-$VERS.tar.gz"
 DEPS="linux-pam"
 

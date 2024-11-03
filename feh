@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="feh"
-VERS=3.10.3
+VERS="${!NAME}_version"
 LINK="https://feh.finalrewind.org/feh-$VERS.tar.bz2"
 DEPS="libpng imlib2 curl"
 

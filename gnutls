@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="gnutls"
-VERS=3.8.7.1
+VERS="${!NAME}_version"
 ver="${VERS%.*.*}"
 LINK="https://www.gnupg.org/ftp/gcrypt/gnutls/v$ver/gnutls-$VERS.tar.xz"
 DEPS="nettle make-ca libunistring libtasn1 p11-kit"

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libvdpau"
-VERS=1.5
+VERS="${!NAME}_version"
 LINK="https://gitlab.freedesktop.org/vdpau/libvdpau/-/archive/$VERS/libvdpau-$VERS.tar.bz2"
 DEPS="xorg-libraries"
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libxcb"
-VERS=1.17.0
+VERS="${!NAME}_version"
 LINK="https://xorg.freedesktop.org/archive/individual/lib/libxcb-$VERS.tar.xz"
 DEPS="libxau xcb-proto libxdmcp"
 

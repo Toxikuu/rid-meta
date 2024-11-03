@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="pciutils"
-VERS=3.13.0
+VERS="${!NAME}_version"
 LINK="https://mj.ucw.cz/download/linux/pci/pciutils-3.13.0.tar.gz"
 DEPS=""
 

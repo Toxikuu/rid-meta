@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libva"
-VERS=2.22.0
+VERS="${!NAME}_version"
 LINK="https://github.com/intel/libva/archive/$VERS/libva-$VERS.tar.gz"
 DEPS="libdrm"
 

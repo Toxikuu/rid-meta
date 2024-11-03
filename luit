@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="luit"
-VERS=20240910
+VERS="${!NAME}_version"
 LINK="https://invisible-mirror.net/archives/luit/luit-$VERS.tgz"
 DEPS="xorg-applications"
 

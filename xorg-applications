@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xorg-applications"
-VERS=0
+VERS="${!NAME}_version"
 LINK=""
 DEPS="libpng mesa xbitmaps xcb-util"
 

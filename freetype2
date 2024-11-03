@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="freetype2"
-VERS=2.13.3
+VERS="${!NAME}_version"
 LINK="https://downloads.sourceforge.net/project/freetype/freetype2/$VERS/freetype-$VERS.tar.xz"
 DEPS="freetype1 harfbuzz"
 

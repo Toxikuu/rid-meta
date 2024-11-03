@@ -1,7 +1,8 @@
 #!/bin/bash
 NAME="p11-kit"
-VERS=0.25.5
+VERS="${!NAME}_version"
 LINK="https://github.com/p11-glue/$NAME/releases/download/$VERS/$NAME-$VERS.tar.xz"
+UPST="https://github.com/p11-glue/$NAME/tags"
 DEPS="libtasn1 nss"
 
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="rust-bindgen"
-VERS=0.69.5
+VERS="${!NAME}_version"
 LINK="https://github.com/rust-lang/rust-bindgen/archive/v$VERS.tar.gz"
 DEPS="llvm rust"  # llvm with clang
 

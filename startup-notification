@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="startup-notification"
-VERS=0.12
+VERS="${!NAME}_version"
 LINK="https://www.freedesktop.org/software/$NAME/releases/$NAME-$VERS.tar.gz"
 DEPS="xorg-libraries xcb-util"
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="grep"
-VERS=3.11
+VERS="${!NAME}_version"
 LINK="https://ftp.gnu.org/gnu/grep/grep-$VERS.tar.xz"
 DEPS=""
 

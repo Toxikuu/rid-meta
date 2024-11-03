@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xcb-util-errors"
-VERS=1.0.1
+VERS="${!NAME}_version"
 LINK="https://xcb.freedesktop.org/dist/$NAME-$VERS.tar.xz"
 DEPS="xcb-proto"
 

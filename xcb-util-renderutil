@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xcb-util-renderutil"
-VERS=0.3.10
+VERS="${!NAME}_version"
 LINK="https://xcb.freedesktop.org/dist/$NAME-$VERS.tar.xz"
 DEPS="libxcb"
 

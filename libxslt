@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libxslt"
-VERS=1.1.42
+VERS="${!NAME}_version"
 ver="${VERS%.*}"
 LINK="https://download.gnome.org/sources/libxslt/$ver/libxslt-$VERS.tar.xz"
 DEPS="libxml2 docbook-xml docbook-xsl-nons"

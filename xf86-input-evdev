@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xf86-input-evdev"
-VERS=2.11.0
+VERS="${!NAME}_version"
 LINK="https://www.x.org/pub/individual/driver/$NAME-$VERS.tar.xz"
 DEPS="libevdev mtdev xorg-server"
 

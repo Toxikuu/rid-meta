@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libpsl"
-VERS=0.21.5
+VERS="${!NAME}_version"
 LINK="https://github.com/rockdaboot/$NAME/releases/download/$VERS/$NAME-$VERS.tar.gz"
 DEPS="libidn2 libunistring"
 

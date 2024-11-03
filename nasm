@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="nasm"
-VERS=2.16.03
+VERS="${!NAME}_version"
 LINK="https://www.nasm.us/pub/nasm/releasebuilds/$VERS/nasm-$VERS.tar.xz"
 DEPS=""
 

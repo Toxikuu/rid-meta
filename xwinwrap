@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xwinwrap"
-VERS=0.9
+VERS="${!NAME}_version"
 LINK="https://github.com/mmhobi7/xwinwrap/archive/refs/tags/v$VERS.tar.gz"
 DEPS="xorg-libraries"
 

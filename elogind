@@ -1,7 +1,8 @@
 #!/bin/bash
 NAME="elogind"
-VERS=255.5
+VERS="${!NAME}_version"
 LINK="https://github.com/elogind/elogind/archive/v$VERS/elogind-$VERS.tar.gz"
+UPST="https://github.com/elogind/elogind/tags"
 DEPS="dbus1 linux-pam"
 
 

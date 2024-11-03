@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="pango"
-VERS=1.54.0
+VERS="${!NAME}_version"
 ver="${VERS%.*}"
 LINK="https://download.gnome.org/sources/pango/$ver/pango-$VERS.tar.xz"
 DEPS="fontconfig freetype2 fribidi glib cairo xorg-libraries"  # cairo built after harfbuzz

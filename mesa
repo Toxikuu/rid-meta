@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="mesa"
-VERS=24.2.6
+VERS="${!NAME}_version"
 LINK="https://mesa.freedesktop.org/archive/mesa-$VERS.tar.xz"
 DEPS="xorg-libraries libdrm mako pyyaml libglvnd libva libvdpau libvdpau-va-gl nettle"
 # the deps need more testing

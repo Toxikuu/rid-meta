@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="mako"
-VERS=1.3.6
+VERS="${!NAME}_version"
 LINK="https://files.pythonhosted.org/packages/source/M/Mako/Mako-1.3.5.tar.gz"
 DEPS=""
 

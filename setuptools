@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="setuptools"
-VERS=75.3.0
+VERS="${!NAME}_version"
 LINK="https://pypi.org/packages/source/s/setuptools/setuptools-$VERS.tar.gz"
 DEPS="python"
 

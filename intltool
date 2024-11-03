@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="intltool"
-VERS=0.51.0
+VERS="${!NAME}_version"
 LINK="https://launchpad.net/intltool/trunk/$VERS/+download/intltool-$VERS.tar.gz"
 DEPS=""
 

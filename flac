@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="flac"
-VERS=1.4.3
+VERS="${!NAME}_version"
 LINK="https://downloads.xiph.org/releases/flac/flac-$VERS.tar.xz"
 DEPS=""
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="readline"
-VERS=8.2.13
+VERS="${!NAME}_version"
 LINK="https://ftp.gnu.org/gnu/readline/readline-$VERS.tar.gz"
 DEPS=""
 

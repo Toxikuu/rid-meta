@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libglvnd"
-VERS=1.7.0
+VERS="${!NAME}_version"
 LINK="https://gitlab.freedesktop.org/glvnd/libglvnd/-/archive/v$VERS/libglvnd-v$VERS.tar.gz"
 DEPS="xorg-libraries"
 

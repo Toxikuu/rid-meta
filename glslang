@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="glslang"
-VERS=15.0.0
+VERS="${!NAME}_version"
 LINK="https://github.com/KhronosGroup/glslang/archive/$VERS/glslang-$VERS.tar.gz"
 DEPS="cmake spirv-tools"
 

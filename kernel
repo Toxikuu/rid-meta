@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="kernel"
-VERS=6.11.6
+VERS="${!NAME}_version"
 # ver="${VERS//\.0/}"
 LINK="https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-$VERS.tar.gz"
 DEPS=""

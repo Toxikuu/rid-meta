@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xbitmaps"
-VERS=1.1.3
+VERS="${!NAME}_version"
 LINK="https://www.x.org/pub/individual/data/$NAME-$VERS.tar.xz"
 DEPS="util-macros"
 

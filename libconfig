@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libconfig"
-VERS=1.7.3
+VERS="${!NAME}_version"
 LINK="https://github.com/hyperrealm/libconfig/releases/download/v$VERS/libconfig-$VERS.tar.gz"
 DEPS=""
 

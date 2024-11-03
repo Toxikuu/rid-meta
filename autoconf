@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="autoconf"
-VERS=2.72
+VERS="${!NAME}_version"
 LINK="https://ftp.gnu.org/gnu/autoconf/autoconf-$VERS.tar.xz"
 DEPS=""
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="file"
-VERS=5.45
+VERS="${!NAME}_version"
 LINK="https://astron.com/pub/file/file-$VERS.tar.gz"
 DEPS=""
 
