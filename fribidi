@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="fribidi"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/fribidi/fribidi/releases/download/v$VERS/fribidi-$VERS.tar.xz"
 UPST="https://github.com/fribidi/fribidi/tags"
 DEPS=""

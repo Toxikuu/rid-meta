@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xkeyboard-config"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://www.x.org/pub/individual/data/xkeyboard-config/$NAME-$VERS.tar.xz"
 DEPS="xorg-libraries"
 

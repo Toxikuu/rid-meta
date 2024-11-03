@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="lynx"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://invisible-mirror.net/archives/lynx/tarballs/lynx$VERS.tar.bz2"
 DEPS=""
 

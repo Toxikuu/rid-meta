@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="mtdev"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://bitmath.org/code/mtdev/mtdev-$VERS.tar.bz2"
 DEPS=""
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="iana-etc"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/Mic92/iana-etc/releases/download/$VERS/iana-etc-$VERS.tar.gz"
 DEPS=""
 

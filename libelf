@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libelf"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://sourceware.org/ftp/elfutils/$VERS/elfutils-$VERS.tar.bz2"
 DEPS=""
 

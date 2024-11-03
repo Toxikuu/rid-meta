@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="readline"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/readline/readline-$VERS.tar.gz"
 DEPS=""
 

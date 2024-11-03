@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="udev"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/systemd/systemd/archive/v$VERS/systemd-$VERS.tar.gz"
 DEPS="jinja2 gperf"
 

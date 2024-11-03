@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libuv"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://dist.libuv.org/dist/v$VERS/libuv-v$VERS.tar.gz"
 DEPS=""
 

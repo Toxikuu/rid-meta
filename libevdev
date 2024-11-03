@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libevdev"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://www.freedesktop.org/software/libevdev/libevdev-$VERS.tar.xz"
 DEPS=""
 

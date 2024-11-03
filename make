@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="make"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/make/make-$VERS.tar.gz"
 DEPS=""
 

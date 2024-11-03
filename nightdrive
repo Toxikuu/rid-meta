@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="nightdrive"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK=""
 DEPS="git wget mpv xwinwrap"
 

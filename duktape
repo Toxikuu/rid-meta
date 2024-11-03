@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="duktape"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://duktape.org/duktape-$VERS.tar.xz"
 DEPS=""
 

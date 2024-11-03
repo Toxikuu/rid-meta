@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="tcl"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://downloads.sourceforge.net/tcl/tcl$VERS-src.tar.gz"
 DEPS=""
 

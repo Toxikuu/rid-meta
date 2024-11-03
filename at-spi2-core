@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="at-spi2-core"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://download.gnome.org/sources/at-spi2-core/${VERS%.*}/at-spi2-core-$VERS.tar.xz"
 DEPS="dbus2 glib xorg-libraries gsettings-desktop-schemas"
 

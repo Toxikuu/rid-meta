@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="dbus1"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://dbus.freedesktop.org/releases/dbus/dbus-$VERS.tar.xz"
 DEPS=""
 

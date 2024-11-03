@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="nghttp2"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/$NAME/$NAME/releases/download/v$VERS/$NAME-$VERS.tar.xz"
 DEPS="libxml2"
 

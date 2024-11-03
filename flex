@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="flex"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/westes/flex/releases/download/v$VERS/flex-$VERS.tar.gz"
 DEPS=""
 

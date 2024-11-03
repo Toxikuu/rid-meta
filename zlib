@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="zlib"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://zlib.net/fossils/zlib-$VERS.tar.gz"
 DEPS=""
 

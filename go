@@ -1,6 +1,7 @@
 #!/bin/bash
+. ../versions
 NAME="go"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://go.dev/dl/go$VERS.linux-amd64.tar.gz"
 DEPS=""
 

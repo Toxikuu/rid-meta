@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="expect"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://prdownloads.sourceforge.net/expect/expect$VERS.tar.gz"
 DEPS=""
 

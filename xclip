@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xclip"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/astrand/xclip/archive/refs/tags/$VERS.tar.gz"
 UPST="https://github.com/astrand/xclip/tags"
 DEPS=""

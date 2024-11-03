@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="efibootmgr"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/rhboot/efibootmgr/archive/$VERS/efibootmgr-$VERS.tar.gz"
 DEPS="efivar popt"
 

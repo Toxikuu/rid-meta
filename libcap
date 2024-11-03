@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libcap"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-$VERS.tar.xz"
 DEPS=""
 

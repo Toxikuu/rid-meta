@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="isl"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://libisl.sourceforge.io/isl-$VERS.tar.xz"
 DEPS=""
 

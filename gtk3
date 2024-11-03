@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="gtk3"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://download.gnome.org/sources/gtk+/${VERS%.*}/gtk+-$VERS.tar.xz"
 DEPS="at-spi2-core gdk-pixbuf libepoxy pango"
 

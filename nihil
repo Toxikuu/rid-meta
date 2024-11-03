@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="nihil"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK=""
 DEPS="git iosevka obsidian vesktop xdotool i3 alacritty"
 

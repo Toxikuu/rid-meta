@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="gsettings-desktop-schemas"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://download.gnome.org/sources/gsettings-desktop-schemas/${VERS%.*}/gsettings-desktop-schemas-$VERS.tar.xz"
 DEPS="glib"
 

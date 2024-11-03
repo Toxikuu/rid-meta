@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="vulkan-headers"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/KhronosGroup/Vulkan-Headers/archive/v$VERS/Vulkan-Headers-$VERS.tar.gz"
 DEPS="cmake"
 

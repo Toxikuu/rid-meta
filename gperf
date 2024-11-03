@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="gperf"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/gperf/gperf-$VERS.tar.gz"
 DEPS=""
 

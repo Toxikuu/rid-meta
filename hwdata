@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NAME="hwdata"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/vcrhonek/$NAME/archive/v$VERS/$NAME-$VERS.tar.gz"
 UPST="https://github.com/vcrhonek/$NAME/tags"
 DEPS=""

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libxdmcp"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://www.x.org/pub/individual/lib/libXdmcp-$VERS.tar.xz"
 DEPS="xorgproto"
 

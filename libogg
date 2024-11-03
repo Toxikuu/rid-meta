@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libogg"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://downloads.xiph.org/releases/ogg/libogg-$VERS.tar.xz"
 DEPS=""
 

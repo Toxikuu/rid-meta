@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libffi"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/libffi/libffi/releases/download/v$VERS/libffi-$VERS.tar.gz"
 DEPS=""
 

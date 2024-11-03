@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="gcc"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/gcc/gcc-$VERS/gcc-$VERS.tar.xz"
 DEPS=""
 

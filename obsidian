@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="obsidian"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/obsidianmd/obsidian-releases/releases/download/v$VERS/obsidian-$VERS.tar.gz"
 DEPS=""
 

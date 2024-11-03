@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xwayland"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://www.x.org/pub/individual/xserver/xwayland-$VERS.tar.xz"
 DEPS="libxcvt pixman wayland-protocols xorg-applications xorg-fonts libepoxy mesa"
 

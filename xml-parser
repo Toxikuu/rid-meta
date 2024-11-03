@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xml-parser"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-$VERS.tar.gz"
 DEPS=""
 

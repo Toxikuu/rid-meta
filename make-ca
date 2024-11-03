@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="make-ca"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/lfs-book/$NAME/archive/v$VERS/$NAME-$VERS.tar.gz"
 DEPS="p11-kit libtasn1 nss"
 

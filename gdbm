@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="gdbm"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/gdbm/gdbm-$VERS.tar.gz"
 DEPS=""
 

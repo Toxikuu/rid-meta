@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="bison"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/bison/bison-$VERS.tar.xz"
 DEPS=""
 

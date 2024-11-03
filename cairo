@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="cairo"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://gitlab.freedesktop.org/cairo/cairo/-/archive/$VERS/cairo-$VERS.tar.bz2"
 DEPS="libpng pixman fontconfig glib xorg-libraries"
 

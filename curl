@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="curl"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://curl.se/download/curl-$VERS.tar.xz"
 DEPS="libpsl"
 

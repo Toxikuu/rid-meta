@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="gzip"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/gzip/gzip-$VERS.tar.xz"
 DEPS=""
 

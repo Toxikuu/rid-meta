@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="icu"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 ver1="${VERS//./-}"
 ver2="${VERS//./_}"
 LINK=""  # the link just doesnt work for 76.1 and i have no idea why; until i figure it out, im using wget

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="meson"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/mesonbuild/meson/releases/download/$VERS/meson-$VERS.tar.gz"
 DEPS="python"
 

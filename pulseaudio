@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="pulseaudio"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://www.freedesktop.org/software/$NAME/releases/$NAME-$VERS.tar.xz"
 DEPS="libsndfile alsa-lib check dbus1"
 

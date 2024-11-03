@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="vesktop"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/Vencord/Vesktop/archive/refs/tags/v$VERS.tar.gz"
 UPST="https://github.com/Vencord/Vesktop/tags"
 DEPS="nodejs cups pnpm gtk+"

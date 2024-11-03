@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="sysklogd"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/troglobit/sysklogd/releases/download/v$VERS/sysklogd-$VERS.tar.gz"
 DEPS=""
 

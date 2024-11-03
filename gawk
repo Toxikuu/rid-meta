@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="gawk"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/gawk/gawk-$VERS.tar.xz"
 DEPS=""
 

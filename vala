@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="vala"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 ver="${VERS%.*}"
 LINK="https://download.gnome.org/sources/vala/$ver/vala-$VERS.tar.xz"
 DEPS="glib"

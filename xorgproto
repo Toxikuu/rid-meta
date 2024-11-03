@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xorgproto"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://xorg.freedesktop.org/archive/individual/proto/xorgproto-$VERS.tar.xz"
 DEPS="util-macros"
 

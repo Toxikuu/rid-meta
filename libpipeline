@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libpipeline"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://download.savannah.gnu.org/releases/libpipeline/libpipeline-$VERS.tar.gz"
 DEPS=""
 

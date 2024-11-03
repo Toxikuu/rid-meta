@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="sed"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/sed/sed-$VERS.tar.xz"
 DEPS=""
 

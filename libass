@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libass"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/libass/libass/releases/download/$VERS/libass-$VERS.tar.xz"
 DEPS="freetype2 fribidi nasm fontconfig"
 

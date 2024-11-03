@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="spirv-headers"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/KhronosGroup/SPIRV-Headers/archive/vulkan-sdk-$VERS/SPIRV-Headers-$VERS.tar.gz"
 DEPS="cmake"
 

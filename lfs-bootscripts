@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="lfs-bootscripts"
-VERS="${!NAME}_version"
+VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://www.linuxfromscratch.org/lfs/downloads/development/lfs-bootscripts-$VERS.tar.xz"
 DEPS=""
 
