@@ -1,20 +1,18 @@
 #!/bin/bash
 NAME="git"
 VERS="${NAME}_version"; VERS="${!VERS}"
-perlvers=5.40
 LINK="https://www.kernel.org/pub/software/scm/git/git-$VERS.tar.xz"
 DEPS="curl perl"
 
 
 IDIR=$(cat << '~fin.'
 
-export RIDBUILD=0
-export perllibdir=/usr/lib/perl5/$perlvers/site_perl
+./configure --prefix=/usr \
+            --with-gitconfig=/etc/gitconfig \
+            --with-python=python3 &&
+make  || die "Make failed"
 
-cm --with-gitconfig=/etc/gitconfig \
-   --with-python=python3
-
-unset RIDBUILD perllibdir
+make perllibdir=/usr/lib/perl5/5.40/site_perl install || die "Make install failed"
 
 ~fin.
 )
