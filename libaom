@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libaom"
-VERS=3.9.1
+VERS=3.10.0
 LINK="https://storage.googleapis.com/aom-releases/libaom-$VERS.tar.gz"
 DEPS="yasm"
 
