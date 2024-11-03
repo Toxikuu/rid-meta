@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NAME="spirv-llvm-translator"
-VERS=19.1.0
+VERS=19.1.1
 LINK="https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v$VERS/SPIRV-LLVM-Translator-$VERS.tar.gz"
 DEPS="cmake libxml2 llvm spirv-headers spirv-tools"
 

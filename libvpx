@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libvpx"
-VERS=1.14.1
+VERS=1.15.0
 LINK="https://github.com/webmproject/libvpx/archive/v$VERS/libvpx-$VERS.tar.gz"
 DEPS="yasm which"
 
