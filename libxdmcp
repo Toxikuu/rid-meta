@@ -2,6 +2,7 @@
 NAME="libxdmcp"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://www.x.org/pub/individual/lib/libXdmcp-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxdmcp/-/tags"
 DEPS="xorgproto"
 
 

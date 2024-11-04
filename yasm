@@ -2,6 +2,8 @@
 NAME="yasm"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://www.tortall.net/projects/yasm/releases/yasm-$VERS.tar.gz"
+UPST="https://yasm.tortall.net/Download.html"
+SELE="#latest-release-130"
 DEPS=""
 
 

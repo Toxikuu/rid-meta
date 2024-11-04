@@ -1,4 +1,5 @@
 #!/bin/bash
+# may split this into a set later
 NAME="xorg_applications"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK=""

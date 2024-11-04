@@ -2,6 +2,7 @@
 NAME="flac"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://downloads.xiph.org/releases/flac/flac-$VERS.tar.xz"
+UPST="https://github.com/xiph/flac/releases/latest"
 DEPS=""
 
 

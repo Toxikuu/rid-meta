@@ -2,6 +2,7 @@
 NAME="giflib"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://downloads.sourceforge.net/project/giflib/giflib-$VERS.tar.gz"
+UPST="https://sourceforge.net/projects/giflib/files"
 DEPS="xmlto"
 
 

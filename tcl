@@ -2,6 +2,7 @@
 NAME="tcl"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://downloads.sourceforge.net/tcl/tcl$VERS-src.tar.gz"
+UPST="https://sourceforge.net/projects/tcl/files"
 DEPS=""
 
 

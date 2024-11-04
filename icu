@@ -3,19 +3,13 @@ NAME="icu"
 VERS="${NAME}_version"; VERS="${!VERS}"
 ver1="${VERS//./-}"
 ver2="${VERS//./_}"
-LINK=""  # the link just doesnt work for 76.1 and i have no idea why; until i figure it out, im using wget
-DEPS="wget"
+LINK="https://github.com/unicode-org/icu/releases/download/release-$ver1/icu4c-$ver2-src.tgz"
+UPST="https://github.com/unicode-org/icu/releases/latest"
+SELE="h1.d-inline"
+DEPS=""
 
 
 IDIR=$(cat << '~fin.'
-
-[ -e "$RIDSOURCES"/$NAME-$VERS.tar ] || {
-wget https://github.com/unicode-org/icu/releases/download/release-$ver1/icu4c-$ver2-src.tgz --directory-prefix="$RIDSOURCES"
-mv "$RIDSOURCES"/{icu4c-$ver2-src.tgz,$NAME-$VERS.tar}
-}
-
-tar xf "$RIDSOURCES/$NAME-$VERS.tar" || die "Failed to extract tarball for $NAME-$VERS"
-cd icu
 
 cd source &&
 

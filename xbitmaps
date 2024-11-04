@@ -2,6 +2,7 @@
 NAME="xbitmaps"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://www.x.org/pub/individual/data/$NAME-$VERS.tar.xz"
+UPST="https://archlinux.org/packages/extra/any/xbitmaps/" # the actual upstream is annoying to parse
 DEPS="util_macros"
 
 

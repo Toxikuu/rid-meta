@@ -3,6 +3,7 @@ NAME="pango"
 VERS="${NAME}_version"; VERS="${!VERS}"
 ver="${VERS%.*}"
 LINK="https://download.gnome.org/sources/pango/$ver/pango-$VERS.tar.xz"
+UPST="https://gitlab.gnome.org/GNOME/pango/-/tags"
 DEPS="fontconfig freetype2 fribidi glib cairo xorg_libraries"  # cairo built after harfbuzz
 
 

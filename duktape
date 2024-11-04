@@ -2,6 +2,8 @@
 NAME="duktape"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://duktape.org/duktape-$VERS.tar.xz"
+UPST="https://duktape.org/download"
+SELE=".latest > td:nth-child(2) > a:nth-child(1)"
 DEPS=""
 
 

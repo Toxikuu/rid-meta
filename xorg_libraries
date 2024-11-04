@@ -1,4 +1,5 @@
 #!/bin/bash
+# i may break these up into a set
 NAME="xorg_libraries"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK=""

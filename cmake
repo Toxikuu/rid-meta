@@ -3,6 +3,8 @@ NAME="cmake"
 VERS="${NAME}_version"; VERS="${!VERS}"
 ver="${VERS%.*}"
 LINK="https://cmake.org/files/v$ver/cmake-$VERS.tar.gz"
+UPST="https://cmake.org/download"
+SELE="#latest"
 DEPS="curl libarchive libuv nghttp2"
 
 

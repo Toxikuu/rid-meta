@@ -2,6 +2,8 @@
 NAME="xf86_input_libinput"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://www.x.org/pub/individual/driver/xf86-input-libinput-$VERS.tar.xz"
+UPST="https://www.x.org/archive/individual/driver/?C=M;O=D"
+SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(2) > a:nth-child(1)"
 DEPS="libinput xorg_server"
 
 

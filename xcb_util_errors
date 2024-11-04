@@ -2,6 +2,7 @@
 NAME="xcb_util_errors"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://xcb.freedesktop.org/dist/xcb-util-errors-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxcb-errors/-/tags"
 DEPS="xcb_proto"
 
 

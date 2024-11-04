@@ -3,6 +3,8 @@
 NAME="go"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://go.dev/dl/go$VERS.linux-amd64.tar.gz"
+UPST="https://go.dev/dl/"
+SELE="div.filename:nth-child(2) > span:nth-child(2)"
 DEPS=""
 
 # go depends on go, and it's bootstrapping hell; ergo binary install

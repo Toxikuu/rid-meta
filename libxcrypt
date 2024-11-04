@@ -1,7 +1,8 @@
 #!/bin/bash
 NAME="libxcrypt"
 VERS="${NAME}_version"; VERS="${!VERS}"
-LINK=""
+LINK="https://github.com/besser82/libxcrypt/releases/download/v$VERS/libxcrypt-$VERS.tar.xz"
+UPST="https://github.com/besser82/libxcrypt/releases/latest"
 DEPS=""
 
 

@@ -2,6 +2,7 @@
 NAME="x264"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://anduin.linuxfromscratch.org/BLFS/x264/x264-$VERS.tar.xz"
+# there is like no upstream for this package lol
 DEPS="nasm"
 
 

@@ -2,6 +2,7 @@
 NAME="git"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://www.kernel.org/pub/software/scm/git/git-$VERS.tar.xz"
+UPST="https://github.com/git/git/tags"
 DEPS="curl perl"
 
 

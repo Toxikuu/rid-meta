@@ -2,6 +2,8 @@
 NAME="intltool"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://launchpad.net/intltool/trunk/$VERS/+download/intltool-$VERS.tar.gz"
+UPST="https://launchpad.net/intltool/trunk"
+SELE="#downloads > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)"
 DEPS=""
 
 

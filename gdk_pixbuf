@@ -3,6 +3,7 @@ NAME="gdk_pixbuf"
 VERS="${NAME}_version"; VERS="${!VERS}"
 ver="${VERS%.*}"
 LINK="https://download.gnome.org/sources/gdk-pixbuf/$ver/gdk-pixbuf-$VERS.tar.xz"
+UPST="https://gitlab.gnome.org/GNOME/gdk-pixbuf/-/tags"
 DEPS="glib libjpeg_turbo libpng shared_mime_info"
 
 

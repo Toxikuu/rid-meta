@@ -2,6 +2,8 @@
 NAME="lfs_bootscripts"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://www.linuxfromscratch.org/lfs/downloads/development/lfs-bootscripts-$VERS.tar.xz"
+UPST="https://www.linuxfromscratch.org/lfs/downloads/development"
+SELE="body > ul:nth-child(2) > li:nth-child(5) > a:nth-child(1)"
 DEPS=""
 
 

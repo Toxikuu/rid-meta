@@ -5,6 +5,8 @@ ver="${VERS%.*}"
 gobjver=1.82.0
 gobjv="${gobjver%.*}"
 LINK="https://download.gnome.org/sources/glib/$ver/glib-$VERS.tar.xz"
+UPST="https://repology.org/project/glib/information" # TODO: Add repology to stabs
+SELE=".version-newest"
 DEPS="meson_toolchain_files pcre2"
 
 

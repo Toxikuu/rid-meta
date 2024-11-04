@@ -2,8 +2,7 @@
 NAME="expat"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://prdownloads.sourceforge.net/expat/expat-$VERS.tar.xz"
-UPST="https://libexpat.github.io"
-SELE="#page-content > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1)"
+UPST="https://sourceforge.net/projects/expat/files"
 DEPS=""
 
 

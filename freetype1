@@ -2,6 +2,7 @@
 NAME="freetype1"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://downloads.sourceforge.net/project/freetype/freetype2/$VERS/freetype-$VERS.tar.xz"
+UPST="https://sourceforge.net/projects/freetype/files"
 DEPS="libpng which"
 
 IDIR=$(cat << '~fin.'
