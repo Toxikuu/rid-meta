@@ -2,6 +2,7 @@
 NAME="libpsl"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/rockdaboot/$NAME/releases/download/$VERS/$NAME-$VERS.tar.gz"
+UPST="https://github.com/rockdaboot/$NAME/tags"
 DEPS="libidn2 libunistring"
 
 

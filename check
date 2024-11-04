@@ -2,6 +2,7 @@
 NAME="check"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/libcheck/check/releases/download/$VERS/check-$VERS.tar.gz"
+UPST="https://github.com/libcheck/check/tags"
 DEPS=""
 
 

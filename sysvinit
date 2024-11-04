@@ -2,6 +2,7 @@
 NAME="sysvinit"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/slicer69/sysvinit/releases/download/$VERS/sysvinit-$VERS.tar.xz"
+UPST="https://github.com/slicer69/sysvinit/tags"
 DEPS=""
 
 

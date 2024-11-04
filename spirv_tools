@@ -2,6 +2,7 @@
 NAME="spirv_tools"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/KhronosGroup/SPIRV-Tools/archive/vulkan-sdk-$VERS/SPIRV-Tools-$VERS.tar.gz"
+UPST="https://github.com/KhronosGroup/SPIRV-Headers/tags"
 DEPS="cmake spirv_headers"
 
 

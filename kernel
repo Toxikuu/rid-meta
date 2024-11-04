@@ -3,6 +3,8 @@ NAME="kernel"
 VERS="${NAME}_version"; VERS="${!VERS}"
 # ver="${VERS//\.0/}"
 LINK="https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-$VERS.tar.gz"
+UPST="https://kernel.org"
+SELE="#latest_link > a:nth-child(1)"
 DEPS=""
 
 

@@ -2,6 +2,7 @@
 NAME="autotiling"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/nwg-piotr/autotiling/archive/refs/tags/v$VERS.tar.gz"
+UPST="https://github.com/nwg-piotr/autotiling/tags"
 DEPS="python"
 
 

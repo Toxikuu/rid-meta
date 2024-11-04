@@ -2,6 +2,7 @@
 NAME="playerctl"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/altdesktop/$NAME/archive/refs/tags/v$VERS.tar.gz"
+UPST="https://github.com/altdesktop/$NAME/tags"
 DEPS=""
 
 

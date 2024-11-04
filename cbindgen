@@ -2,6 +2,7 @@
 NAME="cbindgen"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/mozilla/cbindgen/archive/v$VERS/cbindgen-$VERS.tar.gz"
+UPST="https://github.com/mozilla/cbindgen/tags"
 DEPS="rust"
 
 

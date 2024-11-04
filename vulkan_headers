@@ -2,6 +2,7 @@
 NAME="vulkan_headers"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/KhronosGroup/Vulkan-Headers/archive/v$VERS/Vulkan-Headers-$VERS.tar.gz"
+UPST="https://github.com/KhronosGroup/Vulkan-Headers/tags"
 DEPS="cmake"
 
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 NAME="xcb_util_cursor"
 VERS="${NAME}_version"; VERS="${!VERS}"
-LINK="https://xcb.freedesktop.org/dist/xcb-util-image-$VERS.tar.xz"
+LINK="https://xcb.freedesktop.org/dist/xcb-util-cursor-$VERS.tar.xz"
 DEPS="xcb_util_image xcb_util_renderutil"
 
 

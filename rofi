@@ -2,6 +2,7 @@
 NAME="rofi"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/davatorium/rofi/releases/download/$VERS/rofi-$VERS.tar.xz"
+UPST="https://github.com/davatorium/rofi/tags"
 DEPS="pango cairo xcb_util xcb_util_wm xcb_util_cursor"
 
 

@@ -15,7 +15,6 @@ export CARGO_HOME=/opt/cargo
 export RUSTUP_HOME=/opt/rustup
 
 mkdir -pv /opt/cargo /opt/rustup
-chown -Rv $USER:$USER /opt/cargo /opt/rustup
 
 if ! command -v rustup &> /dev/null; then
     curl https://sh.rustup.rs -sSf | sh -s -- -y --no-modify-path
@@ -23,9 +22,10 @@ fi
 
 . /opt/cargo/env
 
-rustup toolchain install $VERS
-rustup default $VERS
-rustup component add cargo clippy rustfmt
+rustup toolchain install $VERS  &&
+rustup default $VERS            &&
+rustup component add cargo clippy rustfmt ||
+die "Rustup failed"
 
 mv -vf /etc/bash_completion.d/cargo /usr/share/bash-completion/completions
 rm -vf /opt/cargo/env
@@ -33,18 +33,17 @@ rm -vf /opt/cargo/env
 if ! grep -q "# cargo end" /etc/env ; then
     cat << EOF >> /etc/env
 
-    # cargo
-    export CARGO_HOME="/opt/cargo"
-    export RUSTUP_HOME="/opt/rustup"
-    pathprepend "/opt/cargo/bin"
-    # cargo end
+# cargo
+export CARGO_HOME="/opt/cargo"
+export RUSTUP_HOME="/opt/rustup"
+pathprepend "/opt/cargo/bin"
+# cargo end
 
 EOF
 fi
 
-chgrp -R users  /opt/cargo
-chmod g+s       /opt/cargo
-chmod 775       /opt/cargo
+chmod 755 /opt/rustup
+chmod 755 /opt/cargo
 
 ~fin.
 )
@@ -74,11 +73,11 @@ fi
 
 export CARGO_HOME=/opt/cargo
 export RUSTUP_HOME=/opt/rustup
-chown -R $USER:$USER /opt/cargo /opt/rustup
 
-rustup update $VERS
-rustup default $VERS
-rustup component add cargo clippy rustfmt
+rustup update $VERS   &&
+rustup default $VERS  &&
+rustup component add cargo clippy rustfmt ||
+die "Rustup failed"
 
 if [ -f /etc/bash_completion.d/cargo ]; then
     mv -v /etc/bash_completion.d/cargo /usr/share/bash-completion/completions
@@ -87,14 +86,17 @@ fi
 if ! grep -q "# cargo end" /etc/env ; then
     cat << EOF >> /etc/env
 
-    # cargo
-    export CARGO_HOME="/opt/cargo"
-    export RUSTUP_HOME="/opt/rustup"
-    pathprepend "/opt/cargo/bin"
-    # cargo end
+# cargo
+export CARGO_HOME="/opt/cargo"
+export RUSTUP_HOME="/opt/rustup"
+pathprepend "/opt/cargo/bin"
+# cargo end
 
 EOF
 fi
+
+chmod 755 /opt/rustup
+chmod 755 /opt/cargo
 
 ~fin.
 )

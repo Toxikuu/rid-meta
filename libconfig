@@ -2,6 +2,7 @@
 NAME="libconfig"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/hyperrealm/libconfig/releases/download/v$VERS/libconfig-$VERS.tar.gz"
+UPST="https://github.com/hyperrealm/libconfig/tags"
 DEPS=""
 
 

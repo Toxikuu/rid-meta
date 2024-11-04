@@ -2,6 +2,7 @@
 NAME="libyaml"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/yaml/libyaml/releases/download/$VERS/yaml-$VERS.tar.gz"
+UPST="https://github.com/yaml/libyaml/tags"
 DEPS=""
 
 

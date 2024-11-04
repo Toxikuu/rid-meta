@@ -2,6 +2,7 @@
 NAME="spirv_llvm_translator"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v$VERS/SPIRV-LLVM-Translator-$VERS.tar.gz"
+UPST="https://github.com/KhronosGroup/SPIRV-LLVM-Translator/tags"
 DEPS="cmake libxml2 llvm spirv_headers spirv_tools"
 
 

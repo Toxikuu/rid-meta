@@ -2,6 +2,8 @@
 NAME="isl"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://libisl.sourceforge.io/isl-$VERS.tar.xz"
+UPST="https://libisl.sourceforge.io/?C=M;O=D"
+SELE="body > table:nth-child(13) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(2) > a:nth-child(1)"
 DEPS=""
 
 

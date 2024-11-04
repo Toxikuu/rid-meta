@@ -3,6 +3,8 @@ NAME="perl"
 VERS="${NAME}_version"; VERS="${!VERS}"
 ver="${VERS%.*.*}"
 LINK="https://www.cpan.org/src/$ver.0/perl-$VERS.tar.xz"
+UPST="https://www.cpan.org/src"
+SELE=".latest > td:nth-child(2)"
 DEPS=""
 
 

@@ -3,6 +3,7 @@
 NAME="e2fsprogs"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/tytso/e2fsprogs/archive/refs/tags/v$VERS.tar.gz"
+UPST="https://github.com/tytso/e2fsprogs/tags"
 DEPS=""
 
 

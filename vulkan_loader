@@ -2,6 +2,7 @@
 NAME="vulkan_loader"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/KhronosGroup/Vulkan-Loader/archive/v$VERS/Vulkan-Loader-$VERS.tar.gz"
+UPST="https://github.com/KhronosGroup/Vulkan-Loader/tags"
 DEPS="cmake vulkan_headers xorg_libraries"
 
 

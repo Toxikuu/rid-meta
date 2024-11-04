@@ -2,6 +2,7 @@
 NAME="libva"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/intel/libva/archive/$VERS/libva-$VERS.tar.gz"
+UPST="https://github.com/intel/libva/tags"
 DEPS="libdrm"
 
 

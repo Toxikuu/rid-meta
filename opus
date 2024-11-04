@@ -1,7 +1,8 @@
 #!/bin/bash
 NAME="opus"
 VERS="${NAME}_version"; VERS="${!VERS}"
-LINK="https://downloads.xiph.org/releases/opus/opus-$VERS.tar.gz"
+LINK="https://github.com/xiph/opus/releases/download/v$VERS/opus-$VERS.tar.gz"
+UPST="https://github.com/xiph/opus/releases/latest"
 DEPS=""
 
 

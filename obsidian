@@ -2,6 +2,7 @@
 NAME="obsidian"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/obsidianmd/obsidian-releases/releases/download/v$VERS/obsidian-$VERS.tar.gz"
+UPST="https://github.com/obsidianmd/obsidian-releases/tags"
 DEPS=""
 
 

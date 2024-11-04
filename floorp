@@ -2,6 +2,7 @@
 NAME="floorp"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/Floorp-Projects/Floorp/releases/download/v$VERS/floorp-$VERS.linux-x86_64.tar.bz2"
+UPST="https://github.com/Floorp-Projects/Floorp/tags"
 DEPS="gtk3"  # floorp has a bunch of dependencies that i dont feel like finding rn
 
 

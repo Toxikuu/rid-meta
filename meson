@@ -2,6 +2,7 @@
 NAME="meson"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/mesonbuild/meson/releases/download/$VERS/meson-$VERS.tar.gz"
+UPST="https://github.com/mesonbuild/meson/tags"
 DEPS="python"
 
 

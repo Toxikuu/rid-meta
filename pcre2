@@ -2,6 +2,7 @@
 NAME="pcre2"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/PCRE2Project/pcre2/releases/download/pcre2-$VERS/pcre2-$VERS.tar.bz2"
+UPST="https://github.com/PCRE2Project/pcre2/tags"
 DEPS=""
 
 

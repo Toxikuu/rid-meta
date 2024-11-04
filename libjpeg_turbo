@@ -2,6 +2,7 @@
 NAME="libjpeg_turbo"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/$VERS/libjpeg-turbo-$VERS.tar.gz"
+UPST="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/latest"
 DEPS="cmake yasm"
 
 

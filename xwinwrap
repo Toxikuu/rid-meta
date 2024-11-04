@@ -2,6 +2,7 @@
 NAME="xwinwrap"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/mmhobi7/xwinwrap/archive/refs/tags/v$VERS.tar.gz"
+UPST="https://github.com/mmhobi7/xwinwrap/tags"
 DEPS="xorg_libraries"
 
 

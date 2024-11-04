@@ -2,6 +2,7 @@
 NAME="libpng"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/pnggroup/libpng/archive/refs/tags/v$VERS.tar.gz"
+UPST="https://github.com/pnggroup/libpng/tags"
 DEPS=""
 
 

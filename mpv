@@ -2,6 +2,7 @@
 NAME="mpv"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/mpv-player/mpv/archive/v0.39.0/mpv-0.39.0.tar.gz"
+UPST="https://github.com/mpv-player/mpv/tags"
 DEPS="alsa_lib ffmpeg libass libplacebo mesa pulseaudio libjpeg_turbo libva libvdpau luajit uchardet vulkan_loader"
 
 

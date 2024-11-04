@@ -2,6 +2,7 @@
 NAME="cython"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/cython/cython/releases/download/$VERS-1/cython-$VERS.tar.gz"
+UPST="https://github.com/cython/cython/tags"
 DEPS=""
 
 

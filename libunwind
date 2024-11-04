@@ -2,6 +2,7 @@
 NAME="libunwind"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/libunwind/libunwind/releases/download/v$VERS/libunwind-$VERS.tar.gz"
+UPST="https://github.com/libunwind/libunwind/tags"
 DEPS=""
 
 

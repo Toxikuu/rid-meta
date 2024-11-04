@@ -2,6 +2,7 @@
 NAME="udev"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/systemd/systemd/archive/v$VERS/systemd-$VERS.tar.gz"
+UPST="https://github.com/systemd/systemd/tags"
 DEPS="jinja2 gperf"
 
 # udev is in the systemd tarball because systemd

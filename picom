@@ -2,6 +2,7 @@
 NAME="picom"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/yshui/picom/archive/refs/tags/v$VERS.tar.gz"
+UPST="https://github.com/yshui/picom/tags"
 DEPS="xorg_libraries pixman libconfig pcre2 libev uthash"  # INCOMPLETE
 
 

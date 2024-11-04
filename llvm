@@ -3,6 +3,8 @@ NAME="llvm"
 VERS="${NAME}_version"; VERS="${!VERS}"
 ver="${VERS%.*.*}"
 LINK="https://github.com/llvm/llvm-project/releases/download/llvmorg-$VERS/llvm-$VERS.src.tar.xz"
+UPST="https://github.com/llvm/llvm-project/releases/latest"
+SELE="h1.d-inline"
 DEPS="cmake"
 
 

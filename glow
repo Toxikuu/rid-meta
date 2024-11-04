@@ -2,6 +2,7 @@
 NAME="glow"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/charmbracelet/glow/archive/refs/tags/v$VERS.tar.gz"
+UPST="https://github.com/charmbracelet/glow/tags"
 DEPS="go"
 
 

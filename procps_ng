@@ -1,7 +1,8 @@
 #!/bin/bash
 NAME="procps_ng"
 VERS="${NAME}_version"; VERS="${!VERS}"
-LINK="https://sourceforge.net/projects/procps-ng/files/Production/procps-ng-4.0.4.tar.xz"
+LINK="https://sourceforge.net/projects/procps-ng/files/Production/procps-ng-$VERS.tar.xz"
+UPST="https://gitlab.com/procps-ng/procps/-/tags"
 DEPS=""
 
 

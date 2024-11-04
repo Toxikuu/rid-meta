@@ -2,6 +2,7 @@
 NAME="ripgrep"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/BurntSushi/ripgrep/archive/refs/tags/$VERS.tar.gz"
+UPST="https://github.com/BurntSushi/ripgrep/tags"
 DEPS="rust"
 
 

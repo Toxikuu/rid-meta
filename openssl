@@ -2,6 +2,7 @@
 NAME="openssl"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/openssl/openssl/releases/download/openssl-$VERS/openssl-$VERS.tar.gz"
+UPST="https://github.com/openssl/openssl/tags"
 DEPS=""
 
 

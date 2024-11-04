@@ -2,6 +2,7 @@
 NAME="libvpx"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/webmproject/libvpx/archive/v$VERS/libvpx-$VERS.tar.gz"
+UPST="https://github.com/webmproject/libvpx/tags"
 DEPS="yasm which"
 
 

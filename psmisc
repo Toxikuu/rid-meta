@@ -2,6 +2,7 @@
 NAME="psmisc"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-$VERS.tar.xz"
+UPST="https://gitlab.com/psmisc/psmisc/-/tags"
 DEPS=""
 
 

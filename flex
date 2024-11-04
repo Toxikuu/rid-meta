@@ -2,6 +2,7 @@
 NAME="flex"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/westes/flex/releases/download/v$VERS/flex-$VERS.tar.gz"
+UPST="https://github.com/westes/flex/tags"
 DEPS=""
 
 

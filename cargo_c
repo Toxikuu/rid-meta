@@ -2,6 +2,7 @@
 NAME="cargo_c"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/lu-zero/cargo-c/archive/v$VERS/cargo-c-$VERS.tar.gz"
+UPST="https://github.com/lu-zero/cargo-c/tags"
 DEPS="rust"
 
 

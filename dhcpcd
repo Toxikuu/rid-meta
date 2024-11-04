@@ -2,6 +2,7 @@
 NAME="dhcpcd"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://github.com/NetworkConfiguration/dhcpcd/releases/download/v$VERS/dhcpcd-$VERS.tar.xz"
+UPST="https://github.com/NetworkConfiguration/dhcpcd/tags"
 DEPS=""
 
 
