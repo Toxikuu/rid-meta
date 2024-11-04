@@ -2,6 +2,7 @@
 NAME="expect"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://prdownloads.sourceforge.net/expect/expect$VERS.tar.gz"
+UPST="https://sourceforge.net/projects/expect/files"
 DEPS=""
 
 

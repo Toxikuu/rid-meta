@@ -2,6 +2,7 @@
 NAME="binutils"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://sourceware.org/pub/binutils/releases/binutils-$VERS.tar.xz"
+UPST="https://ftp.gnu.org/gnu/binutils/?C=M;O=D"
 DEPS=""
 
 

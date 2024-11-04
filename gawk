@@ -3,6 +3,7 @@ NAME="gawk"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/gawk/gawk-$VERS.tar.xz"
 UPST="https://ftp.gnu.org/gnu/gawk/?C=M;O=D"
+SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(6) > td:nth-child(2) > a:nth-child(1)"
 DEPS=""
 
 

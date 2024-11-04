@@ -2,8 +2,7 @@
 NAME="lame"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://downloads.sourceforge.net/project/lame/lame/$VERS/lame-$VERS.tar.gz"
-UPST="https://sourceforge.net/projects/lame/files/lame"
-SELE=".sub-label"
+UPST="https://sourceforge.net/projects/lame/files"
 DEPS=""
 
 

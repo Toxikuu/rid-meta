@@ -2,6 +2,8 @@
 NAME="libelf"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://sourceware.org/ftp/elfutils/$VERS/elfutils-$VERS.tar.bz2"
+UPST="https://sourceware.org/ftp/elfutils/?C=M;O=D"
+SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(2) > a:nth-child(1)"
 DEPS=""
 
 # i may remove the link and just try to extract the tarball, downloading it if nonexistent

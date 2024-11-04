@@ -2,6 +2,8 @@
 NAME="bzip2"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://www.sourceware.org/pub/bzip2/bzip2-$VERS.tar.gz"
+UPST="https://www.sourceware.org/pub/bzip2/?C=M;O=D"
+SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(8) > td:nth-child(2) > a:nth-child(1)"
 DEPS=""
 
 
