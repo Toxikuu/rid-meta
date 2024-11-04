@@ -2,6 +2,7 @@
 NAME="groff"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/groff/groff-$VERS.tar.gz"
+UPST="https://ftp.gnu.org/gnu/groff/?C=M;O=D"
 DEPS=""
 
 

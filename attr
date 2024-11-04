@@ -2,6 +2,8 @@
 NAME="attr"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://download.savannah.gnu.org/releases/attr/attr-$VERS.tar.gz"
+UPST="http://download.savannah.nongnu.org/releases/attr/?C=M&O=D"
+SELE="html body table#list tbody tr.e td a"
 DEPS=""
 
 

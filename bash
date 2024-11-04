@@ -2,6 +2,7 @@
 NAME="bash"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/bash/bash-$VERS.tar.gz"
+UPST="https://ftp.gnu.org/gnu/bash/?C=M;O=D"
 DEPS=""
 
 

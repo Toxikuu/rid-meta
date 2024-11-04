@@ -2,6 +2,7 @@
 NAME="automake"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/automake/automake-$VERS.tar.xz"
+UPST="https://ftp.gnu.org/gnu/automake/?C=M;O=D"
 DEPS=""
 
 

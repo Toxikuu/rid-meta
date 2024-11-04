@@ -2,6 +2,7 @@
 NAME="gzip"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/gzip/gzip-$VERS.tar.xz"
+UPST="https://ftp.gnu.org/gnu/gzip/?C=M;O=D"
 DEPS=""
 
 

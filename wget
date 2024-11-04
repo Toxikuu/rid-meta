@@ -2,6 +2,7 @@
 NAME="wget"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/wget/wget-$VERS.tar.gz"
+UPST="https://ftp.gnu.org/gnu/wget/?C=M;O=D"
 DEPS="libpsl make_ca libidn2"
 
 

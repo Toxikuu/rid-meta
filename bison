@@ -2,6 +2,7 @@
 NAME="bison"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/bison/bison-$VERS.tar.xz"
+UPST="https://ftp.gnu.org/gnu/bison/?C=M;O=D"
 DEPS=""
 
 

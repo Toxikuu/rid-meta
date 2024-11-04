@@ -2,8 +2,8 @@
 NAME="krb5"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://kerberos.org/dist/krb5/${VERS%.*}/krb5-$VERS.tar.gz"
-UPST="https://kerberos.org/dist/krb5/?C=M;O=D"
-SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(2) > a:nth-child(1)"
+UPST="https://web.mit.edu/kerberos/"
+SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > ul:nth-child(1) > li:nth-child(1) > a:nth-child(1)"
 DEPS=""
 
 

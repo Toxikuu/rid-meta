@@ -2,6 +2,7 @@
 NAME="tar"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/tar/tar-$VERS.tar.xz"
+UPST="https://ftp.gnu.org/gnu/tar/?C=M;O=D"
 DEPS=""
 
 

@@ -2,6 +2,7 @@
 NAME="libidn2"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/libidn/$NAME-$VERS.tar.gz"
+UPST="https://ftp.gnu.org/gnu/libidn/?C=M;O=D"
 DEPS="libunistring"
 
 

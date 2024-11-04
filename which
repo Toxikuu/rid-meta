@@ -2,6 +2,7 @@
 NAME="which"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/which/which-$VERS.tar.gz"
+UPST="https://ftp.gnu.org/gnu/which/?C=M;O=D"
 DEPS=""
 
 

@@ -2,7 +2,7 @@
 NAME="acl"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://download.savannah.gnu.org/releases/acl/acl-$VERS.tar.xz"
-UPST="https://archlinux.org/packages/core/x86_64/acl/"
+UPST="http://download.savannah.gnu.org/releases/acl/?C=M&O=D"
 DEPS=""
 
 

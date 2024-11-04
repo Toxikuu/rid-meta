@@ -2,6 +2,7 @@
 NAME="readline"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/readline/readline-$VERS.tar.gz"
+UPST="https://ftp.gnu.org/gnu/readline/?C=M;O=D"
 DEPS=""
 
 

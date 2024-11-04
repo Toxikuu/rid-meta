@@ -2,6 +2,7 @@
 NAME="grep"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/grep/grep-$VERS.tar.xz"
+UPST="https://ftp.gnu.org/gnu/grep/?C=M;O=D"
 DEPS=""
 
 

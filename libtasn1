@@ -2,6 +2,7 @@
 NAME="libtasn1"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/$NAME/$NAME-$VERS.tar.gz"
+UPST="https://ftp.gnu.org/gnu/$NAME/?C=M;O=D"
 DEPS=""
 
 

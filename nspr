@@ -2,6 +2,7 @@
 NAME="nspr"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://archive.mozilla.org/pub/nspr/releases/v$VERS/src/nspr-$VERS.tar.gz"
+UPST="https://archlinux.org/packages/core/x86_64/nspr"
 DEPS=""
 
 

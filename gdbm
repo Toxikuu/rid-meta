@@ -2,6 +2,7 @@
 NAME="gdbm"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/gdbm/gdbm-$VERS.tar.gz"
+UPST="https://ftp.gnu.org/gnu/gdbm/?C=M;O=D"
 DEPS=""
 
 

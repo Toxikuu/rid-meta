@@ -2,6 +2,7 @@
 NAME="inetutils"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/inetutils/inetutils-$VERS.tar.xz"
+UPST="https://ftp.gnu.org/gnu/inetutils/?C=M;O=D"
 DEPS=""
 
 

@@ -2,6 +2,7 @@
 NAME="libtool"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/libtool/libtool-$VERS.tar.xz"
+UPST="https://ftp.gnu.org/gnu/libtool/?C=M;O=D"
 DEPS=""
 
 

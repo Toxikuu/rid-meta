@@ -2,6 +2,7 @@
 NAME="mpc"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/mpc/mpc-$VERS.tar.gz"
+UPST="https://ftp.gnu.org/gnu/mpc/?C=M;O=D"
 DEPS=""
 
 

@@ -2,6 +2,7 @@
 NAME="gperf"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/gperf/gperf-$VERS.tar.gz"
+UPST="https://ftp.gnu.org/gnu/gperf/?C=M;O=D"
 DEPS=""
 
 

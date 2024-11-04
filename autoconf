@@ -2,6 +2,8 @@
 NAME="autoconf"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/autoconf/autoconf-$VERS.tar.xz"
+UPST="https://ftp.gnu.org/gnu/autoconf/?C=M;O=D"
+SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-child(2) > a:nth-child(1)" # autoconf felt like being special and using a latest.tar.xz
 DEPS=""
 
 

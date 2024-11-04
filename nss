@@ -3,6 +3,7 @@ NAME="nss"
 VERS="${NAME}_version"; VERS="${!VERS}"
 ver="${VERS//./_}"
 LINK="https://archive.mozilla.org/pub/security/nss/releases/NSS_${ver}_RTM/src/nss-$VERS.tar.gz"
+UPST="https://archlinux.org/packages/core/x86_64/nss"
 DEPS="nspr"
 
 

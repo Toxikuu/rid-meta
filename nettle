@@ -2,6 +2,7 @@
 NAME="nettle"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/nettle/nettle-$VERS.tar.gz"
+UPST="https://ftp.gnu.org/gnu/nettle/?C=M;O=D"
 DEPS=""
 
 

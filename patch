@@ -2,6 +2,7 @@
 NAME="patch"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://ftp.gnu.org/gnu/patch/patch-$VERS.tar.xz"
+UPST="https://ftp.gnu.org/gnu/patch/?C=M;O=D"
 DEPS=""
 
 
