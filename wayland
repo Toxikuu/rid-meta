@@ -2,6 +2,7 @@
 NAME="wayland"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://gitlab.freedesktop.org/wayland/wayland/-/releases/$VERS/downloads/wayland-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/wayland/wayland/-/tags"
 DEPS="libxml2"
 
 

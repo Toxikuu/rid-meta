@@ -2,6 +2,7 @@
 NAME="wayland_protocols"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/$VERS/downloads/wayland-protocols-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tags"
 DEPS="wayland"
 
 

@@ -2,6 +2,7 @@
 NAME="libaom"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://storage.googleapis.com/aom-releases/libaom-$VERS.tar.gz"
+UPST="https://repology.org/project/aom/information"
 DEPS="yasm"
 
 

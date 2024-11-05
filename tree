@@ -1,8 +1,8 @@
 #!/bin/bash
-
 NAME="tree"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://gitlab.com/OldManProgrammer/unix-tree/-/archive/$VERS/unix-tree-$VERS.tar.bz2"
+UPST="https://gitlab.com/OldManProgrammer/unix-tree/-/tags"
 
 
 IDIR=$(cat << '~fin.'

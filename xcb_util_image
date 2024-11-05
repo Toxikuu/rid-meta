@@ -2,6 +2,7 @@
 NAME="xcb_util_image"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://xcb.freedesktop.org/dist/xcb-util-image-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxcb-image/-/tags"
 DEPS="xcb_util"
 
 

@@ -2,6 +2,7 @@
 NAME="libgpg_error"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-$VERS.tar.bz2"
+UPST="https://repology.org/project/libgpg-error/information"
 DEPS=""
 
 

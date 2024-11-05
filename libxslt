@@ -3,6 +3,7 @@ NAME="libxslt"
 VERS="${NAME}_version"; VERS="${!VERS}"
 ver="${VERS%.*}"
 LINK="https://download.gnome.org/sources/libxslt/$ver/libxslt-$VERS.tar.xz"
+UPST="https://gitlab.gnome.org/GNOME/libxslt/-/tags"
 DEPS="libxml2 docbook_xml docbook_xsl_nons"
 
 

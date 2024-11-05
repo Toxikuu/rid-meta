@@ -2,6 +2,7 @@
 NAME="libglvnd"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://gitlab.freedesktop.org/glvnd/libglvnd/-/archive/v$VERS/libglvnd-v$VERS.tar.gz"
+UPST="https://gitlab.freedesktop.org/glvnd/libglvnd/-/tags"
 DEPS="xorg_libraries"
 
 

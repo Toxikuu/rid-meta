@@ -2,6 +2,7 @@
 NAME="xcb_proto"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://xorg.freedesktop.org/archive/individual/proto/xcb-proto-$VERS.tar.xz"
+UPST="https://repology.org/project/xcb-proto/information"
 DEPS=""
 
 

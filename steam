@@ -2,6 +2,8 @@
 NAME="steam"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://repo.steampowered.com/steam/pool/steam/s/steam/steam_$VERS.tar.gz"
+UPST="https://repo.steampowered.com/steam/pool/steam/s/steam/?C=M&O=D"
+SELE="#list > tbody > tr:nth-child(4) > td.link > a"
 DEPS=""  # steam dependencies
 
 

@@ -2,6 +2,8 @@
 NAME="python"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://www.python.org/ftp/python/$VERS/Python-$VERS.tar.xz"
+UPST="https://www.python.org/downloads"
+SELE="#touchnav-wrapper > header > div > div.header-banner > div > div.download-os-macos > p > a"
 DEPS=""
 
 

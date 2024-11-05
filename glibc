@@ -97,7 +97,8 @@ EOF
 rm -rf ./*
 find .. -name "*.a" -delete
 
-CC="gcc -m32" CXX="g++ -m32" \
+CC="gcc  -m32 -mstackrealign"            \
+CXX="g++ -m32 -mstackrealign"            \
 ../configure                             \
       --prefix=/usr                      \
       --host=i686-pc-linux-gnu           \

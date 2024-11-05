@@ -2,7 +2,7 @@
 NAME="gsettings_desktop_schemas"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://download.gnome.org/sources/gsettings-desktop-schemas/${VERS%.*}/gsettings-desktop-schemas-$VERS.tar.xz"
-UPST="https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas/-/tags" # may be problematic
+UPST="https://repology.org/project/gsettings-desktop-schemas/information"
 DEPS="glib"
 
 

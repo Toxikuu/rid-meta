@@ -2,6 +2,7 @@
 NAME="xorgproto"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://xorg.freedesktop.org/archive/individual/proto/xorgproto-$VERS.tar.xz"
+UPST="https://repology.org/project/xorgproto/information"
 DEPS="util_macros"
 
 

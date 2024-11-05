@@ -2,6 +2,7 @@
 NAME="libxcb"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://xorg.freedesktop.org/archive/individual/lib/libxcb-$VERS.tar.xz"
+UPST="https://repology.org/project/libxcb/information"
 DEPS="libxau xcb_proto libxdmcp"
 
 

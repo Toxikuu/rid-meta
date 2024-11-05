@@ -3,6 +3,7 @@ NAME="util_linux"
 VERS="${NAME}_version"; VERS="${!VERS}"
 ver=${VERS%.*}
 LINK="https://www.kernel.org/pub/linux/utils/util-linux/v$ver/util-linux-$VERS.tar.xz"
+UPST="https://repology.org/project/util-linux/information"
 DEPS=""
 
 

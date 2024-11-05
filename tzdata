@@ -2,6 +2,8 @@
 NAME="tzdata"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK=""
+UPST="https://data.iana.org/time-zones/releases/?C=M;O=D"
+SELE="body > table > tbody > tr:nth-child(4) > td:nth-child(1) > a" # theres a letter in this version because tzdata lol
 DEPS="glibc"  # provides tzselect zic etc
 
 

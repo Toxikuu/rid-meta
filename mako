@@ -2,6 +2,7 @@
 NAME="mako"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://files.pythonhosted.org/packages/source/M/Mako/Mako-1.3.5.tar.gz"
+UPST="https://pypi.org/project/Mako"
 DEPS=""
 
 

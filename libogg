@@ -2,6 +2,7 @@
 NAME="libogg"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://downloads.xiph.org/releases/ogg/libogg-$VERS.tar.xz"
+UPST="https://github.com/xiph/ogg/tags"
 DEPS=""
 
 

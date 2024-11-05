@@ -2,6 +2,7 @@
 NAME="kbd"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://www.kernel.org/pub/linux/utils/kbd/kbd-$VERS.tar.xz"
+UPST="https://repology.org/project/kbd/information"
 DEPS=""
 
 

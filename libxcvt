@@ -2,6 +2,7 @@
 NAME="libxcvt"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://www.x.org/pub/individual/lib/libxcvt-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxcvt/-/tags"
 DEPS=""
 
 

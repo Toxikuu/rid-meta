@@ -3,6 +3,7 @@ NAME="libxml2"
 VERS="${NAME}_version"; VERS="${!VERS}"
 ver="${VERS%.*}"
 LINK="https://download.gnome.org/sources/libxml2/$ver/libxml2-$VERS.tar.xz"
+UPST="https://gitlab.gnome.org/GNOME/libxml2/-/tags"
 DEPS="icu"
 
 

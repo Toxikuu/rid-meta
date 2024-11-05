@@ -2,6 +2,7 @@
 NAME="libvorbis"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://downloads.xiph.org/releases/vorbis/libvorbis-$VERS.tar.xz"
+UPST="https://github.com/xiph/vorbis/tags"
 DEPS="libogg"
 
 

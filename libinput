@@ -2,6 +2,7 @@
 NAME="libinput"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://gitlab.freedesktop.org/libinput/libinput/-/archive/$VERS/libinput-$VERS.tar.gz"
+UPST="https://gitlab.freedesktop.org/libinput/libinput/-/tags"
 DEPS="libevdev mtdev"
 
 

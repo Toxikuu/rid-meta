@@ -2,6 +2,8 @@
 NAME="libdrm"
 VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://dri.freedesktop.org/libdrm/libdrm-$VERS.tar.xz"
+UPST="https://dri.freedesktop.org/libdrm/?C=M;O=D"
+SELE="body > table > tbody > tr:nth-child(4) > td:nth-child(2) > a"
 DEPS="xorg_libraries"
 
 

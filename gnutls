@@ -3,9 +3,7 @@ NAME="gnutls"
 VERS="${NAME}_version"; VERS="${!VERS}"
 ver="${VERS%.*.*}"
 LINK="https://www.gnupg.org/ftp/gcrypt/gnutls/v$ver/gnutls-$VERS.tar.xz"
-# unfortunately, UPST will have to be (rarely) updated here unless i can think of a better solution
-UPST="https://www.gnupg.org/ftp/gcrypt/gnutls/v3.8/"
-SELE="div.outline-text-3:nth-child(5) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > a:nth-child(1)"
+UPST="https://repology.org/project/gnutls/information"
 DEPS="nettle make_ca libunistring libtasn1 p11_kit"
 
 
