@@ -27,16 +27,19 @@ sed -i 's/drm_fbdev_generic_setup/drm_fbdev_ttm_setup/g' kernel{,-open}/conftest
     --no-x-check                                \
     --no-peermem                                \
     --no-systemd                                \
+    --no-abi-note                               \
     --no-questions                              \
     --x-prefix=/usr                             \
+    --disable-nouveau                           \
+    --skip-module-load                          \
     --no-nouveau-check                          \
     --no-ncurses-color                          \
-    --disable-nouveau                           \
     --force-selinux=no                          \
     --kernel-name=$kver                         \
     --run-nvidia-xconfig                        \
     --no-install-libglvnd                       \
     --no-rebuild-initramfs                      \
+    --install-compat32-libs                     \
     --kernel-module-type=proprietary            \
     --no-check-for-alternate-installs           \
     --kernel-source-path=/usr/src/linux         \
