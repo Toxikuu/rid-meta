@@ -43,9 +43,11 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr               \
       -D LLVM_INCLUDE_BENCHMARKS=OFF             \
       -D CLANG_DEFAULT_PIE_ON_LINUX=ON           \
       -D CLANG_CONFIG_FILE_SYSTEM_DIR=/etc/clang \
-      -W no-dev -G Ninja .. &&
+      -W no-dev -G Ninja ..                     ||
+die "Cmake failed"
 
-ninja &&
+ninja                                           ||
+die "Ninja failed"
 DESTDIR= ninja install &&
 cp -v bin/FileCheck /usr/bin
 
@@ -53,9 +55,9 @@ rm -rf *
 
 CC=gcc CXX=g++                                          \
 cmake -D CMAKE_INSTALL_PREFIX=/usr                      \
-      -D CMAKE_C_FLAGS:STRING=-m32 -O2                  \
+      -D CMAKE_C_FLAGS:STRING=-m32                      \
       -D CMAKE_SKIP_INSTALL_RPATH=ON                    \
-      -D CMAKE_CXX_FLAGS:STRING=-m32 -O2                \
+      -D CMAKE_CXX_FLAGS:STRING=-m32                    \
       -D LLVM_TARGET_ARCH:STRING=i686                   \
       -D LLVM_LIBDIR_SUFFIX=32                          \
       -D LLVM_ENABLE_FFI=ON                             \
@@ -70,9 +72,11 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr                      \
       -D LLVM_INCLUDE_BENCHMARKS=OFF                    \
       -D CLANG_DEFAULT_PIE_ON_LINUX=ON                  \
       -D CLANG_CONFIG_FILE_SYSTEM_DIR=/etc/clang        \
-      -W no-dev -G Ninja .. &&
+      -W no-dev -G Ninja ..                            ||
+die "32-bit CMake failed"
 
-ninja &&
+ninja                                                  ||
+die "32-bit ninja failed"
 DESTDIR=/tmp/rid/dest ninja install
 cp -vr /tmp/rid/dest/usr/lib32/* /usr/lib32
 rm -rf /tmp/rid/dest

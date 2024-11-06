@@ -7,14 +7,7 @@ DEPS="cmake"
 
 IDIR=$(cat << '~fin.'
 
-mkdir build &&
-cd    build &&
-
-cmake -D CMAKE_INSTALL_PREFIX=/usr \
-      -D BUILD_STATIC=OFF          \
-      -W no-dev ..                 &&
-make
-make install
+CN -D BUILD_STATIC=OFF
 
 ~fin.
 )

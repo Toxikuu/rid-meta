@@ -8,33 +8,8 @@ DEPS="cmake libxml2 llvm spirv_headers spirv_tools"
 
 IDIR=$(cat << '~fin.'
 
-mkdir build &&
-cd    build &&
-
-cmake -D CMAKE_INSTALL_PREFIX=/usr                   \
-      -D CMAKE_BUILD_TYPE=Release                    \
-      -D BUILD_SHARED_LIBS=ON                        \
-      -D CMAKE_SKIP_INSTALL_RPATH=ON                 \
-      -D LLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr \
-      -G Ninja ..                                    &&
-ninja &&
-DESTDIR= ninja install &&
-
-rm -rvf * &&
-CC="gcc -m32" CXX="g++ -m32"                         \
-PKG_CONFIG_PATH=/usr/lib32/pkgconfig                 \
-cmake -D CMAKE_INSTALL_PREFIX=/usr                   \
-      -D CMAKE_INSTALL_LIBDIR=lib32                  \
-      -D CMAKE_BUILD_TYPE=Release                    \
-      -D CMAKE_SKIP_INSTALL_RPATH=ON                 \
-      -D BUILD_SHARED_LIBS=ON                        \
-      -D LLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr \
-      -G Ninja ..                                    &&
-ninja &&
-DESTDIR=/tmp/rid/dest ninja install
-cp -vr /tmp/rid/dest/usr/lib32/* /usr/lib32
-rm -rf /tmp/rid/dest
-ldconfig
+CN -D LLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr
+32CN -D LLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr
 
 ~fin.
 )

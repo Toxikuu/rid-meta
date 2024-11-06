@@ -8,13 +8,7 @@ DEPS="cmake"
 
 IDIR=$(cat << '~fin.'
 
-mkdir build &&
-cd    build &&
-
-cmake -D CMAKE_INSTALL_PREFIX=/usr -G Ninja .. &&
-ninja
-
-DESTDIR= ninja install
+CN
 
 ~fin.
 )

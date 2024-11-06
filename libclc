@@ -9,15 +9,7 @@ DEPS="llvm spirv_llvm_translator"  # llvm with clang
 
 IDIR=$(cat << '~fin.'
 
-mkdir build &&
-cd    build &&
-
-cmake -D CMAKE_INSTALL_PREFIX=/usr \
-      -D CMAKE_BUILD_TYPE=Release  \
-      -G Ninja .. &&
-
-ninja
-DESTDIR= ninja install
+CN
 
 ~fin.
 )

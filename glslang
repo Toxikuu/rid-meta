@@ -7,35 +7,13 @@ DEPS="cmake spirv_tools"
 
 
 IDIR=$(cat << '~fin.'
-mkdir build &&
-cd    build &&
+CN \
+  -D ALLOW_EXTERNAL_SPIRV_TOOLS=ON \
+  -D GLSLANG_TESTS=OFF
 
-cmake -D CMAKE_INSTALL_PREFIX=/usr     \
-      -D CMAKE_BUILD_TYPE=Release      \
-      -D ALLOW_EXTERNAL_SPIRV_TOOLS=ON \
-      -D BUILD_SHARED_LIBS=ON          \
-      -D GLSLANG_TESTS=OFF             \
-      -G Ninja .. &&
-
-ninja
-DESTDIR= ninja install
-
-rm -rf *
-CC="gcc -m32" CXX="g++ -m32"           \
-PKG_CONFIG_PATH=/usr/lib32/pkgconfig   \
-cmake -D CMAKE_INSTALL_PREFIX=/usr     \
-      -D CMAKE_INSTALL_LIBDIR=lib32    \
-      -D CMAKE_BUILD_TYPE=Release      \
-      -D ALLOW_EXTERNAL_SPIRV_TOOLS=ON \
-      -D BUILD_SHARED_LIBS=ON          \
-      -D GLSLANG_TESTS=OFF             \
-      -G Ninja .. &&
-
-ninja
-DESTDIR=/tmp/rid/dest ninja install
-cp -vr /tmp/rid/dest/usr/lib32/* /usr/lib32
-rm -rf /tmp/rid/dest
-ldconfig
+32CN \
+  -D ALLOW_EXTERNAL_SPIRV_TOOLS=ON \
+  -D GLSLANG_TESTS=OFF
 
 ~fin.
 )

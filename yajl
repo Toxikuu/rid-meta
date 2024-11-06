@@ -19,14 +19,7 @@ patch -Np1 -i "$RIDSOURCES"/yajl-2.1.0-CVE-2017-16516.patch
 patch -Np1 -i "$RIDSOURCES"/yajl-2.1.0-CVE-2022-24795.patch
 patch -Np1 -i "$RIDSOURCES"/yajl-2.1.0-memory_leak.patch
 
-cmake \
-    -B ridbuild                     \
-    -D CMAKE_BUILD_TYPE=Release     \
-    -D CMAKE_INSTALL_PREFIX=/usr    \
-    -W no-dev
-
-make -C ridbuild
-make -C ridbuild DESTDIR= install
+CN
 
 ~fin.
 )

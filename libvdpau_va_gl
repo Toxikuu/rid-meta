@@ -8,14 +8,9 @@ DEPS="cmake libvdpau libva"
 
 IDIR=$(cat << '~fin.'
 
-mkdir build &&
-cd    build &&
+CN
 
-cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr .. &&
-make
-make install
-
-rm -rf *
+mkdir build && cd build
 CC="gcc -m32" CXX="g++ -m32"                 \
 PKG_CONFIG_PATH=/usr/lib32/pkgconfig         \
 cmake -D CMAKE_BUILD_TYPE=Release            \
@@ -24,11 +19,10 @@ cmake -D CMAKE_BUILD_TYPE=Release            \
 
 make
 make DESTDIR=$PWD/DESTDIR install
+# cant abstract because 32-bit instructions install to lib lol
 cp -vr DESTDIR/$XORG_PREFIX/lib/* $XORG_PREFIX/lib32
 rm -rf DESTDIR
 ldconfig
-
-echo "export VDPAU_DRIVER=va_gl" >> /etc/profile
 
 ~fin.
 )
