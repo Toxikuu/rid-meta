@@ -19,37 +19,38 @@ mn \
     -D gallium-drivers=nouveau  \
     -D video-codecs=all         
 
-rm -rvf  ridbuild
-mkdir -v ridbuild
-cd       ridbuild
-
-CC="gcc -m32" CXX="g++ -m32"                 \
-PKG_CONFIG_PATH=$XORG_PREFIX/lib32/pkgconfig \
-meson setup                                  \
-    --prefix=$XORG_PREFIX                    \
-    --libdir=$XORG_PREFIX/lib32              \
-    --buildtype=release                      \
-    --strip                                  \
-    -D platforms=x11                         \
-    -D gallium-drivers=nouveau               \
-    -D vulkan-drivers=""                     \
-    -D valgrind=disabled                     \
-    -D libunwind=disabled                    \
-    -D glvnd=enabled                         \
-    -D video-codecs=all                      \
-    -D llvm=disabled                         \
-    .. &&
-    sed -i 's/\/usr\/lib\//\/usr\/lib32\//g' ./build.ninja &&
-
-ninja
-
-DESTDIR=$PWD/DESTDIR ninja install
-cp -vr DESTDIR/$XORG_PREFIX/lib32/* $XORG_PREFIX/lib32
-if [ -d DESTDIR/$XORG_PREFIX/share/vulkan ]; then
-     cp -vr DESTDIR/$XORG_PREFIX/share/vulkan $XORG_PREFIX/share
-fi
-rm -rf DESTDIR
-ldconfig
+# # I don't need 32-bit mesa because I use nvidia, so I've commented the below out.
+# rm -rvf  ridbuild
+# mkdir -v ridbuild
+# cd       ridbuild
+#
+# CC="gcc -m32" CXX="g++ -m32"                 \
+# PKG_CONFIG_PATH=$XORG_PREFIX/lib32/pkgconfig \
+# meson setup                                  \
+#     --prefix=$XORG_PREFIX                    \
+#     --libdir=$XORG_PREFIX/lib32              \
+#     --buildtype=release                      \
+#     --strip                                  \
+#     -D platforms=x11                         \
+#     -D gallium-drivers=nouveau               \
+#     -D vulkan-drivers=""                     \
+#     -D valgrind=disabled                     \
+#     -D libunwind=disabled                    \
+#     -D glvnd=enabled                         \
+#     -D video-codecs=all                      \
+#     -D llvm=disabled                         \
+#     .. &&
+#     sed -i 's/\/usr\/lib\//\/usr\/lib32\//g' ./build.ninja &&
+#
+# ninja
+#
+# DESTDIR=$PWD/DESTDIR ninja install
+# cp -vr DESTDIR/$XORG_PREFIX/lib32/* $XORG_PREFIX/lib32
+# if [ -d DESTDIR/$XORG_PREFIX/share/vulkan ]; then
+#      cp -vr DESTDIR/$XORG_PREFIX/share/vulkan $XORG_PREFIX/share
+# fi
+# rm -rf DESTDIR
+# ldconfig
 
 ~fin.
 )
