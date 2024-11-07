@@ -1,0 +1,43 @@
+#!/bin/bash
+NAME="chrony"
+VERS="${NAME}_version"; VERS="${!VERS}"
+LINK="https://chrony-project.org/releases/chrony-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+RIDBUILD=false        \
+cm                    \
+  --disable-readline  \
+  --without-editline  \
+  --disable-sechash   \
+  --without-nettle    \
+  --without-gnutls    \
+  --without-nss       \
+  --without-tomcrypt  \
+  --disable-nts       \
+  --disable-cmdmon    \
+  --disable-refclock  \
+  --disable-phc       \
+  --disable-pps       \
+  --disable-ipv6      \
+  --disable-rtc       \
+  --disable-privdrop  \
+  --without-libcap    \
+  --disable-asyncdns  \
+  --disable-timestamping
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
