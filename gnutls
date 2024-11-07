@@ -1,8 +1,7 @@
 #!/bin/bash
 NAME="gnutls"
 VERS="${NAME}_version"; VERS="${!VERS}"
-ver="${VERS%.*.*}"
-LINK="https://www.gnupg.org/ftp/gcrypt/gnutls/v$ver/gnutls-$VERS.tar.xz"
+LINK="https://www.gnupg.org/ftp/gcrypt/gnutls/v${VERS:0:3}/gnutls-$VERS.tar.xz"
 UPST="https://repology.org/project/gnutls/information"
 DEPS="nettle make_ca libunistring libtasn1 p11_kit"
 
