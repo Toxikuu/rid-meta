@@ -4,7 +4,7 @@ VERS="${NAME}_version"; VERS="${!VERS}"
 LINK="https://repo.steampowered.com/steam/pool/steam/s/steam/steam_$VERS.tar.gz"
 UPST="https://repo.steampowered.com/steam/pool/steam/s/steam/?C=M&O=D"
 SELE="#list > tbody > tr:nth-child(4) > td.link > a"
-DEPS=""  # steam dependencies
+DEPS="@lfs alsa_plugins curl dbus_2 xorg_server libglvnd make-ca mesa nvidia vulkan_loader pulseaudio xdg_user_dirs libgpg_error"
 
 
 # namespaces support in kernel is necessary
@@ -12,6 +12,8 @@ IDIR=$(cat << '~fin.'
 
 ln -sf /usr/bin/true steamdeps
 make install
+
+echo "Make sure you have namespaces support enabled in your kernel config." >&2
 
 ~fin.
 )
