@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="duktape"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="2.7.0"
 LINK="https://duktape.org/duktape-$VERS.tar.xz"
 UPST="https://duktape.org/download"
 SELE=".latest > td:nth-child(2) > a:nth-child(1)"

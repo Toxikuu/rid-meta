@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="udev"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="256.5"
 LINK="https://github.com/systemd/systemd/archive/v$VERS/systemd-$VERS.tar.gz"
 UPST="https://github.com/systemd/systemd/tags"
 DEPS="jinja2 gperf"

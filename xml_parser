@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xml_parser"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="2.47"
 LINK="https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-$VERS.tar.gz"
 UPST="https://metacpan.org/pod/XML::Parser"
 SELE="body > div.page-content > div.content-navigation > div > div.release.dist-release.status-latest.maturity-released > a"

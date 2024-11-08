@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="gdk_pixbuf"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="2.42.12"
 ver="${VERS%.*}"
 LINK="https://download.gnome.org/sources/gdk-pixbuf/$ver/gdk-pixbuf-$VERS.tar.xz"
 UPST="https://gitlab.gnome.org/GNOME/gdk-pixbuf/-/tags"

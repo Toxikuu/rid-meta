@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="gsettings_desktop_schemas"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="47.1"
 LINK="https://download.gnome.org/sources/gsettings-desktop-schemas/${VERS%.*}/gsettings-desktop-schemas-$VERS.tar.xz"
 UPST="https://repology.org/project/gsettings-desktop-schemas/information"
 DEPS="glib"

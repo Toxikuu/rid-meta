@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="meson"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.6.0"
 LINK="https://github.com/mesonbuild/meson/releases/download/$VERS/meson-$VERS.tar.gz"
 UPST="https://github.com/mesonbuild/meson/tags"
 DEPS="python"
@@ -17,11 +17,14 @@ install -vDm644 data/shell-completions/bash/meson /usr/share/bash-completion/com
 
 RDIR=$(cat << '~fin.'
 
+PV=$(gv python)
+PV=${PV%.*}
+
 rm -vf  /usr/bin/meson  \
     /usr/share/bash-completion/completions/meson
 
-rm -rvf /usr/lib/python3.13/site-packages/mesonbuild    \
-        /usr/lib/python3.13/site-packages/meson-$VERS.dist-info
+rm -rvf /usr/lib/python$PV/site-packages/mesonbuild    \
+        /usr/lib/python$PV/site-packages/meson-$VERS.dist-info
 
 ~fin.
 )

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="openssl"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="3.4.0"
 LINK="https://github.com/openssl/openssl/releases/download/openssl-$VERS/openssl-$VERS.tar.gz"
 UPST="https://github.com/openssl/openssl/tags"
 DEPS=""

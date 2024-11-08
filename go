@@ -1,7 +1,6 @@
 #!/bin/bash
-. ../versions
 NAME="go"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.23.3"
 LINK="https://go.dev/dl/go$VERS.linux-amd64.tar.gz"
 UPST="https://go.dev/dl/"
 SELE="div.filename:nth-child(2) > span:nth-child(2)"

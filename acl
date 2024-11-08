@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="acl"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="2.3.2"
 LINK="https://download.savannah.gnu.org/releases/acl/acl-$VERS.tar.xz"
 UPST="http://download.savannah.gnu.org/releases/acl/?C=M&O=D"
 DEPS=""

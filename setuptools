@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="setuptools"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="75.3.0"
 LINK="https://pypi.org/packages/source/s/setuptools/setuptools-$VERS.tar.gz"
 DEPS="python"
 
@@ -15,9 +15,12 @@ pip3 install --no-index --find-links dist setuptools
 
 RDIR=$(cat << '~fin.'
 
-rm -rvf /usr/lib/python3.13/site-packages/setuptools*       \
-        /usr/lib/python3.13/site-packages/_distutils_hack   \
-        /usr/lib/python3.13/site-packages/pkg_resources
+PV=$(gv python)
+PV=${PV%.*}
+
+rm -rvf /usr/lib/python$PV/site-packages/setuptools*       \
+        /usr/lib/python$PV/site-packages/_distutils_hack   \
+        /usr/lib/python$PV/site-packages/pkg_resources
 
 ~fin.
 )

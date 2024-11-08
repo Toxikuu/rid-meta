@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libunwind"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.8.1"
 LINK="https://github.com/libunwind/libunwind/releases/download/v$VERS/libunwind-$VERS.tar.gz"
 UPST="https://github.com/libunwind/libunwind/tags"
 DEPS=""

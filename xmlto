@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xmlto"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="0.0.29"
 LINK="https://pagure.io/xmlto/archive/$VERS/xmlto-$VERS.tar.gz"
 UPST="https://pagure.io/xmlto/releases"
 SELE=".col > div:nth-child(2)"

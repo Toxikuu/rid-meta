@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="jinja2"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="3.1.4"
 LINK="https://pypi.org/packages/source/J/Jinja2/jinja2-$VERS.tar.gz"
 UPST="https://github.com/pallets/jinja/releases/latest"
 DEPS=""
@@ -16,7 +16,10 @@ pip3 install --no-index --no-user --find-links dist Jinja2
 
 RDIR=$(cat << '~fin.'
 
-rm -rvf /usr/lib/python3.13/site-packages/Jinja2-$VERS.dist-info
+PV=$(gv python)
+PV=${PV%.*}
+
+rm -rvf /usr/lib/python$PV/site-packages/Jinja2-$VERS.dist-info
 
 ~fin.
 )

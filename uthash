@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="uthash"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="2.3.0"
 LINK="https://github.com/troydhanson/uthash/archive/refs/tags/v$VERS.tar.gz"
 UPST="https://github.com/troydhanson/uthash/tags"
 DEPS=""

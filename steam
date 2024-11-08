@@ -1,10 +1,10 @@
 #!/bin/bash
 NAME="steam"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.0.0.82"
 LINK="https://repo.steampowered.com/steam/pool/steam/s/steam/steam_$VERS.tar.gz"
 UPST="https://repo.steampowered.com/steam/pool/steam/s/steam/?C=M&O=D"
 SELE="#list > tbody > tr:nth-child(4) > td.link > a"
-DEPS="@lfs alsa_plugins curl dbus_2 xorg_server libglvnd make-ca mesa nvidia vulkan_loader pulseaudio xdg_user_dirs libgpg_error"
+DEPS="alsa_plugins curl dbus2 xorg_server libglvnd make_ca mesa nvidia vulkan_loader pulseaudio xdg_user_dirs libgpg_error"
 
 
 # namespaces support in kernel is necessary

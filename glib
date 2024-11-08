@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="glib"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="2.82.2"
 ver="${VERS%.*}"
 gobjver=1.82.0
 gobjv="${gobjver%.*}"

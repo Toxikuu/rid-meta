@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="readline"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="8.2.13"
 LINK="https://ftp.gnu.org/gnu/readline/readline-$VERS.tar.gz"
 UPST="https://ftp.gnu.org/gnu/readline/?C=M;O=D"
 SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-child(2) > a:nth-child(1)"

@@ -1,10 +1,9 @@
 #!/bin/bash
-# i may break these up into a set
 NAME="xorg_libraries"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="0"
 LINK=""
 DEPS="fontconfig libxcb wget"
-
+# plans to break this up into a set exist
 
 IDIR=$(cat << '~fin.'
 

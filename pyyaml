@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="pyyaml"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="6.0.2"
 LINK="https://files.pythonhosted.org/packages/source/P/PyYAML/pyyaml-$VERS.tar.gz"
 DEPS="cython libyaml"
 

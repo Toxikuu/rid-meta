@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="tzdata"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="2024b"
 LINK=""
 UPST="https://data.iana.org/time-zones/releases/?C=M;O=D"
 SELE="body > table > tbody > tr:nth-child(4) > td:nth-child(1) > a" # theres a letter in this version because tzdata lol

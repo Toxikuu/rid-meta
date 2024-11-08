@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="gtk3"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="3.24.43"
 LINK="https://download.gnome.org/sources/gtk+/${VERS%.*}/gtk+-$VERS.tar.xz"
 # upstream must be (rarely) manually updated
 UPST="https://download.gnome.org/sources/gtk+/3.24/?C=M&O=D"

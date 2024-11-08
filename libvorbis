@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libvorbis"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.3.7"
 LINK="https://downloads.xiph.org/releases/vorbis/libvorbis-$VERS.tar.xz"
 UPST="https://github.com/xiph/vorbis/tags"
 DEPS="libogg"

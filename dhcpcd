@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="dhcpcd"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="10.1.0"
 LINK="https://github.com/NetworkConfiguration/dhcpcd/releases/download/v$VERS/dhcpcd-$VERS.tar.xz"
 UPST="https://github.com/NetworkConfiguration/dhcpcd/tags"
 DEPS=""

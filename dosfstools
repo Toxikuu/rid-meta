@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="dosfstools"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="4.2"
 LINK="https://github.com/dosfstools/dosfstools/releases/download/v$VERS/dosfstools-$VERS.tar.gz"
 UPST="https://github.com/dosfstools/dosfstools/tags"
 DEPS=""

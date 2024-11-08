@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xz"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="5.6.3"
 LINK="https://github.com/tukaani-project/xz/releases/download/v$VERS/xz-$VERS.tar.xz"
 UPST="https://github.com/tukaani-project/xz/tags"
 DEPS=""

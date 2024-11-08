@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="polkit"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="125"
 LINK="https://github.com/polkit-org/polkit/archive/$VERS/polkit-$VERS.tar.gz"
 UPST="https://github.com/polkit-org/polkit/tags"
 DEPS="duktape glib linux_pam elogind"

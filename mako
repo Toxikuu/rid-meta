@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="mako"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.3.6"
 LINK="https://files.pythonhosted.org/packages/source/M/Mako/Mako-1.3.5.tar.gz"
 UPST="https://pypi.org/project/Mako"
 DEPS=""
@@ -16,8 +16,11 @@ pip3 install --no-index --find-links=dist --no-cache-dir --no-user Mako
 
 RDIR=$(cat << '~fin.'
 
+PV=$(gv python)
+PV=${PV%.*}
+
 rm -vf /usr/bin/mako-render
-rm -rvf /usr/lib/python3.13/site-packages/{mako,Mako-$VERS.dist-info}
+rm -rvf /usr/lib/python$PV/site-packages/{mako,Mako-$VERS.dist-info}
 
 ~fin.
 )

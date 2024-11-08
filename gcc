@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="gcc"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="14.2.0"
 LINK="https://ftp.gnu.org/gnu/gcc/gcc-$VERS/gcc-$VERS.tar.xz"
 UPST="https://ftp.gnu.org/gnu/gcc/?C=M;O=D"
 SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(2) > a:nth-child(1)"

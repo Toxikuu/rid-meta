@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="mtdev"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.1.7"
 LINK="https://bitmath.org/code/mtdev/mtdev-$VERS.tar.bz2"
 UPST="https://bitmath.se/org/code/mtdev"
 SELE="body > table:nth-child(2) > tbody > tr:nth-child(3) > td:nth-child(2) > h4:nth-child(2) > a:nth-child(1)"

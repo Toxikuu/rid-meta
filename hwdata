@@ -1,7 +1,6 @@
 #!/bin/bash
-
 NAME="hwdata"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="0.389"
 LINK="https://github.com/vcrhonek/$NAME/archive/v$VERS/$NAME-$VERS.tar.gz"
 UPST="https://github.com/vcrhonek/$NAME/tags"
 DEPS=""

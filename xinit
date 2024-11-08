@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xinit"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.4.2"
 LINK="https://www.x.org/pub/individual/app/xinit-$VERS.tar.xz"
 UPST="https://gitlab.freedesktop.org/xorg/app/xinit/-/tags"
 DEPS="xorg_libraries"

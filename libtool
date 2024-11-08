@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libtool"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="2.5.3"
 LINK="https://ftp.gnu.org/gnu/libtool/libtool-$VERS.tar.xz"
 UPST="https://ftp.gnu.org/gnu/libtool/?C=M;O=D"
 DEPS=""

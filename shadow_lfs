@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="shadow_lfs"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="4.16.0"
 LINK="https://github.com/shadow-maint/shadow/releases/download/$VERS/shadow-$VERS.tar.xz"
 UPST="https://github.com/shadow-maint/shadow/releases/latest"
 SELE=".css-truncate > span:nth-child(2)"

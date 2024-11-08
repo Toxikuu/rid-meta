@@ -1,10 +1,9 @@
 #!/bin/bash
-# may split this into a set later
 NAME="xorg_applications"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="0"
 LINK=""
 DEPS="libpng mesa xbitmaps xcb_util"
-
+# plans to break this up into a set exist
 
 IDIR=$(cat << '~fin.'
 

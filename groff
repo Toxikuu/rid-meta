@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="groff"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.23.0"
 LINK="https://ftp.gnu.org/gnu/groff/groff-$VERS.tar.gz"
 UPST="https://ftp.gnu.org/gnu/groff/?C=M;O=D"
 DEPS=""

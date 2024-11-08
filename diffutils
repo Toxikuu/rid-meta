@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="diffutils"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="3.10"
 LINK="https://ftp.gnu.org/gnu/diffutils/diffutils-$VERS.tar.xz"
 UPST="https://ftp.gnu.org/gnu/diffutils/?C=M;O=D"
 DEPS=""

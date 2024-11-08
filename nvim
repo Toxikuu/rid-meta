@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="nvim"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="9999"
 LINK="https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz"
 DEPS=""
 

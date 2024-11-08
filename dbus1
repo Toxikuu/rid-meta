@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="dbus1"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.14.10"
 LINK="https://dbus.freedesktop.org/releases/dbus/dbus-$VERS.tar.xz"
 UPST="https://dbus.freedesktop.org/releases/dbus/?C=M;O=D"
 SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(2) > a:nth-child(1)"

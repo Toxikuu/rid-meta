@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="wayland"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.23.1"
 LINK="https://gitlab.freedesktop.org/wayland/wayland/-/releases/$VERS/downloads/wayland-$VERS.tar.xz"
 UPST="https://gitlab.freedesktop.org/wayland/wayland/-/tags"
 DEPS="libxml2"

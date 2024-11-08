@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="luajit"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="20240917"
 LINK="https://anduin.linuxfromscratch.org/BLFS/luajit/luajit-$VERS.tar.xz"
 DEPS=""
 

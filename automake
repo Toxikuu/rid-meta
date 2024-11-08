@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="automake"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.17"
 LINK="https://ftp.gnu.org/gnu/automake/automake-$VERS.tar.xz"
 UPST="https://ftp.gnu.org/gnu/automake/?C=M;O=D"
 DEPS=""

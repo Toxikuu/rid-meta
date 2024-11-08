@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="pkgconf"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="2.3.0"
 LINK="https://distfiles.ariadne.space/pkgconf/pkgconf-$VERS.tar.xz"
 DEPS=""
 

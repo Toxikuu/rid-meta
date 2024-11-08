@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="pulseaudio"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="17.0"
 LINK="https://www.freedesktop.org/software/$NAME/releases/$NAME-$VERS.tar.xz"
 UPST="https://repology.org/project/pulseaudio/information"
 DEPS="libsndfile alsa_lib check dbus1"

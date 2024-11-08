@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="zstd"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.5.6"
 LINK="https://github.com/facebook/zstd/releases/download/v$VERS/zstd-$VERS.tar.gz"
 UPST="https://github.com/facebook/zstd/tags"
 DEPS=""

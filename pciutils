@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="pciutils"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="3.13.0"
 LINK="https://mj.ucw.cz/download/linux/pci/pciutils-$VERS.tar.gz"
 UPST="https://mj.ucw.cz/download/linux/pci/?C=M;O=D"
 SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(7) > td:nth-child(2) > a:nth-child(1)"

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="rid"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="0.13.0"
 LINK=""
 UPST="https://github.com/toxikuu/rid/tags"
 DEPS="openssl tar xz bash coreutils glibc gcc"

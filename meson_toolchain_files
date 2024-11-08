@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="meson_toolchain_files"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="0"
 LINK=""
 DEPS="pkgconf_personalities"
 

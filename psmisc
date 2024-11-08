@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="psmisc"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="23.7"
 LINK="https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-$VERS.tar.xz"
 UPST="https://gitlab.com/psmisc/psmisc/-/tags"
 DEPS=""

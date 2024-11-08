@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="lynx"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="2.9.2"
 LINK="https://invisible-mirror.net/archives/lynx/tarballs/lynx$VERS.tar.bz2"
 UPST="https://invisible-mirror.net/archives/lynx/tarballs/?C=M;O=D"
 SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(2) > a:nth-child(1)"

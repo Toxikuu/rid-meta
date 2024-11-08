@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libtasn1"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="4.19.0"
 LINK="https://ftp.gnu.org/gnu/$NAME/$NAME-$VERS.tar.gz"
 UPST="https://ftp.gnu.org/gnu/$NAME/?C=M;O=D"
 DEPS=""

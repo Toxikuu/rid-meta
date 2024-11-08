@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="man_db"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="2.13.0"
 LINK="https://download.savannah.gnu.org/releases/man-db/man-db-$VERS.tar.xz"
 UPST="https://gitlab.com/man-db/man-db/-/tags"
 DEPS=""

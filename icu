@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="icu"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="76.1"
 ver1="${VERS//./-}"
 ver2="${VERS//./_}"
 LINK="https://github.com/unicode-org/icu/releases/download/release-$ver1/icu4c-$ver2-src.tgz"

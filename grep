@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="grep"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="3.11"
 LINK="https://ftp.gnu.org/gnu/grep/grep-$VERS.tar.xz"
 UPST="https://ftp.gnu.org/gnu/grep/?C=M;O=D"
 DEPS=""

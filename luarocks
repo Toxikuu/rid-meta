@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="luarocks"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="3.11.1"
 LINK="https://luarocks.org/releases/luarocks-$VERS.tar.gz"
 UPST="https://luarocks.github.io/luarocks/releases"
 SELE=".main_column > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > a:nth-child(1)"

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="sysvinit"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="3.11"
 LINK="https://github.com/slicer69/sysvinit/releases/download/$VERS/sysvinit-$VERS.tar.xz"
 UPST="https://github.com/slicer69/sysvinit/tags"
 DEPS=""

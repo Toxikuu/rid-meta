@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="ncurses"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="6.5"
 LINK="https://invisible-mirror.net/archives/ncurses/ncurses-$VERS.tar.gz"
 UPST="https://invisible-mirror.net/archives/ncurses/?C=N;O=D"
 SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(28) > td:nth-child(2) > a:nth-child(1)"

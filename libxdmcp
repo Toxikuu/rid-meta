@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libxdmcp"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.1.5"
 LINK="https://www.x.org/pub/individual/lib/libXdmcp-$VERS.tar.xz"
 UPST="https://gitlab.freedesktop.org/xorg/lib/libxdmcp/-/tags"
 DEPS="xorgproto"

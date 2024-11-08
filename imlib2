@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="imlib2"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.12.3"
 LINK="https://downloads.sourceforge.net/project/enlightenment/imlib2-src/$VERS/imlib2-$VERS.tar.xz"
 UPST="https://sourceforge.net/projects/enlightenment/files/imlib2-src"
 SELE="tr.folder:nth-child(1) > th:nth-child(1) > a:nth-child(1) > span:nth-child(2)"

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="mpfr"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="4.2.1"
 LINK="https://ftp.gnu.org/gnu/mpfr/mpfr-$VERS.tar.xz"
 UPST="https://ftp.gnu.org/gnu/mpfr/?C=M;O=D"
 DEPS=""

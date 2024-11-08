@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="coreutils"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="9.5"
 LINK="https://ftp.gnu.org/gnu/coreutils/coreutils-$VERS.tar.xz"
 UPST="https://ftp.gnu.org/gnu/coreutils/?C=M;O=D"
 DEPS=""

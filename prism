@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="prism"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="9.1"
 LINK=""
 UPST="https://github.com/PrismLauncher/PrismLauncher/releases/latest"
 DEPS="krb5"

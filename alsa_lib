@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="alsa_lib"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.2.12"
 LINK="https://www.alsa-project.org/files/pub/lib/alsa-lib-$VERS.tar.bz2"
 UPST="https://github.com/alsa-project/alsa-lib/tags"
 DEPS=""

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="cmake"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="3.31.0"
 ver="${VERS%.*}"
 LINK="https://cmake.org/files/v$ver/cmake-$VERS.tar.gz"
 UPST="https://cmake.org/download"

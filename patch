@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="patch"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="2.7.6"
 LINK="https://ftp.gnu.org/gnu/patch/patch-$VERS.tar.xz"
 UPST="https://ftp.gnu.org/gnu/patch/?C=M;O=D"
 DEPS=""

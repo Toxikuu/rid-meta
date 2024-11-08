@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="rust"  # rustup
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="9999"
 LINK=""
 DEPS="curl"
 
@@ -8,7 +8,7 @@ DEPS="curl"
 IDIR=$(cat << '~fin.'
 
 if [ "$VERS" = "9999" ]; then
-    export VERS="stable"
+    export VERS="9999"
 fi
 
 export CARGO_HOME=/opt/cargo
@@ -68,7 +68,7 @@ sed -i '/# cargo/,/# cargo end/d' /etc/env
 UDIR=$(cat << '~fin.'
 
 if [ "$VERS" = "9999" ]; then
-    export VERS="stable"
+    export VERS="9999"
 fi
 
 export CARGO_HOME=/opt/cargo

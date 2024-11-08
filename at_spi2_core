@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="at_spi2_core"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="2.54.0"
 LINK="https://download.gnome.org/sources/at-spi2-core/${VERS%.*}/at-spi2-core-$VERS.tar.xz"
 UPST="https://gitlab.gnome.org/GNOME/at-spi2-core/-/tags"
 SELE="li.gl-justify-between:nth-child(1) > div:nth-child(1) > pre:nth-child(4)"

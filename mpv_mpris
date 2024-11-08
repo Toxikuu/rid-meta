@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="mpv_mpris"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.1"
 LINK="https://github.com/hoyon/mpv-mpris/archive/refs/tags/$VERS.tar.gz"
 UPST="https://github.com/hoyon/mpv-mpris/tags"
 DEPS="mpv"

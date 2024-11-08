@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libev"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="4.33"
 LINK="http://dist.schmorp.de/$NAME/$NAME-$VERS.tar.gz"
 UPST="http://dist.schmorp.de/libev"
 SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-child(1) > a:nth-child(1)"

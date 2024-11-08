@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xcb_util"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="0.4.1"
 LINK="https://xcb.freedesktop.org/dist/xcb-util-$VERS.tar.xz"
 DEPS="libxcb"
 

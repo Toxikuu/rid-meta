@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="nspr"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="4.36"
 LINK="https://archive.mozilla.org/pub/nspr/releases/v$VERS/src/nspr-$VERS.tar.gz"
 UPST="https://repology.org/project/nspr/information"
 DEPS=""

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xcb_proto"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.17.0"
 LINK="https://xorg.freedesktop.org/archive/individual/proto/xcb-proto-$VERS.tar.xz"
 UPST="https://repology.org/project/xcb-proto/information"
 DEPS=""
@@ -16,8 +16,11 @@ make install
 
 RDIR=$(cat << '~fin.'
 
+PV=$(gv python)
+PV=${PV%.*}
+
 rm -rvf /usr/share/xcb/ \
-        /usr/lib/python3.13/site-packages/xcbgen
+        /usr/lib/python$PV/site-packages/xcbgen
 
 ~fin.
 )

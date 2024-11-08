@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="dbus2"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.14.10"
 LINK="https://dbus.freedesktop.org/releases/dbus/dbus-$VERS.tar.xz"
 UPST="https://dbus.freedesktop.org/releases/dbus/?C=M;O=D"
 DEPS="dbus1 xorg_libraries"

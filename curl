@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="curl"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="8.11.0"
 LINK="https://curl.se/download/curl-$VERS.tar.xz"
 UPST="https://curl.se/download/"
 SELE="tr.even:nth-child(2) > td:nth-child(1)"

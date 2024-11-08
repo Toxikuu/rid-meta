@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="ninja"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.12.1"
 LINK="https://github.com/ninja-build/ninja/archive/v$VERS/ninja-$VERS.tar.gz"
 UPST="https://github.com/ninja-build/ninja/tags"
 DEPS="python"

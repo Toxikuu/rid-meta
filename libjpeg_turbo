@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libjpeg_turbo"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="3.0.4"
 LINK="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/$VERS/libjpeg-turbo-$VERS.tar.gz"
 UPST="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/latest"
 DEPS="cmake yasm"

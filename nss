@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="nss"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="3.106"
 ver="${VERS//./_}"
 LINK="https://archive.mozilla.org/pub/security/nss/releases/NSS_${ver}_RTM/src/nss-$VERS.tar.gz"
 UPST="https://repology.org/project/nss/information"

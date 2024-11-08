@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libxau"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.0.11"
 LINK="https://www.x.org/pub/individual/lib/libXau-$VERS.tar.xz"
 UPST="https://gitlab.freedesktop.org/xorg/lib/libxau/-/tags"
 DEPS="xorgproto"

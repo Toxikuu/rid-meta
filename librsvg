@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="librsvg"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="2.59.2"
 ver="${VERS%.*}"
 LINK="https://download.gnome.org/sources/librsvg/$ver/librsvg-$VERS.tar.xz"
 DEPS="cairo cargo_c gdk_pixbuf pango rust glib vala"

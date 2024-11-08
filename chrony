@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="chrony"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="4.6.1"
 LINK="https://chrony-project.org/releases/chrony-$VERS.tar.gz"
 DEPS=""
 

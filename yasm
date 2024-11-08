@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="yasm"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.3.0"
 LINK="https://www.tortall.net/projects/yasm/releases/yasm-$VERS.tar.gz"
 UPST="https://yasm.tortall.net/Download.html"
 SELE="#latest-release-130"

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xorg_server"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="21.1.14"
 LINK="https://www.x.org/pub/individual/xserver/xorg-server-$VERS.tar.xz"
 UPST="https://www.x.org/archive/individual/xserver/?C=M;O=D"
 SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(2) > a:nth-child(1)"

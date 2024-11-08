@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="iosevka"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="9999"
 LINK=""
 DEPS=""
 

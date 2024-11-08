@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libaom"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="3.10.0"
 LINK="https://storage.googleapis.com/aom-releases/libaom-$VERS.tar.gz"
 UPST="https://repology.org/project/aom/information"
 DEPS="yasm"

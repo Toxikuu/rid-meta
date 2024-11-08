@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xf86_input_libinput"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="1.5.0"
 LINK="https://www.x.org/pub/individual/driver/xf86-input-libinput-$VERS.tar.xz"
 UPST="https://repology.org/project/xdrv%3Alibinput/information"
 DEPS="libinput xorg_server"

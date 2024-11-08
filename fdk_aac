@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="fdk_aac"
-VERS="${NAME}_version"; VERS="${!VERS}"
+VERS="2.0.3"
 LINK="https://downloads.sourceforge.net/project/opencore-amr/fdk-aac/fdk-aac-$VERS.tar.gz"
 UPST="https://sourceforge.net/projects/opencore-amr/files"
 DEPS=""
