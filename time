@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="time"
+VERS="1.9"
+LINK="https://ftp.gnu.org/gnu/time/time-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /bin/time
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

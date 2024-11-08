@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="zip"
+VERS="3.0"
+LINK="https://downloads.sourceforge.net/infozip/zip${VERS//./}.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+make -f unix/Makefile generic CC="gcc -std=gnu89"
+make prefix=/usr MANDIR=$RIDTRASH -f unix/Makefile install
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /bin/zip{,cloak,note,split}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
