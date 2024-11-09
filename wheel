@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="wheel"
-VERS="0.44.0"
+VERS="0.45.0"
 LINK="https://pypi.org/packages/source/w/wheel/wheel-$VERS.tar.gz"
 UPST="https://pypi.org/project/wheel"
 DEPS="python"
