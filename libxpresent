@@ -2,7 +2,7 @@
 NAME="libxpresent"
 VERS="1.0.1"
 LINK="https://www.x.org/pub/individual/lib/libXpresent-$VERS.tar.xz"
-DEPS="libxfixes libxrandr libxext libx11 glibc xorgproto util_macros"
+DEPS="libxfixes libxrandr libxext libx11 glibc xorgproto util-macros"
 
 
 IDIR=$(cat << '~fin.'

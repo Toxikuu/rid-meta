@@ -1,0 +1,27 @@
+#!/bin/bash
+NAME="spirv-llvm-translator"
+VERS="19.1.1"
+LINK="https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v$VERS/SPIRV-LLVM-Translator-$VERS.tar.gz"
+UPST="https://github.com/KhronosGroup/SPIRV-LLVM-Translator/tags"
+DEPS="cmake libxml2 llvm spirv-headers spirv-tools"
+
+
+IDIR=$(cat << '~fin.'
+
+CN -D LLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr
+32CN -D LLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+
+~fin.
+)

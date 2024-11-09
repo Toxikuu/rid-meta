@@ -2,7 +2,7 @@
 NAME="libxinerama"
 VERS="1.1.5"
 LINK="https://www.x.org/pub/individual/lib/libXinerama-$VERS.tar.xz"
-DEPS="libxext libx11 glibc xorgproto util_macros"
+DEPS="libxext libx11 glibc xorgproto util-macros"
 
 
 IDIR=$(cat << '~fin.'

@@ -2,7 +2,7 @@
 NAME="libsm"
 VERS="1.2.4"
 LINK="https://www.x.org/pub/individual/lib/libSM-$VERS.tar.xz"
-DEPS="libice util_linux xorgproto glibc"
+DEPS="libice util-linux xorgproto glibc"
 
 
 IDIR=$(cat << '~fin.'

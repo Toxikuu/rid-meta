@@ -1,0 +1,35 @@
+#!/bin/bash
+NAME="at-spi2-core"
+VERS="2.54.0"
+LINK="https://download.gnome.org/sources/at-spi2-core/${VERS%.*}/at-spi2-core-$VERS.tar.xz"
+UPST="https://gitlab.gnome.org/GNOME/at-spi2-core/-/tags"
+SELE="li.gl-justify-between:nth-child(1) > div:nth-child(1) > pre:nth-child(4)"
+DEPS="bash dbus2 glib libx11 libxi libxtst xprop gsettings-desktop-schemas"
+
+
+IDIR=$(cat << '~fin.'
+
+mn -D systemd_user_dir=/tmp -D docs=false
+rm -vf /tmp/at-spi-dbus-bus.service
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /lib/libatk-1.0.so*         \
+        /lib/libatk-bridge-2.0.so*  \
+        /lib/libatspi.so*           \
+        /usr/include/atk-1.0        \
+        /usr/include/at-spi-2.0     \
+        /usr/include/at-spi2-atk    \
+        /usr/share/defaults/at-spi2 \
+        /usr/lib/gnome-settings-daemon-3.0  \
+        /usr/lib/gtk-2.0/modules/libatk-bridge.so
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

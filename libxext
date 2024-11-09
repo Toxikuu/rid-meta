@@ -2,7 +2,7 @@
 NAME="libxext"
 VERS="1.3.6"
 LINK="https://www.x.org/pub/individual/lib/libXext-$VERS.tar.xz"
-DEPS="libx11 glibc xorgproto util_macros"
+DEPS="libx11 glibc xorgproto util-macros"
 
 
 IDIR=$(cat << '~fin.'

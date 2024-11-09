@@ -1,0 +1,38 @@
+#!/bin/bash
+NAME="gdk-pixbuf"
+VERS="2.42.12"
+ver="${VERS%.*}"
+LINK="https://download.gnome.org/sources/gdk-pixbuf/$ver/gdk-pixbuf-$VERS.tar.xz"
+UPST="https://gitlab.gnome.org/GNOME/gdk-pixbuf/-/tags"
+DEPS="glib libjpeg-turbo libpng shared-mime-info"
+
+
+IDIR=$(cat << '~fin.'
+
+mn \
+    -D others=enabled   \
+    -D man=false        \
+    --wrap-mode=nofallback
+
+gdk-pixbuf-query-loaders --update-cache
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf \
+    /usr/bin/gdk-pixbuf-*                   \
+    /usr/lib/libgdk_pixbuf-2.0.so*          \
+    /usr/include/gdk-pixbuf-2.0             \
+    /usr/lib/gdk-pixbuf-2.0                 \
+    /usr/libexec/installed-tests/gdk-pixbuf \
+    /usr/share/installed-tests/gdk-pixbuf   \
+    /usr/share/thumbnailers/gdk-pixbuf-thumbnailer.thumbnailer
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

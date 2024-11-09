@@ -2,7 +2,7 @@
 NAME="imagemagick"
 VERS="7.1.1-39"
 LINK="https://github.com/ImageMagick/ImageMagick/archive/refs/tags/$VERS.tar.gz"
-DEPS="cairo fontconfig freetype2 glib lcms2 libpng libxext librsvg libtiff libwebp libjpeg_turbo pango"
+DEPS="cairo fontconfig freetype2 glib lcms2 libpng libxext librsvg libtiff libwebp libjpeg-turbo pango"
 
 
 IDIR=$(cat << '~fin.'

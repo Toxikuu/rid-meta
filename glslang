@@ -3,7 +3,7 @@ NAME="glslang"
 VERS="15.0.0"
 LINK="https://github.com/KhronosGroup/glslang/archive/$VERS/glslang-$VERS.tar.gz"
 UPST="https://github.com/KhronosGroup/glslang/releases/latest"
-DEPS="cmake spirv_tools"
+DEPS="cmake spirv-tools"
 
 
 IDIR=$(cat << '~fin.'

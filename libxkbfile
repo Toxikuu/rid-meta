@@ -2,7 +2,7 @@
 NAME="libxkbfile"
 VERS="1.1.3"
 LINK="https://www.x.org/pub/individual/lib/libxkbfile-$VERS.tar.xz"
-DEPS="libx11 xorgproto glibc util_macros"
+DEPS="libx11 xorgproto glibc util-macros"
 
 
 IDIR=$(cat << '~fin.'

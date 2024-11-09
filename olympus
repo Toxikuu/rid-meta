@@ -2,7 +2,7 @@
 NAME="olympus"
 VERS="9999"
 LINK=""
-DEPS="unzip xdg_utils desktop_file_utils"
+DEPS="unzip xdg-utils desktop-file-utils"
 
 
 IDIR=$(cat << '~fin.'

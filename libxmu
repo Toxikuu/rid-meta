@@ -2,7 +2,7 @@
 NAME="libxmu"
 VERS="1.2.1"
 LINK="https://www.x.org/pub/individual/lib/libXmu-$VERS.tar.xz"
-DEPS="libxext libxt libx11 xorgproto glibc util_macros"
+DEPS="libxext libxt libx11 xorgproto glibc util-macros"
 
 
 IDIR=$(cat << '~fin.'

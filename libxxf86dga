@@ -2,7 +2,7 @@
 NAME="libxxf86dga"
 VERS="1.1.6"
 LINK="https://www.x.org/pub/individual/lib/libXxf86dga-$VERS.tar.xz"
-DEPS="xorgproto libxext libx11 util_macros"
+DEPS="xorgproto libxext libx11 util-macros"
 
 
 IDIR=$(cat << '~fin.'

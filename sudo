@@ -2,7 +2,7 @@
 NAME="sudo"
 VERS="1.9.16"
 LINK="https://www.sudo.ws/dist/sudo-$VERS.tar.gz"
-DEPS="linux_pam"
+DEPS="linux-pam"
 
 
 IDIR=$(cat << '~fin.'

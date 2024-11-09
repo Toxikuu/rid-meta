@@ -1,0 +1,29 @@
+#!/bin/bash
+NAME="flit-core"
+VERS="3.10.1"
+LINK="https://pypi.org/packages/source/f/flit-core/flit_core-$VERS.tar.gz"
+UPST="https://pypi.org/project/flit-core"
+DEPS="python"
+
+
+IDIR=$(cat << '~fin.'
+
+pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
+pip3 install --no-index --no-user --find-links dist flit_core
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+PV=$(gv python)
+PV=${PV%.*}
+
+rm -rvf /usr/lib/python$PV/site-packages/flit_core*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

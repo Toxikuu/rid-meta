@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="xf86-input-evdev"
+VERS="2.11.0"
+LINK="https://www.x.org/pub/individual/driver/xf86-input-evdev-$VERS.tar.xz"
+UPST="https://repology.org/project/xdrv:evdev/information"
+DEPS="libevdev mtdev xorg-server"
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

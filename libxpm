@@ -2,7 +2,7 @@
 NAME="libxpm"
 VERS="3.5.17"
 LINK="https://www.x.org/pub/individual/lib/libXpm-$VERS.tar.xz"
-DEPS="libxt libxext libx11 glibc util_macros"
+DEPS="libxt libxext libx11 glibc util-macros"
 
 
 IDIR=$(cat << '~fin.'

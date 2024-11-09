@@ -2,7 +2,7 @@
 NAME="libwebp"
 VERS="1.4.0"
 LINK="https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-$VERS.tar.gz"
-DEPS="libjpeg_turbo libpng libtiff" # also sdl12-compat
+DEPS="libjpeg-turbo libpng libtiff" # also sdl12-compat
 
 
 IDIR=$(cat << '~fin.'

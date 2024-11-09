@@ -1,0 +1,33 @@
+#!/bin/bash
+NAME="man-db"
+VERS="2.13.0"
+LINK="https://download.savannah.gnu.org/releases/man-db/man-db-$VERS.tar.xz"
+UPST="https://gitlab.com/man-db/man-db/-/tags"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm  --docdir=/tmp/rid/trash         \
+    --sysconfdir=/etc               \
+    --disable-setuid                \
+    --enable-cache-owner=bin        \
+    --with-browser=/usr/bin/lynx    \
+    --with-vgrind=/usr/bin/vgrind   \
+    --with-grap=/usr/bin/grap       \
+    --with-systemdtmpfilesdir=      \
+    --with-systemdsystemunitdir=
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

@@ -1,0 +1,34 @@
+#!/bin/bash
+NAME="make-ca"
+VERS="1.14"
+LINK="https://github.com/lfs-book/make-ca/archive/v$VERS/make-ca-$VERS.tar.gz"
+UPST="https://github.com/lfs-book/make-ca/tags"
+DEPS="p11-kit libtasn1 nss"
+
+
+IDIR=$(cat <<~fin.
+
+cat >> make-ca << "EOF"
+ln -svf /etc/pki/tls/certs/ca-bundle.crt /etc/ssl/certs/ca-certificates.crt
+EOF
+
+make install &&
+install -vdm755 /etc/ssl/local
+
+/usr/sbin/make-ca -g
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/bin/make-ca            \
+        /etc/ssl/{certs,local}      \
+        /etc/pki/{nssdb,anchors,tls/{certs,java}}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

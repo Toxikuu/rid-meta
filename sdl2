@@ -2,7 +2,7 @@
 NAME="sdl2"
 VERS="2.30.9"
 LINK="https://www.libsdl.org/release/SDL2-$VERS.tar.gz"
-DEPS="libxkbcommon wayland_protocols libxext libxrender libx11 libxcursor libxrandr libxinerama libxss alsa_lib"
+DEPS="libxkbcommon wayland-protocols libxext libxrender libx11 libxcursor libxrandr libxinerama libxss alsa-lib"
 
 
 IDIR=$(cat << '~fin.'

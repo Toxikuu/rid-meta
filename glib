@@ -6,7 +6,7 @@ gobjver=1.82.0
 gobjv="${gobjver%.*}"
 LINK="https://download.gnome.org/sources/glib/$ver/glib-$VERS.tar.xz"
 UPST="https://repology.org/project/glib/information"
-DEPS="meson_toolchain_files pcre2"
+DEPS="meson-toolchain-files pcre2"
 
 
 IDIR=$(cat << '~fin.'

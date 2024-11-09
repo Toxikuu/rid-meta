@@ -4,7 +4,7 @@ VERS="1.1.42"
 ver="${VERS%.*}"
 LINK="https://download.gnome.org/sources/libxslt/$ver/libxslt-$VERS.tar.xz"
 UPST="https://gitlab.gnome.org/GNOME/libxslt/-/tags"
-DEPS="libxml2 docbook_xml docbook_xsl_nons"
+DEPS="libxml2 docbook-xml docbook-xsl-nons"
 
 
 IDIR=$(cat << '~fin.'

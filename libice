@@ -2,7 +2,7 @@
 NAME="libice"
 VERS="1.1.1"
 LINK="https://www.x.org/pub/individual/lib/libICE-$VERS.tar.xz"
-DEPS="glibc xorgproto xtrans util_macros"
+DEPS="glibc xorgproto xtrans util-macros"
 
 
 IDIR=$(cat << '~fin.'

@@ -3,7 +3,7 @@ NAME="xorgproto"
 VERS="2024.1"
 LINK="https://xorg.freedesktop.org/archive/individual/proto/xorgproto-$VERS.tar.xz"
 UPST="https://repology.org/project/xorgproto/information"
-DEPS="util_macros"
+DEPS="util-macros"
 
 
 IDIR=$(cat << '~fin.'

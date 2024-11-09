@@ -2,7 +2,7 @@
 NAME="libx11"
 VERS="1.8.10"
 LINK="https://www.x.org/pub/individual/lib/libX11-$VERS.tar.xz"
-DEPS="libxcb glibc xorgproto util_macros xtrans"
+DEPS="libxcb glibc xorgproto util-macros xtrans"
 
 
 IDIR=$(cat << '~fin.'

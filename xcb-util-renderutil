@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="xcb-util-renderutil"
+VERS="0.3.10"
+LINK="https://xcb.freedesktop.org/dist/xcb-util-renderutil-$VERS.tar.xz"
+DEPS="libxcb"
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib/libxcb-render-util.*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

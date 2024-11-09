@@ -2,7 +2,7 @@
 NAME="libxcursor"
 VERS="1.2.2"
 LINK="https://www.x.org/pub/individual/lib/libXcursor-$VERS.tar.xz"
-DEPS="libxfixes libxrender libx11 glibc xorgproto util_macros"
+DEPS="libxfixes libxrender libx11 glibc xorgproto util-macros"
 
 
 IDIR=$(cat << '~fin.'

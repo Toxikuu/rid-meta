@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="iana-etc"
+VERS="20241024"
+LINK="https://github.com/Mic92/iana-etc/releases/download/$VERS/iana-etc-$VERS.tar.gz"
+UPST="https://github.com/Mic92/iana-etc/tags"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cp services protocols /etc
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /etc/{protocols,services}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

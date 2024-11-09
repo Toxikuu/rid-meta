@@ -1,0 +1,26 @@
+#!/bin/bash
+NAME="alsa-lib"
+VERS="1.2.12"
+LINK="https://www.alsa-project.org/files/pub/lib/alsa-lib-$VERS.tar.bz2"
+UPST="https://github.com/alsa-project/alsa-lib/tags"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+32cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

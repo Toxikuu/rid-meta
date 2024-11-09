@@ -2,7 +2,7 @@
 NAME="libfontenc"
 VERS="1.1.8"
 LINK="https://www.x.org/pub/individual/lib/libfontenc-$VERS.tar.xz"
-DEPS="glibc xorgproto util_macros"
+DEPS="glibc xorgproto util-macros"
 
 
 IDIR=$(cat << '~fin.'

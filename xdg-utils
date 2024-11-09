@@ -1,0 +1,36 @@
+#!/bin/bash
+NAME="xdg-utils"
+VERS="1.2.1"
+LINK="https://gitlab.freedesktop.org/xdg/xdg-utils/-/archive/v$VERS/xdg-utils-v$VERS.tar.gz"
+DEPS="xmlto lynx xorg-applications"
+
+
+IDIR=$(cat << '~fin.'
+
+./configure --prefix=/usr &&
+make &&
+make install
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+pushd /usr/bin
+  rm -vf \
+    xdg-desktop-menu  \
+    xdg-desktop-icon  \
+    xdg-mime          \
+    xdg-icon-resource \
+    xdg-open          \
+    xdg-email         \
+    xdg-screensaver   \
+    xdg-settings     &&
+popd
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

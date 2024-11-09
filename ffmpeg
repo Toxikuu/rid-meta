@@ -4,7 +4,7 @@ VERS="7.1"
 LINK="https://ffmpeg.org/releases/ffmpeg-$VERS.tar.xz"
 UPST="https://ffmpeg.org//releases/?C=M;O=D"
 SELE="body > pre:nth-child(2) > a:nth-child(14)"
-DEPS="libaom libass fdk_aac freetype2 lame libvorbis libvpx opus x264 x265 yasm alsa_lib libva sdl2 pulseaudio"
+DEPS="libaom libass fdk-aac freetype2 lame libvorbis libvpx opus x264 x265 yasm alsa-lib libva sdl2 pulseaudio"
 
 
 IDIR=$(cat << '~fin.'

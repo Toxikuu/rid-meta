@@ -3,7 +3,7 @@ NAME="libsndfile"
 VERS="1.2.2"
 LINK="https://github.com/$NAME/$NAME/releases/download/$VERS/$NAME-$VERS.tar.xz"
 UPST="https://github.com/$NAME/$NAME/tags"
-DEPS="flac opus libvorbis alsa_lib"
+DEPS="flac opus libvorbis alsa-lib"
 
 
 IDIR=$(cat << '~fin.'

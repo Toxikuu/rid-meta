@@ -2,7 +2,7 @@
 NAME="libxcomposite"
 VERS="0.4.6"
 LINK="https://www.x.org/pub/individual/lib/libXcomposite-$VERS.tar.xz"
-DEPS="libxfixes xorgproto libx11 glibc util_macros"
+DEPS="libxfixes xorgproto libx11 glibc util-macros"
 
 
 IDIR=$(cat << '~fin.'
