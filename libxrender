@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libxrender"
+VERS="0.9.11"
+LINK="https://www.x.org/pub/individual/lib/libXrender-$VERS.tar.xz"
+DEPS="libx11 glibc xorgproto"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+32cm $XORG_CONFIG_32
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib{,32}/libXrender.{la,so*}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

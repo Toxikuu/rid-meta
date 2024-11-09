@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libxcursor"
+VERS="1.2.2"
+LINK="https://www.x.org/pub/individual/lib/libXcursor-$VERS.tar.xz"
+DEPS="libxfixes libxrender libx11 glibc xorgproto util_macros"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+32cm $XORG_CONFIG_32
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib{,32}/libXcursor.{la,so*}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

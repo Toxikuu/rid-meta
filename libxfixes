@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libxfixes"
+VERS="6.0.1"
+LINK="https://www.x.org/pub/individual/lib/libXfixes-$VERS.tar.xz"
+DEPS="libx11 xorgproto glibc util_macros"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+32cm $XORG_CONFIG_32
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib{,32}/libXfixes.{la,so*}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

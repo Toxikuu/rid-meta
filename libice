@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libice"
+VERS="1.1.1"
+LINK="https://www.x.org/pub/individual/lib/libICE-$VERS.tar.xz"
+DEPS="glibc xorgproto xtrans util_macros"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+32cm $XORG_CONFIG_32
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib{,32}/libICE.{la,so*}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libxfont2"
+VERS="2.0.7"
+LINK="https://www.x.org/pub/individual/lib/libXfont2-$VERS.tar.xz"
+DEPS="freetype2 libfontenc xorgproto glibc xtrans util_macros"
+
+
+IDIR=$(cat << '~fin.'
+
+cm   $XORG_CONFIG    --disable-open-zfile
+32cm $XORG_CONFIG_32 --disable-open-zfile
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib{,32}/libXfont2.{la,so*}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

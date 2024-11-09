@@ -3,7 +3,7 @@ NAME="picom"
 VERS="12.3"
 LINK="https://github.com/yshui/picom/archive/refs/tags/v$VERS.tar.gz"
 UPST="https://github.com/yshui/picom/tags"
-DEPS="xorg_libraries pixman libconfig pcre2 libev uthash"  # INCOMPLETE
+DEPS="dbus2 libepoxy xcb_util_image xcb_util_renderutil pixman libconfig pcre2 libev uthash"
 
 
 IDIR=$(cat << '~fin.'

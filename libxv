@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libxv"
+VERS="1.0.12"
+LINK="https://www.x.org/pub/individual/lib/libXv-$VERS.tar.xz"
+DEPS="libxext libx11 glibc xorgproto"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+32cm $XORG_CONFIG_32
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib{,32}/libXv.{la,so*}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

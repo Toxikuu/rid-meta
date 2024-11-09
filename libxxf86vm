@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libxxf86vm"
+VERS="1.1.5"
+LINK="https://www.x.org/pub/individual/lib/libXxf86vm-$VERS.tar.xz"
+DEPS="libxext libx11 glibc xorgproto"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+32cm $XORG_CONFIG_32
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib{,32}/libXxf86vm.{la,so*}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

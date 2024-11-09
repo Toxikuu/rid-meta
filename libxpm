@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libxpm"
+VERS="3.5.17"
+LINK="https://www.x.org/pub/individual/lib/libXpm-$VERS.tar.xz"
+DEPS="libxt libxext libx11 glibc util_macros"
+
+
+IDIR=$(cat << '~fin.'
+
+cm   $XORG_CONFIG    --disable-open-zfile
+32cm $XORG_CONFIG_32 --disable-open-zfile
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib{,32}/libXpm.{la,so*}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

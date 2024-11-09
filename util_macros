@@ -16,7 +16,7 @@ make install
 
 RDIR=$(cat << '~fin.'
 
-rm -rvf $XORG_PREFIX/share/util-macros
+rm -rvf /usr/share/util-macros
 
 ~fin.
 )

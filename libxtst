@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libxtst"
+VERS="1.2.5"
+LINK="https://www.x.org/pub/individual/lib/libXtst-$VERS.tar.xz"
+DEPS="libxext libxi libx11 glibc xorgproto util_macros"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+32cm $XORG_CONFIG_32
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib{,32}/libXtst.{la,so*}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

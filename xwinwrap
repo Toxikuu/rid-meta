@@ -3,7 +3,7 @@ NAME="xwinwrap"
 VERS="0.9"
 LINK="https://github.com/mmhobi7/xwinwrap/archive/refs/tags/v$VERS.tar.gz"
 UPST="https://github.com/mmhobi7/xwinwrap/tags"
-DEPS="xorg_libraries"
+DEPS="libx11 libxext libxrender"
 
 
 IDIR=$(cat << '~fin.'

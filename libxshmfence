@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libxshmfence"
+VERS="1.3.2"
+LINK="https://www.x.org/pub/individual/lib/libxshmfence-$VERS.tar.xz"
+DEPS="util_macros xorgproto glibc"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+32cm $XORG_CONFIG_32
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib{,32}/libxshmfence.{la,so*}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

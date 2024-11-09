@@ -1,0 +1,31 @@
+#!/bin/bash
+NAME="xtrans"
+VERS="1.5.1"
+LINK="https://www.x.org/releases/individual/lib/xtrans-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+
+CC="gcc -m32" CXX="g++ -m32" PKG_CONFIG_PATH=/usr/lib32/pkgconfig \
+./configure $XORG_CONFIG_32
+make
+make DESTDIR=$PWD/DESTDIR install
+cp -vr DESTDIR/usr/share/pkgconfig/* /usr/lib32/pkgconfig
+rm -rf DESTDIR
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

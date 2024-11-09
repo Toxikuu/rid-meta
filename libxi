@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libxi"
+VERS="1.8.1"
+LINK="https://www.x.org/pub/individual/lib/libXi-1.8.1.tar.xz"
+DEPS="libxext libxfixes libx11 glibc xorgproto util_macros"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+32cm $XORG_CONFIG_32
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib{,32}/libXi.{la,so*}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

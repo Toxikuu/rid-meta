@@ -3,7 +3,7 @@ NAME="xinit"
 VERS="1.4.2"
 LINK="https://www.x.org/pub/individual/app/xinit-$VERS.tar.xz"
 UPST="https://gitlab.freedesktop.org/xorg/app/xinit/-/tags"
-DEPS="xorg_libraries"
+DEPS="libx11 util_macros"
 
 
 IDIR=$(cat << '~fin.'
@@ -16,7 +16,7 @@ ldconfig
 
 RDIR=$(cat << '~fin.'
 
-echo not implemented
+rm -vf /bin/{xinit,startx}
 
 ~fin.
 )

@@ -4,7 +4,7 @@ VERS="0.12"
 LINK="https://www.freedesktop.org/software/startup-notification/releases/startup-notification-$VERS.tar.gz"
 UPST="https://www.freedesktop.org/software/startup-notification/releases/?C=M;O=D"
 SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(2) > a:nth-child(1)"
-DEPS="xorg_libraries xcb_util"
+DEPS="libx11 libxcb xcb_util"
 
 
 IDIR=$(cat << '~fin.'

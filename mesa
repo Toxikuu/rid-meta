@@ -4,7 +4,7 @@ VERS="24.2.6"
 LINK="https://mesa.freedesktop.org/archive/mesa-$VERS.tar.xz"
 UPST="https://archive.mesa3d.org/?C=M;O=D"
 SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(2) > a:nth-child(1)"
-DEPS="xorg_libraries libdrm mako pyyaml libglvnd libva libvdpau libvdpau_va_gl nettle"
+DEPS="libdrm libelf libx11 libxcb libxext libxfixes libxrandr libxshmfence libxxf86vm xcb-util-keysyms xorgproto mako pyyaml libglvnd libva libvdpau libvdpau_va_gl"
 # the deps need more testing
 
 IDIR=$(cat << '~fin.'
@@ -25,10 +25,10 @@ mn \
 # cd       ridbuild
 #
 # CC="gcc -m32" CXX="g++ -m32"                 \
-# PKG_CONFIG_PATH=$XORG_PREFIX/lib32/pkgconfig \
+# PKG_CONFIG_PATH=/usr/lib32/pkgconfig         \
 # meson setup                                  \
-#     --prefix=$XORG_PREFIX                    \
-#     --libdir=$XORG_PREFIX/lib32              \
+#     --prefix=/usr                            \
+#     --libdir=/usr/lib32                      \
 #     --buildtype=release                      \
 #     --strip                                  \
 #     -D platforms=x11                         \
@@ -45,9 +45,9 @@ mn \
 # ninja
 #
 # DESTDIR=$PWD/DESTDIR ninja install
-# cp -vr DESTDIR/$XORG_PREFIX/lib32/* $XORG_PREFIX/lib32
-# if [ -d DESTDIR/$XORG_PREFIX/share/vulkan ]; then
-#      cp -vr DESTDIR/$XORG_PREFIX/share/vulkan $XORG_PREFIX/share
+# cp -vr DESTDIR/usr/lib32/* /usr/lib32
+# if [ -d DESTDIR/usr/share/vulkan ]; then
+#      cp -vr DESTDIR/usr/share/vulkan /usr/share
 # fi
 # rm -rf DESTDIR
 # ldconfig

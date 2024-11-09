@@ -3,7 +3,7 @@ NAME="libvdpau"
 VERS="1.5"
 LINK="https://gitlab.freedesktop.org/vdpau/libvdpau/-/archive/$VERS/libvdpau-$VERS.tar.bz2"
 UPST="https://gitlab.freedesktop.org/vdpau/libvdpau/-/tags"
-DEPS="xorg_libraries"
+DEPS="glibc libx11 libxext xorgproto"
 
 
 IDIR=$(cat << '~fin.'

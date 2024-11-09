@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libxt"
+VERS="1.3.0"
+LINK="https://www.x.org/pub/individual/lib/libXt-$VERS.tar.xz"
+DEPS="libsm libx11 libice glibc xorgproto util_macros"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG 
+32cm $XORG_CONFIG_32
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib{,32}/libXt.{la,so*}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

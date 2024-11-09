@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libx11"
+VERS="1.8.10"
+LINK="https://www.x.org/pub/individual/lib/libX11-$VERS.tar.xz"
+DEPS="libxcb glibc xorgproto util_macros xtrans"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG --disable-xf86bigfont
+32cm $XORG_CONFIG_32
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib{,32}/libX11.{la,so*}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

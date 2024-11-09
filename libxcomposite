@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libxcomposite"
+VERS="0.4.6"
+LINK="https://www.x.org/pub/individual/lib/libXcomposite-$VERS.tar.xz"
+DEPS="libxfixes xorgproto libx11 glibc util_macros"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+32cm $XORG_CONFIG_32
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib{,32}/libXcomposite.{la,so*}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

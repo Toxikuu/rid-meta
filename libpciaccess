@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libpciaccess"
+VERS="0.18.1"
+LINK="https://www.x.org/pub/individual/lib/libpciaccess-$VERS.tar.xz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+mn
+32mn
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib{,32}/libpciaccess.so*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

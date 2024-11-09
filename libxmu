@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="libxmu"
+VERS="1.2.1"
+LINK="https://www.x.org/pub/individual/lib/libXmu-$VERS.tar.xz"
+DEPS="libxext libxt libx11 xorgproto glibc util_macros"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+32cm $XORG_CONFIG_32
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib{,32}/libXmu{,u}.{la,so*}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
