@@ -1,0 +1,58 @@
+#!/bin/bash
+NAME="cuda"
+VERS="12.6.2"
+NV=$(gv nvidia)
+LINK=""
+DEPS="nvidia"
+
+
+IDIR=$(cat << '~fin.'
+
+[ -e "$RIDSOURCES"/cuda_${VERS}_${NV}_linux.run ] ||
+raw https://developer.download.nvidia.com/compute/cuda/$VERS/local_installers/cuda_${VERS}_${NV}_linux.run
+
+chmod +x "$RIDSOURCES"/cuda_${VERS}_${NV}_linux.run
+cp -vf "$RIDSOURCES"/cuda_${VERS}_${NV}_linux.run .
+
+kver=$(realpath /usr/src/linux | cut -d- -f2-)
+echo "Detected kernel version '$kver'"
+
+./cuda_${VERS}_${NV}_linux.run  \
+  --silent                      \
+  --toolkit                     \
+  --toolkitpath=/opt/cuda       \
+  --no-man-page                 \
+  -m=kernel-open                \
+  --run-nvidia-xconfig          \
+  --defaultroot=/usr/lib/cuda
+
+pathappend /opt/cuda-$VERS/bin
+
+# useful for ffmpeg which links to cuda's libnppig.so.12
+echo "/opt/cuda/targets/x86_64-linux/lib" > /etc/ld.so.conf.d/cuda.conf
+
+if ! grep -q "# cuda end" /etc/env ; then
+    cat << EOF >> /etc/env
+
+    # cuda
+    pathappend /opt/cuda/bin
+    # cuda end
+
+EOF
+fi
+
+
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

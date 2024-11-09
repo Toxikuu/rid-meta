@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="nv-codec-headers"
+VERS="12.2.72.0"
+LINK="https://github.com/FFmpeg/nv-codec-headers/releases/download/n$VERS/nv-codec-headers-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+make PREFIX=/usr install
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/include/ffnvcodec
+rm -vf /usr/lib/pkgconfig/ffnvcodec.pc
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
