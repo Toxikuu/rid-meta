@@ -1,0 +1,39 @@
+#!/bin/bash
+NAME="imagemagick"
+VERS="7.1.1-39"
+LINK="https://github.com/ImageMagick/ImageMagick/archive/refs/tags/$VERS.tar.gz"
+DEPS="cairo fontconfig freetype2 glib lcms2 libpng libxext librsvg libtiff libwebp libjpeg_turbo pango"
+
+
+IDIR=$(cat << '~fin.'
+
+cm \
+  --sysconfdir=/etc   \
+  --enable-shared     \
+  --enable-hdri       \
+  --with-rsvg         \
+  --with-webp         \
+  --without-gslib     \
+  --without-autotrace \
+  --without-dps       \
+  --without-fpx       \
+  --without-gcc-arch  \
+  --without-gvc       \
+  --with-perl         \
+  --with-modules      
+
+rm -vf /etc/ImageMagick-${VERS%.*.*}/type-{apple,dejavu,windows,ghostscript,urw-base35}.xml
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

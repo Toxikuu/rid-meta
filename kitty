@@ -1,0 +1,60 @@
+#!/bin/bash
+NAME="kitty"
+VERS="0.37.0"
+LINK="https://github.com/kovidgoyal/kitty/releases/download/v$VERS/kitty-$VERS.tar.xz"
+UPST="https://github.com/kovidgoyal/kitty/releases/latest"
+DEPS="imagemagick go simde python freetype2 fontconfig libx11 libxkbcommon libxcursor libxi dbus2 lcms2 xxhash libxinerama libxrandr symbols"
+
+
+IDIR=$(cat << '~fin.'
+
+export CGO_CPPFLAGS="${CPPFLAGS}"
+export CGO_CFLAGS="${CFLAGS}"
+export CGO_CXXFLAGS="${CXXFLAGS}"
+export CGO_LDFLAGS="${LDFLAGS}"
+export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -mod=readonly -modcacherw"
+
+python3 setup.py linux-package --update-check-interval=0 ||
+die "Build failed"
+
+rm -rvf linux-package/lib/kitty/{fonts,logo,shell-integration/{fish,ssh,zsh}}
+rm -rvf linux-package/share/{applications,doc,icons,man}
+
+cp -vf linux-package/bin/* /bin/
+mo linux-package/lib/kitty /lib/kitty
+cp -rvf linux-package/share /usr/share
+
+linux-package/bin/kitten __complete__ setup bash | install -Dm644 /dev/stdin /usr/share/bash-completion/completions/kitty
+
+[ -e /usr/share/pixmaps/kitty.png ] ||
+{
+raw https://github.com/samholmes/whiskers/raw/main/whiskers-tokyo.png;
+mv -vf $RIDSOURCES/whiskers-tokyo.png /usr/share/pixmaps/kitty.png;
+}
+
+cat << 'EOF' > /usr/share/applications/kitty.desktop
+[Desktop Entry]
+Version=$VERS
+Type=Application
+Name=Kitty
+Comment="Eyecandy terminal emulator"
+StartupNotify=false
+Exec=kitty
+Icon=kitty
+Terminal=false
+Categories=System;TerminalEmulator;
+EOF
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /bin/{kitty,kitten}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

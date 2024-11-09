@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="simde"
+VERS="0.8.2"
+LINK="https://github.com/simd-everywhere/simde/archive/refs/tags/v$VERS.tar.gz"
+UPST="https://github.com/simd-everywhere/simde/releases/latest"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+mn
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

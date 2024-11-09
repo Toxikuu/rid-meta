@@ -1,0 +1,26 @@
+#!/bin/bash
+NAME="xxhash"
+VERS="0.8.2"
+LINK="https://github.com/Cyan4973/xxHash/archive/refs/tags/v$VERS.tar.gz"
+UPST="https://github.com/Cyan4973/xxHash/releases/latest"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+make PREFIX=/usr
+make PREFIX=/usr install
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib/libxxhash.so*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
