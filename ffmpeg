@@ -4,7 +4,8 @@ VERS="7.1"
 LINK="https://ffmpeg.org/releases/ffmpeg-$VERS.tar.xz"
 UPST="https://ffmpeg.org//releases/?C=M;O=D"
 SELE="body > pre:nth-child(2) > a:nth-child(14)"
-DEPS="libaom libass fdk-aac freetype2 lame libvorbis libvpx opus x264 x265 yasm alsa-lib libva sdl2 pulseaudio"
+cuda_deps="nv-codec-headers gcc13 cuda"
+DEPS="libaom libass fdk-aac freetype2 lame libvorbis libvpx opus x264 x265 yasm alsa-lib libva sdl2 pulseaudio ${cuda_deps}"
 
 
 IDIR=$(cat << '~fin.'
@@ -12,10 +13,13 @@ IDIR=$(cat << '~fin.'
 raw https://www.linuxfromscratch.org/patches/blfs/svn/ffmpeg-$VERS-chromium_method-1.patch
 patch -Np1 -i "$RIDSOURCES"/ffmpeg-$VERS-chromium_method-1.patch
 
+pathprepend /opt/gcc13/bin
 
 cm --enable-gpl                       \
    --enable-version3                  \
    --enable-nonfree                   \
+   --enable-cuda-nvcc                 \
+   --enable-libnpp                    \
    --disable-static                   \
    --enable-shared                    \
    --disable-debug                    \
@@ -33,7 +37,9 @@ cm --enable-gpl                       \
    --enable-openssl                   \
    --disable-doc                      \
    --disable-large-tests              \
-   --ignore-tests=enhanced-flv-av1
+   --ignore-tests=enhanced-flv-av1    \
+   --extra-cflags=-I/opt/cuda/include \
+   --extra-ldflags=-L/opt/cuda/lib64  \
 
 gcc tools/qt-faststart.c -o tools/qt-faststart
 install -v -m755    tools/qt-faststart /usr/bin
