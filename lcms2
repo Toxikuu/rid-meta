@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="lcms2"
+VERS="2.16"
+LINK="https://github.com/mm2/Little-CMS/releases/download/lcms$VERS/lcms2-$VERS.tar.gz"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /bin/{jpg,link,ps,tif,trans}icc
+rm -vf /usr/lib/liblcms2.{la,so*}
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
