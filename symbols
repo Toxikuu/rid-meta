@@ -1,0 +1,30 @@
+#!/bin/bash
+NAME="symbols"
+VERS="3.2.1"
+LINK=""
+DEPS="tar xz"
+
+
+IDIR=$(cat << '~fin.'
+
+raw https://github.com/ryanoasis/nerd-fonts/releases/download/v$VERS/NerdFontsSymbolsOnly.tar.xz
+cp -vf $RIDSOURCES/NerdFontsSymbolsOnly.tar.xz .
+
+mkdir -pv Symbols
+tar xvf NerdFontsSymbolsOnly.tar.xz -C Symbols
+rm -vf Symbols/{LICENSE,README.md}
+mo Symbols /usr/share/fonts/Symbols
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/share/fonts/Symbols
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
