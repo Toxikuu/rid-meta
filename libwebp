@@ -1,0 +1,35 @@
+#!/bin/bash
+NAME="libwebp"
+VERS="1.4.0"
+LINK="https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-$VERS.tar.gz"
+DEPS="libjpeg_turbo libpng libtiff" # also sdl12-compat
+
+
+IDIR=$(cat << '~fin.'
+
+cm \
+  --enable-libwebpmux     \
+  --enable-libwebpdemux   \
+  --enable-libwebpdecoder \
+  --enable-libwebpextras  \
+  --enable-swap-16bit-csp
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /bin/{cwebp,dwebp,gif2webp,img2webp,vwebp,webpinfo,webpmux}
+rm -vf /usr/lib/libwebp.{la,so*}          \
+       /usr/lib/libwebp{,de}mux.{la,so*}  \
+       /usr/lib/libwebpdecoder.{la,so*}   \
+       /usr/lib/libsharpyuv.{la,so*}
+
+rm -rvf /usr/include/webp
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
