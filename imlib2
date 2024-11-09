@@ -4,7 +4,7 @@ VERS="1.12.3"
 LINK="https://downloads.sourceforge.net/project/enlightenment/imlib2-src/$VERS/imlib2-$VERS.tar.xz"
 UPST="https://sourceforge.net/projects/enlightenment/files/imlib2-src"
 SELE="tr.folder:nth-child(1) > th:nth-child(1) > a:nth-child(1) > span:nth-child(2)"
-DEPS="giflib librsvg freetype2 libjpeg-turbo libpng libitiff libxext librsvg libwebp"
+DEPS="giflib librsvg freetype2 libjpeg_turbo libpng libitiff libxext librsvg libwebp"
 
 
 IDIR=$(cat << '~fin.'
