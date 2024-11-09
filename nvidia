@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="nvidia"
-VERS="565.57.01"
+VERS="560.35.03"
 LINK=""
 DEPS=""
 
@@ -16,9 +16,6 @@ echo "Detected kernel version '$kver'"
 
 "$RIDSOURCES"/NVIDIA-Linux-x86_64-$VERS.run --extract-only || die "Failed to extract NVIDIA's .run"
 cd NVIDIA-Linux-x86_64-$VERS
-
-# fix currently necessary for 6.11 kernels
-sed -i 's/drm_fbdev_generic_setup/drm_fbdev_ttm_setup/g' kernel{,-open}/conftest.sh kernel/nvidia-drm/nvidia-drm-{drv.c,sources.mk} || die "Sed failed"
 
 ./nvidia-installer                              \
     --silent                                    \
@@ -40,13 +37,15 @@ sed -i 's/drm_fbdev_generic_setup/drm_fbdev_ttm_setup/g' kernel{,-open}/conftest
     --no-install-libglvnd                       \
     --no-rebuild-initramfs                      \
     --install-compat32-libs                     \
-    --kernel-module-type=proprietary            \
+    --kernel-module-type=open                   \
     --no-check-for-alternate-installs           \
     --kernel-source-path=/usr/src/linux         \
     --documentation-prefix=/tmp/rid/trash       \
     --allow-installation-with-running-driver    \
     --kernel-install-path=/lib/modules/$kver/kernel/drivers/video ||
 die "NVIDIA's .run failed"
+
+echo "You should reboot for the nvidia drivers to take effect" >&2
 
 ~fin.
 )
