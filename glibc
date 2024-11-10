@@ -97,8 +97,8 @@ EOF
 rm -rf ./*
 find .. -name "*.a" -delete
 
-CC="gcc  -m32 -mstackrealign"            \
-CXX="g++ -m32 -mstackrealign"            \
+CC="gcc -m32 -mstackrealign -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer"  \
+CXX="g++ -m32 -mstackrealign -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer" \
 ../configure                             \
       --prefix=/usr                      \
       --host=i686-pc-linux-gnu           \
@@ -119,8 +119,8 @@ echo "/usr/lib32" >> /etc/ld.so.conf
 
 echo 'int main(){}' > dummy.c
 gcc -m32 dummy.c
-readelf -l a.out | grep '/ld-linux'
-echo "Command exited with: $?"
+readelf -l a.out | grep '/ld-linux' ||
+die "Multilib toolchain failed sanity check"
 
 rm -v dummy.c a.out
 
@@ -164,7 +164,8 @@ sed '/RTLDLIST=/s@/usr@@g' -i /usr/bin/ldd
 rm -rf ./*
 find .. -name "*.a" -delete
 
-CC="gcc -m32" CXX="g++ -m32" \
+CC="gcc -m32 -mstackrealign -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer"  \
+CXX="g++ -m32 -mstackrealign -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer" \
 ../configure                             \
       --prefix=/usr                      \
       --host=i686-pc-linux-gnu           \
