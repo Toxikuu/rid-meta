@@ -6,12 +6,11 @@ DOWN="https://github.com/Toxikuu/rid/releases/download/v$VERS/rid.tar.xz"
 UPST="https://github.com/toxikuu/rid/tags"
 DEPS="openssl tar xz bash coreutils glibc gcc"
 
-# this meta file may need to be updated depending on the trajectory of rid's future development
 
 IDIR=$(cat << '~fin.'
 
 if [ -e $RIDHOME/pkgs.json ]; then
-    mv -vf /tmp/pkgs.json /tmp/rid-pkgs.bak
+  mv -vf $RIDHOME/pkgs.json /tmp/rid-pkgs.bak
 fi
 
 tar xvf "$RIDSOURCES"/rid.tar.xz -C /usr/bin
@@ -27,12 +26,15 @@ fi
 
 RDIR=$(cat << '~fin.'
 
+if [ -e $RIDHOME/pkgs.json ]; then
+  mv -vf /tmp/pkgs.json /tmp/rid-pkgs.bak
+fi
 rm -rvf /{tmp,etc}/rid
+rm -vf /bin/rid
 
 ~fin.
 )
 
-# i may update udir to house the backups currently done in rdir
 UDIR=$(cat << '~fin.'
 ~fin.
 )
