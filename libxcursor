@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libxcursor"
-VERS="1.2.2"
+VERS="1.2.3"
 LINK="https://www.x.org/pub/individual/lib/libXcursor-$VERS.tar.xz"
 DEPS="libxfixes libxrender libx11 glibc xorgproto util-macros"
 
