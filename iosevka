@@ -1,18 +1,17 @@
 #!/bin/bash
 NAME="iosevka"
-VERS="9999"
+VERS="3.2.1"
 LINK=""
+DOWN="https://github.com/ryanoasis/nerd-fonts/releases/download/v$VERS/Iosevka.tar.xz"
 DEPS=""
 
 
 IDIR=$(cat << '~fin.'
 
-[ -e "$RIDSOURCES"/iosevka-9999.tar ] || raw https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz
-
-mo "$RIDSOURCES"/Iosevka.tar.xz "$RIDSOURCES"/iosevka-9999.tar
+mo "$RIDSOURCES"/Iosevka.tar.xz "$RIDSOURCES"/$NAME-$VERS.tar
 mkdir -pv /usr/share/fonts/iosevka
 
-tar xvf "$RIDSOURCES"/iosevka-9999.tar -C /usr/share/fonts/iosevka
+tar xvf "$RIDSOURCES"/$NAME-$VERS.tar -C /usr/share/fonts/$NAME
 
 ~fin.
 )

@@ -3,52 +3,51 @@ NAME="cuda"
 VERS="12.6.2"
 NV=$(gv nvidia)
 LINK=""
+DOWN="https://developer.download.nvidia.com/compute/cuda/$VERS/local_installers/cuda_${VERS}_${NV}_linux.run"
+UPST="https://developer.nvidia.com/cuda-toolkit-archive"
+SELE="div.field:nth-child(1) > div:nth-child(1) > div:nth-child(1) > p:nth-child(3) > a:nth-child(3)"
 DEPS="nvidia"
 
 
 IDIR=$(cat << '~fin.'
 
-[ -e "$RIDSOURCES"/cuda_${VERS}_${NV}_linux.run ] ||
-raw https://developer.download.nvidia.com/compute/cuda/$VERS/local_installers/cuda_${VERS}_${NV}_linux.run
-
 chmod +x "$RIDSOURCES"/cuda_${VERS}_${NV}_linux.run
 cp -vf "$RIDSOURCES"/cuda_${VERS}_${NV}_linux.run .
 
-kver=$(realpath /usr/src/linux | cut -d- -f2-)
-echo "Detected kernel version '$kver'"
+export CUDA_HOME="/opt/cuda"
 
+echo "Running cuda installer..."
 ./cuda_${VERS}_${NV}_linux.run  \
   --silent                      \
   --toolkit                     \
-  --toolkitpath=/opt/cuda       \
-  --no-man-page                 \
-  -m=kernel-open                \
-  --run-nvidia-xconfig          \
-  --defaultroot=/usr/lib/cuda
+  --toolkitpath="$CUDA_HOME"    \
+  --no-man-page
 
-pathappend /opt/cuda-$VERS/bin
+pathappend "$CUDA_HOME/bin"
 
+echo "Adding cuda libraries to ld.so.conf.d/cuda.conf"
 # useful for ffmpeg which links to cuda's libnppig.so.12
-echo "/opt/cuda/targets/x86_64-linux/lib" > /etc/ld.so.conf.d/cuda.conf
+echo "$CUDA_HOME/lib64" > /etc/ld.so.conf.d/cuda.conf
 
+echo "Writing to /etc/env"
 if ! grep -q "# cuda end" /etc/env ; then
     cat << EOF >> /etc/env
 
     # cuda
-    pathappend /opt/cuda/bin
+    export CUDA_HOME=$CUDA_HOME
+    pathappend \$CUDA_HOME/bin
     # cuda end
-
 EOF
 fi
-
-
+echo "Done"
 
 ~fin.
 )
 
 RDIR=$(cat << '~fin.'
 
-echo not implemented
+rm -rvf /opt/cuda
+sed -i '/    # cuda/,/    # cuda end/' /etc/env
 
 ~fin.
 )

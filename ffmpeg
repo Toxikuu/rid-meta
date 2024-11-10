@@ -2,6 +2,7 @@
 NAME="ffmpeg"
 VERS="7.1"
 LINK="https://ffmpeg.org/releases/ffmpeg-$VERS.tar.xz"
+DOWN="https://www.linuxfromscratch.org/patches/blfs/svn/ffmpeg-$VERS-chromium_method-1.patch"
 UPST="https://ffmpeg.org//releases/?C=M;O=D"
 SELE="body > pre:nth-child(2) > a:nth-child(14)"
 cuda_deps="nv-codec-headers gcc13 cuda"
@@ -10,7 +11,6 @@ DEPS="libaom libass fdk-aac freetype2 lame libvorbis libvpx opus x264 x265 yasm 
 
 IDIR=$(cat << '~fin.'
 
-raw https://www.linuxfromscratch.org/patches/blfs/svn/ffmpeg-$VERS-chromium_method-1.patch
 patch -Np1 -i "$RIDSOURCES"/ffmpeg-$VERS-chromium_method-1.patch
 
 pathprepend /opt/gcc13/bin

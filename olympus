@@ -2,12 +2,11 @@
 NAME="olympus"
 VERS="9999"
 LINK=""
+DOWN='https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds/4338/artifacts?artifactName=linux.main&api-version=5.0&%24format=zip'
 DEPS="unzip xdg-utils desktop-file-utils"
 
 
 IDIR=$(cat << '~fin.'
-
-raw 'https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds/4338/artifacts?artifactName=linux.main&api-version=5.0&%24format=zip'
 
 mo '"$RIDSOURCES"/artifacts?artifactName=linux.main&api-version=5.0&%24format=zip' "$RIDSOURCES"/olympus.zip
 

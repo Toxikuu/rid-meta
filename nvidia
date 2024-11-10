@@ -2,13 +2,12 @@
 NAME="nvidia"
 VERS="560.35.03"
 LINK=""
+DOWN="https://us.download.nvidia.com/XFree86/Linux-x86_64/$VERS/NVIDIA-Linux-x86_64-$VERS.run"
+UPST="https://github.com/NVIDIA/nvidia-installer/tags"
 DEPS=""
 
 
 IDIR=$(cat << '~fin.'
-
-[ -f "$RIDSOURCES"/NVIDIA-Linux-x86_64-$VERS.run ] ||
-raw https://us.download.nvidia.com/XFree86/Linux-x86_64/$VERS/NVIDIA-Linux-x86_64-$VERS.run
 
 chmod +x "$RIDSOURCES"/NVIDIA-Linux-x86_64-$VERS.run
 kver=$(realpath /usr/src/linux | cut -d- -f2-)

@@ -5,13 +5,12 @@ ver="${VERS%.*}"
 gobjver=1.82.0
 gobjv="${gobjver%.*}"
 LINK="https://download.gnome.org/sources/glib/$ver/glib-$VERS.tar.xz"
+DOWN="https://download.gnome.org/sources/gobject-introspection/$gobjv/gobject-introspection-$gobjver.tar.xz"
 UPST="https://repology.org/project/glib/information"
 DEPS="meson-toolchain-files pcre2"
 
 
 IDIR=$(cat << '~fin.'
-
-[ -f gobject-introspection-$gobjver.tar.xz ] || raw https://download.gnome.org/sources/gobject-introspection/$gobjv/gobject-introspection-$gobjver.tar.xz
 
 if [ -e /usr/include/glib-2.0 ]; then
     rm -rf /usr/include/glib-2.0.old &&

@@ -2,13 +2,12 @@
 NAME="sysvinit"
 VERS="3.11"
 LINK="https://github.com/slicer69/sysvinit/releases/download/$VERS/sysvinit-$VERS.tar.xz"
+DOWN="https://www.linuxfromscratch.org/patches/lfs/development/sysvinit-$VERS-consolidated-1.patch"
 UPST="https://github.com/slicer69/sysvinit/tags"
 DEPS=""
 
 
 IDIR=$(cat << '~fin.'
-
-[ -e "$RIDSOURCES"/sysvinit-$VERS-consolidated-1.patch ] || raw https://www.linuxfromscratch.org/patches/lfs/development/sysvinit-$VERS-consolidated-1.patch
 
 patch -Np1 -i "$RIDSOURCES"/sysvinit-$VERS-consolidated-1.patch
 

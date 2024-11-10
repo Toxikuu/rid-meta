@@ -2,14 +2,12 @@
 NAME="giflib"
 VERS="5.2.2"
 LINK="https://downloads.sourceforge.net/project/giflib/giflib-$VERS.tar.gz"
+DOWN="https://www.linuxfromscratch.org/patches/blfs/svn/giflib-$VERS-upstream_fixes-1.patch"
 UPST="https://sourceforge.net/projects/giflib/files"
 DEPS="xmlto"
 
 
 IDIR=$(cat << '~fin.'
-
-[ -e "$RIDSOURCES"/giflib-$VERS-upstream_fixes-1.patch ] ||
-raw https://www.linuxfromscratch.org/patches/blfs/svn/giflib-$VERS-upstream_fixes-1.patch
 
 patch -Np1 -i "$RIDSOURCES"/giflib-$VERS-upstream_fixes-1.patch
 cp pic/gifgrid.gif doc/giflib-logo.gif
@@ -33,7 +31,6 @@ rm -rvf /bin/gif{2rgb,build,clrmp,fix,text,tool}    \
         /lib/libgif.so*                             \
         /usr/share/doc/giflib-$VERS
         
-
 ~fin.
 )
 

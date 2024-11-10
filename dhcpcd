@@ -2,6 +2,7 @@
 NAME="dhcpcd"
 VERS="10.1.0"
 LINK="https://github.com/NetworkConfiguration/dhcpcd/releases/download/v$VERS/dhcpcd-$VERS.tar.xz"
+DOWN="https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20240913.tar.xz"
 UPST="https://github.com/NetworkConfiguration/dhcpcd/tags"
 DEPS=""
 
@@ -15,8 +16,6 @@ cm  --sysconfdir=/etc            \
     --runstatedir=/run           \
     --disable-privsep
 unset RIDBUILD
-
-[ -e "$RIDSOURCES"/blfs-bootscripts-20240913.tar* ] || raw https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20240913.tar.xz
 
 tar xvf "$RIDSOURCES"/blfs-bootscripts-20240913.tar*
 cd blfs-bootscripts-20240913

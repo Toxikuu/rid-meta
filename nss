@@ -3,13 +3,12 @@ NAME="nss"
 VERS="3.106"
 ver="${VERS//./_}"
 LINK="https://archive.mozilla.org/pub/security/nss/releases/NSS_${ver}_RTM/src/nss-$VERS.tar.gz"
+DOWN="https://www.linuxfromscratch.org/patches/blfs/svn/nss-standalone-1.patch"
 UPST="https://repology.org/project/nss/information"
 DEPS="nspr"
 
 
 IDIR=$(cat << '~fin.'
-
-[ -e "$RIDSOURCES"/nss-standalone-1.patch ] || raw https://www.linuxfromscratch.org/patches/blfs/svn/nss-standalone-1.patch
 
 patch -Np1 -i "$RIDSOURCES"/nss-standalone-1.patch               ||
 die "Patch failed"

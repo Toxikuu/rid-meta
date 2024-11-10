@@ -2,6 +2,7 @@
 NAME="binutils"
 VERS="2.43.1"
 LINK="https://sourceware.org/pub/binutils/releases/binutils-$VERS.tar.xz"
+DOWN="https://www.linuxfromscratch.org/patches/downloads/binutils/binutils-$VERS-upstream_fix-1.patch"
 UPST="https://ftp.gnu.org/gnu/binutils/?C=M;O=D"
 DEPS=""
 
@@ -10,6 +11,9 @@ IDIR=$(cat << '~fin.'
 
 mkdir -v build
 cd       build
+
+patch -Np1 -i $RIDSOURCES/binutils-$VERS-upstream_fix-1.patch
+autoreconf -fiv
 
 ../configure --prefix=/usr       \
              --sysconfdir=/etc   \

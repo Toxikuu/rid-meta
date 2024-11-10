@@ -2,6 +2,7 @@
 NAME="kitty"
 VERS="0.37.0"
 LINK="https://github.com/kovidgoyal/kitty/releases/download/v$VERS/kitty-$VERS.tar.xz"
+DOWN="https://github.com/samholmes/whiskers/raw/main/whiskers-tokyo.png"
 UPST="https://github.com/kovidgoyal/kitty/releases/latest"
 DEPS="imagemagick go simde python freetype2 fontconfig libx11 libxkbcommon libxcursor libxi dbus2 lcms2 xxhash libxinerama libxrandr symbols"
 
@@ -26,11 +27,7 @@ cp -rvf linux-package/share /usr/share
 
 linux-package/bin/kitten __complete__ setup bash | install -Dm644 /dev/stdin /usr/share/bash-completion/completions/kitty
 
-[ -e /usr/share/pixmaps/kitty.png ] ||
-{
-raw https://github.com/samholmes/whiskers/raw/main/whiskers-tokyo.png;
-mv -vf $RIDSOURCES/whiskers-tokyo.png /usr/share/pixmaps/kitty.png;
-}
+cp -vf $RIDSOURCES/whiskers-tokyo.png /usr/share/pixmaps/kitty.png;
 
 cat << 'EOF' > /usr/share/applications/kitty.desktop
 [Desktop Entry]

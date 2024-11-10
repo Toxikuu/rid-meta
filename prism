@@ -2,16 +2,14 @@
 NAME="prism"
 VERS="9.1"
 LINK=""
+DOWN="https://github.com/PrismLauncher/PrismLauncher/releases/download/$VERS/PrismLauncher-Linux-Qt6-Portable-$VERS.tar.gz \
+      https://another_link_woah"
 UPST="https://github.com/PrismLauncher/PrismLauncher/releases/latest"
 DEPS="krb5"
 
 
 IDIR=$(cat << '~fin.'
 
-raw https://github.com/PrismLauncher/PrismLauncher/releases/download/$VERS/PrismLauncher-Linux-Qt6-Portable-$VERS.tar.gz
-
-mkdir -pv $NAME-$VERS
-cd        $NAME-$VERS
 tar xvf "$RIDSOURCES"/PrismLauncher-Linux-Qt6-Portable-$VERS.tar.gz
 cd ..
 mo $NAME-$VERS  /usr/src/prism

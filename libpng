@@ -2,13 +2,13 @@
 NAME="libpng"
 VERS="1.6.44"
 LINK="https://github.com/pnggroup/libpng/archive/refs/tags/v$VERS.tar.gz"
+DOWN="https://downloads.sourceforge.net/project/libpng-apng/libpng16/$VERS/libpng-$VERS-apng.patch.gz"
 UPST="https://github.com/pnggroup/libpng/tags"
 DEPS=""
 
 
 IDIR=$(cat << '~fin.'
 
-raw https://downloads.sourceforge.net/project/libpng-apng/libpng16/$VERS/libpng-$VERS-apng.patch.gz
 gzip -cd "$RIDSOURCES"/libpng-$VERS-apng.patch.gz | patch -p1
 
 cm

@@ -3,6 +3,7 @@ NAME="kernel"
 VERS="6.11.7"
 # ver="${VERS//\.0/}"
 LINK="https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-$VERS.tar.gz"
+DOWN="https://raw.githubusercontent.com/Toxikuu/rid/refs/heads/master/defaults/kernelconfig"
 UPST="https://kernel.org"
 SELE="#latest_link > a:nth-child(1)"
 DEPS=""
@@ -22,12 +23,7 @@ ln -sfv   /usr/src/linux-$VERS /usr/src/linux
 cd        /usr/src/linux
 
 if [ ! -e .config ]; then
-    if [ -e "$RIDHOME/defaults/kernelconfig" ]; then
-        cp -vf "$RIDHOME/defaults/kernelconfig" .config
-    else
-        raw https://raw.githubusercontent.com/Toxikuu/rid/refs/heads/master/defaults/kernelconfig &&
-        cp -vf "$RIDSOURCES"/kernelconfig .config
-    fi
+    cp -vf "$RIDSOURCES/kernelconfig" .config
 fi
 
 make olddefconfig

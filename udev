@@ -2,6 +2,8 @@
 NAME="udev"
 VERS="256.5"
 LINK="https://github.com/systemd/systemd/archive/v$VERS/systemd-$VERS.tar.gz"
+DOWN="https://anduin.linuxfromscratch.org/LFS/udev-lfs-20230818.tar.xz \
+      https://anduin.linuxfromscratch.org/LFS/systemd-man-pages-$VERS.tar.xz"
 UPST="https://github.com/systemd/systemd/tags"
 DEPS="jinja2 gperf"
 
@@ -53,13 +55,9 @@ install -vm644 hwdb.d/*  ../hwdb.d/{*.hwdb,README} /usr/lib/udev/hwdb.d/
 install -vm755 $udev_helpers                       /usr/lib/udev
 install -vm644 ../network/99-default.link          /usr/lib/udev/network
 
-[ -f "$RIDSOURCES"/udev-lfs-20230818.tar.xz ] || raw https://anduin.linuxfromscratch.org/LFS/udev-lfs-20230818.tar.xz
-
 tar -xvf "$RIDSOURCES"/udev-lfs-20230818.tar.xz
 make -f udev-lfs-20230818/Makefile.lfs install
 
-
-[ -f "$RIDSOURCES"/systemd-man-pages-$VERS.tar.xz ] || raw https://anduin.linuxfromscratch.org/LFS/systemd-man-pages-$VERS.tar.xz
 
 tar -xf "$RIDSOURCES"/systemd-man-pages-$VERS.tar.xz               \
     --no-same-owner --strip-components=1                              \

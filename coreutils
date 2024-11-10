@@ -2,13 +2,12 @@
 NAME="coreutils"
 VERS="9.5"
 LINK="https://ftp.gnu.org/gnu/coreutils/coreutils-$VERS.tar.xz"
+DOWN="https://www.linuxfromscratch.org/patches/lfs/development/coreutils-$VERS-i18n-2.patch"
 UPST="https://ftp.gnu.org/gnu/coreutils/?C=M;O=D"
 DEPS=""
 
 
 IDIR=$(cat << '~fin.'
-
-[ -e "$RIDSOURCES"/coreutils-$VERS-i18n-2.patch ] || raw https://www.linuxfromscratch.org/patches/lfs/development/coreutils-$VERS-i18n-2.patch
 
 patch -Np1 -i "$RIDSOURCES"/coreutils-$VERS-i18n-2.patch
 

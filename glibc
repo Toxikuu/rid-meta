@@ -2,13 +2,12 @@
 NAME="glibc"
 VERS="2.40"
 LINK="https://ftp.gnu.org/gnu/glibc/glibc-$VERS.tar.xz"
+DOWN="https://www.linuxfromscratch.org/patches/lfs/development/glibc-$VERS-fhs-1.patch"
 UPST="https://ftp.gnu.org/gnu/glibc/?C=M;O=D"
 DEPS=""
 
 
 IDIR=$(cat << '~fin.'
-
-[ -f "$RIDSOURCES"/glibc-$VERS-fhs-1.patch ] || raw https://www.linuxfromscratch.org/patches/lfs/development/glibc-$VERS-fhs-1.patch
 
 patch -Np1 -i "$RIDSOURCES"/glibc-$VERS-fhs-1.patch
 
@@ -135,8 +134,6 @@ echo not implemented
 )
 
 UDIR=$(cat << '~fin.'
-
-[ -f "$RIDSOURCES"/glibc-$VERS-fhs-1.patch ] || raw https://www.linuxfromscratch.org/patches/lfs/development/glibc-$VERS-fhs-1.patch
 
 patch -Np1 -i "$RIDSOURCES"/glibc-$VERS-fhs-1.patch
 

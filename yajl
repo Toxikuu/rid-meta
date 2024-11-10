@@ -2,18 +2,14 @@
 NAME="yajl"
 VERS="2.1.0"
 LINK="https://github.com/lloyd/yajl/archive/refs/tags/$VERS.tar.gz"
+DOWN="https://gitlab.archlinux.org/archlinux/packaging/packages/yajl/-/raw/main/yajl-2.1.0-CVE-2017-16516.patch \
+      https://gitlab.archlinux.org/archlinux/packaging/packages/yajl/-/raw/main/yajl-2.1.0-CVE-2022-24795.patch \
+      https://gitlab.archlinux.org/archlinux/packaging/packages/yajl/-/raw/main/yajl-2.1.0-memory_leak.patch"
 UPST="https://github.com/lloyd/yajl/tags"
 DEPS="cmake"
 
 
 IDIR=$(cat << '~fin.'
-
-[ -e "$RIDSOURCES"/yajl-2.1.0-CVE-2017-16516.patch ] ||
-raw https://gitlab.archlinux.org/archlinux/packaging/packages/yajl/-/raw/main/yajl-2.1.0-CVE-2017-16516.patch
-[ -e "$RIDSOURCES"/yajl-2.1.0-CVE-2022-24795.patch ] ||
-raw https://gitlab.archlinux.org/archlinux/packaging/packages/yajl/-/raw/main/yajl-2.1.0-CVE-2022-24795.patch
-[ -e "$RIDSOURCES"/yajl-2.1.0-memory_leak.patch ] ||
-raw https://gitlab.archlinux.org/archlinux/packaging/packages/yajl/-/raw/main/yajl-2.1.0-memory_leak.patch
 
 patch -Np1 -i "$RIDSOURCES"/yajl-2.1.0-CVE-2017-16516.patch
 patch -Np1 -i "$RIDSOURCES"/yajl-2.1.0-CVE-2022-24795.patch

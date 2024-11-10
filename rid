@@ -2,6 +2,7 @@
 NAME="rid"
 VERS="0.14.0"
 LINK=""
+DOWN="https://github.com/Toxikuu/rid/releases/download/v$VERS/rid.tar.xz"
 UPST="https://github.com/toxikuu/rid/tags"
 DEPS="openssl tar xz bash coreutils glibc gcc"
 
@@ -13,7 +14,6 @@ if [ -e $RIDHOME/pkgs.json ]; then
     mv -vf /tmp/pkgs.json /tmp/rid-pkgs.bak
 fi
 
-raw https://github.com/Toxikuu/rid/releases/download/v$VERS/rid.tar.xz
 tar xvf "$RIDSOURCES"/rid.tar.xz -C /usr/bin
 /usr/bin/rid -b
 
@@ -27,7 +27,6 @@ fi
 
 RDIR=$(cat << '~fin.'
 
-rm -vf /usr/bin/raw
 rm -rvf /{tmp,etc}/rid
 
 ~fin.
