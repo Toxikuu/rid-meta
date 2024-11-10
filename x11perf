@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="x11perf"
+VERS="1.6.1"
+LINK="https://www.x.org/pub/individual/app/x11perf-$VERS.tar.bz2"
+DEPS="libx11 libxmu libxrender libxft libxext fontconfig util-macros"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

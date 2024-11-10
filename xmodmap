@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="xmodmap"
+VERS="1.0.11"
+LINK="https://www.x.org/pub/individual/app/xmodmap-$VERS.tar.xz"
+DEPS="util-macros libx11"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

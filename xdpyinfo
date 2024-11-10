@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="xdpyinfo"
+VERS="1.3.4"
+LINK="https://www.x.org/pub/individual/app/xdpyinfo-1.3.4.tar.xz"
+DEPS="libx11 libxext libxtst libxxf86vm libxrender libxcomposite libxinerama util-macros xorgproto"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

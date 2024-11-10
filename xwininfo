@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="xwininfo"
+VERS="1.1.6"
+LINK="https://www.x.org/pub/individual/app/xwininfo-$VERS.tar.xz"
+DEPS="util-macros libx11 libxcb"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

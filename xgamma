@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="xgamma"
+VERS="1.0.7"
+LINK="https://www.x.org/pub/individual/app/xgamma-$VERS.tar.xz"
+DEPS="libx11 libxxf86vm util-macros"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

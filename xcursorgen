@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="xcursorgen"
+VERS="1.0.8"
+LINK="https://www.x.org/pub/individual/app/xcursorgen-$VERS.tar.xz"
+DEPS="libx11 libxcursor libpng util-macros"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

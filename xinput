@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="xinput"
+VERS="1.6.4"
+LINK="https://www.x.org/pub/individual/app/xinput-$VERS.tar.xz"
+DEPS="util-macros xorgproto libxfixes libxi libx11 libxinerama"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

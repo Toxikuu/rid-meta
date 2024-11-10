@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="setxkbmap"
+VERS="1.3.4"
+LINK="https://www.x.org/pub/individual/app/setxkbmap-$VERS.tar.xz"
+DEPS="util-macros"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="xev"
+VERS="1.2.6"
+LINK="https://www.x.org/pub/individual/app/xev-1.2.6.tar.xz"
+DEPS="libx11 libxrandr util-macros xorgproto"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

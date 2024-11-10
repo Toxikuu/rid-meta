@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="xvinfo"
+VERS="1.1.5"
+LINK="https://www.x.org/pub/individual/app/xvinfo-$VERS.tar.xz"
+DEPS="libx11 libxv util-macros"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

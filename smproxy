@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="smproxy"
+VERS="1.0.7"
+LINK="https://www.x.org/pub/individual/app/smproxy-$VERS.tar.xz"
+DEPS="libxmu libsm libxt"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

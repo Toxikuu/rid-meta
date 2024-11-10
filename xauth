@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="xauth"
+VERS="1.1.3"
+LINK="https://www.x.org/pub/individual/app/xauth-1.1.3.tar.xz"
+DEPS="libxmu libxau libxext libx11 util-macros"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
