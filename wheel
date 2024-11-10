@@ -17,7 +17,7 @@ pip3 install --no-index --find-links=dist wheel
 RDIR=$(cat << '~fin.'
 
 PV=$(gv python)
-PV=${PV%.*}
+PV="${PV%.*}"
 
 rm -vf /usr/bin/wheel
 rm -rvf /usr/lib/python$PV/site-packages/wheel*
