@@ -3,7 +3,7 @@ NAME="xcursor-themes"
 VERS="1.0.7"
 LINK="https://www.x.org/pub/individual/data/xcursor-themes-$VERS.tar.xz"
 UPST="https://repology.org/project/xcursor-themes/information"
-DEPS="xorg-applications"
+DEPS="util-macros xcursorgen pkgconf"
 
 
 IDIR=$(cat << '~fin.'

@@ -2,11 +2,12 @@
 NAME="xdg-utils"
 VERS="1.2.1"
 LINK="https://gitlab.freedesktop.org/xdg/xdg-utils/-/archive/v$VERS/xdg-utils-v$VERS.tar.gz"
-DEPS="xmlto lynx xorg-applications"
+DEPS="xmlto lynx xset xprop"
 
 
 IDIR=$(cat << '~fin.'
 
+# cant do cm because --disable-static causes a build failure lol
 ./configure --prefix=/usr &&
 make &&
 make install
