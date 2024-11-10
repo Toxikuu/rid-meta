@@ -10,9 +10,10 @@ DEPS=""
 IDIR=$(cat << '~fin.'
 
 cm \
-    --enable-shared     \
-    --with-system-expat \
-    --enable-optimizations
+    --enable-shared         \
+    --with-system-expat     \
+    --enable-optimizations  \
+    --disable-option-checking
 
 cat > /etc/pip.conf << EOF
 [global]
@@ -25,11 +26,14 @@ EOF
 
 RDIR=$(cat << '~fin.'
 
-echo not implemented
+rm -rvf /usr/lib/python[0-9]*
 
 ~fin.
 )
 
 UDIR=$(cat << '~fin.'
+rm -rvf /usr/lib/python[0-9]*
+
+"$IDIR"
 ~fin.
 )
