@@ -16,11 +16,14 @@ patch -Np1 -i "$RIDSOURCES"/ffmpeg-$VERS-chromium_method-1.patch
 pathprepend /opt/gcc13/bin
 
 cm --enable-gpl                       \
+   --enable-lto                       \
    --enable-version3                  \
    --enable-nonfree                   \
    --enable-cuda-nvcc                 \
+   --enable-nvenc                     \
    --enable-libnpp                    \
    --disable-static                   \
+   --disable-rpath                    \
    --enable-shared                    \
    --disable-debug                    \
    --enable-libaom                    \
