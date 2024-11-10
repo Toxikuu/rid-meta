@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="strace"
+VERS="6.11"
+LINK="https://github.com/strace/strace/releases/download/v$VERS/strace-$VERS.tar.xz"
+UPST="https://github.com/strace/strace/releases/latest"
+DEPS="glibc" # optionally, libunwind
+
+
+IDIR=$(cat << '~fin.'
+
+cm --enable-bundled
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
