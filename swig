@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="swig"
+VERS="4.3.0"
+LINK="https://downloads.sourceforge.net/swig/swig-$VERS.tar.gz"
+DEPS="pcre2"
+
+
+IDIR=$(cat << '~fin.'
+
+cm --without-javascript --without-maximum-compile-warnings
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -rvf /usr/share/swig
+rm -vf /bin/{,ccache-}swig
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)

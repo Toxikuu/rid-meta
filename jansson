@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="jansson"
+VERS="2.14"
+LINK="https://github.com/akheron/jansson/releases/download/v$VERS/jansson-$VERS.tar.bz2"
+DEPS=""
+
+
+IDIR=$(cat << '~fin.'
+
+cm
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+rm -vf /usr/lib/libjansson.so*
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
