@@ -10,16 +10,18 @@ DEPS=""
 
 IDIR=$(cat << '~fin.'
 
-mkdir -pv /opt/go
-cp -rvf * /opt/go
+GO_HOME="/opt/go"
+
+mkdir -pv "$GO_HOME"
+cp -rvf * "$GO_HOME"
 
 if ! grep -q "# go end" /etc/env ; then
-    cat << 'EOF' >> /etc/env
+    cat << EOF >> /etc/env
 
     # go
-    pathappend /opt/go/bin
+    export GO_HOME=$GO_HOME
+    pathappend "\$GO_HOME/bin"
     # go end
-
 EOF
 fi
 
@@ -28,7 +30,8 @@ fi
 
 RDIR=$(cat << '~fin.'
 
-echo not implemented
+rm -rvf /opt/go
+sed -i '/    # go/,/    # go end/d' /etc/env
 
 ~fin.
 )

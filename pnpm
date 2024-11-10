@@ -7,18 +7,19 @@ DEPS="curl"
 
 IDIR=$(cat << '~fin.'
 
-curl -fsSL https://get.pnpm.io/install.sh | env PNPM_HOME=/opt/pnpm sh -
-echo "The output of pnpm's install.sh is a lie lol."
+PNPM_HOME="/opt/pnpm"
+
+curl -fsSL https://get.pnpm.io/install.sh | env PNPM_HOME="$PNPM_HOME" sh -
+echo "Disregard the output of pnpm's install.sh as rid overrides it" >&2
 sed -i '/# pnpm/,/# pnpm end/d' $HOME/.bashrc
 
 if ! grep -q "# pnpm end" /etc/env ; then
-    cat << 'EOF' >> /etc/env
+    cat << EOF >> /etc/env
 
     # pnpm
-    export PNPM_HOME="/opt/pnpm"
-    pathappend "/opt/pnpm"
+    export PNPM_HOME="$PNPM_HOME"
+    pathappend "\$PNPM_HOME"
     # pnpm end
-
 EOF
 fi
 
@@ -28,8 +29,7 @@ fi
 RDIR=$(cat << '~fin.'
 
 rm -rvf /opt/pnpm
-
-sed -i '/# pnpm/,/# pnpm end/d' /etc/env
+sed -i '/    # pnpm/,/    # pnpm end/d' /etc/env
 
 ~fin.
 )
@@ -42,9 +42,8 @@ if ! grep -q "# pnpm end" /etc/env ; then
 
     # pnpm
     export PNPM_HOME="/opt/pnpm"
-    pathappend "/opt/pnpm"
+    pathappend "$PNPM_HOME"
     # pnpm end
-
 EOF
 fi
 ~fin.
