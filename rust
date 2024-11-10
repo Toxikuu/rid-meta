@@ -41,7 +41,7 @@ if ! grep -q "# rust end" /etc/env ; then
 EOF
 fi
 
-chmod 755 "$CARGO_HOME"
+chmod 777 "$CARGO_HOME"
 chmod 755 "$RUSTUP_HOME"
 
 ~fin.
@@ -86,8 +86,8 @@ if ! grep -q "# rust end" /etc/env ; then
 EOF
 fi
 
+chmod 777 $CARGO_HOME
 chmod 755 $RUSTUP_HOME
-chmod 755 $CARGO_HOME
 
 ~fin.
 )
