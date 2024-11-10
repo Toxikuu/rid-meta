@@ -3,6 +3,7 @@ NAME="xcb-util-cursor"
 VERS="0.1.5"
 LINK="https://xcb.freedesktop.org/dist/xcb-util-cursor-$VERS.tar.xz"
 DEPS="xcb-util-image xcb-util-renderutil"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxcb-cursor/-/tags"
 
 
 IDIR=$(cat << '~fin.'

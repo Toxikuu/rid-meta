@@ -1,7 +1,8 @@
 #!/bin/bash
 NAME="xdriinfo"
 VERS="1.0.7"
-LINK="https://www.x.org/pub/individual/app/xdriinfo-1.0.7.tar.xz"
+LINK="https://www.x.org/pub/individual/app/xdriinfo-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/app/xdriinfo/-/tags"
 DEPS="libx11 util-macros xorgproto"
 
 

@@ -3,6 +3,7 @@ NAME="librsvg"
 VERS="2.59.2"
 ver="${VERS%.*}"
 LINK="https://download.gnome.org/sources/librsvg/$ver/librsvg-$VERS.tar.xz"
+UPST="https://gitlab.gnome.org/GNOME/librsvg/-/tags"
 DEPS="cairo cargo-c gdk-pixbuf pango rust glib vala"
 
 

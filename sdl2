@@ -3,6 +3,8 @@ NAME="sdl2"
 VERS="2.30.9"
 LINK="https://www.libsdl.org/release/SDL2-$VERS.tar.gz"
 DEPS="libxkbcommon wayland-protocols libxext libxrender libx11 libxcursor libxrandr libxinerama libxss alsa-lib"
+UPST="https://www.libsdl.org/release/?C=M;O=D"
+SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(2) > a:nth-child(1)"
 
 
 IDIR=$(cat << '~fin.'

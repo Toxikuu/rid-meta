@@ -2,6 +2,8 @@
 NAME="luajit"
 VERS="20240917"
 LINK="https://anduin.linuxfromscratch.org/BLFS/luajit/luajit-$VERS.tar.xz"
+UPST="https://www.linuxfromscratch.org/blfs/view/svn/general/luajit"
+SELE=".ulink"
 DEPS=""
 
 

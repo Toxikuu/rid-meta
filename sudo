@@ -3,6 +3,8 @@ NAME="sudo"
 VERS="1.9.16"
 LINK="https://www.sudo.ws/dist/sudo-$VERS.tar.gz"
 DEPS="linux-pam"
+UPST="https://www.sudo.ws"
+SELE=".gdoc-markdown > p:nth-child(6) > a:nth-child(2)"
 
 
 IDIR=$(cat << '~fin.'

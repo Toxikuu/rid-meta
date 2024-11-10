@@ -2,6 +2,7 @@
 NAME="jansson"
 VERS="2.14"
 LINK="https://github.com/akheron/jansson/releases/download/v$VERS/jansson-$VERS.tar.bz2"
+UPST="https://github.com/akheron/jansson/releases/latest"
 DEPS=""
 
 

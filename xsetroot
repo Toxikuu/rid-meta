@@ -2,6 +2,7 @@
 NAME="xsetroot"
 VERS="1.1.3"
 LINK="https://www.x.org/pub/individual/app/xsetroot-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/app/xsetroot/-/tags"
 DEPS="libxmu libx11 libxcursor xbitmaps util-macros"
 
 

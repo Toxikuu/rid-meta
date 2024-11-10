@@ -2,6 +2,7 @@
 NAME="libxfont2"
 VERS="2.0.7"
 LINK="https://www.x.org/pub/individual/lib/libXfont2-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxfont/-/tags"
 DEPS="freetype2 libfontenc xorgproto glibc xtrans util-macros"
 
 

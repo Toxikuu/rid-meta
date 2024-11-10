@@ -1,7 +1,8 @@
 #!/bin/bash
 NAME="libxi"
-VERS="1.8.1"
-LINK="https://www.x.org/pub/individual/lib/libXi-1.8.1.tar.xz"
+VERS="1.8.2"
+LINK="https://www.x.org/pub/individual/lib/libXi-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxi/-/tags"
 DEPS="libxext libxfixes libx11 glibc xorgproto util-macros"
 
 

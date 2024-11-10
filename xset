@@ -2,6 +2,7 @@
 NAME="xset"
 VERS="1.2.5"
 LINK="https://www.x.org/pub/individual/app/xset-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/app/xset/-/tags"
 DEPS="libxmu util-macros"
 
 

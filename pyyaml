@@ -2,6 +2,7 @@
 NAME="pyyaml"
 VERS="6.0.2"
 LINK="https://files.pythonhosted.org/packages/source/P/PyYAML/pyyaml-$VERS.tar.gz"
+UPST="https://pypi.org/project/PyYAML"
 DEPS="cython libyaml"
 
 
@@ -15,7 +16,9 @@ pip3 install --no-index --find-links=dist --no-cache-dir --no-user PyYAML
 
 RDIR=$(cat << '~fin.'
 
-echo not implemented
+PV=$(gv python)
+
+rm -rvf /usr/lib/python${PV}/site-packages/pyyaml*
 
 ~fin.
 )

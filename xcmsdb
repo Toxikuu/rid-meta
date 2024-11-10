@@ -1,7 +1,8 @@
 #!/bin/bash
 NAME="xcmsdb"
 VERS="1.0.7"
-LINK="https://www.x.org/pub/individual/app/xcmsdb-1.0.7.tar.xz"
+LINK="https://www.x.org/pub/individual/app/xcmsdb-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/app/xcmsdb/-/tags"
 DEPS="libx11 util-macros"
 
 

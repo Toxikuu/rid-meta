@@ -2,6 +2,7 @@
 NAME="libxrender"
 VERS="0.9.11"
 LINK="https://www.x.org/pub/individual/lib/libXrender-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxrender/-/tags"
 DEPS="libx11 glibc xorgproto"
 
 

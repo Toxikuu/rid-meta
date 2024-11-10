@@ -2,6 +2,7 @@
 NAME="xrandr"
 VERS="1.5.3"
 LINK="https://www.x.org/pub/individual/app/xrandr-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/app/xrandr/-/tags"
 DEPS="libx11 libxrandr util-macros"
 
 

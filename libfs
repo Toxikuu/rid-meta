@@ -2,6 +2,7 @@
 NAME="libfs"
 VERS="1.0.10"
 LINK="https://www.x.org/pub/individual/lib/libFS-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libfs/-/tags"
 DEPS="glibc xorgproto xtrans"
 
 

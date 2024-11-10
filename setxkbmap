@@ -2,6 +2,7 @@
 NAME="setxkbmap"
 VERS="1.3.4"
 LINK="https://www.x.org/pub/individual/app/setxkbmap-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/app/setxkbmap/-/tags"
 DEPS="util-macros"
 
 

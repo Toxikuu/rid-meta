@@ -2,6 +2,7 @@
 NAME="libxxf86vm"
 VERS="1.1.5"
 LINK="https://www.x.org/pub/individual/lib/libXxf86vm-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxxf86vm/-/tags"
 DEPS="libxext libx11 glibc xorgproto"
 
 

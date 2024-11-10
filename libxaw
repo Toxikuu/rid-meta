@@ -1,7 +1,8 @@
 #!/bin/bash
 NAME="libxaw"
-VERS="3.5.17"
-LINK="https://www.x.org/pub/individual/lib/libXpm-$VERS.tar.xz"
+VERS="1.0.16"
+LINK="https://www.x.org/pub/individual/lib/libXaw-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxaw/-/tags"
 DEPS="libxmu libxpm libx11 libxt libxext xorgproto glibc util-macros"
 
 

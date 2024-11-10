@@ -2,6 +2,7 @@
 NAME="xlsatoms"
 VERS="1.1.4"
 LINK="https://www.x.org/pub/individual/app/xlsatoms-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/app/xlsatoms/-/tags"
 DEPS="util-macros xorgproto libxcb"
 
 

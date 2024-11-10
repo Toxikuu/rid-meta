@@ -2,6 +2,7 @@
 NAME="xpr"
 VERS="1.2.0"
 LINK="https://www.x.org/pub/individual/app/xpr-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/app/xpr/-/tags"
 DEPS="libx11 libxmu util-macros"
 
 

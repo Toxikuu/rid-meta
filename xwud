@@ -2,6 +2,7 @@
 NAME="xwud"
 VERS="1.0.7"
 LINK="https://www.x.org/pub/individual/app/xwud-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/app/xwud/-/tags"
 DEPS="util-macros libx11"
 
 

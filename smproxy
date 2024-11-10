@@ -2,6 +2,7 @@
 NAME="smproxy"
 VERS="1.0.7"
 LINK="https://www.x.org/pub/individual/app/smproxy-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/app/smproxy/-/tags"
 DEPS="libxmu libsm libxt"
 
 

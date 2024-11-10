@@ -2,6 +2,7 @@
 NAME="xwd"
 VERS="1.0.9"
 LINK="https://www.x.org/pub/individual/app/xwd-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/app/xwd/-/tags"
 DEPS="libx11 util-macros libxt"
 
 

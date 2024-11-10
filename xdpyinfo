@@ -2,6 +2,7 @@
 NAME="xdpyinfo"
 VERS="1.3.4"
 LINK="https://www.x.org/pub/individual/app/xdpyinfo-1.3.4.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/app/xdpyinfo/-/tags"
 DEPS="libx11 libxext libxtst libxxf86vm libxrender libxcomposite libxinerama util-macros xorgproto"
 
 

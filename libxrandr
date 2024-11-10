@@ -2,6 +2,7 @@
 NAME="libxrandr"
 VERS="1.5.4"
 LINK="https://www.x.org/pub/individual/lib/libXrandr-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxrandr/-/tags"
 DEPS="libxext libxrender libx11 glibc util-macros xorgproto"
 
 

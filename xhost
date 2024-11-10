@@ -2,6 +2,7 @@
 NAME="xhost"
 VERS="1.0.9"
 LINK="https://www.x.org/pub/individual/app/xhost-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/app/xhost/-/tags"
 DEPS="libx11 libxmu util-macros"
 
 

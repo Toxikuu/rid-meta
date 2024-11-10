@@ -2,6 +2,7 @@
 NAME="xgamma"
 VERS="1.0.7"
 LINK="https://www.x.org/pub/individual/app/xgamma-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/app/xgamma/-/tags"
 DEPS="libx11 libxxf86vm util-macros"
 
 

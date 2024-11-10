@@ -1,7 +1,8 @@
 #!/bin/bash
 NAME="x11perf"
-VERS="1.6.1"
-LINK="https://www.x.org/pub/individual/app/x11perf-$VERS.tar.bz2"
+VERS="1.7.0"
+LINK="https://www.x.org/archive/individual/test/x11perf-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/test/x11perf/-/tags"
 DEPS="libx11 libxmu libxrender libxft libxext fontconfig util-macros"
 
 

@@ -2,6 +2,7 @@
 NAME="libx11"
 VERS="1.8.10"
 LINK="https://www.x.org/pub/individual/lib/libX11-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libx11/-/tags"
 DEPS="libxcb glibc xorgproto util-macros xtrans"
 
 

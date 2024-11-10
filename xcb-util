@@ -2,6 +2,7 @@
 NAME="xcb-util"
 VERS="0.4.1"
 LINK="https://xcb.freedesktop.org/dist/xcb-util-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxcb-util/-/tags"
 DEPS="libxcb"
 
 

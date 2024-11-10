@@ -2,6 +2,7 @@
 NAME="xkbevd"
 VERS="1.1.5"
 LINK="https://www.x.org/pub/individual/app/xkbevd-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/app/xkbevd/-/tags"
 DEPS="util-macros"
 
 

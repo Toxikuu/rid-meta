@@ -2,6 +2,7 @@
 NAME="libxxf86dga"
 VERS="1.1.6"
 LINK="https://www.x.org/pub/individual/lib/libXxf86dga-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxxf86dga/-/tags"
 DEPS="xorgproto libxext libx11 util-macros"
 
 

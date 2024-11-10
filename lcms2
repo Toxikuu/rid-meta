@@ -2,6 +2,7 @@
 NAME="lcms2"
 VERS="2.16"
 LINK="https://github.com/mm2/Little-CMS/releases/download/lcms$VERS/lcms2-$VERS.tar.gz"
+UPST="https://github.com/mm2/Little-CMS/releases/latest"
 DEPS=""
 
 

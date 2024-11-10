@@ -2,6 +2,7 @@
 NAME="libxdamage"
 VERS="1.1.6"
 LINK="https://www.x.org/pub/individual/lib/libXdamage-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxdamage/-/tags"
 DEPS="libxfixes xorgproto libx11 glibc"
 
 

@@ -2,6 +2,8 @@
 NAME="zip"
 VERS="3.0"
 LINK="https://downloads.sourceforge.net/infozip/zip${VERS//./}.tar.gz"
+UPST="https://sourceforge.net/projects/infozip/files/Zip%203.x%20%28latest%29/3.0/"
+SELE=".current-dir"
 DEPS=""
 
 

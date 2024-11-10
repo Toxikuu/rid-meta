@@ -2,6 +2,7 @@
 NAME="libwebp"
 VERS="1.4.0"
 LINK="https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-$VERS.tar.gz"
+UPST="https://repology.org/project/libwebp/information"
 DEPS="libjpeg-turbo libpng libtiff" # also sdl12-compat
 
 

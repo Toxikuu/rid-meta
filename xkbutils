@@ -2,6 +2,7 @@
 NAME="xkbutils"
 VERS="1.0.6"
 LINK="https://www.x.org/pub/individual/app/xkbutils-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/app/xkbutils/-/tags"
 DEPS="util-macros xorgproto libxt libxaw libx11"
 
 

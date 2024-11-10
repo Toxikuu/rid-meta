@@ -2,6 +2,7 @@
 NAME="libxfixes"
 VERS="6.0.1"
 LINK="https://www.x.org/pub/individual/lib/libXfixes-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxfixes/-/tags"
 DEPS="libx11 xorgproto glibc util-macros"
 
 

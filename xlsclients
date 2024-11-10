@@ -2,6 +2,7 @@
 NAME="xlsclients"
 VERS="1.1.5"
 LINK="https://www.x.org/pub/individual/app/xlsclients-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/app/xlsclients/-/tags"
 DEPS="util-macros xorgproto libxcb"
 
 

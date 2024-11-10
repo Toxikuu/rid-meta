@@ -2,6 +2,7 @@
 NAME="libfontenc"
 VERS="1.1.8"
 LINK="https://www.x.org/pub/individual/lib/libfontenc-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libfontenc/-/tags"
 DEPS="glibc xorgproto util-macros"
 
 

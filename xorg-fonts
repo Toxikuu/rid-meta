@@ -4,6 +4,7 @@ VERS="0"
 LINK=""
 DEPS="xcursor-themes wget"
 
+# slated for removal
 
 IDIR=$(cat << '~fin.'
 

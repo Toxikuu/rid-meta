@@ -2,6 +2,7 @@
 NAME="xev"
 VERS="1.2.6"
 LINK="https://www.x.org/pub/individual/app/xev-1.2.6.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/app/xev/-/tags"
 DEPS="libx11 libxrandr util-macros xorgproto"
 
 

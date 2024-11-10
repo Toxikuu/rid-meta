@@ -2,6 +2,7 @@
 NAME="libpipeline"
 VERS="1.5.8"
 LINK="https://download.savannah.gnu.org/releases/libpipeline/libpipeline-$VERS.tar.gz"
+UPST="https://repology.org/project/libpipeline/information"
 DEPS=""
 
 

@@ -2,6 +2,7 @@
 NAME="xwininfo"
 VERS="1.1.6"
 LINK="https://www.x.org/pub/individual/app/xwininfo-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/app/xwininfo/-/tags"
 DEPS="util-macros libx11 libxcb"
 
 

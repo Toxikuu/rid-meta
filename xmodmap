@@ -2,6 +2,7 @@
 NAME="xmodmap"
 VERS="1.0.11"
 LINK="https://www.x.org/pub/individual/app/xmodmap-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/app/xmodmap/-/tags"
 DEPS="util-macros libx11"
 
 

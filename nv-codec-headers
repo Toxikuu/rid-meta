@@ -2,6 +2,7 @@
 NAME="nv-codec-headers"
 VERS="12.2.72.0"
 LINK="https://github.com/FFmpeg/nv-codec-headers/releases/download/n$VERS/nv-codec-headers-$VERS.tar.gz"
+UPST="https://github.com/FFmpeg/nv-codec-headers/releases/latest"
 DEPS=""
 
 

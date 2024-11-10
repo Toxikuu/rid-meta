@@ -2,6 +2,7 @@
 NAME="libxres"
 VERS="1.2.2"
 LINK="https://www.x.org/pub/individual/lib/libXres-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxres/-/tags"
 DEPS="libxext libx11 glibc xorgproto util-macros"
 
 

@@ -2,6 +2,7 @@
 NAME="libxss"
 VERS="1.2.4"
 LINK="https://www.x.org/pub/individual/lib/libXScrnSaver-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxscrnsaver/-/tags"
 DEPS="libxext libx11 glibc xorgproto"
 
 

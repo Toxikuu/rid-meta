@@ -2,6 +2,7 @@
 NAME="xrefresh"
 VERS="1.1.0"
 LINK="https://www.x.org/pub/individual/app/xrefresh-$VERS.tar.xz"
+UPST="https://gitlab.freedesktop.org/xorg/app/xrefresh/-/tags"
 DEPS="libx11 util-macros"
 
 

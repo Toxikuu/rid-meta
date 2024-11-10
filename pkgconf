@@ -2,6 +2,7 @@
 NAME="pkgconf"
 VERS="2.3.0"
 LINK="https://distfiles.ariadne.space/pkgconf/pkgconf-$VERS.tar.xz"
+UPST="https://github.com/pkgconf/pkgconf/tags"
 DEPS=""
 
 
