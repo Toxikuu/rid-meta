@@ -19,7 +19,8 @@ if ! grep -q "# go end" /etc/env ; then
     cat << EOF >> /etc/env
 
     # go
-    export GO_HOME=$GO_HOME
+    export GO_HOME="$GO_HOME"
+    export GOPATH="\$GO_HOME"
     pathappend "\$GO_HOME/bin"
     # go end
 EOF
