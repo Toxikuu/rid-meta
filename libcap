@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libcap"
-VERS="2.71"
+VERS="2.72"
 LINK="https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-$VERS.tar.xz"
 UPST="https://repology.org/project/libcap/information"
 DEPS=""
