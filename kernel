@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="kernel"
-VERS="6.11.7"
+VERS="6.11.8"
 # ver="${VERS//\.0/}"
 LINK="https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-$VERS.tar.gz"
 DOWN="https://raw.githubusercontent.com/Toxikuu/rid/refs/heads/master/defaults/kernelconfig"

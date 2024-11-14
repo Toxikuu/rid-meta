@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xprop"
-VERS="1.2.7"
+VERS="1.2.8"
 LINK="https://www.x.org/pub/individual/app/xprop-$VERS.tar.xz"
 UPST="https://gitlab.freedesktop.org/xorg/app/xprop/-/tags"
 DEPS="util-macros libx11"

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="picom"
-VERS="12.4"
+VERS="12.5"
 LINK="https://github.com/yshui/picom/archive/refs/tags/v$VERS.tar.gz"
 UPST="https://github.com/yshui/picom/tags"
 DEPS="dbus2 libepoxy xcb-util-image xcb-util-renderutil pixman libconfig pcre2 libev uthash"
