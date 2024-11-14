@@ -2,9 +2,7 @@
 NAME="gtk3"
 VERS="3.24.43"
 LINK="https://download.gnome.org/sources/gtk+/${VERS%.*}/gtk+-$VERS.tar.xz"
-# upstream must be (rarely) manually updated
-UPST="https://download.gnome.org/sources/gtk+/3.24/?C=M&O=D"
-SELE="#list > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(1) > a:nth-child(1)"
+# ive yet to find a functional upstream + selector combination because gnome enjoys making my life difficult
 DEPS="at-spi2-core gdk-pixbuf libepoxy pango"
 
 
