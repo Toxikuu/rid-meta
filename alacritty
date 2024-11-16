@@ -4,6 +4,7 @@ VERS="0.14.0"
 LINK="https://github.com/alacritty/alacritty/archive/refs/tags/v$VERS.tar.gz"
 UPST="https://github.com/alacritty/alacritty/tags"
 DEPS="rust ncurses libxcb freetype2 fontconfig libxi libxcursor libxkbcommon libxrandr desktop-file-utils"
+NEWS="The default build instructions disable Wayland support."
 
 
 IDIR=$(cat << '~fin.'
