@@ -11,11 +11,13 @@ IDIR=$(cat << '~fin.'
 
 mn   \
     -D udev=true          \
-    -D valgrind=disabled
+    -D valgrind=disabled  \
+    -D cairo-tests=disabled
 
 32mn \
     -D udev=true          \
-    -D valgrind=disabled
+    -D valgrind=disabled  \
+    -D cairo-tests=disabled
 
 ~fin.
 )
