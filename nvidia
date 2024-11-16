@@ -5,6 +5,7 @@ LINK=""
 DOWN="https://us.download.nvidia.com/XFree86/Linux-x86_64/$VERS/NVIDIA-Linux-x86_64-$VERS.run"
 UPST="https://github.com/NVIDIA/nvidia-installer/tags"
 DEPS=""
+NEWS="Must be rebuilt after kernel sources change, else X11 won't start. It's also recommended you restart after installing this package for the drivers to take effect."
 
 
 IDIR=$(cat << '~fin.'
@@ -43,8 +44,6 @@ cd NVIDIA-Linux-x86_64-$VERS
     --allow-installation-with-running-driver    \
     --kernel-install-path=/lib/modules/$kver/kernel/drivers/video ||
 die "NVIDIA's .run failed"
-
-echo "You should reboot for the nvidia drivers to take effect" >&2
 
 ~fin.
 )

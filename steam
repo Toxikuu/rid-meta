@@ -5,15 +5,13 @@ LINK="https://repo.steampowered.com/steam/pool/steam/s/steam/steam_$VERS.tar.gz"
 UPST="https://repo.steampowered.com/steam/pool/steam/s/steam/?C=M&O=D"
 SELE="#list > tbody > tr:nth-child(4) > td.link > a"
 DEPS="alsa-plugins curl dbus2 xorg-server libglvnd make-ca mesa nvidia vulkan-loader pulseaudio xdg-user-dirs libgpg-error"
+NEWS="Make sure you have namespaces support enabled in your kernel config."
 
 
-# namespaces support in kernel is necessary
 IDIR=$(cat << '~fin.'
 
 ln -sf /usr/bin/true steamdeps
 make install
-
-echo "Make sure you have namespaces support enabled in your kernel config." >&2
 
 ~fin.
 )
