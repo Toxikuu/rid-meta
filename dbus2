@@ -9,7 +9,6 @@ DEPS="dbus1 @xorg-libs"
 
 IDIR=$(cat << '~fin.'
 
-make distclean
 cm \
     --sysconfdir=/etc               \
     --localstatedir=/var            \
