@@ -12,15 +12,18 @@ DEPS=""
 
 IDIR=$(cat << '~fin.'
 
+[ -e /usr/src/linux/.config ] &&
+cp /usr/src/linux/.config $RIDSOURCES/kernelconfig
+
+[ -e /usr/src/linux-$VERS ] ||
+{
 mkdir -pv      /usr/src/linux-$VERS
 cd ..
 mo kernel-$VERS /usr/src/linux-$VERS
+}
 
-[ -e /usr/src/linux/.config ] &&
-cp /usr/src/linux/.config /usr/src/linux-$VERS/.config
-
-rm -rf    /usr/src/linux
-ln -sfv   /usr/src/linux-$VERS /usr/src/linux
+rm -rvf   /usr/src/linux
+ln -sfv   linux-$VERS /usr/src/linux
 cd        /usr/src/linux
 
 if [ ! -e .config ]; then
