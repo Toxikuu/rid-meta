@@ -8,8 +8,9 @@ DEPS="libx11 libxext libxrender"
 
 IDIR=$(cat << '~fin.'
 
-make PREFIX=/usr
-make PREFIX=/usr install
+sed -i 's/usr\/local/usr/' Makefile || die "sed failed"
+make                                || die "make failed"
+make install                        || die "make install failed"
 
 ~fin.
 )
