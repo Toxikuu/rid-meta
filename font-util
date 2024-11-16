@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="font-util"
+VERS="1.4.1"
+LINK="https://www.x.org/pub/individual/font/$NAME-$VERS.tar.xz"
+DEPS="util-macros glibc"
+
+
+IDIR=$(cat << '~fin.'
+
+cm $XORG_CONFIG
+
+~fin.
+)
+
+RDIR=$(cat << '~fin.'
+
+echo not implemented
+
+~fin.
+)
+
+UDIR=$(cat << '~fin.'
+~fin.
+)
