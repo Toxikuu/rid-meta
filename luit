@@ -1,7 +1,8 @@
 #!/bin/bash
 NAME="luit"
 VERS="2.0.20240910"
-LINK="https://invisible-mirror.net/archives/luit/luit-$VERS.tgz"
+ver="${VERS##*.}"
+LINK="https://invisible-mirror.net/archives/luit/luit-$ver.tgz"
 UPST="https://invisible-mirror.net/archives/luit/current/?C=M;O=D"
 SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-child(2) > a:nth-child(1)"
 DEPS="libx11"
