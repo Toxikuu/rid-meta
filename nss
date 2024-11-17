@@ -5,12 +5,12 @@ ver="${VERS//./_}"
 LINK="https://archive.mozilla.org/pub/security/nss/releases/NSS_${ver}_RTM/src/nss-$VERS.tar.gz"
 DOWN="https://www.linuxfromscratch.org/patches/blfs/svn/nss-standalone-1.patch"
 UPST="https://repology.org/project/nss/information"
-DEPS="nspr"
+DEPS="nspr sqlite"
 
 
 IDIR=$(cat << '~fin.'
 
-patch -Np1 -i "$RIDSOURCES"/nss-standalone-1.patch               ||
+patch -Np1 -i "$RIDSOURCES"/nss-standalone-1.patch ||
 die "Patch failed"
 
 sqlite3 --version > /dev/null 2>&1 || 
