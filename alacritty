@@ -8,10 +8,8 @@ NEWS="The default build instructions disable Wayland support."
 
 
 IDIR=$(cat << '~fin.'
-opts "x11" "wayland x11"
 
-FEATURES=$(echo "$OPTS" | tr ' ' ',')
-cargo build --release --no-default-features --features="$FEATURES"
+cargo build --release --no-default-features --features=x11
 
 install -v -D -m755 "target/release/alacritty" "/usr/bin/alacritty"
 install -v -D -m644 "extra/logo/alacritty-term.svg" "/usr/share/pixmaps/Alacritty.svg"
