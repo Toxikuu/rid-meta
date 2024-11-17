@@ -1,11 +1,15 @@
 #!/bin/bash
 NAME="freetype2"
 VERS="2.13.3"
-LINK="https://downloads.sourceforge.net/project/freetype/freetype2/$VERS/freetype-$VERS.tar.xz"
+LINK=""
 UPST="https://sourceforge.net/projects/freetype/files"
 DEPS="freetype1 harfbuzz"
 
 IDIR=$(cat << '~fin.'
+
+tar xvf "$RIDSOURCES"/freetype1-$VERS.tar &&
+cd  freetype-$VERS                        ||
+die "Failed to extract tarball"
 
 cm   --enable-freetype-config
 32cm --enable-freetype-config --with-brotli=no
