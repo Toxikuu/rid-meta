@@ -16,7 +16,6 @@ cm \
     --runstatedir=/run              \
     --disable-doxygen-docs          \
     --disable-xml-docs              \
-    --disable-static                \
     --with-systemduserunitdir=no    \
     --with-systemdsystemunitdir=no  \
     --docdir=/tmp/rid/trash         \
@@ -28,16 +27,26 @@ chmod -v      4750       /usr/libexec/dbus-daemon-launch-helper
 dbus-uuidgen --ensure
 ln -sfv /var/lib/dbus/machine-id /etc
 
-32cm \
-    --sysconfdir=/etc               \
-    --localstatedir=/var            \
-    --runstatedir=/run              \
-    --disable-doxygen-docs          \
-    --disable-xml-docs              \
-    --disable-static                \
-    --with-systemduserunitdir=no    \
-    --with-systemdsystemunitdir=no  \
-    --with-system-socket=/run/dbus/system_bus_socket
+CC="gcc -m32" CXX="g++ -m32"                     \
+PKG_CONFIG_PATH="/usr/lib32/pkgconfig"           \
+./configure --prefix=/usr                        \
+            --libdir=/usr/lib32                  \
+            --host=i686-pc-linux-gnu             \
+            --sysconfdir=/etc                    \
+            --localstatedir=/var                 \
+            --runstatedir=/run                   \
+            --disable-doxygen-docs               \
+            --disable-xml-docs                   \
+            --disable-static                     \
+            --with-systemduserunitdir=no         \
+            --with-systemdsystemunitdir=no       \
+            --with-system-socket=/run/dbus/system_bus_socket &&
+
+make  || die "Make failed"
+make DESTDIR=$PWD/DESTDIR install     &&
+cp -vR DESTDIR/usr/lib32/* /usr/lib32 &&
+rm -rf DESTDIR                        &&
+ldconfig  || die "Install failed"
 
 ~fin.
 )
