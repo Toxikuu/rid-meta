@@ -55,3 +55,37 @@ rm -vf /usr/share/bash-completion/completions/cargo
 sed -i '/    # rust/,/    # rust end/d' /etc/env
 
 }
+
+udir() {
+
+if [ "$VERS" = "9999" ]; then
+    export VERS="nightly"
+fi
+
+export CARGO_HOME=/opt/cargo
+export RUSTUP_HOME=/opt/rustup
+
+rustup update  $VERS &&
+rustup default $VERS &&
+rustup component add cargo clippy rustfmt ||
+die "Rustup failed"
+
+if [ -f /etc/bash_completion.d/cargo ]; then
+    mv -v /etc/bash_completion.d/cargo /usr/share/bash-completion/completions
+fi
+
+if ! grep -q "# rust end" /etc/env ; then
+    cat << EOF >> /etc/env
+
+    # rust
+    export CARGO_HOME="$CARGO_HOME"
+    export RUSTUP_HOME="$RUSTUP_HOME"
+    pathprepend "\$CARG_HOME/bin"
+    # rust end
+EOF
+fi
+
+chmod 777 $CARGO_HOME
+chmod 755 $RUSTUP_HOME
+
+}
