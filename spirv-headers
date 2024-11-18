@@ -6,20 +6,16 @@ UPST="https://github.com/KhronosGroup/SPIRV-Headers/tags"
 DEPS="cmake"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 CN
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

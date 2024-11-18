@@ -6,21 +6,17 @@ UPST="https://github.com/xiph/opus/releases/latest"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn -D docdir=/tmp/rid/trash
 32mn
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,21 +6,17 @@ UPST="https://gitlab.freedesktop.org/xdg/shared-mime-info/-/tags"
 DEPS="glib libxml2"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn -D update-mimedb=true
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/bin/update-mime-database \
         /usr/share/mime
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

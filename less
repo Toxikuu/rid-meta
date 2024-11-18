@@ -6,20 +6,16 @@ UPST="https://github.com/gwsw/less/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm --sysconfdir=/etc
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/bin/less{,echo,key}
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

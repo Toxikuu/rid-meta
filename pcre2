@@ -6,7 +6,7 @@ UPST="https://github.com/PCRE2Project/pcre2/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm \
     --docdir=/tmp/rid/trash         \
@@ -27,16 +27,12 @@ cm \
     --enable-pcre2grep-libbz2       \
     --enable-pcre2test-libreadline
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

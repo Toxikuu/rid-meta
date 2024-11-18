@@ -6,20 +6,16 @@ UPST="https://repology.org/project/xcursor-themes/information"
 DEPS="util-macros xcursorgen pkgconf"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/share/icons/{redglass,handhelds,whiteglass}
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

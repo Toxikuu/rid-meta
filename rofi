@@ -6,20 +6,16 @@ UPST="https://github.com/davatorium/rofi/tags"
 DEPS="pango cairo xcb-util xcb-util-wm xcb-util-cursor"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

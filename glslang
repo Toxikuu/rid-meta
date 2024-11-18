@@ -6,7 +6,7 @@ UPST="https://github.com/KhronosGroup/glslang/releases/latest"
 DEPS="cmake spirv-tools"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 CN \
   -D ALLOW_EXTERNAL_SPIRV_TOOLS=ON \
   -D GLSLANG_TESTS=OFF
@@ -15,16 +15,12 @@ CN \
   -D ALLOW_EXTERNAL_SPIRV_TOOLS=ON \
   -D GLSLANG_TESTS=OFF
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

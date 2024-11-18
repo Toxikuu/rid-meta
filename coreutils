@@ -7,7 +7,7 @@ UPST="https://ftp.gnu.org/gnu/coreutils/?C=M;O=D"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 patch -Np1 -i "$RIDSOURCES"/coreutils-$VERS-i18n-2.patch
 
@@ -18,16 +18,12 @@ mv -vf /usr/bin/chroot /usr/sbin
 mv -vf /usr/share/man/man1/chroot.1 /usr/share/man/man8/chroot.8
 sed -i 's/"1"/"8"/' /usr/share/man/man8/chroot.8
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

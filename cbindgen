@@ -6,21 +6,17 @@ UPST="https://github.com/mozilla/cbindgen/tags"
 DEPS="rust"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cargo build --release
 install -Dm755 target/release/cbindgen /usr/bin/
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/bin/cbindgen
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

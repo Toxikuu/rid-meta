@@ -6,20 +6,16 @@ UPST="https://gitlab.freedesktop.org/xorg/lib/libxcb-keysyms/-/tags"
 DEPS="libxcb"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/lib/libxcb-keysyms.*
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

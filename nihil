@@ -5,7 +5,7 @@ LINK=""
 DEPS="git iosevka obsidian vesktop xdotool i3 alacritty"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cd /dots
 git clone https://github.com/toxikuu/nihil.git && cd nihil
@@ -14,25 +14,20 @@ chown -vR $TARGET_USER:$TARGET_USER /dots/nihil
 rm -rvf $H/.config
 ln -svf /dots/nihil/config $H/.config
 
-{ [ -e $H/Vault/.obsidian/themes ] && cp -rvf extra/Obsidian/Nihil $H/Vault/.obsidian/themes/ } || true
+{ [ -e $H/Vault/.obsidian/themes ] && cp -rvf extra/Obsidian/Nihil $H/Vault/.obsidian/themes/ ; } || true
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf \
-    $H/.config          \
-    $H/.xinitrc         \
-    $H/.bashrc          \
-    $H/Wallpapers       \
-    $H/.bash_profile
+$H/.config          \
+$H/.xinitrc         \
+$H/.bashrc          \
+$H/Wallpapers       \
+$H/.bash_profile
 
 # i need to add some commands to move .bak back
+}
 
-~fin.
-)
 
-UDIR=$(cat << '~fin.'
-~fin.
-)

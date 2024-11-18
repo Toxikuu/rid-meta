@@ -6,24 +6,20 @@ UPST="https://gitlab.freedesktop.org/xorg/lib/libxcvt/-/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn
 32mn
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf                         \
     /usr/bin/cvt                \
     /usr/lib{,32}/libxcvt.so*   \
     /usr/include/libxcvt
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -7,21 +7,17 @@ SELE=".sub-label"
 DEPS="pcre2"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm --without-javascript --without-maximum-compile-warnings
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/share/swig
 rm -vf /bin/{,ccache-}swig
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,7 +6,7 @@ UPST="https://github.com/Vencord/Vesktop/tags"
 DEPS="nodejs cups pnpm gtk3" # cups necessary bc electron
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 pnpm i || die "pnpm failed to install dependencies"
 pnpm package --linux dir || die "pnpm build failed"
@@ -45,10 +45,9 @@ EOF
 
 chmod 644 /usr/share/applications/vesktop.desktop
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/bin/vesktop.sh \
         /usr/lib/vesktop    \
@@ -57,9 +56,6 @@ rm -rvf /usr/bin/vesktop.sh \
 echo "Not removing ~/.config/vesktop"
 echo "You may do so yourself if you like"
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

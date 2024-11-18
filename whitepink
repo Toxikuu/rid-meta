@@ -5,7 +5,7 @@ LINK=""
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mkdir -pv /dots && cd /dots
 
@@ -18,18 +18,14 @@ chown -Rv $TARGET_USER:$TARGET_USER whitepink
 ln -sfv /dots/whitepink/config $H/.config
 echo "You should now set up files in extra manually. (/dots/whitepink/extra)"
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf $H/.config  \
         /dots/whitepink
 echo "If you set up any files in /dots/nightdrive/extra, you're responsible for handling the removal of those."
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

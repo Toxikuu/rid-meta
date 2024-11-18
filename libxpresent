@@ -6,21 +6,17 @@ DEPS="libxfixes libxrandr libxext libx11 glibc xorgproto util-macros"
 UPST="https://gitlab.freedesktop.org/xorg/lib/libxpresent/-/tags"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm $XORG_CONFIG
 32cm $XORG_CONFIG_32
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/lib{,32}/libXpresent.{la,so*}
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

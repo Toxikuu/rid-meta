@@ -6,23 +6,19 @@ UPST="https://github.com/fribidi/fribidi/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf \
     /usr/lib/libfribidi.so* \
     /usr/include/fribidi    \
     /usr/bin/fribidi
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

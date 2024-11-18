@@ -7,22 +7,18 @@ SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-
 DEPS="libpsl make-ca libidn2"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm --sysconfdir=/etc \
    --with-ssl=openssl
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/bin/wget \
    /usr/share/man/man1/wget.1
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

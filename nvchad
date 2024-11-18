@@ -5,23 +5,19 @@ LINK=""
 DEPS="nvim git"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 git clone https://github.com/NvChad/starter /root/.config/nvim
 rm -rvf $H/.config/nvim && cp -rvf /root/.config/nvim $H/.config/nvim
 chown -vR $TARGET_USER:$TARGET_USER $H/.config/nvim
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf {/root,$H}/.config/nvim \
         {/root,$H}/.local/{state,share}/nvim
 
-~fin.
-)
+        }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

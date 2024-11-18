@@ -7,7 +7,7 @@ SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 ./configure --prefix=/usr           \
             --sysconfdir=/etc/lynx  \
@@ -21,18 +21,14 @@ make
 make install-full
 chgrp -v -R root /usr/share/doc/lynx-$VERS/lynx_doc
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/bin/lynx
 rm -rvf /etc/lynx \
   /usr/share/doc/lynx-$VERS
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

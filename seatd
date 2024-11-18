@@ -6,21 +6,17 @@ UPST="https://github.com/kennylevinsen/seatd/tags"
 DEPS="elogind"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/bin/seatd{,-launch} \
        /usr/lib/libseat.so*
 
-~fin.
-)
+   }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

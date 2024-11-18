@@ -6,21 +6,17 @@ UPST="https://github.com/FFmpeg/nv-codec-headers/releases/latest"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 make PREFIX=/usr install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/include/ffnvcodec
 rm -vf /usr/lib/pkgconfig/ffnvcodec.pc
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

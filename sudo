@@ -8,7 +8,7 @@ SELE=".gdoc-markdown > p:nth-child(6) > a:nth-child(2)"
 NEWS="Feel free to edit the sudo and badpass prompts in $RIDMETA/sudo and rebuild. Also, the default instructions disable year 2038 support."
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 NORMAL=$(tput sgr0)
 BOLD=$(tput bold)
@@ -65,16 +65,12 @@ session   include     system-session
 EOF
 chmod 644 /etc/pam.d/sudo
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

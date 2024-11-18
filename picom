@@ -6,20 +6,16 @@ UPST="https://github.com/yshui/picom/tags"
 DEPS="dbus2 libepoxy xcb-util-image xcb-util-renderutil pixman libconfig pcre2 libev uthash"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,21 +6,17 @@ UPST="https://gitlab.com/procps-ng/procps/-/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm  --docdir=/tmp/rid/trash \
     --disable-kill
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

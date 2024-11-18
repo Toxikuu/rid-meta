@@ -6,7 +6,7 @@ UPST="https://github.com/troglobit/sysklogd/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm --sysconfdir=/etc --runstatedir=/run --without-logger
 
@@ -27,16 +27,12 @@ secure_mode 2
 # End /etc/syslog.conf
 EOF
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/bin/sysklogd
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

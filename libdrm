@@ -7,7 +7,7 @@ SELE="body > table > tbody > tr:nth-child(4) > td:nth-child(2) > a"
 DEPS="libpciaccess"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn   \
     -D udev=true          \
@@ -19,16 +19,12 @@ mn   \
     -D valgrind=disabled  \
     -D cairo-tests=disabled
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

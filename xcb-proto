@@ -6,15 +6,14 @@ UPST="https://repology.org/project/xcb-proto/information"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 PYTHON=python3 ./configure $XORG_CONFIG
 make install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 PV=$(gv python)
 PV=${PV%.*}
@@ -22,9 +21,6 @@ PV=${PV%.*}
 rm -rvf /usr/share/xcb/ \
         /usr/lib/python$PV/site-packages/xcbgen
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

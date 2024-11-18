@@ -7,24 +7,20 @@ DEPS=""
 NEWS="If building 32-bit pulseaudio, ensure you have 32-bit check."
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 export docdir=/tmp/rid/trash
 cm
 32cm
 unset docdir
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf  /usr/bin/checkmk    \
         /usr/lib{,32}/libcheck.so*
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

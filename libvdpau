@@ -6,22 +6,18 @@ UPST="https://gitlab.freedesktop.org/vdpau/libvdpau/-/tags"
 DEPS="glibc libx11 libxext xorgproto"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn   -D documentation=false
 32mn -D documentation=false
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/{lib,include}/vdpau
 rm -vf /usr/lib{,32}/libvdpau.so*
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

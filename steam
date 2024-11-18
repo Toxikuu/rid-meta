@@ -8,24 +8,20 @@ DEPS="alsa-plugins curl dbus2 xorg-server libglvnd make-ca mesa nvidia vulkan-lo
 NEWS="Make sure you have namespaces support enabled in your kernel config."
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 ln -sf /usr/bin/true steamdeps
 make install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/lib/steam          \
         /usr/share/doc/steam    \
         /usr/bin/steam          \
         /usr/bin/steamdeps
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

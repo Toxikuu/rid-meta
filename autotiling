@@ -6,7 +6,7 @@ UPST="https://github.com/nwg-piotr/autotiling/tags"
 DEPS="python"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mkdir -pv     /usr/lib/autotiling
 cd     ..
@@ -25,17 +25,13 @@ EOF
 
 chmod +x /bin/autotiling.sh
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf  /bin/autotiling.sh
 rm -rvf /usr/lib/autotiling
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

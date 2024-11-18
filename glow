@@ -6,21 +6,17 @@ UPST="https://github.com/charmbracelet/glow/tags"
 DEPS="go"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 go build
 install -v -m 755 glow /usr/bin/glow
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/bin/glow
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

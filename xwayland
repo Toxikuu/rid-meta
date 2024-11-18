@@ -7,7 +7,7 @@ SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-
 DEPS="libxcvt libxfont2 libglvnd libxau wayland libdrm libxshmfence xtrans xorgproto dbus2 pixman wayland-protocols libepoxy mesa"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 sed -i '/install_man/,$d' meson.build &&
 
@@ -19,16 +19,12 @@ cat >> /etc/sysconfig/createfiles << "EOF"
 /tmp/.X11-unix dir 1777 root root
 EOF
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/bin/Xwayland
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

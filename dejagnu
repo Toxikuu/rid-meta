@@ -6,7 +6,7 @@ UPST="https://ftp.gnu.org/gnu/dejagnu/?C=M;O=D"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mkdir -v build
 cd       build
@@ -19,16 +19,12 @@ make install
 install -v -dm755  /usr/share/doc/dejagnu-$VERS
 install -v -m644   doc/dejagnu.{html,txt} /usr/share/doc/dejagnu-$VERS
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/bin/{dejagnu,runtest}
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

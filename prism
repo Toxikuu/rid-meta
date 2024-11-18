@@ -8,7 +8,7 @@ UPST="https://github.com/PrismLauncher/PrismLauncher/releases/latest"
 DEPS="krb5"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 tar xvf "$RIDSOURCES"/PrismLauncher-Linux-Qt6-Portable-$VERS.tar.gz
 cd ..
@@ -29,17 +29,13 @@ Keywords=minecraft;client;launcher;prism;
 StartupNotify=false
 EOF
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf  /usr/share/applications/prism.desktop
 rm -rvf /usr/src/prism
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

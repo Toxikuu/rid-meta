@@ -6,15 +6,14 @@ UPST="https://gitlab.freedesktop.org/wayland/wayland/-/tags"
 DEPS="libxml2"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn   -D documentation=false
 32mn -D documentation=false
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf \
     /usr/bin/wayland-scanner       \
@@ -26,9 +25,6 @@ rm -vf \
 rm -rvf /usr/share/wayland
     
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,7 +6,7 @@ UPST="https://repology.org/project/libwebp/information"
 DEPS="libjpeg-turbo libpng libtiff" # also sdl12-compat
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm \
   --enable-libwebpmux     \
@@ -15,10 +15,9 @@ cm \
   --enable-libwebpextras  \
   --enable-swap-16bit-csp
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /bin/{cwebp,dwebp,gif2webp,img2webp,vwebp,webpinfo,webpmux}
 rm -vf /usr/lib/libwebp.{la,so*}          \
@@ -28,9 +27,6 @@ rm -vf /usr/lib/libwebp.{la,so*}          \
 
 rm -rvf /usr/include/webp
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

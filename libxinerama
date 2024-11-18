@@ -6,21 +6,17 @@ UPST="https://gitlab.freedesktop.org/xorg/lib/libxinerama/-/tags"
 DEPS="libxext libx11 glibc xorgproto util-macros"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm $XORG_CONFIG
 32cm $XORG_CONFIG_32
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/lib{,32}/libXinerama.{la,so*}
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,7 +6,7 @@ UPST="https://github.com/Floorp-Projects/Floorp/tags"
 DEPS="gtk3"  # floorp has a bunch of dependencies that i dont feel like finding rn
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 rm -rf /usr/src/floorp-$VERS
 
@@ -25,16 +25,12 @@ EOF
 
 chmod +x /usr/bin/floorp.sh
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

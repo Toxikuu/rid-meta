@@ -6,7 +6,7 @@ UPST="https://github.com/lz4/lz4/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 make BUILD_STATIC=no PREFIX=/usr
 make BUILD_STATIC=no PREFIX=/usr install
@@ -17,19 +17,15 @@ CC="gcc -m32" make BUILD_STATIC=no
 make BUILD_STATIC=no PREFIX=/usr LIBDIR=/usr/lib32 DESTDIR=$RIDDEST install &&
 cp -a $RIDDEST/usr/lib32/* /usr/lib32/
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf \
     /usr/bin/lz4{,c,cat}    \
     /usr/bin/unlz4          \
     /usr/lib{,32}/liblz4.so*
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

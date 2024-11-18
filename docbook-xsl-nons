@@ -8,7 +8,7 @@ SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-
 DEPS="libxml2"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 patch -Np1 -i "$RIDSOURCES"/docbook-xsl-nons-$VERS-stack_fix-1.patch
 
@@ -85,17 +85,13 @@ xmlcatalog --noout --add "rewriteURI" \
            "/usr/share/xml/docbook/xsl-stylesheets-nons-$VERS" \
     /etc/xml/catalog
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/share/xml/docbook/xsl-stylesheets-nons-$VERS \
         /usr/share/doc/docbook-xsl-nons-$VERS
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

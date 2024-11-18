@@ -6,7 +6,7 @@ UPST="https://gitlab.com/man-db/man-db/-/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm  --docdir=/tmp/rid/trash         \
     --sysconfdir=/etc               \
@@ -18,16 +18,12 @@ cm  --docdir=/tmp/rid/trash         \
     --with-systemdtmpfilesdir=      \
     --with-systemdsystemunitdir=
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

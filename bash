@@ -6,7 +6,7 @@ UPST="https://ftp.gnu.org/gnu/bash/?C=M;O=D"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 ./configure --prefix=/usr             \
             --without-bash-malloc     \
@@ -22,16 +22,12 @@ rm -vf /usr/bin/bashbug
 echo "You should now run:" 
 echo "exec /usr/bin/bash --login"
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

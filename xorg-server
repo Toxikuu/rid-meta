@@ -7,7 +7,7 @@ SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-
 DEPS="libxcvt pixman xkeyboard-config dbus2 elogind libepoxy libunwind nettle xcb-util-keysyms xcb-util-image xcb-util-renderutil xcb-util-wm font-util"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn \
     --localstatedir=/var    \
@@ -22,16 +22,12 @@ cat >> /etc/sysconfig/createfiles << "EOF"
 /tmp/.X11-unix dir 1777 root root
 EOF
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

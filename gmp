@@ -6,7 +6,7 @@ UPST="https://ftp.gnu.org/gnu/gmp/?C=M;O=D"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 ./configure --prefix=/usr    \
             --enable-cxx     \
@@ -55,16 +55,12 @@ cp -Rv DESTDIR/usr/lib32/* /usr/lib32
 cp -Rv DESTDIR/usr/include/m32/* /usr/include/m32/
 rm -rf DESTDIR
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/lib{,32}/libgmp{,xx}.so*
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

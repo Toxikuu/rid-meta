@@ -6,7 +6,7 @@ UPST="https://github.com/lfs-book/make-ca/tags"
 DEPS="p11-kit libtasn1 nss"
 
 
-IDIR=$(cat <<~fin.
+idir() {
 
 cat >> make-ca << "EOF"
 ln -svf /etc/pki/tls/certs/ca-bundle.crt /etc/ssl/certs/ca-certificates.crt
@@ -17,18 +17,14 @@ install -vdm755 /etc/ssl/local
 
 /usr/sbin/make-ca -g
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/bin/make-ca            \
         /etc/ssl/{certs,local}      \
         /etc/pki/{nssdb,anchors,tls/{certs,java}}
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

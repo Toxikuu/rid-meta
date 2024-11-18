@@ -6,21 +6,17 @@ UPST="http://download.savannah.gnu.org/releases/acl/?C=M&O=D"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm --docdir=/tmp/rid/trash
 32cm --libexecdir=/usr/lib32
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

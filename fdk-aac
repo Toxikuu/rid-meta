@@ -6,20 +6,16 @@ UPST="https://sourceforge.net/projects/opencore-amr/files"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/include/fdk-aac /usr/lib/libfdk-aac.*
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

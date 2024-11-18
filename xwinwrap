@@ -6,22 +6,18 @@ UPST="https://github.com/mmhobi7/xwinwrap/tags"
 DEPS="libx11 libxext libxrender"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 sed -i 's/usr\/local/usr/' Makefile || die "sed failed"
 make                                || die "make failed"
 make install                        || die "make install failed"
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /bin/xwinwrap
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

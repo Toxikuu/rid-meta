@@ -7,21 +7,17 @@ SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-
 DEPS="cmake"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 CN -D BUILD_STATIC=OFF
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/include/uchardet /usr/lib/libuchardet.so*
 rm -vf /usr/bin/uchardet
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

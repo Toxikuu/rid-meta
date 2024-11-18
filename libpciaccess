@@ -6,21 +6,17 @@ UPST="https://gitlab.freedesktop.org/xorg/lib/libpciaccess/-/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn
 32mn
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/lib{,32}/libpciaccess.so*
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

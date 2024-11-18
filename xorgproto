@@ -6,21 +6,17 @@ UPST="https://repology.org/project/xorgproto/information"
 DEPS="util-macros"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn
 mv -v /usr/share/doc/xorgproto{,-2024.1}
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/share/doc/xorgproto-2024.1/
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

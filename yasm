@@ -7,15 +7,14 @@ SELE="#latest-release-130"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 sed -i 's#) ytasm.*#)#' Makefile.in &&
 cm
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf \
     /usr/include/libyasm                \
@@ -23,9 +22,6 @@ rm -rvf \
     /usr/bin/yasm                       \
     /usr/lib/libyasm.a
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -8,7 +8,7 @@ SELE="#latest"
 DEPS="curl libarchive libuv nghttp2"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 sed -i '/"lib64"/s/64//' Modules/GNUInstallDirs.cmake &&
 
@@ -23,16 +23,12 @@ sed -i '/"lib64"/s/64//' Modules/GNUInstallDirs.cmake &&
 make
 make DESTDIR= install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,7 +6,7 @@ UPST="https://github.com/haasn/libplacebo/tags"
 DEPS="ffmpeg glad"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 sed -e "20s/$/,/"                                         \
     -e "21i cxx.find_library('glslang', required: false)" \
@@ -16,17 +16,13 @@ mn \
     -D tests=false  \
     -D demos=false
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/include/libplacebo \
         /usr/lib/libplacebo.so*
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

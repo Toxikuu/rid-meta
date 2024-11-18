@@ -6,15 +6,14 @@ UPST="https://pypi.org/project/setuptools/"
 DEPS="python"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
 pip3 install --no-index --find-links dist setuptools
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 PV=$(gv python)
 PV=${PV%.*}
@@ -23,9 +22,6 @@ rm -rvf /usr/lib/python$PV/site-packages/setuptools*       \
         /usr/lib/python$PV/site-packages/_distutils_hack   \
         /usr/lib/python$PV/site-packages/pkg_resources
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

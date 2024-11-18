@@ -6,7 +6,7 @@ UPST="https://github.com/lu-zero/cargo-c/tags"
 DEPS="rust"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 curl -LO https://github.com/lu-zero/cargo-c/releases/download/v$VERS/Cargo.lock
 [ ! -e /usr/include/libssh2.h ] || export LIBSSH2_SYS_USE_PKG_CONFIG=1    &&
@@ -16,17 +16,13 @@ cargo build --release
 
 install -vm755 target/release/cargo-{capi,cbuild,cinstall,ctest} /usr/bin/
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf \
     /usr/bin/cargo-c{api,test,build,install}
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

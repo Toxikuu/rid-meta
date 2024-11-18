@@ -7,20 +7,16 @@ SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/bin/m4
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

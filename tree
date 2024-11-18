@@ -5,21 +5,15 @@ LINK="https://gitlab.com/OldManProgrammer/unix-tree/-/archive/$VERS/unix-tree-$V
 UPST="https://gitlab.com/OldManProgrammer/unix-tree/-/tags"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 make
 make PREFIX=/usr install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/bin/tree
 
-~fin.
-)
-
-UDIR=$(cat << '~fin.'
-~fin.
-)
+}

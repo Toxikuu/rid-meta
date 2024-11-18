@@ -7,22 +7,18 @@ SELE="tr.odd:nth-child(4) > td:nth-child(2) > a:nth-child(1)"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf \
     /usr/bin/nasm   \
     /usr/bin/ndisasm
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

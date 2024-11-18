@@ -6,21 +6,17 @@ UPST="https://gitlab.freedesktop.org/xorg/lib/libxdmcp/-/tags"
 DEPS="xorgproto"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm $XORG_CONFIG --docdir=/tmp/rid/trash
 32cm $XORG_CONFIG
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/lib{,32}/libXdmcp.*
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,21 +6,17 @@ UPST="https://gitlab.freedesktop.org/xorg/lib/libxkbfile/-/tags"
 DEPS="libx11 xorgproto glibc util-macros"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm $XORG_CONFIG
 32cm $XORG_CONFIG_32
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

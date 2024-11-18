@@ -7,7 +7,7 @@ SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 sed -i '/MV.*old/d' Makefile.in
 sed -i '/{OLDSUFF}/c:' support/shlib-install
@@ -33,18 +33,14 @@ make SHLIB_LIBS="-lncursesw" DESTDIR=$PWD/DESTDIR install
 cp -Rv DESTDIR/usr/lib32/* /usr/lib32
 rm -rf DESTDIR
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/include/readline           \
         /usr/lib{,32}/libhistory.so*    \
         /usr/lib{,32}/libreadline.so*
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

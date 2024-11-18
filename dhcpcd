@@ -7,7 +7,7 @@ UPST="https://github.com/NetworkConfiguration/dhcpcd/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 export RIDBUILD=false
 cm  --sysconfdir=/etc            \
@@ -21,16 +21,12 @@ tar xvf "$RIDSOURCES"/blfs-bootscripts-20240913.tar*
 cd blfs-bootscripts-20240913
 make install-service-dhcpcd
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

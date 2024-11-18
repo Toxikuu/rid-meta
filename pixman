@@ -6,21 +6,17 @@ UPST="https://gitlab.freedesktop.org/pixman/pixman/-/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/include/pixman-1
 rm -vf /usr/lib/libpixman-1.*
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

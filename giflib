@@ -7,7 +7,7 @@ UPST="https://sourceforge.net/projects/giflib/files"
 DEPS="xmlto"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 patch -Np1 -i "$RIDSOURCES"/giflib-$VERS-upstream_fixes-1.patch
 cp pic/gifgrid.gif doc/giflib-logo.gif
@@ -22,18 +22,14 @@ find doc \( -name Makefile\* -o -name \*.1 \
 install -v -dm755 /usr/share/doc/giflib-$VERS &&
 cp -v -R doc/* /usr/share/doc/giflib-$VERS
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /bin/gif{2rgb,build,clrmp,fix,text,tool}    \
         /lib/libgif.so*                             \
         /usr/share/doc/giflib-$VERS
         
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

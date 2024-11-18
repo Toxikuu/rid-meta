@@ -6,21 +6,17 @@ UPST="https://github.com/jordansissel/xdotool/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 make WITHOUT_RPATH_FIX=1
 make PREFIX=/usr INSTALLMAN=/usr/share/man install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/bin/xdotool /usr/lib/libxdo.so*
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

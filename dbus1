@@ -8,7 +8,7 @@ DEPS=""
 
 # dbus pass 1
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm \
     --sysconfdir=/etc               \
@@ -48,16 +48,12 @@ cp -vR DESTDIR/usr/lib32/* /usr/lib32 &&
 rm -rf DESTDIR                        &&
 ldconfig  || die "Install failed"
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

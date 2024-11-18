@@ -6,21 +6,17 @@ UPST="https://github.com/rockdaboot/$NAME/tags"
 DEPS="libidn2 libunistring"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn
 32mn
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

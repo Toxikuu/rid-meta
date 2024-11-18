@@ -6,21 +6,17 @@ UPST="https://github.com/xiph/vorbis/tags"
 DEPS="libogg"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm
 32cm
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

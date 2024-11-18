@@ -6,20 +6,16 @@ UPST="https://ftp.gnu.org/gnu/gzip/?C=M;O=D"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

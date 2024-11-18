@@ -7,7 +7,7 @@ UPST="https://dbus.freedesktop.org/releases/dbus/?C=M;O=D"
 DEPS="dbus1 @xorg-libs"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 tar xvf "$RIDSOURCES"/dbus1-$VERS.tar &&
 cd dbus-$VERS                         ||
 die "Failed to extract tarball"
@@ -31,16 +31,12 @@ tar xf "$RIDSOURCES"/blfs-bootscripts-20240913.tar.xz
 cd blfs-bootscripts-20240913
 make install-dbus
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

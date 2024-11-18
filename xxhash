@@ -6,21 +6,17 @@ UPST="https://github.com/Cyan4973/xxHash/releases/latest"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 make PREFIX=/usr
 make PREFIX=/usr install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/lib/libxxhash.so*
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

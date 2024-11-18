@@ -6,7 +6,7 @@ UPST="https://github.com/linux-pam/linux-pam/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn \
     -D docs=disabled    \
@@ -70,16 +70,12 @@ session     required        pam_deny.so
 # End /etc/pam.d/other
 EOF
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo PAM removal not supported
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

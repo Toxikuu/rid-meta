@@ -6,24 +6,20 @@ UPST="https://github.com/webmproject/libvpx/tags"
 DEPS="yasm which"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 sed -i 's/cp -p/cp/' build/make/Makefile &&
 
 cm --enable-shared
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/bin/vpx{de,en}c    \
         /usr/lib/libvpx.so*     \
         /usr/include/vpx
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

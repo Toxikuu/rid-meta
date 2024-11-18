@@ -7,22 +7,18 @@ SELE="#downloads > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 sed -i 's:\\\${:\\\$\\{:' intltool-update.in
 cm
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/share/intltool
 rm -vf /usr/bin/intltool{,ize,-update,-prepare,-merge,-extract}
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

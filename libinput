@@ -6,7 +6,7 @@ UPST="https://gitlab.freedesktop.org/libinput/libinput/-/tags"
 DEPS="libevdev mtdev"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn \
     -D debug-gui=false        \
@@ -14,16 +14,12 @@ mn \
     -D libwacom=false         \
     -D udev-dir=/usr/lib/udev
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

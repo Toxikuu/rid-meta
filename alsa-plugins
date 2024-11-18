@@ -6,21 +6,17 @@ UPST="https://github.com/alsa-project/alsa-plugins/tags"
 DEPS="alsa-lib"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm   --sysconfdir=/etc --disable-libav
 32cm --sysconfdir=/etc --disable-libav
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -7,22 +7,18 @@ SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm
 rm -vf /usr/include/event.h
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf  /usr/lib/libev.{l,}a \
         /usr/lib/libev.so*
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

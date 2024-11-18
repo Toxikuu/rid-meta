@@ -6,20 +6,16 @@ UPST="https://gitlab.freedesktop.org/xorg/app/xauth/-/tags"
 DEPS="libxmu libxau libxext libx11 util-macros"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm $XORG_CONFIG
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

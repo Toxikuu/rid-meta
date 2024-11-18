@@ -7,7 +7,7 @@ SELE="body > table:nth-child(13) > tbody:nth-child(1) > tr:nth-child(3) > td:nth
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 ./configure --prefix=/usr    \
             --disable-static \
@@ -19,16 +19,12 @@ make install
 mkdir -pv /usr/share/gdb/auto-load/usr/lib
 mv -v /usr/lib/libisl*gdb.py /usr/share/gdb/auto-load/usr/lib
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/lib/libisl.so*
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

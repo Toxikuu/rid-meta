@@ -6,7 +6,7 @@ UPST="https://github.com/tytso/e2fsprogs/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm --sysconfdir=/etc    \
    --enable-elf-shlibs  \
@@ -20,10 +20,9 @@ rm -fv /usr/lib/{libcom_err,libe2p,libext2fs,libss}.a
 gunzip -v /usr/share/info/libext2fs.info.gz
 install-info --dir-file=/usr/share/info/dir /usr/share/info/libext2fs.info
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/bin/{badblocks,chattr,compile_et,debugfs,dumpe2fs,e2freefrag,e2fsck,e2image,e2label,e2mmpstatus,e2scrub,e2scrub_all,e2undo,e4crypt,e4defrag,filefrag,fsck.ext2,fsck.ext3,fsck.ext4,logsave,lsattr,mk_cmds,mke2fs,mkfs.ext2,mkfs.ext3,mkfs.ext4,mklost+found,resize2fs,tune2fs}
 
@@ -38,9 +37,6 @@ rm -rvf /usr/lib/e2fsprogs      \
         /usr/{share,include}/et \
         /usr/{share,include}/ss
         
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,7 +6,7 @@ UPST="https://github.com/ImageMagick/ImageMagick/releases/latest"
 DEPS="cairo fontconfig freetype2 glib lcms2 libpng libxext librsvg libtiff libwebp libjpeg-turbo pango"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm \
   --sysconfdir=/etc   \
@@ -25,16 +25,12 @@ cm \
 
 rm -vf /etc/ImageMagick-${VERS%.*.*}/type-{apple,dejavu,windows,ghostscript,urw-base35}.xml
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -7,7 +7,7 @@ SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-
 DEPS="freetype2"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm  --sysconfdir=/etc    \
     --localstatedir=/var \
@@ -18,10 +18,9 @@ cm  --sysconfdir=/etc    \
         --localstatedir=/var \
         --disable-docs
 
-~fin.
-)
+    }
 
-RDIR=$(cat << '~fin.'
+    rdir() {
 
 pushd /usr/bin
 rm -vf \
@@ -43,9 +42,6 @@ rm -rvf \
     /var/cache/fontconfig   \
     /usr/share/xml/fontconfig 
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

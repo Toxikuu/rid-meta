@@ -6,21 +6,17 @@ UPST="https://gitlab.freedesktop.org/xorg/app/xinit/-/tags"
 DEPS="libx11 util-macros"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm $XORG_CONFIG --with-xinitdir=/etc/X11/app-defaults
 ldconfig
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /bin/{xinit,startx}
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

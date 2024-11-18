@@ -6,7 +6,7 @@ UPST="https://github.com/harfbuzz/harfbuzz/tags"
 DEPS="freetype1"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn   -D graphite2=disabled
 32mn -D graphite2=disabled \
@@ -14,16 +14,12 @@ mn   -D graphite2=disabled
      -D cairo=disabled     \
      -D gobject=disabled
 
-~fin.
-)
+ }
 
-RDIR=$(cat << '~fin.'
+ rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

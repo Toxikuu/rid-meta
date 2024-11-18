@@ -7,7 +7,7 @@ SELE="tr.even:nth-child(2) > td:nth-child(1)"
 DEPS="libpsl"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm --with-openssl                \
    --with-ca-path=/etc/ssl/certs \
@@ -17,16 +17,12 @@ cm --with-openssl                \
      --with-ca-path=/etc/ssl/certs \
      --without-brotli
 
-~fin.
-)
+ }
 
-RDIR=$(cat << '~fin.'
+ rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,26 +6,22 @@ UPST="https://github.com/xiph/flac/releases/latest"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm   --disable-thorough-tests \
      --docdir=/tmp/rid/trash
 
 32cm --disable-thorough-tests
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/bin/{meta,}flac   \
         /usr/include/FLAC{,++} \
         /usr/lib{,32}/libFLAC* \
         /usr/share/doc/flac-$VERS
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

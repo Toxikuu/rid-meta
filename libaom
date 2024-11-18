@@ -6,7 +6,7 @@ UPST="https://repology.org/project/aom/information"
 DEPS="yasm"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 CN                  \
   -D ENABLE_DOCS=no \
@@ -14,16 +14,12 @@ CN                  \
 
 rm -vf /usr/lib/libaom.a
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/include/aom /usr/lib/libaom.so*
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

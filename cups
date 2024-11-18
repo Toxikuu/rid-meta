@@ -6,7 +6,7 @@ UPST="https://github.com/OpenPrinting/cups/tags"
 DEPS="gnutls"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 useradd -c "Print Service User" -d /var/spool/cups -g lp -s /bin/false -u 9 lp
 groupadd -g 19 lpadmin
@@ -38,16 +38,12 @@ EOF
 # make install-cups from blfs-bootscripts is not used here because i dont use cups much
 # i just need cups to satisfy an electron library dependency for discord
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

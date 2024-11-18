@@ -7,20 +7,16 @@ UPST="https://gitlab.gnome.org/GNOME/pango/-/tags"
 DEPS="fontconfig freetype2 fribidi glib cairo libx11 libxrender libxft"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn --wrap-mode=nofallback
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

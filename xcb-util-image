@@ -6,20 +6,16 @@ UPST="https://gitlab.freedesktop.org/xorg/lib/libxcb-image/-/tags"
 DEPS="xcb-util"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/lib/libxcb-image.*
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

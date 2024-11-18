@@ -6,7 +6,7 @@ UPST="https://github.com/KhronosGroup/SPIRV-Headers/tags"
 DEPS="cmake spirv-headers"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 
 CN \
@@ -19,16 +19,12 @@ CN \
   -D SPIRV_TOOLS_BUILD_STATIC=OFF   \
   -D SPIRV-Headers_SOURCE_DIR=/usr
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

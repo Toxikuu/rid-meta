@@ -6,26 +6,22 @@ UPST="https://github.com/BurntSushi/ripgrep/tags"
 DEPS="rust"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 RUSTFLAGS="-C target-cpu=native" \
 cargo build --release
 
 install -v -Dm755 "target/release/rg" "/usr/bin/rg"
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf \
     /usr/bin/rg                 \
     /usr/share/man/man1/rg.1    \
     /usr/share/bash-completion/completions/rg
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

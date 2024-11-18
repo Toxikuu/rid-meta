@@ -6,16 +6,15 @@ UPST="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/latest"
 DEPS="cmake yasm"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 CN \
   -D ENABLE_STATIC=FALSE              \
   -D CMAKE_INSTALL_DEFAULT_LIBDIR=lib
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf \
     /usr/bin/cjpeg          \
@@ -29,9 +28,6 @@ rm -vf \
 
 rm -rvf /usr/share/doc/libjpeg-turbo-$VERS
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

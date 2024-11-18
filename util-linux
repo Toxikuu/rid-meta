@@ -7,7 +7,7 @@ UPST="https://repology.org/project/util-linux/information"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm \
     ADJTIME_PATH=/var/lib/hwclock/adjtime \
@@ -49,16 +49,12 @@ mv /usr/bin/ncursesw6-config{,.tmp}
 
 mv /usr/bin/ncursesw6-config{.tmp,}
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,21 +6,17 @@ UPST="https://github.com/rust-lang/rust-bindgen/tags"
 DEPS="llvm rust"  # llvm with clang
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cargo build --release
 install -Dm755 target/release/bindgen /usr/bin/
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/bin/bindgen
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,20 +6,16 @@ UPST="https://github.com/strace/strace/releases/latest"
 DEPS="glibc" # optionally, libunwind
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm --enable-bundled
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

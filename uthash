@@ -6,22 +6,18 @@ UPST="https://github.com/troydhanson/uthash/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 for h in src/*.h; do
     install -v -m644 $h /usr/include/
 done
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

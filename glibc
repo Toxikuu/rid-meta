@@ -7,7 +7,7 @@ UPST="https://ftp.gnu.org/gnu/glibc/?C=M;O=D"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 patch -Np1 -i "$RIDSOURCES"/glibc-$VERS-fhs-1.patch
 
@@ -123,17 +123,15 @@ die "Multilib toolchain failed sanity check"
 
 rm -v dummy.c a.out
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
+udir() {
 
 patch -Np1 -i "$RIDSOURCES"/glibc-$VERS-fhs-1.patch
 
@@ -186,5 +184,4 @@ readelf -l a.out | grep '/ld-linux'
 echo "Command exited with: $?"
 rm -vf dummy.c a.out
 
-~fin.
-)
+}

@@ -6,22 +6,15 @@ UPST="https://github.com/vcrhonek/$NAME/tags"
 DEPS=""
 
 # cant use cm because no make
-IDIR=$(cat << '~fin.'
+idir() {
 
 ./configure --prefix=/usr --disable-blacklist
 make install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/share/hwdata
 
-~fin.
-)
-
-UDIR=$(cat << '~fin.'
-
-~fin.
-)
+}

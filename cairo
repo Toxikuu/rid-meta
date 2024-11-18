@@ -7,22 +7,18 @@ UPST="https://gitlab.freedesktop.org/cairo/cairo/-/tags"
 DEPS="libpng pixman fontconfig glib bash freetype2 glib libx11 libxcb libxext libxrender libpng pixman"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 patch -Np1 -i "$RIDSOURCES"/cairo-$VERS-upstream_fixes-1.patch
 
 mn
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,21 +6,17 @@ UPST="https://github.com/$NAME/$NAME/tags"
 DEPS="flac opus libvorbis alsa-lib"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm   --disable-mpeg --docdir=/tmp/rid/trash 
 32cm --disable-mpeg
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -7,24 +7,20 @@ SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-
 DEPS="glib"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn
 
 install -vdm755 /usr/share/applications &&
 update-desktop-database /usr/share/applications
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/bin/desktop-file-{edit,install,validate} \
        /usr/bin/update-desktop-database
 
-~fin.
-)
+   }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

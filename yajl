@@ -9,7 +9,7 @@ UPST="https://github.com/lloyd/yajl/tags"
 DEPS="cmake"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 patch -Np1 -i "$RIDSOURCES"/yajl-2.1.0-CVE-2017-16516.patch &&
 patch -Np1 -i "$RIDSOURCES"/yajl-2.1.0-CVE-2022-24795.patch &&
@@ -18,17 +18,11 @@ die "sed failed"
 
 CN
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf  /usr/lib/libyajl.so* \
         /usr/lib/libyajl_s.a
 
-~fin.
-)
-
-UDIR=$(cat << '~fin.'
-~fin.
-)
+}

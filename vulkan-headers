@@ -6,14 +6,13 @@ UPST="https://github.com/KhronosGroup/Vulkan-Headers/tags"
 DEPS="cmake"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 CN
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf \
     /usr/include/vk_video \
@@ -21,9 +20,6 @@ rm -rvf \
     /usr/share/vulkan     \
     /usr/share/cmake/VulkanHeaders
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

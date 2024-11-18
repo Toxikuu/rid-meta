@@ -7,7 +7,7 @@ SELE="div.sect1:nth-child(1) > div:nth-child(2) > div:nth-child(1) > p:nth-child
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 RIDBUILD=false        \
 cm                    \
@@ -30,16 +30,12 @@ cm                    \
   --disable-asyncdns  \
   --disable-timestamping
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

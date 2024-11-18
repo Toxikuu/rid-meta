@@ -6,21 +6,17 @@ UPST="https://gitlab.freedesktop.org/xorg/lib/libxrandr/-/tags"
 DEPS="libxext libxrender libx11 glibc util-macros xorgproto"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm $XORG_CONFIG
 32cm $XORG_CONFIG_32
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/lib{,32}/libXrandr.{la,so*}
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

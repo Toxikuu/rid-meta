@@ -7,21 +7,17 @@ SELE=".current-dir"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 make -f unix/Makefile generic CC="gcc -std=gnu89"
 make prefix=/usr MANDIR=$RIDTRASH -f unix/Makefile install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /bin/zip{,cloak,note,split}
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -7,20 +7,16 @@ SELE="h1.d-inline"
 DEPS="llvm spirv-llvm-translator"  # llvm with clang
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 CN
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/{share,include}/clc
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

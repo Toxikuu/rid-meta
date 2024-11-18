@@ -6,20 +6,16 @@ UPST="https://github.com/libass/libass/tags"
 DEPS="freetype2 fribidi nasm fontconfig"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/include/ass /usr/lib/libass.so*
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

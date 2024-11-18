@@ -6,21 +6,17 @@ UPST="https://gitlab.freedesktop.org/xorg/lib/libxcb-wm/-/tags"
 DEPS="libxcb"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf  /usr/lib/libxcb-ewmh.* \
         /usr/lib/libxcb-icccm.*
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

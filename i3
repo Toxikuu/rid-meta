@@ -6,22 +6,18 @@ UPST="https://github.com/i3/i3/tags"
 DEPS="xcb-util-keysyms xcb-util-wm libev yajl startup-notification pango perl xcb-util-cursor xcb-util-xrm libxkbcommon"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn \
     -D mans=false   \
     -D docs=false
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

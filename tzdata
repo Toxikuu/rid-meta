@@ -9,7 +9,7 @@ DEPS="glibc"  # provides tzselect zic etc
 NEWS='To change your time zone, rebuild tzdata with the desired zone set in $TZ.'
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cp -vf "$RIDSOURCES"/tzdata$VERS.tar.gz .
 tar xvf tzdata$VERS.tar.gz
@@ -31,16 +31,12 @@ unset ZONEINFO
 ln -sfv /usr/share/zoneinfo/$TZ /etc/localtime
 echo "Set timezone to $TZ"
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

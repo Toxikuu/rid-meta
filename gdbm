@@ -7,21 +7,17 @@ SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm --enable-libgdbm-compat
 32cm --enable-libgdbm-compat
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

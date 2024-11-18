@@ -6,7 +6,7 @@ DOWN='https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds/4338/artifacts
 DEPS="unzip xdg-utils desktop-file-utils"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 ln -sfv "$RIDSOURCES"/'artifacts?artifactName=linux.main&api-version=5.0&%24format=zip' "$RIDSOURCES"/olympus.zip
 cp -vf "$RIDSOURCES"/olympus.zip .
@@ -20,17 +20,13 @@ yes "y" | ./install.sh
 
 mo /usr/share/applications/{O,o}lympus.desktop
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/lib/olympus
 rm -vf /usr/bin/olympus
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

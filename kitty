@@ -7,7 +7,7 @@ UPST="https://github.com/kovidgoyal/kitty/releases/latest"
 DEPS="imagemagick go simde python freetype2 fontconfig libx11 libxkbcommon libxcursor libxi dbus2 lcms2 xxhash libxinerama libxrandr symbols"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 export CGO_CPPFLAGS="${CPPFLAGS}"
 export CGO_CFLAGS="${CFLAGS}"
@@ -42,16 +42,12 @@ Terminal=false
 Categories=System;TerminalEmulator;
 EOF
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /bin/{kitty,kitten}
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

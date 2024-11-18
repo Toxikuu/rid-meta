@@ -6,21 +6,17 @@ UPST="https://gitlab.freedesktop.org/xorg/util/macros/-/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 ./configure $XORG_CONFIG
 make install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/share/util-macros
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -5,23 +5,19 @@ LINK="https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.ta
 DEPS=""
 
 # this is a binary install because im lazy and dont want to resolve nvim dependencies
-IDIR=$(cat << '~fin.'
+idir() {
 
 mo bin/nvim   /usr/bin/nvim
 mo lib/nvim   /usr/lib/nvim
 mo share/nvim /usr/share/nvim
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/bin/nvim
 rm -rvf /usr/{lib,share}/nvim
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

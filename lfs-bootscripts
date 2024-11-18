@@ -7,20 +7,16 @@ SELE="body > ul:nth-child(2) > li:nth-child(5) > a:nth-child(1)"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 make install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,7 +6,7 @@ UPST="https://sourceforge.net/projects/lame/files"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 sed -i -e 's/^\(\s*hardcode_libdir_flag_spec\s*=\).*/\1/' configure
 
@@ -15,18 +15,14 @@ make
 
 make pkghtmldir=/tmp/rid/trash install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/bin/{lame,mp3rtp}  \
         /usr/lib/libmp3lame.*   \
         /usr/include/lame
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

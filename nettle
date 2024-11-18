@@ -6,15 +6,14 @@ UPST="https://ftp.gnu.org/gnu/nettle/?C=M;O=D"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm
 chmod -v 755 /usr/lib/lib{hogweed,nettle}.so
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf \
     /usr/bin/nettle-hash        \
@@ -27,9 +26,6 @@ rm -vf \
 
 rm -rvf /usr/include/nettle
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

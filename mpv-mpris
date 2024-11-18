@@ -6,7 +6,7 @@ UPST="https://github.com/hoyon/mpv-mpris/tags"
 DEPS="mpv"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 make
 make PREFIX=/usr install
@@ -14,17 +14,13 @@ make PREFIX=/usr install
 echo "/etc/mpv/scripts/mpris.so has been installed"
 echo "this may cause issues"
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/lib/mpv-mpris \
         /etc/mpv/scripts/mpris.so
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

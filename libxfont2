@@ -6,21 +6,17 @@ UPST="https://gitlab.freedesktop.org/xorg/lib/libxfont/-/tags"
 DEPS="freetype2 libfontenc xorgproto glibc xtrans util-macros"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm   $XORG_CONFIG    --disable-open-zfile
 32cm $XORG_CONFIG_32 --disable-open-zfile
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/lib{,32}/libXfont2.{la,so*}
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

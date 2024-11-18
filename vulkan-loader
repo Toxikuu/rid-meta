@@ -6,7 +6,7 @@ UPST="https://github.com/KhronosGroup/Vulkan-Loader/tags"
 DEPS="cmake vulkan-headers libx11 libxrandr"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 CN
 
@@ -14,17 +14,13 @@ CN
 ASFLAGS=--32 CFLAGS=-m32 CXXFLAGS=-m32 \
 32CN
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/lib/cmake/VulkanLoader \
         /usr/lib{,32}/libvulkan.so*
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

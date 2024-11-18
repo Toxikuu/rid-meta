@@ -6,7 +6,7 @@ UPST="https://repology.org/project/kmod/information"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm \
     --sysconfdir=/etc   \
@@ -30,16 +30,12 @@ done
     --disable-manpages            \
     --with-rootlibdir=/usr/lib32
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

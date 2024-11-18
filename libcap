@@ -6,7 +6,7 @@ UPST="https://repology.org/project/libcap/information"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 sed -i '/install -m.*STA/d' libcap/Makefile
 
@@ -21,16 +21,12 @@ sed -e "s|^libdir=.*|libdir=/usr/lib32|" -i /usr/lib32/pkgconfig/lib{cap,psx}.pc
 chmod -v 755 /usr/lib32/libcap.so.$VERS
 rm -rf DESTDIR
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

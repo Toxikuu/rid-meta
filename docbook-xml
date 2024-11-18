@@ -8,7 +8,7 @@ SELE="body > div.article > dl:nth-child(5) > dd:nth-child(2) > ul > li:nth-child
 DEPS="unzip libxml2"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 unzip "$RIDSOURCES"/docbook-xml-$VERS.zip
 
@@ -110,17 +110,13 @@ do
     /etc/xml/catalog
 done
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /etc/xml \
   /usr/share/xml/docbook/xml-dtd-$VERS/
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

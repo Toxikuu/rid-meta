@@ -7,21 +7,17 @@ SELE="body > table:nth-child(2) > tbody > tr:nth-child(3) > td:nth-child(2) > h4
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf  /usr/bin/mtdev-test \
         /usr/lib/libmtdev.*
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

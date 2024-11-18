@@ -6,7 +6,7 @@ UPST="https://github.com/besser82/libxcrypt/releases/latest"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm      --enable-hashes=strong,glibc    \
         --enable-obsolete-api=no        \
@@ -26,16 +26,12 @@ cp -av .libs/libcrypt.so* /usr/lib32/ &&
 make install-pkgconfigDATA &&
 ln -svf libxcrypt.pc /usr/lib32/pkgconfig/libcrypt.pc
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -8,7 +8,7 @@ SELE=".latest > td:nth-child(2)"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 export BUILD_ZLIB=False
 export BUILD_BZIP2=0
@@ -32,16 +32,12 @@ make
 make install
 unset BUILD_ZLIB BUILD_BZIP2
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -10,7 +10,7 @@ cuda_deps="nv-codec-headers gcc13 cuda"
 DEPS="libaom libass fdk-aac freetype2 lame libvorbis libvpx opus x264 x265 yasm alsa-lib libva sdl2 pulseaudio ${cuda_deps}"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 patch -Np1 -i "$RIDSOURCES"/ffmpeg-$VERS-chromium_method-1.patch
 
@@ -49,16 +49,12 @@ cm --enable-gpl                       \
 gcc tools/qt-faststart.c -o tools/qt-faststart
 install -v -m755    tools/qt-faststart /usr/bin
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

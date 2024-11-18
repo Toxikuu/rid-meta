@@ -6,7 +6,7 @@ USPT="https://github.com/rust-lang/rust/releases"
 DEPS="curl"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 if [ "$VERS" = "9999" ]; then
     export VERS="nightly"
@@ -45,20 +45,18 @@ fi
 chmod 777 "$CARGO_HOME"
 chmod 755 "$RUSTUP_HOME"
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /opt/{cargo,rustup}
 rm -vf /usr/share/bash-completion/completions/cargo
 
 sed -i '/    # rust/,/    # rust end/d' /etc/env
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
+udir() {
 
 if [ "$VERS" = "9999" ]; then
     export VERS="nightly"
@@ -90,5 +88,4 @@ fi
 chmod 777 $CARGO_HOME
 chmod 755 $RUSTUP_HOME
 
-~fin.
-)
+}

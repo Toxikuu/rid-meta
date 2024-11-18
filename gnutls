@@ -6,21 +6,17 @@ UPST="https://repology.org/project/gnutls/information"
 DEPS="nettle make-ca libunistring libtasn1 p11-kit"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm --docdir=/tmp/rid/trash \
    --with-default-trust-store-pkcs11="pkcs11:"
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

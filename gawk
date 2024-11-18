@@ -7,7 +7,7 @@ SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(6) > td:nth-
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 sed -i 's/extras//' Makefile.in
 rm -vf /usr/bin/gawk-$VERS
@@ -16,10 +16,9 @@ cm
 
 ln -sv gawk.1 /usr/share/man/man1/awk.1
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/lib/gawk       \
         /usr/libexec/awk    \
@@ -28,9 +27,6 @@ rm -rvf /usr/lib/gawk       \
 rm -vf  /usr/bin/{g,}awk    \
         /usr/bin/gawk-$VERS
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

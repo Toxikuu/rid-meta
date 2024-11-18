@@ -6,7 +6,7 @@ UPST="https://github.com/obsidianmd/obsidian-releases/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mkdir -pv      /usr/lib/obsidian
 cd     ..
@@ -27,16 +27,12 @@ Categories=Office;
 Keywords=markdown;md;notes;
 EOF
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

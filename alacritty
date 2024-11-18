@@ -7,7 +7,7 @@ DEPS="rust ncurses libxcb freetype2 fontconfig libxi libxcursor libxkbcommon lib
 NEWS="The default build instructions disable Wayland support."
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cargo build --release --no-default-features --features=x11
 
@@ -17,16 +17,12 @@ desktop-file-install -m 644 --dir "/usr/share/applications/" "extra/linux/Alacri
 
 update-desktop-database
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

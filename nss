@@ -8,7 +8,7 @@ UPST="https://repology.org/project/nss/information"
 DEPS="nspr sqlite"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 patch -Np1 -i "$RIDSOURCES"/nss-standalone-1.patch ||
 die "Patch failed"
@@ -67,16 +67,12 @@ sed -i 's/lib/lib32/g' Linux*/lib/pkgconfig/nss.pc                  &&
 install -v -m644 Linux*/lib/pkgconfig/nss.pc  /usr/lib32/pkgconfig  ||
 die "Install failed"
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

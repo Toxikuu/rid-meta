@@ -5,7 +5,7 @@ LINK=""
 UPST="https://sourceforge.net/projects/freetype/files"
 DEPS="freetype1 harfbuzz"
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 tar xvf "$RIDSOURCES"/freetype1-$VERS.tar &&
 cd  freetype-$VERS                        ||
@@ -14,19 +14,15 @@ die "Failed to extract tarball"
 cm   --enable-freetype-config
 32cm --enable-freetype-config --with-brotli=no
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf 
     /usr/bin/freetype-config    \
     /usr/lib{,32}/libfreetype.* \
     /usr/include/freetype2
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

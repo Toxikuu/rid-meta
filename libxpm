@@ -6,21 +6,17 @@ UPST="https://gitlab.freedesktop.org/xorg/lib/libxpm/-/tags"
 DEPS="libxt libxext libx11 glibc util-macros"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm   $XORG_CONFIG    --disable-open-zfile
 32cm $XORG_CONFIG_32 --disable-open-zfile
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/lib{,32}/libXpm.{la,so*}
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

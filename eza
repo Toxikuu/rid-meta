@@ -6,21 +6,17 @@ UPST="https://github.com/eza-community/eza/tags"
 DEPS="rust"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cargo build --release
 install -v -Dm755 "target/release/eza" "/usr/bin/eza"
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

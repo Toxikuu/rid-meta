@@ -6,15 +6,14 @@ UPST="https://github.com/xkbcommon/libxkbcommon/releases/latest"
 DEPS="xkeyboard-config libxcb wayland wayland-protocols"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn   -D enable-docs=false
 32mn -D enable-docs=false
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf \
     /usr/bin/xkbcli               \
@@ -23,9 +22,6 @@ rm -rvf \
     /usr/include/xkbcommon        \
     /usr/libexec/xkbcommon
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

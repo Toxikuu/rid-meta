@@ -7,21 +7,17 @@ UPST="https://github.com/rpm-software-management/popt/releases/latest"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/lib/libpopt.la \
        /usr/lib/libpopt.so*
 
-~fin.
-)
+   }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

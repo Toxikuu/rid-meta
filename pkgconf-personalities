@@ -5,7 +5,7 @@ LINK=""
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mkdir -pv /usr/share/pkgconfig/personality.d
 
@@ -62,18 +62,14 @@ else
     cat pp2
 fi
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/share/pkgconfig/personality.d
 rm -vf /usr/bin/x86_64-pc-linux-gnu-pkg-config
 rm -vf /usr/bin/i686-pc-linux-gnu-pkg-config
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -7,7 +7,7 @@ SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(8) > td:nth-
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 sed -i 's@\(ln -s -f \)$(PREFIX)/bin/@\1@' Makefile
 sed -i "s@(PREFIX)/man@(PREFIX)/share/man@g" Makefile
@@ -38,10 +38,9 @@ ln -sf libbz2.so.1.0.8 /usr/lib32/libbz2.so.1
 ln -sf libbz2.so.1.0.8 /usr/lib32/libbz2.so.1.0
 install -Dm644 libbz2.a /usr/lib32/libbz2.a
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 pushd /usr/bin
 rm -vf \
@@ -59,9 +58,6 @@ rm -vf \
     /usr/lib{,32}/libbz2.so*
 popd
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

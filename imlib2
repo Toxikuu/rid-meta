@@ -7,14 +7,13 @@ SELE="tr.folder:nth-child(1) > th:nth-child(1) > a:nth-child(1) > span:nth-child
 DEPS="giflib librsvg freetype2 libjpeg-turbo libpng libtiff libxext librsvg libwebp"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf  /usr/bin/imlib2_*           \
         /usr/lib/libImlib2.*
@@ -22,9 +21,6 @@ rm -vf  /usr/bin/imlib2_*           \
 rm -rvf /usr/{lib,share}/imlib2     \
         /usr/share/doc/imlib2-$VERS
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

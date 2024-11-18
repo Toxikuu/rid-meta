@@ -6,21 +6,17 @@ UPST="https://github.com/libffi/libffi/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm --with-gcc-arch=native
 32cm --with-gcc-arch=i686
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

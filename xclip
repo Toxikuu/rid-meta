@@ -6,7 +6,7 @@ UPST="https://github.com/astrand/xclip/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 autoconf -fv
 # cm doesn't work because --disable-static throws an error
@@ -14,17 +14,13 @@ autoconf -fv
 make
 make install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf  /usr/bin/xclip{,-*}  \
         /usr/share/man/man1/xclip{.1,-copyfile.1}
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

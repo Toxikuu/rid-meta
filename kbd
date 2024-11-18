@@ -7,7 +7,7 @@ UPST="https://repology.org/project/kbd/information"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 patch -Np1 -i "$RIDSOURCES"/kbd-$VERS-backspace-1.patch
 
@@ -16,16 +16,12 @@ sed -i 's/resizecons.8 //' docs/man/man8/Makefile.in
 
 cm --disable-vlock
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

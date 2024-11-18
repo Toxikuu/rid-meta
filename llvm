@@ -11,7 +11,7 @@ SELE="h1.d-inline"
 DEPS="cmake"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 tar -xf "$RIDSOURCES"/llvm-cmake-$ver.src.tar.xz
 tar -xf "$RIDSOURCES"/llvm-third-party-$ver.src.tar.xz
@@ -85,16 +85,12 @@ for i in clang clang++; do
   echo -fstack-protector-strong > /etc/clang/$i.cfg
 done
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

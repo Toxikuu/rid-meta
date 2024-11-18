@@ -7,7 +7,7 @@ UPST="https://github.com/slicer69/sysvinit/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 patch -Np1 -i "$RIDSOURCES"/sysvinit-$VERS-consolidated-1.patch
 
@@ -58,16 +58,12 @@ CLOCKPARAMS=
 # End /etc/sysconfig/clock
 EOF
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,25 +6,21 @@ UPST="https://github.com/dosfstools/dosfstools/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm \
     --enable-compat-symlinks \
     --mandir=/usr/share/man  \
     --docdir=/tmp/rid/trash
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf  /bin/fatlabel   \
         /bin/fsck.fat   \
         /bin/mkfs.fat
         
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

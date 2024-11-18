@@ -6,21 +6,17 @@ UPST="https://github.com/rhboot/efivar/tags"
 DEPS="" # doc dep on mandoc
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 make ENABLE_DOCS=0
 make install ENABLE_DOCS=0 LIBDIR=/usr/lib
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

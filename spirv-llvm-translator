@@ -6,22 +6,15 @@ UPST="https://github.com/KhronosGroup/SPIRV-LLVM-Translator/tags"
 DEPS="cmake libxml2 llvm spirv-headers spirv-tools"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 CN -D LLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr
 32CN -D LLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
-
-UDIR=$(cat << '~fin.'
-
-~fin.
-)
+}

@@ -7,20 +7,16 @@ UPST="https://gitlab.gnome.org/GNOME/vala/-/tags"
 DEPS="glib"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm --disable-valadoc
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

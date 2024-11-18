@@ -6,23 +6,19 @@ UPST="https://github.com/ninja-build/ninja/tags"
 DEPS="python"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 python3 configure.py --bootstrap
 install -vm755 ninja /usr/bin/
 install -vDm644 misc/bash-completion /usr/share/bash-completion/completions/ninja
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf  ninja   \
         /usr/share/bash-completion/completions/ninja
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -7,21 +7,17 @@ UPST="https://github.com/anholt/libepoxy/releases/latest"
 DEPS="mesa"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/lib/libepoxy.so*   \
         /usr/include/epoxy
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

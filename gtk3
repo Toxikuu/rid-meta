@@ -6,7 +6,7 @@ LINK="https://download.gnome.org/sources/gtk+/${VERS%.*}/gtk+-$VERS.tar.xz"
 DEPS="at-spi2-core gdk-pixbuf libepoxy pango"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn \
     -D man=false                \
@@ -16,16 +16,12 @@ mn \
 gtk-query-immodules-3.0 --update-cache
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

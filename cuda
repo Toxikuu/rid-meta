@@ -9,7 +9,7 @@ SELE="div.field:nth-child(1) > div:nth-child(1) > div:nth-child(1) > p:nth-child
 DEPS="nvidia"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 chmod +x "$RIDSOURCES"/cuda_${VERS}_${NV}_linux.run
 cp -vf "$RIDSOURCES"/cuda_${VERS}_${NV}_linux.run .
@@ -41,17 +41,13 @@ EOF
 fi
 echo "Done"
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /opt/cuda
 sed -i '/    # cuda/,/    # cuda end/' /etc/env
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

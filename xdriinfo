@@ -6,20 +6,16 @@ UPST="https://gitlab.freedesktop.org/xorg/app/xdriinfo/-/tags"
 DEPS="libx11 util-macros xorgproto"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm $XORG_CONFIG
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

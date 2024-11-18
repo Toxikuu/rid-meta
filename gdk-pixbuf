@@ -7,7 +7,7 @@ UPST="https://gitlab.gnome.org/GNOME/gdk-pixbuf/-/tags"
 DEPS="glib libjpeg-turbo libpng shared-mime-info"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn \
     -D others=enabled   \
@@ -16,10 +16,9 @@ mn \
 
 gdk-pixbuf-query-loaders --update-cache
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf \
     /usr/bin/gdk-pixbuf-*                   \
@@ -30,9 +29,6 @@ rm -rvf \
     /usr/share/installed-tests/gdk-pixbuf   \
     /usr/share/thumbnailers/gdk-pixbuf-thumbnailer.thumbnailer
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

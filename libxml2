@@ -7,7 +7,7 @@ UPST="https://gitlab.gnome.org/GNOME/libxml2/-/tags"
 DEPS="icu"
 
 
-IDIR=$(cat <<'~fin.'
+idir() {
 
 cm --sysconfdir=/etc       \
    --with-history          \
@@ -25,16 +25,12 @@ sed '/libs=/s/xml2.*/xml2"/' -i /usr/bin/xml2-config
 
 rm -vf /usr/lib32/libxml2.la
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

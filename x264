@@ -6,20 +6,16 @@ LINK="https://anduin.linuxfromscratch.org/BLFS/x264/x264-$VERS.tar.xz"
 DEPS="nasm"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm --enable-shared --disable-cli
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/lib/libx264.so*
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,7 +6,7 @@ UPST="https://gitlab.freedesktop.org/xorg/lib/libxtrans/-/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm $XORG_CONFIG
 
@@ -17,16 +17,12 @@ make DESTDIR=$PWD/DESTDIR install
 cp -vr DESTDIR/usr/share/pkgconfig/* /usr/lib32/pkgconfig
 rm -rf DESTDIR
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

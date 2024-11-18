@@ -7,23 +7,19 @@ SELE="#list > tbody:nth-child(2) > tr:nth-child(5) > td:nth-child(1) > a:nth-chi
 DEPS="cmake libjpeg-turbo libwebp"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 CN
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf bin/{fax2ps,fax2tiff,pal2rgb,ppm2tiff,raw2tiff,tiff2bw,tiff2pdf,tiff2ps,tiff2rgba,tiffcmp,tiffcp,tiffcrop,tiffdither,tiffdump,tiffgt,tiffinfo,tiffmedian,tiffset,tiffsplit}
 rm -vf /usr/lib/libtiff{,xx}.so*
 
 rm -rvf /usr/lib/cmake/tiff
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

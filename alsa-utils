@@ -6,7 +6,7 @@ UPST="https://github.com/alsa-project/alsa-utils/tags"
 DEPS="alsa-lib"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm --disable-alsaconf \
    --disable-bat      \
@@ -25,16 +25,12 @@ defaults.ctl.card 1
 # End /etc/asound.conf
 EOF
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

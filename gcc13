@@ -5,7 +5,7 @@ LINK="https://ftp.gnu.org/gnu/gcc/gcc-13.3.0/gcc-13.3.0.tar.xz"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 case $(uname -m) in
   x86_64)
@@ -32,16 +32,12 @@ cd       build
 make
 make install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /opt/gcc13
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

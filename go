@@ -8,7 +8,7 @@ DEPS=""
 
 # go depends on go, and it's bootstrapping hell; ergo binary install
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 GO_HOME="/opt/go"
 
@@ -26,17 +26,13 @@ if ! grep -q "# go end" /etc/env ; then
 EOF
 fi
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /opt/go
 sed -i '/    # go/,/    # go end/d' /etc/env
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

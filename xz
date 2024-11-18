@@ -6,15 +6,14 @@ UPST="https://github.com/tukaani-project/xz/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm --disable-doc
 32cm --disable-doc
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 pushd /usr/bin
 rm -vf \
@@ -43,9 +42,6 @@ rm -vf \
     xzmore      \
     /usr/lib{,32}/liblzma.so*
 popd
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

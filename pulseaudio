@@ -6,7 +6,7 @@ UPST="https://repology.org/project/pulseaudio/information"
 DEPS="libsndfile alsa-lib check dbus2 glib meson-toolchain-files"
 
 # this piece of shit still doesn't build in 32-bit
-IDIR=$(cat << '~fin.'
+idir() {
 
 mkdir build && cd build
 
@@ -38,16 +38,12 @@ cp -vr DESTDIR/usr/lib32/* /usr/lib32
 rm -rf DESTDIR
 ldconfig
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

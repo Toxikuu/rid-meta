@@ -7,21 +7,17 @@ SELE="h1.d-inline" # lcms2 is a special case
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /bin/{jpg,link,ps,tif,trans}icc
 rm -vf /usr/lib/liblcms2.{la,so*}
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,20 +6,16 @@ UPST="https://gitlab.freedesktop.org/wayland/wayland-protocols/-/tags"
 DEPS="wayland"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mn
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/share/wayland-protocols
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

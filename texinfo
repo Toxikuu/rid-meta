@@ -7,21 +7,17 @@ SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(6) > td:nth-
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm
 # make TEXMF=/usr/share/texmf install-tex
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

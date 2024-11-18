@@ -6,17 +6,16 @@ UPST="https://gitlab.freedesktop.org/xdg/xdg-utils/-/tags"
 DEPS="xmlto lynx xset xprop"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 # cant do cm because --disable-static causes a build failure lol
 ./configure --prefix=/usr &&
 make &&
 make install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 pushd /usr/bin
   rm -vf \
@@ -30,9 +29,6 @@ pushd /usr/bin
     xdg-settings     &&
 popd
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,23 +6,19 @@ UPST="https://ftp.gnu.org/gnu/diffutils/?C=M;O=D"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf  /usr/bin/cmp        \
         /usr/bin/diff{,3}   \
         /usr/bin/sdiff
         
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

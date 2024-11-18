@@ -6,7 +6,7 @@ UPST="https://github.com/mpv-player/mpv/tags"
 DEPS="alsa-lib ffmpeg libass libplacebo mesa pulseaudio libjpeg-turbo libva libvdpau luajit uchardet vulkan-loader"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 sed -i 's/AV_OPT_TYPE_CHANNEL_LAYOUT/AV_OPT_TYPE_CHLAYOUT/' filters/f_lavfi.c
 
@@ -41,16 +41,12 @@ mn -D x11=enabled                     \
 gtk-update-icon-cache -qtf /usr/share/icons/hicolor || echo "skipping gtk-update-icon-cache"
 update-desktop-database -q
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,7 +6,7 @@ UPST="https://github.com/libunwind/libunwind/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 RIDBUILD=false
 cm
@@ -29,17 +29,13 @@ cp -v DESTDIR/usr/include/libunwind-x86.h /usr/include
 rm -rf DESTDIR
 ldconfig
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf  /usr/lib/libunwind.* \
         /usr/lib/libunwind-*
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

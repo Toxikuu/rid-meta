@@ -6,7 +6,7 @@ UPST="https://sourceforge.net/projects/tcl/files"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 SRCDIR=$(pwd)
 cd unix
@@ -39,17 +39,13 @@ make install-private-headers
 ln -sfv tclsh8.6 /usr/bin/tclsh
 mv /usr/share/man/man3/{Thread,Tcl_Thread}.3
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf  /usr/bin/tclsh{,8.6}    \
         /usr/lib/libtcl{,stub}8.6.*
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

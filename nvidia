@@ -8,7 +8,7 @@ DEPS=""
 NEWS="Must be rebuilt after kernel sources change, else X11 won't start. It's also recommended you restart after installing this package for the drivers to take effect."
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 chmod +x "$RIDSOURCES"/NVIDIA-Linux-x86_64-$VERS.run
 kver=$(realpath /usr/src/linux | cut -d- -f2-)
@@ -45,16 +45,12 @@ cd NVIDIA-Linux-x86_64-$VERS
     --kernel-install-path=/lib/modules/$kver/kernel/drivers/video ||
 die "NVIDIA's .run failed"
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

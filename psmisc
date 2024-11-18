@@ -6,17 +6,16 @@ UPST="https://gitlab.com/psmisc/psmisc/-/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 ./configure --prefix=/usr
 
 make
 make install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 pushd /usr/bin
 
@@ -31,9 +30,6 @@ rm -vf \
 
 popd
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

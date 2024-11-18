@@ -6,20 +6,16 @@ DEPS="util-macros xorgproto"
 UPST="https://gitlab.freedesktop.org/xorg/app/sessreg/-/tags"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm $XORG_CONFIG
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

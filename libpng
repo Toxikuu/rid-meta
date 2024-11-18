@@ -7,26 +7,22 @@ UPST="https://github.com/pnggroup/libpng/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 gzip -cd "$RIDSOURCES"/libpng-$VERS-apng.patch.gz | patch -p1
 
 cm
 32cm
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/bin/libpng{,16}-config \
   /usr/bin/{pngfix,png-fix-itxt}    \
   /usr/include/libpng16             \
   /usr/lib/libpng{,16}.*
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

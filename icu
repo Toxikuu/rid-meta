@@ -9,7 +9,7 @@ SELE="h1.d-inline"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cd source &&
 
@@ -29,16 +29,12 @@ ldconfig
 
 # TODO: Add error handling or make it build with abstractions
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

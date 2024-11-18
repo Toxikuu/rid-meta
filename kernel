@@ -10,7 +10,7 @@ NEWS='You can edit your kernel config at /usr/src/linux/.config and run `rid -fu
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 [ -e /usr/src/linux/.config ] &&
 cp /usr/src/linux/.config $RIDSOURCES/kernelconfig
@@ -53,16 +53,12 @@ install uhci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i uhci_hcd ; true
 # End /etc/modprobe.d/usb.conf
 EOF
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

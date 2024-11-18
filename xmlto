@@ -7,23 +7,19 @@ SELE=".col > div:nth-child(2)"
 DEPS="docbook-xml docbook-xsl-nons libxslt"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 autoreconf -fiv &&
 LINKS="/usr/bin/links" cm
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/share/xmlto  \
   /usr/bin/xmlif          \
   /usr/bin/xmlto          
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

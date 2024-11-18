@@ -6,21 +6,17 @@ UPST="https://gitlab.freedesktop.org/xorg/lib/libx11/-/tags"
 DEPS="libxcb glibc xorgproto util-macros xtrans"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm $XORG_CONFIG --disable-xf86bigfont
 32cm $XORG_CONFIG_32
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/lib{,32}/libX11.{la,so*}
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,21 +6,17 @@ UPST="https://github.com/rhboot/efibootmgr/tags"
 DEPS="efivar popt"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 make EFIDIR=LFS EFI_LOADER=tox64.efi
 make install EFIDIR=LFS
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

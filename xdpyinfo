@@ -6,20 +6,16 @@ UPST="https://gitlab.freedesktop.org/xorg/app/xdpyinfo/-/tags"
 DEPS="libx11 libxext libxtst libxxf86vm libxrender libxcomposite libxinerama util-macros xorgproto"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm $XORG_CONFIG
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

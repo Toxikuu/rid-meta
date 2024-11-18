@@ -7,7 +7,7 @@ SELE=".css-truncate > span:nth-child(2)"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 if [ -e /usr/lib/libpam.so ]; then
     die "Pam is installed. You should install shadow, not shadow-lfs."
@@ -44,16 +44,12 @@ sed -i '/MAIL/s/yes/no/' /etc/default/useradd
 
 echo "You may now set the root password with passwd root if you wish"
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

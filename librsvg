@@ -7,7 +7,7 @@ UPST="https://gitlab.gnome.org/GNOME/librsvg/-/tags"
 DEPS="cairo cargo-c gdk-pixbuf pango rust glib vala"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 sed -e "/OUTDIR/s|,| / 'librsvg-2.59.1', '--no-namespace-dir',|" \
     -e '/output/s|Rsvg-2.0|librsvg-2.59.1|'                      \
@@ -15,10 +15,9 @@ sed -e "/OUTDIR/s|,| / 'librsvg-2.59.1', '--no-namespace-dir',|" \
 
 mn
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf                             \
     /usr/include/librsvg-2.0        \
@@ -26,9 +25,6 @@ rm -rvf                             \
     /usr/lib/librsvg-2.*            \
     /usr/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.*
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

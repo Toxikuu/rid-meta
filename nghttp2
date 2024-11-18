@@ -6,21 +6,17 @@ UPST="https://github.com/$NAME/$NAME/tags"
 DEPS="libxml2"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm --enable-lib-only \
    --docdir=/tmp/rid/trash/
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,7 +6,7 @@ UPST="https://github.com/p11-glue/p11-kit/tags"
 DEPS="libtasn1 nss"
 
 
-IDIR=$(cat <<'~fin.'
+idir() {
 
 sed '20,$ d' -i trust/trust-extract-compat &&
 
@@ -28,16 +28,12 @@ ln -sfv /usr/libexec/p11-kit/trust-extract-compat \
 ln -sfv ./pkcs11/p11-kit-trust.so /usr/lib/libnssckbi.so
 ln -sfv ./pkcs11/p11-kit-trust.so /usr/lib32/libnssckbi.so
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

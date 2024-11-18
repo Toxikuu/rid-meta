@@ -6,7 +6,7 @@ UPST="https://repology.org/project/nspr/information"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cd nspr &&
 
@@ -21,16 +21,12 @@ cm --with-mozilla    \
      --with-pthreads \
      --disable-64bit
 
-~fin.
-)
+ }
 
-RDIR=$(cat << '~fin.'
+ rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,7 +6,7 @@ UPST="https://github.com/elogind/elogind/releases/latest"
 DEPS="dbus1 linux-pam"
 
 
-IDIR=$(cat <<'~fin.'
+idir() {
 
 mn \
     -D docdir=/tmp/rid/trash        \
@@ -54,16 +54,12 @@ password required    pam_deny.so
 # End /etc/pam.d/elogind-user
 EOF
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

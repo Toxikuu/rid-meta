@@ -6,7 +6,7 @@ UPST="https://github.com/hyperrealm/libconfig/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 autoreconf -fiv
 ./configure --prefix=/usr
@@ -14,16 +14,12 @@ sed -i -e 's/ -shared / -Wl,-O2,--as-needed\0/g' libtool
 make
 make install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

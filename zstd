@@ -6,7 +6,7 @@ UPST="https://github.com/facebook/zstd/tags"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 make prefix=/usr
 make prefix=/usr install
@@ -20,18 +20,14 @@ sed -e "/^libdir/s/lib$/lib32/" -i /usr/lib32/pkgconfig/libzstd.pc
 rm -rf DESTDIR
 rm -vf /usr/lib32/libzstd.a
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf  /usr/bin/zstd{,cat,grep,less,mt}    \
         /usr/bin/unzstd                     \
         /usr/lib{,32}/libzstd.so*
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

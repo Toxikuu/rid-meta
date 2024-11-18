@@ -7,7 +7,7 @@ SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(7) > td:nth-
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 sed -r '/INSTALL.*(PCI_IDS|update-pciids)/d' \
     -i Makefile
@@ -23,10 +23,9 @@ make PREFIX=/usr                \
 
 chmod -v 755 /usr/lib/libpci.so
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/bin/lspci   \
         /usr/bin/pcilmr  \
@@ -34,9 +33,6 @@ rm -rvf /usr/bin/lspci   \
         /usr/include/pci \
         /usr/lib/libpci.so*
 
-~fin.
-)
+    }
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

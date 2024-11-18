@@ -7,7 +7,7 @@ UPST="https://github.com/ryanoasis/nerd-fonts/releases/latest"
 DEPS="tar xz"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cp -vf $RIDSOURCES/NerdFontsSymbolsOnly.tar.xz .
 
@@ -16,16 +16,12 @@ tar xvf NerdFontsSymbolsOnly.tar.xz -C Symbols
 rm -vf Symbols/{LICENSE,README.md}
 mo Symbols /usr/share/fonts/Symbols
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/share/fonts/Symbols
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

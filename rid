@@ -7,7 +7,7 @@ UPST="https://github.com/toxikuu/rid/tags"
 DEPS="openssl tar xz bash coreutils glibc gcc"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 if [ -e $RIDHOME/pkgs.json ]; then
   mv -vf $RIDHOME/pkgs.json /tmp/rid-pkgs.bak
@@ -21,10 +21,9 @@ if [ -e /tmp/rid-pkgs.bak ]; then
   echo "restored pkgs.json"
 fi
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 if [ -e $RIDHOME/pkgs.json ]; then
   mv -vf /tmp/pkgs.json /tmp/rid-pkgs.bak
@@ -32,9 +31,6 @@ fi
 rm -rvf /{tmp,etc}/rid
 rm -vf /bin/rid
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

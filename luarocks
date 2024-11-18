@@ -7,23 +7,19 @@ SELE=".main_column > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) >
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 # luarocks's configure treats unknown flags as errors
 ./configure --prefix=/usr
 make
 make install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

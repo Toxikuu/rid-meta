@@ -6,7 +6,7 @@ UPST="https://ftp.gnu.org/gnu/inetutils/?C=M;O=D"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 sed -i 's/def HAVE_TERMCAP_TGETENT/ 1/' telnet/telnet.c
 
@@ -23,10 +23,9 @@ cm \
 
 mv -v /usr/{,s}bin/ifconfig
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 pushd /usr/bin
 
@@ -44,9 +43,6 @@ rm -vf \
 
 popd
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

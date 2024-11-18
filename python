@@ -7,7 +7,7 @@ SELE="#touchnav-wrapper > header > div > div.header-banner > div > div.download-
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm \
     --enable-shared         \
@@ -21,19 +21,17 @@ root-user-action = ignore
 disable-pip-version-check = true
 EOF
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/lib/python[0-9]*
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
+udir() {
+
 rm -rvf /usr/lib/python[0-9]*
+idir
 
-"$IDIR"
-~fin.
-)
+}

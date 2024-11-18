@@ -7,23 +7,19 @@ SELE="body > div.page-content > div.content-navigation > div > div.release.dist-
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 perl Makefile.PL
 
 make
 make install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -6,21 +6,17 @@ UPST="https://archlinux.org/packages/extra/any/xbitmaps/" # the actual upstream 
 DEPS="util-macros"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 ./configure $XORG_CONFIG
 make install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/include/X11/bitmaps
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

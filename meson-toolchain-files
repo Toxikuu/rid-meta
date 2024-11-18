@@ -5,7 +5,7 @@ LINK=""
 DEPS="pkgconf-personalities"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 mkdir -pv /usr/share/meson/cross
 
@@ -61,16 +61,12 @@ cpu = 'i686'
 endian = 'little'
 EOF
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /usr/share/meson/{cross,native}
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

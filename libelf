@@ -9,7 +9,7 @@ DEPS=""
 # i may remove the link and just try to extract the tarball, downloading it if nonexistent
 # that'll only happen if i need something else from elfutils
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 ./configure --prefix=/usr                \
             --disable-debuginfod         \
@@ -34,16 +34,12 @@ install -vDm644 config/libelf.pc DESTDIR/usr/lib32/pkgconfig/libelf.pc
 cp -Rv DESTDIR/usr/lib32/* /usr/lib32
 rm -rf DESTDIR
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

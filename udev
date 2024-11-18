@@ -9,7 +9,7 @@ DEPS="jinja2 gperf"
 
 # udev is in the systemd tarball because systemd
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 sed -i -e 's/GROUP="render"/GROUP="video"/' \
        -e 's/GROUP="sgx", //' rules.d/50-udev-default.rules.in
@@ -107,16 +107,12 @@ sed -e "s;/usr/lib;&32;g" src/libudev/libudev.pc > /usr/lib32/pkgconfig/libudev.
 
 udev-hwdb update
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 echo not implemented
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

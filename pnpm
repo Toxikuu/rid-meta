@@ -6,7 +6,7 @@ UPST="https://github.com/pnpm/pnpm/releases/latest"
 DEPS="curl"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 PNPM_HOME="/opt/pnpm"
 
@@ -24,18 +24,16 @@ if ! grep -q "# pnpm end" /etc/env ; then
 EOF
 fi
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -rvf /opt/pnpm
 sed -i '/    # pnpm/,/    # pnpm end/d' /etc/env
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
+udir() {
 pnpm self-update
 
 if ! grep -q "# pnpm end" /etc/env ; then
@@ -47,5 +45,5 @@ if ! grep -q "# pnpm end" /etc/env ; then
     # pnpm end
 EOF
 fi
-~fin.
-)
+
+}

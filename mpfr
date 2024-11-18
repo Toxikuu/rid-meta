@@ -6,7 +6,7 @@ UPST="https://ftp.gnu.org/gnu/mpfr/?C=M;O=D"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 ./configure --prefix=/usr        \
             --disable-static     \
@@ -16,16 +16,12 @@ IDIR=$(cat << '~fin.'
 make
 make install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/lib/libmpfr.so*
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -7,20 +7,16 @@ SELE=".layouts_homeLayout__f7Zuk > section:nth-child(1) > div:nth-child(2) > sma
 DEPS="pnpm"
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 pnpm env use -g "$VERS"
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 pnpm env rm -g "$VERS"
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

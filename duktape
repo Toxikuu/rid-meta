@@ -7,22 +7,18 @@ SELE=".latest > td:nth-child(2) > a:nth-child(1)"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 sed -i 's/-Os/-O2/' Makefile.sharedlibrary
 make -f Makefile.sharedlibrary INSTALL_PREFIX=/usr
 make -f Makefile.sharedlibrary INSTALL_PREFIX=/usr install
 
-~fin.
-)
+}
 
-RDIR=$(cat << '~fin.'
+rdir() {
 
 rm -vf /usr/lib/libduktape{,d}.so*
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+

@@ -8,7 +8,7 @@ LINK="https://sqlite.org/2024/sqlite-autoconf-3470000.tar.gz"
 DEPS=""
 
 
-IDIR=$(cat << '~fin.'
+idir() {
 
 cm  \
   --enable-fts{4,5} \
@@ -17,17 +17,13 @@ cm  \
             -D SQLITE_ENABLE_DBSTAT_VTAB=1     \
             -D SQLITE_SECURE_DELETE=1"
 
-~fin.
-)
+        }
 
-RDIR=$(cat << '~fin.'
+        rdir() {
 
 rm -vf /usr/lib/libsqlite3.{la,so*} \
   /usr/bin/sqlite3
 
-~fin.
-)
+}
 
-UDIR=$(cat << '~fin.'
-~fin.
-)
+
