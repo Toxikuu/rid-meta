@@ -1,7 +1,6 @@
 #!/bin/bash
 NAME="nightdrive"
 VERS="9999"
-LINK=""
 DEPS="git wget mpv xwinwrap"
 
 

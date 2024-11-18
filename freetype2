@@ -1,7 +1,6 @@
 #!/bin/bash
 NAME="freetype2"
 VERS="2.13.3"
-LINK=""
 UPST="https://sourceforge.net/projects/freetype/files"
 DEPS="freetype1 harfbuzz"
 

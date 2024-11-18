@@ -1,8 +1,8 @@
 #!/bin/bash
 NAME="whitepink"
 VERS="9999"
-LINK=""
-DEPS=""
+DEPS="git"
+NEWS="Some files (in /dots/whitepink/extra) must be set up manually."
 
 
 idir() {
@@ -16,7 +16,6 @@ git clone https://github.com/Toxikuu/whitepink
 chown -Rv $TARGET_USER:$TARGET_USER whitepink
 
 ln -sfv /dots/whitepink/config $H/.config
-echo "You should now set up files in extra manually. (/dots/whitepink/extra)"
 
 }
 
@@ -24,6 +23,5 @@ rdir() {
 
 rm -rvf $H/.config  \
         /dots/whitepink
-echo "If you set up any files in /dots/nightdrive/extra, you're responsible for handling the removal of those."
 
 }

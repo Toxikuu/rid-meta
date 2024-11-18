@@ -1,7 +1,6 @@
 #!/bin/bash
 NAME="rust"  # rustup
 VERS="1.82.0"
-LINK=""
 USPT="https://github.com/rust-lang/rust/releases"
 DEPS="curl"
 

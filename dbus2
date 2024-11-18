@@ -1,7 +1,6 @@
 #!/bin/bash
 NAME="dbus2"
 VERS="1.14.10"
-LINK=""
 DOWN="https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20240913.tar.xz"
 UPST="https://dbus.freedesktop.org/releases/dbus/?C=M;O=D"
 DEPS="dbus1 @xorg-libs"

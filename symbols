@@ -1,7 +1,6 @@
 #!/bin/bash
 NAME="symbols"
 VERS="3.2.1"
-LINK=""
 DOWN="https://github.com/ryanoasis/nerd-fonts/releases/download/v$VERS/NerdFontsSymbolsOnly.tar.xz"
 UPST="https://github.com/ryanoasis/nerd-fonts/releases/latest"
 DEPS="tar xz"

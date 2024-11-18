@@ -1,7 +1,6 @@
 #!/bin/bash
 NAME="nvchad"
 VERS="9999"
-LINK=""
 DEPS="nvim git"
 
 
@@ -18,4 +17,4 @@ rdir() {
 rm -rvf {/root,$H}/.config/nvim \
         {/root,$H}/.local/{state,share}/nvim
 
-        }
+}
