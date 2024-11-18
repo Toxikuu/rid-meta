@@ -1,14 +1,15 @@
 #!/bin/bash
 NAME="rust"  # rustup
-VERS="9999"
+VERS="1.82.0"
 LINK=""
+USPT="https://github.com/rust-lang/rust/releases"
 DEPS="curl"
 
 
 IDIR=$(cat << '~fin.'
 
 if [ "$VERS" = "9999" ]; then
-    export VERS="stable"
+    export VERS="nightly"
 fi
 
 export CARGO_HOME=/opt/cargo
@@ -60,7 +61,7 @@ sed -i '/    # rust/,/    # rust end/d' /etc/env
 UDIR=$(cat << '~fin.'
 
 if [ "$VERS" = "9999" ]; then
-    export VERS="stable"
+    export VERS="nightly"
 fi
 
 export CARGO_HOME=/opt/cargo
