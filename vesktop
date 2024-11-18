@@ -11,7 +11,7 @@ idir() {
 pnpm i || die "pnpm failed to install dependencies"
 pnpm package --linux dir || die "pnpm build failed"
 
-mo dist/linux-unpacked /usr/lib/vesktop
+mo dist/linux-unpacked /usr/src/vesktop
 
 cat << 'EOF' > /usr/bin/vesktop.sh
 #!/bin/sh
@@ -50,7 +50,7 @@ chmod 644 /usr/share/applications/vesktop.desktop
 rdir() {
 
 rm -rvf /usr/bin/vesktop.sh \
-        /usr/lib/vesktop    \
+        /usr/src/vesktop    \
         /usr/share/applications/vesktop.desktop
 
 echo "Not removing ~/.config/vesktop"
