@@ -178,5 +178,10 @@ install -vm644 DESTDIR/usr/include/gnu/{lib-names,stubs}-32.h \
                /usr/include/gnu/
 
 echo 'int main(){}' > dummy.c
+gcc -m32 dummy.c
+readelf -l a.out | grep '/ld-linux'
+
+echo "Command exited with: $?"
+rm -vf dummy.c a.out
 
 }
