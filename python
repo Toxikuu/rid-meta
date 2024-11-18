@@ -25,7 +25,9 @@ EOF
 
 rdir() {
 
-rm -rvf /usr/lib/python[0-9]*
+rm -rvf /usr/lib/python[0-9]*   \
+        /usr/bin/python         \
+        /usr/bin/python[0-9]*
 
 }
 
