@@ -2,6 +2,7 @@
 NAME="iosevka"
 VERS="3.2.1"
 LINK=""
+UPST="https://github.com/ryanoasis/nerd-fonts/releases/latest"
 DOWN="https://github.com/ryanoasis/nerd-fonts/releases/download/v$VERS/Iosevka.tar.xz"
 DEPS=""
 

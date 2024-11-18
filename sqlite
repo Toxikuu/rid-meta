@@ -2,6 +2,8 @@
 NAME="sqlite"
 VERS="3.47.0"
 ver="${VERS//./}000"
+UPST="https://sqlite.org/"
+SELE="body > a:nth-child(9)"
 LINK="https://sqlite.org/2024/sqlite-autoconf-3470000.tar.gz"
 DEPS=""
 
