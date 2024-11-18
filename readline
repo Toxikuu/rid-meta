@@ -42,5 +42,3 @@ rm -rvf /usr/include/readline           \
         /usr/lib{,32}/libreadline.so*
 
     }
-
-

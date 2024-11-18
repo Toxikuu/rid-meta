@@ -77,5 +77,3 @@ rdir() {
 echo PAM removal not supported
 
 }
-
-

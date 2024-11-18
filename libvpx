@@ -21,5 +21,3 @@ rm -rvf /usr/bin/vpx{de,en}c    \
         /usr/include/vpx
 
     }
-
-

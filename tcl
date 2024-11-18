@@ -47,5 +47,3 @@ rm -vf  /usr/bin/tclsh{,8.6}    \
         /usr/lib/libtcl{,stub}8.6.*
 
     }
-
-

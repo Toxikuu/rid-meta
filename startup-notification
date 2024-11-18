@@ -20,5 +20,3 @@ rm -rvf /usr/lib/libstartup-notification-1.*    \
         /usr/share/doc/startup-notification-$VERS
 
     }
-
-

@@ -19,10 +19,3 @@ die "sed failed"
 CN
 
 }
-
-rdir() {
-
-rm -vf  /usr/lib/libyajl.so* \
-        /usr/lib/libyajl_s.a
-
-}

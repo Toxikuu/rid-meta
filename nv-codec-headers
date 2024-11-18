@@ -18,5 +18,3 @@ rm -rvf /usr/include/ffnvcodec
 rm -vf /usr/lib/pkgconfig/ffnvcodec.pc
 
 }
-
-

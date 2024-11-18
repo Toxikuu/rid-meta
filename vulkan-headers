@@ -21,5 +21,3 @@ rm -rvf \
     /usr/share/cmake/VulkanHeaders
 
 }
-
-

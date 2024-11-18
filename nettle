@@ -27,5 +27,3 @@ rm -vf \
 rm -rvf /usr/include/nettle
 
 }
-
-

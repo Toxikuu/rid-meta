@@ -28,10 +28,3 @@ rdir() {
 rm -rvf /usr/lib/python[0-9]*
 
 }
-
-udir() {
-
-rm -rvf /usr/lib/python[0-9]*
-idir
-
-}

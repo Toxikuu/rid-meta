@@ -18,5 +18,3 @@ rdir() {
 rm -rvf /usr/share/util-macros
 
 }
-
-

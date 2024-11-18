@@ -19,5 +19,3 @@ rm -rvf {/root,$H}/.config/nvim \
         {/root,$H}/.local/{state,share}/nvim
 
         }
-
-

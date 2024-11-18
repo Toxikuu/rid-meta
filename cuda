@@ -49,5 +49,3 @@ rm -rvf /opt/cuda
 sed -i '/    # cuda/,/    # cuda end/' /etc/env
 
 }
-
-

@@ -38,5 +38,3 @@ rm -rvf /usr/lib/e2fsprogs      \
         /usr/{share,include}/ss
         
     }
-
-

@@ -18,5 +18,3 @@ rdir() {
 pnpm env rm -g "$VERS"
 
 }
-
-

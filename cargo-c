@@ -24,5 +24,3 @@ rm -vf \
     /usr/bin/cargo-c{api,test,build,install}
 
 }
-
-

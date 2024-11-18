@@ -31,5 +31,3 @@ rm -rvf /bin/gif{2rgb,build,clrmp,fix,text,tool}    \
         /usr/share/doc/giflib-$VERS
         
     }
-
-

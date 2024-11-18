@@ -22,5 +22,3 @@ rm -rvf /usr/lib/python$PV/site-packages/glad{,2-$VERS.dist-info}
 rm -vf /usr/bin/glad
 
 }
-
-

@@ -17,5 +17,3 @@ rdir() {
 rm -rvf /usr/include/fdk-aac /usr/lib/libfdk-aac.*
 
 }
-
-

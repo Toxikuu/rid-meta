@@ -23,5 +23,3 @@ rm -rvf /usr/lib/steam          \
         /usr/bin/steamdeps
 
     }
-
-

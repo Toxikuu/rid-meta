@@ -27,5 +27,3 @@ rm -vf \
     /usr/lib{,32}/liblz4.so*
 
 }
-
-

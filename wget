@@ -20,5 +20,3 @@ rm -vf /usr/bin/wget \
    /usr/share/man/man1/wget.1
 
 }
-
-

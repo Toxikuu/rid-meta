@@ -34,5 +34,3 @@ rm -rvf /opt/go
 sed -i '/    # go/,/    # go end/d' /etc/env
 
 }
-
-

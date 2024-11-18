@@ -11,9 +11,3 @@ make
 make PREFIX=/usr install
 
 }
-
-rdir() {
-
-rm -vf /usr/bin/tree
-
-}

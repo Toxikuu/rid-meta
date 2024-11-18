@@ -23,5 +23,3 @@ rdir() {
 rm -rvf /usr/share/fonts/Symbols
 
 }
-
-

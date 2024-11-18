@@ -18,5 +18,3 @@ rdir() {
 rm -vf /usr/bin/bindgen
 
 }
-
-

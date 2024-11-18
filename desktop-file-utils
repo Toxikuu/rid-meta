@@ -22,5 +22,3 @@ rm -vf /usr/bin/desktop-file-{edit,install,validate} \
        /usr/bin/update-desktop-database
 
    }
-
-

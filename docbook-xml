@@ -118,5 +118,3 @@ rm -rvf /etc/xml \
   /usr/share/xml/docbook/xml-dtd-$VERS/
 
 }
-
-

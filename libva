@@ -23,5 +23,3 @@ rm -rvf /usr/lib/libva-drm.so*      \
        /usr/include/va
 
    }
-
-

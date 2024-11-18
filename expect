@@ -27,5 +27,3 @@ rm -vf  /usr/bin/expect  \
         /usr/lib/libexpect$VERS.so
 
     }
-
-

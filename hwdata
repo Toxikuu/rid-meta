@@ -12,9 +12,3 @@ idir() {
 make install
 
 }
-
-rdir() {
-
-rm -rvf /usr/share/hwdata
-
-}

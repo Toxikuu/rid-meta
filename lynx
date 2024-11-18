@@ -30,5 +30,3 @@ rm -rvf /etc/lynx \
   /usr/share/doc/lynx-$VERS
 
 }
-
-

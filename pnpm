@@ -32,18 +32,3 @@ rm -rvf /opt/pnpm
 sed -i '/    # pnpm/,/    # pnpm end/d' /etc/env
 
 }
-
-udir() {
-pnpm self-update
-
-if ! grep -q "# pnpm end" /etc/env ; then
-    cat << 'EOF' >> /etc/env
-
-    # pnpm
-    export PNPM_HOME="/opt/pnpm"
-    pathappend "$PNPM_HOME"
-    # pnpm end
-EOF
-fi
-
-}

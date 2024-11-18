@@ -19,5 +19,3 @@ rm -rvf /usr/share/swig
 rm -vf /bin/{,ccache-}swig
 
 }
-
-

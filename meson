@@ -26,5 +26,3 @@ rm -rvf /usr/lib/python$PV/site-packages/mesonbuild    \
         /usr/lib/python$PV/site-packages/meson-$VERS.dist-info
 
     }
-
-

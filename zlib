@@ -33,5 +33,3 @@ rdir() {
 rm -vf /usr/lib{,32}/libz.so*
 
 }
-
-

@@ -19,5 +19,3 @@ rm -rvf /usr/include/uchardet /usr/lib/libuchardet.so*
 rm -vf /usr/bin/uchardet
 
 }
-
-

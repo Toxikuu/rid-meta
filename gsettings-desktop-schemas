@@ -20,5 +20,3 @@ rm -rvf /usr/include/gsettings-desktop-schemas  \
         /usr/share/GConf/gsettings
 
     }
-
-

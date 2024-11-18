@@ -22,5 +22,3 @@ rm -rvf /usr/share/xcb/ \
         /usr/lib/python$PV/site-packages/xcbgen
 
     }
-
-

@@ -21,5 +21,3 @@ PV=${PV%.*}
 rm -rvf /usr/lib/python$PV/site-packages/flit_core*
 
 }
-
-

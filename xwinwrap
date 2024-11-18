@@ -19,5 +19,3 @@ rdir() {
 rm -vf /bin/xwinwrap
 
 }
-
-

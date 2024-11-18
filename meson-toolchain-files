@@ -68,5 +68,3 @@ rdir() {
 rm -rvf /usr/share/meson/{cross,native}
 
 }
-
-

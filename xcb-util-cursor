@@ -17,5 +17,3 @@ rdir() {
 rm -vf /usr/lib/libxcb-cursor.*
 
 }
-
-

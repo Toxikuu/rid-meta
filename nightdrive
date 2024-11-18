@@ -33,5 +33,3 @@ rm -rvf $H/.config  \
 echo "If you set up any files in /dots/nightdrive/extra, you're responsible for handling the removal of those."
 
 }
-
-

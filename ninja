@@ -20,5 +20,3 @@ rm -vf  ninja   \
         /usr/share/bash-completion/completions/ninja
 
     }
-
-

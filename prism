@@ -37,5 +37,3 @@ rm -vf  /usr/share/applications/prism.desktop
 rm -rvf /usr/src/prism
 
 }
-
-

@@ -24,5 +24,3 @@ rm -rvf /usr/bin/libpng{,16}-config \
   /usr/lib/libpng{,16}.*
 
 }
-
-

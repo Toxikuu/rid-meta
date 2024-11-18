@@ -19,5 +19,3 @@ rdir() {
 rm -vf /usr/bin/tar
 
 }
-
-

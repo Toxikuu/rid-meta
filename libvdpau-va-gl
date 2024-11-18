@@ -31,5 +31,3 @@ rdir() {
 rm -vf /usr/lib/vdpau/libvdpau_va_gl.so*
 
 }
-
-

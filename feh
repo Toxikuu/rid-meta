@@ -22,5 +22,3 @@ rm -rvf /usr/share/feh
 rm -vf /usr/bin/feh
 
 }
-
-

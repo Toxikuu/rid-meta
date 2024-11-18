@@ -23,5 +23,3 @@ rdir() {
 rm -vf /usr/lib/libmpfr.so*
 
 }
-
-

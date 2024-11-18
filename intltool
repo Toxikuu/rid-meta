@@ -20,5 +20,3 @@ rm -rvf /usr/share/intltool
 rm -vf /usr/bin/intltool{,ize,-update,-prepare,-merge,-extract}
 
 }
-
-

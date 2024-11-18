@@ -20,5 +20,3 @@ rdir() {
 rm -vf /usr/lib/libduktape{,d}.so*
 
 }
-
-

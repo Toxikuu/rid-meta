@@ -18,5 +18,3 @@ rdir() {
 echo not implemented
 
 }
-
-

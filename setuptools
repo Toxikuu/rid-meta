@@ -23,5 +23,3 @@ rm -rvf /usr/lib/python$PV/site-packages/setuptools*       \
         /usr/lib/python$PV/site-packages/pkg_resources
 
     }
-
-

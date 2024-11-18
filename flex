@@ -22,5 +22,3 @@ rm -vf  /usr/bin/lex        \
         /usr/lib{,32}/libfl.so*
 
     }
-
-

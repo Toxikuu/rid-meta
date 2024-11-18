@@ -20,5 +20,3 @@ rm -vf  /usr/lib/libev.{l,}a \
         /usr/lib/libev.so*
 
     }
-
-

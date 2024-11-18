@@ -18,5 +18,3 @@ rdir() {
 rm -vf /usr/lib{,32}/libXfont2.{la,so*}
 
 }
-
-

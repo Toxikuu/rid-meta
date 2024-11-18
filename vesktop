@@ -57,5 +57,3 @@ echo "Not removing ~/.config/vesktop"
 echo "You may do so yourself if you like"
 
 }
-
-

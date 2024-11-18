@@ -32,5 +32,3 @@ rm -rvf /{tmp,etc}/rid
 rm -vf /bin/rid
 
 }
-
-

@@ -28,5 +28,3 @@ rm -vf /usr/bin/{,f}unzip \
   /usr/bin/zip{grep,info}
 
 }
-
-

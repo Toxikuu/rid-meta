@@ -19,5 +19,3 @@ rm -vf /usr/bin/nvim
 rm -rvf /usr/{lib,share}/nvim
 
 }
-
-

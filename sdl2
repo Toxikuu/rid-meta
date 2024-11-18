@@ -24,5 +24,3 @@ rm -rvf /usr/include/SDL2               \
     /usr/lib/cmake/SDL2
 
 }
-
-

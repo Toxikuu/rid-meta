@@ -22,5 +22,3 @@ rm -vf  /usr/bin/xclip{,-*}  \
         /usr/share/man/man1/xclip{.1,-copyfile.1}
 
     }
-
-

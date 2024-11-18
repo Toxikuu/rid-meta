@@ -19,5 +19,3 @@ rm -vf /bin/{jpg,link,ps,tif,trans}icc
 rm -vf /usr/lib/liblcms2.{la,so*}
 
 }
-
-

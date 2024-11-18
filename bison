@@ -19,5 +19,3 @@ rm -vf  /usr/bin/{bison,yacc}   \
         /usr/lib/liby.a
 
     }
-
-

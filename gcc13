@@ -39,5 +39,3 @@ rdir() {
 rm -rvf /opt/gcc13
 
 }
-
-

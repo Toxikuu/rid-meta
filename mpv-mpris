@@ -22,5 +22,3 @@ rm -rvf /usr/lib/mpv-mpris \
         /etc/mpv/scripts/mpris.so
 
 }
-
-

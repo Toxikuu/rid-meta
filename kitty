@@ -49,5 +49,3 @@ rdir() {
 rm -vf /bin/{kitty,kitten}
 
 }
-
-

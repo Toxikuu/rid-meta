@@ -22,5 +22,3 @@ rm -rvf /usr/lib/cmake/VulkanLoader \
         /usr/lib{,32}/libvulkan.so*
 
     }
-
-

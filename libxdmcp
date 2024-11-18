@@ -18,5 +18,3 @@ rdir() {
 rm -rvf /usr/lib{,32}/libXdmcp.*
 
 }
-
-

@@ -18,5 +18,3 @@ rm -vf  /usr/lib/libxcb-ewmh.* \
         /usr/lib/libxcb-icccm.*
 
     }
-
-

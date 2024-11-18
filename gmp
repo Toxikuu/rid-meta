@@ -62,5 +62,3 @@ rdir() {
 rm -vf /usr/lib{,32}/libgmp{,xx}.so*
 
 }
-
-

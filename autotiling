@@ -33,5 +33,3 @@ rm -vf  /bin/autotiling.sh
 rm -rvf /usr/lib/autotiling
 
 }
-
-

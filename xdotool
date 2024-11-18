@@ -18,5 +18,3 @@ rdir() {
 rm -vf /usr/bin/xdotool /usr/lib/libxdo.so*
 
 }
-
-

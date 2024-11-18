@@ -22,5 +22,3 @@ rdir() {
 rm -vf /usr/lib/libmpc.so*
 
 }
-
-

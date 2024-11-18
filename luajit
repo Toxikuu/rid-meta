@@ -25,5 +25,3 @@ rm -rvf /usr/include/luajit-2.1 \
         /usr/share/luajit-2.1
 
     }
-
-

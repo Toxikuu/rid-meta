@@ -18,5 +18,3 @@ rm -rvf /usr/include/pixman-1
 rm -vf /usr/lib/libpixman-1.*
 
 }
-
-

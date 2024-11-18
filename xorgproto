@@ -18,5 +18,3 @@ rdir() {
 rm -vf /usr/share/doc/xorgproto-2024.1/
 
 }
-
-

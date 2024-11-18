@@ -21,5 +21,3 @@ rm -vf /usr/lib/libtiff{,xx}.so*
 rm -rvf /usr/lib/cmake/tiff
 
 }
-
-

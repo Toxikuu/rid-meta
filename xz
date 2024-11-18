@@ -43,5 +43,3 @@ rm -vf \
     /usr/lib{,32}/liblzma.so*
 popd
 }
-
-

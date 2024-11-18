@@ -20,5 +20,3 @@ PV=$(gv python)
 rm -rvf /usr/lib/python${PV}/site-packages/pyyaml*
 
 }
-
-

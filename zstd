@@ -29,5 +29,3 @@ rm -vf  /usr/bin/zstd{,cat,grep,less,mt}    \
         /usr/lib{,32}/libzstd.so*
 
     }
-
-

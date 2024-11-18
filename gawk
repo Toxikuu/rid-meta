@@ -28,5 +28,3 @@ rm -vf  /usr/bin/{g,}awk    \
         /usr/bin/gawk-$VERS
 
     }
-
-

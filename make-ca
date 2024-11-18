@@ -26,5 +26,3 @@ rm -rvf /usr/bin/make-ca            \
         /etc/pki/{nssdb,anchors,tls/{certs,java}}
 
     }
-
-

@@ -19,5 +19,3 @@ rm -rvf /usr/lib/libepoxy.so*   \
         /usr/include/epoxy
 
     }
-
-

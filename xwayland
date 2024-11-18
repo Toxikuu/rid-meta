@@ -26,5 +26,3 @@ rdir() {
 rm -vf /usr/bin/Xwayland
 
 }
-
-

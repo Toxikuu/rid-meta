@@ -30,5 +30,3 @@ rm -rvf \
     /usr/share/thumbnailers/gdk-pixbuf-thumbnailer.thumbnailer
 
 }
-
-

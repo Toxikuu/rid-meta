@@ -23,5 +23,3 @@ rm -vf \
     /usr/share/bash-completion/completions/rg
 
 }
-
-

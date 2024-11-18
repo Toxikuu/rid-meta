@@ -26,6 +26,4 @@ rm -rvf /lib/libatk-1.0.so*         \
         /usr/lib/gnome-settings-daemon-3.0  \
         /usr/lib/gtk-2.0/modules/libatk-bridge.so
 
-    }
-
-
+}

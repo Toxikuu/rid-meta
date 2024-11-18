@@ -18,5 +18,3 @@ rm -vf /usr/bin/seatd{,-launch} \
        /usr/lib/libseat.so*
 
    }
-
-

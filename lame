@@ -24,5 +24,3 @@ rm -rvf /usr/bin/{lame,mp3rtp}  \
         /usr/include/lame
 
     }
-
-

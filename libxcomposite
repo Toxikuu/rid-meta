@@ -18,5 +18,3 @@ rdir() {
 rm -vf /usr/lib{,32}/libXcomposite.{la,so*}
 
 }
-
-

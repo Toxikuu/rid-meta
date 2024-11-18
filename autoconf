@@ -20,5 +20,3 @@ rm -vf /usr/bin/auto{conf,header,m4te,reconf,scan,update}
 rm -vf /usr/bin/ifnames
 
 }
-
-

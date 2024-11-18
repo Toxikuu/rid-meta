@@ -21,5 +21,3 @@ rdir() {
 rm -rvf /usr/include/aom /usr/lib/libaom.so*
 
 }
-
-

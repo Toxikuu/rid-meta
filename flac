@@ -23,5 +23,3 @@ rm -rvf /usr/bin/{meta,}flac   \
         /usr/share/doc/flac-$VERS
 
     }
-
-

@@ -22,5 +22,3 @@ rm -vf /usr/bin/mako-render
 rm -rvf /usr/lib/python$PV/site-packages/{mako,Mako-$VERS.dist-info}
 
 }
-
-

@@ -36,5 +36,3 @@ rm -rvf /bin/pk{action,check,exec,ttyagent} \
         /usr/share/polkit-1
 
     }
-
-

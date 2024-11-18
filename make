@@ -17,5 +17,3 @@ rdir() {
 rm -vf /usr/bin/make
 
 }
-
-

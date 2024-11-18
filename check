@@ -21,6 +21,4 @@ rdir() {
 rm -vf  /usr/bin/checkmk    \
         /usr/lib{,32}/libcheck.so*
 
-    }
-
-
+}

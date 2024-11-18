@@ -93,5 +93,3 @@ rm -rvf /usr/share/xml/docbook/xsl-stylesheets-nons-$VERS \
         /usr/share/doc/docbook-xsl-nons-$VERS
 
     }
-
-

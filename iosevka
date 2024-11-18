@@ -15,9 +15,3 @@ mkdir -pv /usr/share/fonts/iosevka
 tar xvf "$RIDSOURCES"/$NAME-$VERS.tar -C /usr/share/fonts/$NAME
 
 }
-
-rdir() {
-
-rm -rvf /usr/share/fonts/iosevka
-
-}

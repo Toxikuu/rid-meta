@@ -34,5 +34,3 @@ rm -rvf /usr/bin/lspci   \
         /usr/lib/libpci.so*
 
     }
-
-

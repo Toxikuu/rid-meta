@@ -22,5 +22,3 @@ rm -vf  /bin/fatlabel   \
         /bin/mkfs.fat
         
     }
-
-

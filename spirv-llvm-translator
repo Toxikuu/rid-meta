@@ -12,9 +12,3 @@ CN -D LLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr
 32CN -D LLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr
 
 }
-
-rdir() {
-
-echo not implemented
-
-}
