@@ -37,7 +37,7 @@ make install
 
 RDIR=$(cat << '~fin.'
 
-echo not implemented
+rm -rvf /opt/gcc13
 
 ~fin.
 )
