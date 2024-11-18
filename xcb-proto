@@ -3,7 +3,7 @@ NAME="xcb-proto"
 VERS="1.17.0"
 LINK="https://xorg.freedesktop.org/archive/individual/proto/xcb-proto-$VERS.tar.xz"
 UPST="https://repology.org/project/xcb-proto/information"
-DEPS=""
+DEPS="python"
 
 
 idir() {
@@ -21,4 +21,4 @@ PV=${PV%.*}
 rm -rvf /usr/share/xcb/ \
         /usr/lib/python$PV/site-packages/xcbgen
 
-    }
+}
