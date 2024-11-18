@@ -127,7 +127,7 @@ rm -v dummy.c a.out
 
 rdir() {
 
-echo not implemented
+echo "Not removing $NAME sorry"
 
 }
 
