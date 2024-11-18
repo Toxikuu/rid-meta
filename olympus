@@ -8,13 +8,14 @@ DEPS="unzip xdg-utils desktop-file-utils"
 
 IDIR=$(cat << '~fin.'
 
-mo '"$RIDSOURCES"/artifacts?artifactName=linux.main&api-version=5.0&%24format=zip' "$RIDSOURCES"/olympus.zip
-
+ln -sfv "$RIDSOURCES"/'artifacts?artifactName=linux.main&api-version=5.0&%24format=zip' "$RIDSOURCES"/olympus.zip
 cp -vf "$RIDSOURCES"/olympus.zip .
 
-unzip olympus.zip && cd   linux.main
-unzip    dist.zip && rm -vf dist.zip
+unzip olympus.zip && cd   linux.main    &&
+unzip    dist.zip && rm -vf dist.zip    &&
+cd .. && mo linux.main /usr/lib/olympus
 
+cd /usr/lib/olympus
 yes "y" | ./install.sh
 
 mo /usr/share/applications/{O,o}lympus.desktop
@@ -24,7 +25,8 @@ mo /usr/share/applications/{O,o}lympus.desktop
 
 RDIR=$(cat << '~fin.'
 
-echo not implemented
+rm -rvf /usr/lib/olympus
+rm -vf /usr/bin/olympus
 
 ~fin.
 )
