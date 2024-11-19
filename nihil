@@ -8,7 +8,7 @@ idir() {
 
 cd /dots
 git clone https://github.com/toxikuu/nihil.git && cd nihil
-chown -vR $TARGET_USER:$TARGET_USER /dots/nihil
+chown -vR $TU:$TU /dots/nihil
 
 rm -rvf $H/.config
 ln -svf /dots/nihil/config $H/.config

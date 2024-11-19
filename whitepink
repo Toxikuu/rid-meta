@@ -13,7 +13,7 @@ rm -rvf $H/.config
 rm -rvf whitepink
 
 git clone https://github.com/Toxikuu/whitepink
-chown -Rv $TARGET_USER:$TARGET_USER whitepink
+chown -Rv $TU:$TU whitepink
 
 ln -sfv /dots/whitepink/config $H/.config
 

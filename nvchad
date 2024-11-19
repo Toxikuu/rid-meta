@@ -8,7 +8,7 @@ idir() {
 
 git clone https://github.com/NvChad/starter /root/.config/nvim
 rm -rvf $H/.config/nvim && cp -rvf /root/.config/nvim $H/.config/nvim
-chown -vR $TARGET_USER:$TARGET_USER $H/.config/nvim
+chown -vR $TU:$TU $H/.config/nvim
 
 }
 
