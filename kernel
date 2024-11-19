@@ -1,12 +1,12 @@
 #!/bin/bash
 NAME="kernel"
-VERS="6.11.9"
+VERS="6.12"
 # ver="${VERS//\.0/}"
 LINK="https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-$VERS.tar.gz"
 DOWN="https://raw.githubusercontent.com/Toxikuu/rid/refs/heads/master/defaults/kernelconfig"
 UPST="https://kernel.org"
 SELE="#latest_link > a:nth-child(1)"
-NEWS='You can edit your kernel config at /usr/src/linux/.config and run `rid -fu kernel` to use the new config. NVIDIA drivers must be rebuilt after the kernel sources are changed.'
+NEWS='You can edit your kernel config at /usr/src/linux/.config and run `rid -fu kernel` to use the new config. NVIDIA drivers must be rebuilt after the kernel sources are changed. Rid does not provide removal instructions for the kernel.'
 DEPS=""
 
 
@@ -57,6 +57,6 @@ EOF
 
 rdir() {
 
-echo not implemented
+echo "Remove the kernel manually (in /usr/src/) or replace this with your own instructions." >&2
 
 }

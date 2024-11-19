@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="iosevka"
-VERS="3.2.1"
+VERS="3.3.0"
 UPST="https://github.com/ryanoasis/nerd-fonts/releases/latest"
 DOWN="https://github.com/ryanoasis/nerd-fonts/releases/download/v$VERS/Iosevka.tar.xz"
 
@@ -10,6 +10,12 @@ idir() {
 mo "$RIDSOURCES"/Iosevka.tar.xz "$RIDSOURCES"/$NAME-$VERS.tar
 mkdir -pv /usr/share/fonts/iosevka
 
-tar xvf "$RIDSOURCES"/$NAME-$VERS.tar -C /usr/share/fonts/$NAME
+tar xvf "$RIDSOURCES"/iosevka-$VERS.tar -C /usr/share/fonts/$NAME
+
+}
+
+ridr() {
+
+rm -rvf /usr/share/fonts/iosevka/
 
 }

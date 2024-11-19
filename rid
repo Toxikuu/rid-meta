@@ -1,23 +1,23 @@
 #!/bin/bash
 NAME="rid"
-VERS="0.16.4"
-LINK=""
-DOWN="https://github.com/Toxikuu/rid/releases/download/v$VERS/rid.tar.xz"
+VERS="0.16.6"
+LINK="https://github.com/Toxikuu/rid/releases/download/v$VERS/rid.tar.xz"
+DOWN=""
 UPST="https://github.com/toxikuu/rid/tags"
 DEPS="openssl tar xz bash coreutils glibc gcc"
 
 
 idir() {
 
-if [ -e $RIDHOME/pkgs.json ]; then
-  mv -vf $RIDHOME/pkgs.json /tmp/rid-pkgs.bak
+if [ -e "$RIDHOME"/pkgs.json ]; then
+  mv -vf "$RIDHOME"/pkgs.json /tmp/rid-pkgs.bak
 fi
 
-tar xvf "$RIDSOURCES"/rid.tar.xz -C /usr/bin
+cp -vf rid /usr/bin/rid
 /usr/bin/rid -b
 
 if [ -e /tmp/rid-pkgs.bak ]; then
-  mv -vf /tmp/rid-pkgs.bak $RIDHOME/pkgs.json
+  mv -vf /tmp/rid-pkgs.bak "$RIDHOME"/pkgs.json
   echo "restored pkgs.json"
 fi
 
@@ -25,10 +25,13 @@ fi
 
 rdir() {
 
-if [ -e $RIDHOME/pkgs.json ]; then
+if [ -e "$RIDHOME"/pkgs.json ]; then
   mv -vf /tmp/pkgs.json /tmp/rid-pkgs.bak
 fi
-rm -rvf /{tmp,etc}/rid
+
+[ -z "$RIDHOME" ] && die "\$RIDHOME is not set!"
+[ -z "$RIDTMP" ]  && die "\$RIDTMP is not set!"
+rm -rvf "$RIDHOME" "$RIDTMP"
 rm -vf /bin/rid
 
 }
