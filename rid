@@ -1,37 +1,26 @@
 #!/bin/bash
 NAME="rid"
 VERS="0.16.6"
-LINK="https://github.com/Toxikuu/rid/releases/download/v$VERS/rid.tar.xz"
+LINK=""
 DOWN=""
 UPST="https://github.com/toxikuu/rid/tags"
-DEPS="openssl tar xz bash coreutils glibc gcc"
+DEPS="curl tar xz bash coreutils glibc gcc"
 
 
 idir() {
 
-if [ -e "$RIDHOME"/pkgs.json ]; then
-  mv -vf "$RIDHOME"/pkgs.json /tmp/rid-pkgs.bak
-fi
-
-cp -vf rid /usr/bin/rid
-/usr/bin/rid -b
-
-if [ -e /tmp/rid-pkgs.bak ]; then
-  mv -vf /tmp/rid-pkgs.bak "$RIDHOME"/pkgs.json
-  echo "restored pkgs.json"
-fi
+curl -fsSL https://raw.githubusercontent.com/Toxikuu/rid/refs/heads/master/install.sh | bash
 
 }
 
 rdir() {
 
-if [ -e "$RIDHOME"/pkgs.json ]; then
-  mv -vf /tmp/pkgs.json /tmp/rid-pkgs.bak
+if [ -e "$RIDPKGSJSON" ]; then
+  mv -vf "$RIDPKGSJSON" /tmp/rid-pkgs.bak
 fi
 
-[ -z "$RIDHOME" ] && die "\$RIDHOME is not set!"
-[ -z "$RIDTMP" ]  && die "\$RIDTMP is not set!"
 rm -rvf "$RIDHOME" "$RIDTMP"
-rm -vf /bin/rid
+rm -vf /usr/bin/rid
+echo -e "\x1b[30;1m  $RIDSOURCES has not been removed\n  You may remove it manually\x1b[0m"
 
 }
