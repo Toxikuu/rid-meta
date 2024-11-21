@@ -1,0 +1,29 @@
+#!/bin/bash
+NAME="bash-completion"
+VERS="2.14.0"
+LINK="https://github.com/scop/bash-completion/archive/refs/tags/$VERS.tar.gz"
+DEPS="bash autoconf"
+NEWS="Bash completions are installed in '/usr/share/bash-completion/completions'. A script is installed in '/etc/profile.d/bash_completion.sh'."
+
+
+idir() {
+
+autoreconf -fiv
+cm --sysconfdir=/etc
+
+if ! grep -q "# bash-completion" /etc/env ; then
+    cat << EOF >> /etc/env
+
+    # bash-completion
+    source /etc/profile.d/bash_completion.sh
+    # bash-completion end
+EOF
+fi
+
+}
+
+rdir() {
+    
+echo not implemented
+
+}

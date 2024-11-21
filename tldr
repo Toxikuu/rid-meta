@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="tldr"
+VERS="1.7.1"
+LINK="https://github.com/tealdeer-rs/tealdeer/archive/refs/tags/v$VERS.tar.gz"
+UPST="https://github.com/tealdeer-rs/tealdeer/releases/latest"
+DEPS="rust" # optionally cargo strip
+
+
+idir() {
+
+cargo build --release
+cargo strip || true
+install -v -m 755 target/release/tldr /usr/bin/tldr
+
+tldr --update
+rm -vf "$H"/.cache/tealdeer/pages.*
+
+}
+
+rdir() {
+    
+rm -vf /usr/bin/tldr
+
+}

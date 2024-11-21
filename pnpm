@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="pnpm"
-VERS="9.13.2" # this may not be used, but it is helpful for knowing when to self-update pnpm
+VERS="9.14.2" # this may not be used, but it is helpful for knowing when to self-update pnpm
 UPST="https://github.com/pnpm/pnpm/releases/latest"
 DEPS="curl"
 

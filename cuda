@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="cuda"
-VERS="12.6.2"
+VERS="12.6.3"
 NV=$(gv nvidia)
 DOWN="https://developer.download.nvidia.com/compute/cuda/$VERS/local_installers/cuda_${VERS}_${NV}_linux.run"
 UPST="https://developer.nvidia.com/cuda-toolkit-archive"

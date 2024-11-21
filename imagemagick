@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="imagemagick"
-VERS="7.1.1-40"
+VERS="7.1.1-41"
 LINK="https://github.com/ImageMagick/ImageMagick/archive/refs/tags/$VERS.tar.gz"
 UPST="https://github.com/ImageMagick/ImageMagick/releases/latest"
 DEPS="cairo fontconfig freetype2 glib lcms2 libpng libxext librsvg libtiff libwebp libjpeg-turbo pango"
