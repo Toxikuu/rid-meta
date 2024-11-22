@@ -1,0 +1,19 @@
+#!/bin/bash
+NAME="glm"
+VERS="1.0.1"
+LINK="https://github.com/g-truc/glm/archive/refs/tags/$VERS.tar.gz"
+UPST="https://github.com/g-truc/glm/releases/latest"
+DEPS="cmake ninja"
+
+
+idir() {
+
+cp -rvf glm /usr/include/
+
+}
+
+rdir() {
+
+rm -rvf /usr/include/glm
+
+}

@@ -1,0 +1,25 @@
+#!/bin/bash
+NAME="glew"
+VERS="2.2.0"
+LINK="https://downloads.sourceforge.net/glew/glew-$VERS.tgz"
+UPST=""
+DEPS="mesa"
+
+
+idir() {
+
+sed -i 's%lib64%lib%g' config/Makefile.linux &&
+sed -i -e '/glew.lib.static:/d' \
+       -e '/0644 .*STATIC/d'    \
+       -e 's/glew.lib.static//' Makefile     &&
+make
+make install.all
+
+}
+
+rdir() {
+
+rm -vf /usr/bin/{glew,visual}info
+rm -vf /usr/lib/libGLEW.so*
+
+}

@@ -1,0 +1,20 @@
+#!/bin/bash
+NAME="socat"
+VERS="1.8.0.1"
+LINK="http://www.dest-unreach.org/socat/download/socat-$VERS.tar.gz"
+UPST="http://www.dest-unreach.org/socat/"
+SELE="body > p:nth-child(7) > a:nth-child(1)"
+DEPS="glibc openssl readline"
+
+
+idir() {
+
+cm --mandir=/usr/share/man
+
+}
+
+rdir() {
+
+rm -vf /usr/bin/socat
+
+}

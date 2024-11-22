@@ -1,0 +1,22 @@
+#!/bin/bash
+NAME="maim"
+VERS="5.8.0"
+LINK="https://github.com/naelstrof/maim/archive/refs/tags/v$VERS.tar.gz"
+UPST="https://github.com/naelstrof/maim/releases/latest"
+DEPS="freetype2 libpng libjpeg-turbo libwebp libx11 libxcomposite libxext libxfixes libxrandr slop cmake glm"
+
+
+idir() {
+
+sed -e 's|CXX_STANDARD 11|CXX_STANDARD 17|g' -i CMakeLists.txt
+cmake -DCMAKE_INSTALL_PREFIX=/usr .
+make
+make install
+
+}
+
+rdir() {
+
+echo "not implemented"
+
+}

@@ -1,0 +1,20 @@
+#!/bin/bash
+NAME="glu"
+VERS="9.0.3"
+LINK="https://archive.mesa3d.org/glu/glu-$VERS.tar.xz"
+UPST=""
+DEPS="mesa"
+
+
+idir() {
+
+mn -D gl_provider=gl
+rm -vf /usr/lib/libGLU.a
+
+}
+
+rdir() {
+
+rm -vf /usr/lib/libGLU.so*
+
+}
