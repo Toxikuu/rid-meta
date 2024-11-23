@@ -1,7 +1,7 @@
 #!/bin/bash
 NAME="feh"
-VERS="3.10.3"
-LINK="https://feh.finalrewind.org/feh-$VERS.tar.bz2"
+VERS="3.10.2"
+LINK="https://github.com/derf/feh/archive/refs/heads/master.tar.gz" # not sure why, but finalrewind's link doesn't work with rid; so im using github's
 UPST="https://feh.finalrewind.org"
 SELE=".inlinepage > h1:nth-child(1) > a:nth-child(1)"
 DEPS="libpng imlib2 curl"
@@ -9,7 +9,7 @@ DEPS="libpng imlib2 curl"
 
 idir() {
 
-sed -i "s:doc/feh:&-3.10.3:" config.mk &&
+sed -i "s:doc/feh:&-$VERS:" config.mk &&
 make PREFIX=/usr         || die "Make failed"
 make PREFIX=/usr install || die "Make install failed"
 
