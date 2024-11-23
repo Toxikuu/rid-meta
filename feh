@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="feh"
-VERS="3.10.2"
+VERS="3.10.3"
 LINK="https://github.com/derf/feh/archive/refs/heads/master.tar.gz" # not sure why, but finalrewind's link doesn't work with rid; so im using github's
 UPST="https://feh.finalrewind.org"
 SELE=".inlinepage > h1:nth-child(1) > a:nth-child(1)"

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="nss"
-VERS="3.106"
+VERS="3.107"
 ver="${VERS//./_}"
 LINK="https://archive.mozilla.org/pub/security/nss/releases/NSS_${ver}_RTM/src/nss-$VERS.tar.gz"
 DOWN="https://www.linuxfromscratch.org/patches/blfs/svn/nss-standalone-1.patch"
