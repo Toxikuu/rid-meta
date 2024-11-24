@@ -1,16 +1,28 @@
 #!/bin/bash
-NAME="wget"
-VERS="1.25.0"
-LINK="https://ftp.gnu.org/gnu/wget/wget-$VERS.tar.gz"
-UPST="https://ftp.gnu.org/gnu/wget/?C=M;O=D"
-SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-child(2) > a:nth-child(1)"
-DEPS="libpsl make-ca libidn2"
+NAME="wget" # wget2, technically
+VERS="2.2.0"
+LINK="https://gnuwget.gitlab.io/wget2/wget2-latest.tar.gz"
+UPST="https://gitlab.com/gnuwget/wget2/-/tags"
+DEPS="libpsl make-ca libidn2 python tar autoconf automake gettext"
 
 
 idir() {
 
-cm --sysconfdir=/etc \
-   --with-ssl=openssl
+cm  \
+  --with-lzma             \
+  --with-bzip2            \
+  --without-lzip          \
+  --sysconfdir=/etc       \
+  --without-brotlidec     \
+  --disable-doc           \
+  --disable-rpath         \
+  --enable-threads=posix  \
+  --disable-nls           \
+  --enable-year2038       \
+  --with-gnu-ld           \
+  --without-plugin-support
+
+ln -sfv wget2 /usr/bin/wget
 
 }
 
