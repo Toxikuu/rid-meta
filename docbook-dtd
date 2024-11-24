@@ -1,0 +1,48 @@
+#!/bin/bash
+NAME="docbook-dtd"
+VERS="4.5"
+DOWN="https://www.docbook.org/sgml/$VERS/docbook-$VERS.zip"
+UPST=""
+DEPS="unzip sgml-common"
+
+
+idir() {
+
+unzip "$RIDSOURCES"/docbook-$VERS.zip
+
+sed -i -e '/ISO 8879/d' \
+       -e '/gml/d' docbook.cat
+
+install -v -d /usr/share/sgml/docbook/sgml-dtd-$VERS &&
+chown -R root:root . &&
+
+install -v docbook.cat /usr/share/sgml/docbook/sgml-dtd-$VERS/catalog &&
+cp -v -af *.dtd *.mod *.dcl /usr/share/sgml/docbook/sgml-dtd-$VERS &&
+
+install-catalog --add /etc/sgml/sgml-docbook-dtd-$VERS.cat \
+    /usr/share/sgml/docbook/sgml-dtd-$VERS/catalog &&
+
+install-catalog --add /etc/sgml/sgml-docbook-dtd-$VERS.cat \
+    /etc/sgml/sgml-docbook.cat
+
+cat >> /usr/share/sgml/docbook/sgml-dtd-$VERS/catalog << "EOF"
+  -- Begin Single Major Version catalog changes --
+
+PUBLIC "-//OASIS//DTD DocBook V4.4//EN" "docbook.dtd"
+PUBLIC "-//OASIS//DTD DocBook V4.3//EN" "docbook.dtd"
+PUBLIC "-//OASIS//DTD DocBook V4.2//EN" "docbook.dtd"
+PUBLIC "-//OASIS//DTD DocBook V4.1//EN" "docbook.dtd"
+PUBLIC "-//OASIS//DTD DocBook V4.0//EN" "docbook.dtd"
+
+  -- End Single Major Version catalog changes --
+EOF
+
+}
+
+
+
+rdir() {
+
+rm -rvf /usr/share/sgml/docbook/sgml-dtd-[0-9]*
+
+}

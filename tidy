@@ -1,0 +1,32 @@
+#!/bin/bash
+NAME="tidy"
+VERS="5.8.0"
+LINK="https://github.com/htacg/tidy-html5/archive/$VERS/tidy-html5-$VERS.tar.gz"
+UPST=""
+DEPS="cmake libxslt"
+
+
+idir() {
+
+cd build/cmake &&
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_BUILD_TYPE=Release  \
+      -D BUILD_TAB2SPACE=ON        \
+      ../..    &&
+
+make
+
+make install &&
+rm -fv /usr/lib/libtidy.a &&
+install -v -m755 tab2space /usr/bin
+
+}
+
+rdir() {
+
+rm -rvf /usr/share/doc/tidy-[0-9]*
+rm -vf /usr/bin/{tab2space,tidy}  \
+       /usr/lib/libtidy.so*
+
+}

@@ -1,0 +1,52 @@
+#!/bin/bash
+NAME="sgml-common"
+VERS="0.6.3"
+LINK="https://sourceware.org/ftp/docbook-tools/new-trials/SOURCES/sgml-common-$VERS.tgz"
+DOWN="https://www.linuxfromscratch.org/patches/blfs/svn/sgml-common-$VERS-manpage-1.patch"
+UPST=""
+DEPS=""
+
+
+idir() {
+
+patch -Np1 -i "$RIDSOURCES"/sgml-common-$VERS-manpage-1.patch &&
+autoreconf -f -i
+
+./configure --prefix=/usr --sysconfdir=/etc &&
+make
+
+make docdir=/usr/share/doc install &&
+
+install-catalog --add /etc/sgml/sgml-ent.cat \
+    /usr/share/sgml/sgml-iso-entities-8879.1986/catalog &&
+
+install-catalog --add /etc/sgml/sgml-docbook.cat \
+    /etc/sgml/sgml-ent.cat
+
+}
+
+rdir() {
+
+install-catalog --remove /etc/sgml/sgml-ent.cat \
+  /usr/share/sgml/sgml-iso-entities-8879.1986/catalog &&
+
+install-catalog --remove /etc/sgml/sgml-docbook.cat \
+    /etc/sgml/sgml-ent.cat
+
+rm -rvf /etc/sgml   \
+        /usr/share/doc/sgml-common-$VERS  \
+        /usr/share/sgml
+
+rm -vf /usr/bin/{sgmlwhich,install-catalog}
+
+}
+
+udir() {
+install-catalog --remove /etc/sgml/sgml-ent.cat \
+  /usr/share/sgml/sgml-iso-entities-8879.1986/catalog &&
+
+install-catalog --remove /etc/sgml/sgml-docbook.cat \
+    /etc/sgml/sgml-ent.cat
+
+idir
+}

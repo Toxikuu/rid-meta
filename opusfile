@@ -1,0 +1,19 @@
+#!/bin/bash
+NAME="opusfile"
+VERS="0.12"
+LINK="https://ftp.osuosl.org/pub/xiph/releases/opus/opusfile-$VERS.tar.gz"
+UPST="https://github.com/xiph/opusfile/releases/latest"
+DEPS="openssl opus"
+
+
+idir() {
+
+cm
+
+}
+
+rdir() {
+
+echo "not implemented"
+
+}

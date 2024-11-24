@@ -1,8 +1,7 @@
 #!/bin/bash
 NAME="nodejs"
 VERS="23.3.0"
-UPST="https://nodejs.org/en"
-SELE=".layouts_homeLayout__f7Zuk > section:nth-child(1) > div:nth-child(2) > small:nth-child(4) > b:nth-child(1) > a:nth-child(1)"
+UPST="https://github.com/nodejs/node/releases/latest"
 DEPS="pnpm"
 
 
