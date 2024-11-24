@@ -9,7 +9,7 @@ DEPS="rust" # optionally cargo strip
 idir() {
 
 cargo build --release
-cargo strip || true
+cargo strip >/dev/null 2>&1 || :
 install -v -m 755 target/release/tldr /usr/bin/tldr
 
 tldr --update

@@ -13,7 +13,7 @@ chown -vR $TU:$TU /dots/nihil
 rm -rvf $H/.config
 ln -svf /dots/nihil/config $H/.config
 
-{ [ -e $H/Vault/.obsidian/themes ] && cp -rvf extra/Obsidian/Nihil $H/Vault/.obsidian/themes/ ; } || true
+{ [ -e $H/Vault/.obsidian/themes ] && cp -rvf extra/Obsidian/Nihil $H/Vault/.obsidian/themes/ ; } || :
 
 }
 
