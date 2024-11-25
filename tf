@@ -8,6 +8,7 @@ DEPS="python"
 
 idir() {
 
+# necessary since tf doesn't account for rid's versioned source folders
 sed -i "28s/tf/tf-$VERS/" install.sh
 yes 'y' | ./install.sh
 
