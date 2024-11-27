@@ -3,11 +3,15 @@ NAME="nvchad"
 VERS="9999"
 DEPS="nvim git"
 
-
 idir() {
 
+mo $H/.config/nvim{,-bak}    || :
+mo /root/.config/nvim{,-bak} || :
+
+rm -rvf {/root,$H}/.local/{state,share}/nvim
+
 git clone https://github.com/NvChad/starter /root/.config/nvim
-rm -rvf $H/.config/nvim && cp -rvf /root/.config/nvim $H/.config/nvim
+cp -rvf /root/.config/nvim $H/.config/nvim
 chown -vR $TU:$TU $H/.config/nvim
 
 }
