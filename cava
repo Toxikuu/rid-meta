@@ -1,0 +1,23 @@
+#!/bin/bash
+NAME="cava"
+VERS="0.10.3"
+LINK="https://github.com/karlstav/cava/archive/refs/tags/$VERS.tar.gz"
+UPST="https://github.com/karlstav/cava/releases/latest"
+DEPS="fftw iniparser"
+
+
+idir() {
+
+./autogen.sh
+cm  \
+  --disable-input-sndio     \
+  --disable-input-jack      \
+  --disable-input-portaudio
+
+}
+
+rdir() {
+
+echo "not implemented"
+
+}

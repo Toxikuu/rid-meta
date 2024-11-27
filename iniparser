@@ -1,0 +1,30 @@
+#!/bin/bash
+NAME="iniparser"
+VERS="4.2.4"
+LINK="https://github.com/ndevilla/iniparser/archive/refs/tags/v$VERS.tar.gz"
+UPST="https://github.com/ndevilla/iniparser/releases/latest"
+DEPS=""
+
+
+idir() {
+
+mkdir ridbuild
+cmake -B ridbuild   \
+  -DCMAKE_INSTALL_PREFIX=/usr   \
+  -DCMAKE_BUILD_TYPE=Release    \
+  -DBUILD_SHARED_LIBS=ON        \
+  -DCMAKE_SKIP_INSTALL_RPATH=ON \
+  -DBUILD_DOCS=OFF              \
+  -DBUILD_EXAMPLES=OFF          \
+  -DBUILD_STATIC_LIBS=OFF       
+
+cmake --build ridbuild
+cd ridbuild && make install
+
+}
+
+rdir() {
+
+echo "not implemented"
+
+}
