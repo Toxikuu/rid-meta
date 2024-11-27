@@ -1,0 +1,24 @@
+#!/bin/bash
+NAME="fzf"
+VERS="0.56.3"
+LINK="https://github.com/junegunn/fzf/archive/refs/tags/v$VERS.tar.gz"
+UPST="https://github.com/junegunn/fzf/releases/latest"
+DEPS="go"
+
+
+idir() {
+
+FZF_VERSION=$VERS FZF_REVISION=tarball make
+cp -vf target/fzf-linux_amd64 /usr/bin/fzf
+
+mkdir -pv /etc/profile.d
+cp -vf shell/*.bash /etc/profile.d/
+
+
+}
+
+rdir() {
+
+echo "not implemented"
+
+}
