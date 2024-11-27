@@ -1,7 +1,8 @@
 #!/bin/bash
 NAME="bash-completion"
-VERS="2.14.0"
+VERS="2.15.0"
 LINK="https://github.com/scop/bash-completion/archive/refs/tags/$VERS.tar.gz"
+UPST="https://github.com/scop/bash-completion/releases/latest"
 DEPS="bash autoconf"
 NEWS="Bash completions are installed in '/usr/share/bash-completion/completions'. A script is installed in '/etc/profile.d/bash_completion.sh'."
 
