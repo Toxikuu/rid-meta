@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="tree"
-VERS="2.2.0"
+VERS="2.2.1"
 LINK="https://gitlab.com/OldManProgrammer/unix-tree/-/archive/$VERS/unix-tree-$VERS.tar.bz2"
 UPST="https://gitlab.com/OldManProgrammer/unix-tree/-/tags"
 
