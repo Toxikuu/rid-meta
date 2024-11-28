@@ -3,6 +3,7 @@ NAME="lame"
 VERS="3.100"
 LINK="https://downloads.sourceforge.net/project/lame/lame/$VERS/lame-$VERS.tar.gz"
 UPST="https://sourceforge.net/projects/lame/files"
+VCMD="curl -s 'https://lame.sourceforge.io/' | grep download.php | head -n2 | tail -n1 | cut -dv -f2 | cut -d'<' -f1" # suboptimal, but no git repo
 DEPS=""
 
 

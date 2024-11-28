@@ -6,7 +6,8 @@ LINK="https://github.com/llvm/llvm-project/releases/download/llvmorg-$VERS/llvm-
 DOWN="https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-cmake-$ver.src.tar.xz 		\
       https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-third-party-$ver.src.tar.xz	\
       https://github.com/llvm/llvm-project/releases/download/llvmorg-$VERS/clang-$VERS.src.tar.xz"
-UPST="https://github.com/llvm/llvm-project/releases/latest"
+UPST="https://github.com/llvm/llvm-project.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n3 | head -n1 | cut -d- -f2"
 SELE="h1.d-inline"
 DEPS="cmake"
 

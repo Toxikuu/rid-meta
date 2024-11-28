@@ -2,7 +2,7 @@
 NAME="tree"
 VERS="2.2.1"
 LINK="https://gitlab.com/OldManProgrammer/unix-tree/-/archive/$VERS/unix-tree-$VERS.tar.bz2"
-UPST="https://gitlab.com/OldManProgrammer/unix-tree/-/tags"
+UPST="https://gitlab.com/OldManProgrammer/unix-tree.git"
 
 
 idir() {

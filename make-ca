@@ -2,7 +2,7 @@
 NAME="make-ca"
 VERS="1.14"
 LINK="https://github.com/lfs-book/make-ca/archive/v$VERS/make-ca-$VERS.tar.gz"
-UPST="https://github.com/lfs-book/make-ca/tags"
+UPST="https://github.com/lfs-book/make-ca.git"
 DEPS="p11-kit libtasn1 nss"
 
 

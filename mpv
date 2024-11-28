@@ -1,8 +1,8 @@
 #!/bin/bash
 NAME="mpv"
 VERS="0.39.0"
-LINK="https://github.com/mpv-player/mpv/archive/v0.39.0/mpv-0.39.0.tar.gz"
-UPST="https://github.com/mpv-player/mpv/tags"
+LINK="https://github.com/mpv-player/mpv/archive/v$VERS/mpv-$VERS.tar.gz"
+UPST="https://github.com/mpv-player/mpv.git"
 DEPS="alsa-lib ffmpeg libass libplacebo mesa pulseaudio libjpeg-turbo libva libvdpau luajit uchardet vulkan-loader"
 
 

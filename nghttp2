@@ -2,7 +2,7 @@
 NAME="nghttp2"
 VERS="1.64.0"
 LINK="https://github.com/$NAME/$NAME/releases/download/v$VERS/$NAME-$VERS.tar.xz"
-UPST="https://github.com/$NAME/$NAME/tags"
+UPST="https://github.com/$NAME/$NAME.git"
 DEPS="libxml2"
 
 

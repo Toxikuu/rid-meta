@@ -2,7 +2,7 @@
 NAME="mpv-mpris"
 VERS="1.1"
 LINK="https://github.com/hoyon/mpv-mpris/archive/refs/tags/$VERS.tar.gz"
-UPST="https://github.com/hoyon/mpv-mpris/tags"
+UPST="https://github.com/hoyon/mpv-mpris.git"
 DEPS="mpv"
 
 

@@ -2,19 +2,14 @@
 NAME="isl"
 VERS="0.27"
 LINK="https://libisl.sourceforge.io/isl-$VERS.tar.xz"
-UPST="https://libisl.sourceforge.io/?C=M;O=D"
-SELE="body > table:nth-child(13) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(2) > a:nth-child(1)"
+UPST="git://repo.or.cz/isl.git"
+VCMD="git ls-remote --tags 'git://repo.or.cz/isl.git' | sed 's:.*/::' | sort -V | tail -n1 | cut -d- -f2"
 DEPS=""
 
 
 idir() {
 
-./configure --prefix=/usr    \
-            --disable-static \
-            --docdir=/tmp/rid/trash
-
-make
-make install
+cm --docdir=/tmp/rid/trash
 
 mkdir -pv /usr/share/gdb/auto-load/usr/lib
 mv -v /usr/lib/libisl*gdb.py /usr/share/gdb/auto-load/usr/lib

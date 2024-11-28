@@ -2,7 +2,7 @@
 NAME="xcb-util-renderutil"
 VERS="0.3.10"
 LINK="https://xcb.freedesktop.org/dist/xcb-util-renderutil-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/lib/libxcb-render-util/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxcb-render-util.git"
 DEPS="libxcb"
 
 

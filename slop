@@ -3,7 +3,7 @@ NAME="slop"
 VERS="7.6"
 LINK="https://github.com/naelstrof/slop/archive/refs/tags/v$VERS.tar.gz"
 DOWN="https://gitlab.archlinux.org/archlinux/packaging/packages/slop/-/raw/main/bugfix-add-missed-header.patch"
-UPST="https://github.com/naelstrof/slop/releases/latest"
+UPST="https://github.com/naelstrof/slop.git"
 DEPS="libxext libx11 mesa glew libxrender cmake glu"
 
 

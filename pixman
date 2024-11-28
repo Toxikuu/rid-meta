@@ -2,7 +2,7 @@
 NAME="pixman"
 VERS="0.44.0"
 LINK="https://www.x.org/releases/individual/lib/pixman-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/pixman/pixman/-/tags"
+UPST="https://gitlab.freedesktop.org/pixman/pixman.git"
 DEPS=""
 
 

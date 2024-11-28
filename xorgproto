@@ -2,7 +2,7 @@
 NAME="xorgproto"
 VERS="2024.1"
 LINK="https://xorg.freedesktop.org/archive/individual/proto/xorgproto-$VERS.tar.xz"
-UPST="https://repology.org/project/xorgproto/information"
+UPST="https://gitlab.freedesktop.org/xorg/proto/xorgproto.git"
 DEPS="util-macros"
 
 

@@ -2,7 +2,7 @@
 NAME="polkit"
 VERS="125"
 LINK="https://github.com/polkit-org/polkit/archive/$VERS/polkit-$VERS.tar.gz"
-UPST="https://github.com/polkit-org/polkit/tags"
+UPST="https://github.com/polkit-org/polkit.git"
 DEPS="duktape glib linux-pam elogind"
 
 

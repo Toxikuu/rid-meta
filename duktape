@@ -2,8 +2,8 @@
 NAME="duktape"
 VERS="2.7.0"
 LINK="https://duktape.org/duktape-$VERS.tar.xz"
-UPST="https://duktape.org/download"
-SELE=".latest > td:nth-child(2) > a:nth-child(1)"
+UPST="https://github.com/svaarala/duktape.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n1"
 DEPS=""
 
 

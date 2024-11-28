@@ -2,8 +2,7 @@
 NAME="gdbm"
 VERS="1.24"
 LINK="https://ftp.gnu.org/gnu/gdbm/gdbm-$VERS.tar.gz"
-UPST="https://ftp.gnu.org/gnu/gdbm/?C=M;O=D"
-SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-child(2) > a:nth-child(1)"
+UPST="https://git.savannah.gnu.org/git/gdbm.git"
 DEPS=""
 
 

@@ -2,7 +2,7 @@
 NAME="fftw"
 VERS="3.3.10"
 LINK="http://fftw.org/fftw-$VERS.tar.gz"
-UPST="http://fftw.org/download.html"
+UPST="https://github.com/FFTW/fftw3.git"
 SELE="body > h2:nth-child(10)"
 DEPS=""
 

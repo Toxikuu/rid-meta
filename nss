@@ -4,7 +4,8 @@ VERS="3.107"
 ver="${VERS//./_}"
 LINK="https://archive.mozilla.org/pub/security/nss/releases/NSS_${ver}_RTM/src/nss-$VERS.tar.gz"
 DOWN="https://www.linuxfromscratch.org/patches/blfs/svn/nss-standalone-1.patch"
-UPST="https://repology.org/project/nss/information"
+UPST="https://github.com/nss-dev/nss.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | grep -B1 NSS_3_10_1_BASE | head -n1 | cut -d_ -f2-3 | sed 's/_/./g'"
 DEPS="nspr sqlite"
 
 

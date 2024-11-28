@@ -2,8 +2,8 @@
 NAME="lcms2"
 VERS="2.16"
 LINK="https://github.com/mm2/Little-CMS/releases/download/lcms$VERS/lcms2-$VERS.tar.gz"
-UPST="https://github.com/mm2/Little-CMS/releases/latest"
-SELE="h1.d-inline" # lcms2 is a special case
+UPST="https://github.com/mm2/Little-CMS.git"
+VCMD="git ls-remote --tags 'https://github.com/mm2/Little-CMS.git' | sed 's:.*/::' | sort -V | tail -n2 | head -n1 | sed 's/lcms//'" # this is likely to break with new release candidates
 DEPS=""
 
 

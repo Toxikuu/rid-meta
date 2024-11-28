@@ -2,7 +2,8 @@
 NAME="pyyaml"
 VERS="6.0.2"
 LINK="https://files.pythonhosted.org/packages/source/P/PyYAML/pyyaml-$VERS.tar.gz"
-UPST="https://pypi.org/project/PyYAML"
+UPST="https://github.com/yaml/pyyaml.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sed 's/\^{}//' | sort -V | grep -v rc | tail -n2 | head -n1"
 DEPS="cython libyaml"
 
 

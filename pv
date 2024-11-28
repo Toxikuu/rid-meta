@@ -2,8 +2,7 @@
 NAME="pv"
 VERS="1.9.0"
 LINK="http://www.ivarch.com/programs/sources/pv-$VERS.tar.gz"
-UPST="http://www.ivarch.com/programs/pv.shtml"
-SELE="html body main#main aside.noprint.downloadlinks table tbody tr td ul.plain li a"
+UPST="https://codeberg.org/a-j-wood/pv.git"
 DEPS=""
 
 

@@ -2,7 +2,8 @@
 NAME="libfs"
 VERS="1.0.10"
 LINK="https://www.x.org/pub/individual/lib/libFS-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/lib/libfs/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libfs.git"
+VCMD="git ls-remote --tags 'https://gitlab.freedesktop.org/xorg/lib/libfs.git' | sed 's:.*/::' | sort -V | grep libFS- | tail -n1 | cut -d- -f2"
 DEPS="glibc xorgproto xtrans"
 
 

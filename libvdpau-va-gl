@@ -2,7 +2,8 @@
 NAME="libvdpau-va-gl"
 VERS="0.4.2"
 LINK="https://github.com/i-rinat/libvdpau-va-gl/archive/v$VERS/libvdpau-va-gl-$VERS.tar.gz"
-UPST="https://github.com/i-rinat/libvdpau-va-gl/tags"
+UPST="https://github.com/i-rinat/libvdpau-va-gl.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n1"
 DEPS="cmake libvdpau libva"
 
 

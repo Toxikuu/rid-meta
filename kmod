@@ -2,7 +2,7 @@
 NAME="kmod"
 VERS="33"
 LINK="https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-$VERS.tar.xz"
-UPST="https://repology.org/project/kmod/information"
+UPST="https://kernel.googlesource.com/pub/scm/utils/kernel/kmod/kmod.git"
 DEPS=""
 
 

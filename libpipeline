@@ -2,7 +2,8 @@
 NAME="libpipeline"
 VERS="1.5.8"
 LINK="https://download.savannah.gnu.org/releases/libpipeline/libpipeline-$VERS.tar.gz"
-UPST="https://repology.org/project/libpipeline/information"
+UPST="https://gitlab.com/libpipeline/libpipeline.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 2.4.2 | head -n1"
 DEPS=""
 
 

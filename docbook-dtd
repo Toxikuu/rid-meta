@@ -2,7 +2,6 @@
 NAME="docbook-dtd"
 VERS="4.5"
 DOWN="https://www.docbook.org/sgml/$VERS/docbook-$VERS.zip"
-UPST=""
 DEPS="unzip sgml-common"
 
 

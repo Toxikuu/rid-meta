@@ -2,7 +2,7 @@
 NAME="xcb-util-wm"
 VERS="0.4.2"
 LINK="https://xcb.freedesktop.org/dist/xcb-util-wm-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/lib/libxcb-wm/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxcb-wm.git"
 DEPS="libxcb"
 
 

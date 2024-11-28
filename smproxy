@@ -2,7 +2,8 @@
 NAME="smproxy"
 VERS="1.0.7"
 LINK="https://www.x.org/pub/individual/app/smproxy-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/app/smproxy/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/app/smproxy.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 smproxy-1_0_2 | head -n1 | cut -d- -f2"
 DEPS="libxmu libsm libxt"
 
 

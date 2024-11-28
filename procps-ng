@@ -2,7 +2,7 @@
 NAME="procps-ng"
 VERS="4.0.4"
 LINK="https://sourceforge.net/projects/procps-ng/files/Production/procps-ng-$VERS.tar.xz"
-UPST="https://gitlab.com/procps-ng/procps/-/tags"
+UPST="https://gitlab.com/procps-ng/procps.git"
 DEPS=""
 
 

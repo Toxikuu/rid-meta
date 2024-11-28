@@ -2,7 +2,7 @@
 NAME="flit-core"
 VERS="3.10.1"
 LINK="https://pypi.org/packages/source/f/flit-core/flit_core-$VERS.tar.gz"
-UPST="https://pypi.org/project/flit-core"
+UPST="https://github.com/pypa/flit.git"
 DEPS="python"
 
 

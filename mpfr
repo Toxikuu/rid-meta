@@ -2,7 +2,8 @@
 NAME="mpfr"
 VERS="4.2.1"
 LINK="https://ftp.gnu.org/gnu/mpfr/mpfr-$VERS.tar.xz"
-UPST="https://ftp.gnu.org/gnu/mpfr/?C=M;O=D"
+UPST="https://gitlab.inria.fr/mpfr/mpfr.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 bug_compound-root | head -n1"
 DEPS=""
 
 

@@ -2,7 +2,8 @@
 NAME="iana-etc"
 VERS="20241122"
 LINK="https://github.com/Mic92/iana-etc/releases/download/$VERS/iana-etc-$VERS.tar.gz"
-UPST="https://github.com/Mic92/iana-etc/tags"
+UPST="https://github.com/Mic92/iana-etc.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 untagged | head -n1"
 DEPS=""
 
 

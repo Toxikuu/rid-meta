@@ -3,7 +3,7 @@ NAME="steam"
 VERS="1.0.0.82"
 LINK="https://repo.steampowered.com/steam/pool/steam/s/steam/steam_$VERS.tar.gz"
 UPST="https://repo.steampowered.com/steam/pool/steam/s/steam/?C=M&O=D"
-SELE="#list > tbody > tr:nth-child(4) > td.link > a"
+VCMD="curl -s '$UPST' | grep .tar.gz | head -n1 | cut -d_ -f2 | cut -d. -f1-4"
 DEPS="alsa-plugins curl dbus2 xorg-server libglvnd make-ca mesa nvidia vulkan-loader pulseaudio xdg-user-dirs libgpg-error"
 NEWS="Make sure you have namespaces support enabled in your kernel config."
 

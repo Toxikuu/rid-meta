@@ -2,7 +2,7 @@
 NAME="xcb-util-keysyms"
 VERS="0.4.1"
 LINK="https://xcb.freedesktop.org/dist/xcb-util-keysyms-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/lib/libxcb-keysyms/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxcb-keysyms.git"
 DEPS="libxcb"
 
 

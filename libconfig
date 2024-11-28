@@ -2,7 +2,7 @@
 NAME="libconfig"
 VERS="1.7.3"
 LINK="https://github.com/hyperrealm/libconfig/releases/download/v$VERS/libconfig-$VERS.tar.gz"
-UPST="https://github.com/hyperrealm/libconfig/tags"
+UPST="https://github.com/hyperrealm/libconfig.git"
 DEPS=""
 
 

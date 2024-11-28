@@ -2,8 +2,6 @@
 NAME="shadow-lfs"
 VERS="4.16.0"
 LINK="https://github.com/shadow-maint/shadow/releases/download/$VERS/shadow-$VERS.tar.xz"
-UPST="https://github.com/shadow-maint/shadow/releases/latest"
-SELE=".css-truncate > span:nth-child(2)"
 DEPS=""
 
 

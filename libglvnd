@@ -2,7 +2,7 @@
 NAME="libglvnd"
 VERS="1.7.0"
 LINK="https://gitlab.freedesktop.org/glvnd/libglvnd/-/archive/v$VERS/libglvnd-v$VERS.tar.gz"
-UPST="https://gitlab.freedesktop.org/glvnd/libglvnd/-/tags"
+UPST="https://gitlab.freedesktop.org/glvnd/libglvnd.git"
 DEPS="libxext libx11 xorgproto"
 
 

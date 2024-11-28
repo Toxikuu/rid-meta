@@ -2,7 +2,8 @@
 NAME="glm"
 VERS="1.0.1"
 LINK="https://github.com/g-truc/glm/archive/refs/tags/$VERS.tar.gz"
-UPST="https://github.com/g-truc/glm/releases/latest"
+UPST="https://github.com/g-truc/glm.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B 1 bug-214-closed | head -n1"
 DEPS="cmake ninja"
 
 

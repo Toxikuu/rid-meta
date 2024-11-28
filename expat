@@ -2,7 +2,8 @@
 NAME="expat"
 VERS="2.6.4"
 LINK="https://prdownloads.sourceforge.net/expat/expat-$VERS.tar.xz"
-UPST="https://sourceforge.net/projects/expat/files"
+UPST="https://github.com/libexpat/libexpat.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B 1 V1_0 | head -n1 | cut -d_ -f2- | sed 's/_/./g'"
 DEPS=""
 
 

@@ -2,7 +2,7 @@
 NAME="hwdata"
 VERS="0.389"
 LINK="https://github.com/vcrhonek/$NAME/archive/v$VERS/$NAME-$VERS.tar.gz"
-UPST="https://github.com/vcrhonek/$NAME/tags"
+UPST="https://github.com/vcrhonek/$NAME.git"
 DEPS=""
 
 # cant use cm because no make

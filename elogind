@@ -2,7 +2,7 @@
 NAME="elogind"
 VERS="255.5"
 LINK="https://github.com/elogind/elogind/archive/v$VERS/elogind-$VERS.tar.gz"
-UPST="https://github.com/elogind/elogind/releases/latest"
+UPST="https://github.com/elogind/elogind.git"
 DEPS="dbus1 linux-pam"
 
 

@@ -2,7 +2,8 @@
 NAME="dejagnu"
 VERS="1.6.3"
 LINK="https://ftp.gnu.org/gnu/dejagnu/dejagnu-$VERS.tar.gz"
-UPST="https://ftp.gnu.org/gnu/dejagnu/?C=M;O=D"
+UPST="https://git.savannah.gnu.org/git/dejagnu.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n4 | head -n1 | cut -d- -f2"
 DEPS=""
 
 

@@ -2,8 +2,8 @@
 NAME="libclc"
 VERS="19.1.4"
 LINK="https://github.com/llvm/llvm-project/releases/download/llvmorg-$VERS/libclc-$VERS.src.tar.xz"
-UPST="https://github.com/llvm/llvm-project/releases/latest"
-SELE="h1.d-inline"
+UPST="https://github.com/llvm/llvm-project.git"
+VCMD="git ls-remote --tags 'https://github.com/llvm/llvm-project.git' | sed 's:.*/::' | sort -V | tail -n3 | head -n1 | cut -d- -f2"
 DEPS="llvm spirv-llvm-translator"  # llvm with clang
 
 

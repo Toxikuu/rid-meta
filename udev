@@ -4,7 +4,8 @@ VERS="256.5"
 LINK="https://github.com/systemd/systemd/archive/v$VERS/systemd-$VERS.tar.gz"
 DOWN="https://anduin.linuxfromscratch.org/LFS/udev-lfs-20230818.tar.xz \
       https://anduin.linuxfromscratch.org/LFS/systemd-man-pages-$VERS.tar.xz"
-UPST="https://github.com/systemd/systemd/tags"
+UPST="https://github.com/systemd/systemd.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sed 's/\^{}//' | sort -V | grep -v -- -rc | tail -n1"
 DEPS="jinja2 gperf"
 
 # udev is in the systemd tarball because systemd

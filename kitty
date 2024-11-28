@@ -3,7 +3,7 @@ NAME="kitty"
 VERS="0.37.0"
 LINK="https://github.com/kovidgoyal/kitty/releases/download/v$VERS/kitty-$VERS.tar.xz"
 DOWN="https://github.com/samholmes/whiskers/raw/main/whiskers-tokyo.png"
-UPST="https://github.com/kovidgoyal/kitty/releases/latest"
+UPST="https://github.com/kovidgoyal/kitty.git"
 DEPS="imagemagick go simde python freetype2 fontconfig libx11 libxkbcommon libxcursor libxi dbus2 lcms2 xxhash libxinerama libxrandr symbols"
 
 

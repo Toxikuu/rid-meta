@@ -2,8 +2,7 @@
 NAME="sqlite"
 VERS="3.47.1"
 ver="${VERS//./}000"
-UPST="https://sqlite.org/"
-SELE="body > a:nth-child(9)"
+UPST="https://github.com/sqlite/sqlite.git"
 LINK="https://sqlite.org/2024/sqlite-autoconf-3470000.tar.gz"
 DEPS=""
 

@@ -2,8 +2,7 @@
 NAME="libidn2"
 VERS="2.3.7"
 LINK="https://ftp.gnu.org/gnu/libidn/$NAME-$VERS.tar.gz"
-UPST="https://ftp.gnu.org/gnu/libidn/?C=M;O=D"
-SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-child(2) > a:nth-child(1)"
+UPST="https://gitlab.com/libidn/libidn2.git"
 DEPS="libunistring"
 
 

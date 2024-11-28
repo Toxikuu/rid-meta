@@ -2,7 +2,7 @@
 NAME="cava"
 VERS="0.10.3"
 LINK="https://github.com/karlstav/cava/archive/refs/tags/$VERS.tar.gz"
-UPST="https://github.com/karlstav/cava/releases/latest"
+UPST="https://github.com/karlstav/cava.git"
 DEPS="fftw iniparser"
 
 

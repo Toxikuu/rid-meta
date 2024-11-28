@@ -2,8 +2,8 @@
 NAME="libev"
 VERS="4.33"
 LINK="http://dist.schmorp.de/$NAME/$NAME-$VERS.tar.gz"
-UPST="http://dist.schmorp.de/libev"
-SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-child(1) > a:nth-child(1)"
+UPST="https://github.com/xorangekiller/libev-git.git"
+VCMD="git ls-remote --tags 'https://github.com/xorangekiller/libev-git' | sed 's:.*/::' | sort -V | tail -n3 | head -n1 | cut -d- -f2 | sed 's/_/./g'" # for some reason, 4.43 exists in the tags, so breakage may ensue
 DEPS=""
 
 

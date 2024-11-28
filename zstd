@@ -2,7 +2,8 @@
 NAME="zstd"
 VERS="1.5.6"
 LINK="https://github.com/facebook/zstd/releases/download/v$VERS/zstd-$VERS.tar.gz"
-UPST="https://github.com/facebook/zstd/tags"
+UPST="https://github.com/facebook/zstd.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 vxyz | head -n1"
 DEPS=""
 
 

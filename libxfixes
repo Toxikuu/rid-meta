@@ -2,7 +2,8 @@
 NAME="libxfixes"
 VERS="6.0.1"
 LINK="https://www.x.org/pub/individual/lib/libXfixes-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/lib/libxfixes/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxfixes.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sed 's/\^{}//' | sort -V | grep -B1 rel-0-6-1 | head -n1 | cut -d- -f2"
 DEPS="libx11 xorgproto glibc util-macros"
 
 

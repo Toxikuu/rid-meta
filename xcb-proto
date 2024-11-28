@@ -2,7 +2,8 @@
 NAME="xcb-proto"
 VERS="1.17.0"
 LINK="https://xorg.freedesktop.org/archive/individual/proto/xcb-proto-$VERS.tar.xz"
-UPST="https://repology.org/project/xcb-proto/information"
+UPST="https://gitlab.freedesktop.org/xorg/proto/xcbproto.git"
+VCMD="git ls-remote --tags 'https://gitlab.freedesktop.org/xorg/proto/xcbproto.git' | sed 's:.*/::' | sort -V | tail -n1 | cut -d- -f3"
 DEPS="python"
 
 

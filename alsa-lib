@@ -2,7 +2,7 @@
 NAME="alsa-lib"
 VERS="1.2.13"
 LINK="https://www.alsa-project.org/files/pub/lib/alsa-lib-$VERS.tar.bz2"
-UPST="https://github.com/alsa-project/alsa-lib/tags"
+UPST="https://github.com/alsa-project/alsa-lib.git"
 DEPS=""
 
 

@@ -2,7 +2,7 @@
 NAME="check"
 VERS="0.15.2"
 LINK="https://github.com/libcheck/check/releases/download/$VERS/check-$VERS.tar.gz"
-UPST="https://github.com/libcheck/check/tags"
+UPST="https://github.com/libcheck/check.git"
 DEPS=""
 NEWS="If building 32-bit pulseaudio, ensure you have 32-bit check."
 

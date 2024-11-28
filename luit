@@ -4,7 +4,7 @@ VERS="2.0.20240910"
 ver="${VERS##*.}"
 LINK="https://invisible-mirror.net/archives/luit/luit-$ver.tgz"
 UPST="https://invisible-mirror.net/archives/luit/current/?C=M;O=D"
-SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-child(2) > a:nth-child(1)"
+VCMD="curl -s '$UPST' | grep luit- | head -n1| cut -d- -f2 | cut -d. -f 1-3"
 DEPS="libx11"
 
 

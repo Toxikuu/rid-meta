@@ -2,7 +2,7 @@
 NAME="uthash"
 VERS="2.3.0"
 LINK="https://github.com/troydhanson/uthash/archive/refs/tags/v$VERS.tar.gz"
-UPST="https://github.com/troydhanson/uthash/tags"
+UPST="https://github.com/troydhanson/uthash.git"
 DEPS=""
 
 

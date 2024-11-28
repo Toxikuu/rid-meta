@@ -2,8 +2,7 @@
 NAME="tar"
 VERS="1.35"
 LINK="https://ftp.gnu.org/gnu/tar/tar-$VERS.tar.xz"
-UPST="https://ftp.gnu.org/gnu/tar/?C=M;O=D"
-SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-child(2) > a:nth-child(1)"
+UPST="https://git.savannah.gnu.org/git/tar.git"
 DEPS=""
 
 

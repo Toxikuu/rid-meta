@@ -2,7 +2,7 @@
 NAME="harfbuzz"
 VERS="10.1.0"
 LINK="https://github.com/harfbuzz/harfbuzz/releases/download/$VERS/harfbuzz-$VERS.tar.xz"
-UPST="https://github.com/harfbuzz/harfbuzz/tags"
+UPST="https://github.com/harfbuzz/harfbuzz.git"
 DEPS="freetype1"
 
 

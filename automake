@@ -2,7 +2,7 @@
 NAME="automake"
 VERS="1.17"
 LINK="https://ftp.gnu.org/gnu/automake/automake-$VERS.tar.xz"
-UPST="https://ftp.gnu.org/gnu/automake/?C=M;O=D"
+UPST="https://git.savannah.gnu.org/git/automake.git"
 DEPS=""
 
 

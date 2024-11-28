@@ -2,7 +2,8 @@
 NAME="xdriinfo"
 VERS="1.0.7"
 LINK="https://www.x.org/pub/individual/app/xdriinfo-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/app/xdriinfo/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/app/xdriinfo.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n2 | head -n1 | cut -d- -f2"
 DEPS="libx11 util-macros xorgproto"
 
 

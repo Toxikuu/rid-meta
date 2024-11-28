@@ -2,7 +2,7 @@
 NAME="libyaml"
 VERS="0.2.5"
 LINK="https://github.com/yaml/libyaml/releases/download/$VERS/yaml-$VERS.tar.gz"
-UPST="https://github.com/yaml/libyaml/tags"
+UPST="https://github.com/yaml/libyaml.git"
 DEPS=""
 
 

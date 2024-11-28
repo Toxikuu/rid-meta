@@ -2,8 +2,7 @@
 NAME="xmlto"
 VERS="0.0.29"
 LINK="https://pagure.io/xmlto/archive/$VERS/xmlto-$VERS.tar.gz"
-UPST="https://pagure.io/xmlto/releases"
-SELE=".col > div:nth-child(2)"
+UPST="https://pagure.io/xmlto.git"
 DEPS="docbook-xml docbook-xsl-nons libxslt"
 
 

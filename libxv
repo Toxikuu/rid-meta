@@ -2,7 +2,8 @@
 NAME="libxv"
 VERS="1.0.12"
 LINK="https://www.x.org/pub/individual/lib/libXv-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/lib/libxv/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxv.git"
+VCMD="git ls-remote --tags 'https://gitlab.freedesktop.org/xorg/lib/libxv.git' | sed 's:.*/::' | sed 's/\^{}//' | sort -V | grep -B1 rel-0-6-1 | head -n1 | cut -d- -f2"
 DEPS="libxext libx11 glibc xorgproto"
 
 

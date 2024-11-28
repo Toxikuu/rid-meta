@@ -2,7 +2,7 @@
 NAME="psmisc"
 VERS="23.7"
 LINK="https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-$VERS.tar.xz"
-UPST="https://gitlab.com/psmisc/psmisc/-/tags"
+UPST="https://gitlab.com/psmisc/psmisc.git"
 DEPS=""
 
 

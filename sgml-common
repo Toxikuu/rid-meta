@@ -3,7 +3,8 @@ NAME="sgml-common"
 VERS="0.6.3"
 LINK="https://sourceware.org/ftp/docbook-tools/new-trials/SOURCES/sgml-common-$VERS.tgz"
 DOWN="https://www.linuxfromscratch.org/patches/blfs/svn/sgml-common-$VERS-manpage-1.patch"
-UPST=""
+UPST="https://sourceware.org/ftp/docbook-tools/new-trials/SOURCES/?C=M;O=D"
+VCMD="curl -s '$UPST' | grep sgml-common- | cut -d- -f3 | cut -d. -f1-3"
 DEPS=""
 
 

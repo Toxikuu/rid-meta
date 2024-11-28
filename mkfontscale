@@ -3,7 +3,8 @@ NAME="mkfontscale"
 VERS="1.2.3"
 LINK="https://www.x.org/pub/individual/app/mkfontscale-$VERS.tar.xz"
 DEPS="freetype2 util-macros xorgproto"
-UPST="https://gitlab.freedesktop.org/xorg/app/mkfontscale/-/tags"
+VCMD="git ls-remote --tags 'https://gitlab.freedesktop.org/xorg/app/mkfontscale.git' | sed 's:.*/::' | sort -V | grep -B1 rel-0-6-1 | head -n1 | cut -d- -f2"
+UPST="https://gitlab.freedesktop.org/xorg/app/mkfontscale.git"
 
 
 idir() {

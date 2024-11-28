@@ -2,7 +2,7 @@
 NAME="rust-bindgen"
 VERS="0.69.5"
 LINK="https://github.com/rust-lang/rust-bindgen/archive/v$VERS.tar.gz"
-UPST="https://github.com/rust-lang/rust-bindgen/tags"
+UPST="https://github.com/rust-lang/rust-bindgen.git"
 DEPS="llvm rust"  # llvm with clang
 
 

@@ -3,7 +3,8 @@ NAME="gdk-pixbuf"
 VERS="2.42.12"
 ver="${VERS%.*}"
 LINK="https://download.gnome.org/sources/gdk-pixbuf/$ver/gdk-pixbuf-$VERS.tar.xz"
-UPST="https://gitlab.gnome.org/GNOME/gdk-pixbuf/-/tags"
+UPST="https://github.com/GNOME/gdk-pixbuf.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B 1 2.90.0 | head -n1" # why does 2.90.x exist :sob:
 DEPS="glib libjpeg-turbo libpng shared-mime-info"
 
 

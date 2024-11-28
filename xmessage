@@ -3,7 +3,8 @@ NAME="xmessage"
 VERS="1.0.7"
 LINK="https://www.x.org/pub/individual/app/xmessage-$VERS.tar.xz"
 DEPS="libxaw libx11 libxt util-macros"
-UPST="https://gitlab.freedesktop.org/xorg/app/xmessage/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/app/xmessage.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n2 | head -n1 | cut -d- -f2"
 
 
 idir() {

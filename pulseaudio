@@ -2,7 +2,7 @@
 NAME="pulseaudio"
 VERS="17.0"
 LINK="https://www.freedesktop.org/software/$NAME/releases/$NAME-$VERS.tar.xz"
-UPST="https://repology.org/project/pulseaudio/information"
+UPST="https://github.com/pulseaudio/pulseaudio.git"
 DEPS="libsndfile alsa-lib check dbus2 glib meson-toolchain-files"
 
 # this piece of shit still doesn't build in 32-bit

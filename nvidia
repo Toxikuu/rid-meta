@@ -3,7 +3,7 @@ NAME="nvidia"
 VERS="560.35.03"
 DOWN="https://us.download.nvidia.com/XFree86/Linux-x86_64/$VERS/NVIDIA-Linux-x86_64-$VERS.run \
       https://github.com/Binary-Eater/open-gpu-kernel-modules/commit/8ac26d3c66ea88b0f80504bdd1e907658b41609d.patch"
-UPST="https://github.com/NVIDIA/nvidia-installer/tags"
+UPST="https://github.com/NVIDIA/nvidia-installer.git"
 DEPS="" # nvidia does have dependencies i just dont wanna deal with them rn
 NEWS="Must be rebuilt after kernel sources change, else X11 won't start. It's also recommended you restart after installing this package for the drivers to take effect."
 

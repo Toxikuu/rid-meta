@@ -1,8 +1,8 @@
 #!/bin/bash
 NAME="mako"
 VERS="1.3.6"
-LINK="https://files.pythonhosted.org/packages/source/M/Mako/Mako-1.3.5.tar.gz"
-UPST="https://pypi.org/project/Mako"
+LINK="https://github.com/sqlalchemy/mako/archive/refs/tags/rel_${VERS//./_}.tar.gz"
+UPST="https://github.com/sqlalchemy/mako.git"
 DEPS=""
 
 

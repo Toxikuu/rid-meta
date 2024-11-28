@@ -2,8 +2,8 @@
 NAME="texinfo"
 VERS="7.1.1"
 LINK="https://ftp.gnu.org/gnu/texinfo/texinfo-$VERS.tar.xz"
-UPST="https://ftp.gnu.org/gnu/texinfo/?C=M;O=D"
-SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(6) > td:nth-child(2) > a:nth-child(1)"
+UPST="https://git.savannah.gnu.org/git/texinfo.git"
+VCMD="git ls-remote --tags 'https://git.savannah.gnu.org/git/texinfo.git' | sed 's:.*/::' | sort -V | tail -n1 | cut -d- -f2"
 DEPS=""
 
 

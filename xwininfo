@@ -2,7 +2,8 @@
 NAME="xwininfo"
 VERS="1.1.6"
 LINK="https://www.x.org/pub/individual/app/xwininfo-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/app/xwininfo/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/app/xwininfo.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n2 | head -n1 | cut -d- -f2"
 DEPS="util-macros libx11 libxcb"
 
 

@@ -3,7 +3,7 @@ NAME="dhcpcd"
 VERS="10.1.0"
 LINK="https://github.com/NetworkConfiguration/dhcpcd/releases/download/v$VERS/dhcpcd-$VERS.tar.xz"
 DOWN="https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20240913.tar.xz"
-UPST="https://github.com/NetworkConfiguration/dhcpcd/tags"
+UPST="https://github.com/NetworkConfiguration/dhcpcd.git"
 DEPS=""
 
 

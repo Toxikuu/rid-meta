@@ -2,7 +2,8 @@
 NAME="inetutils"
 VERS="2.5"
 LINK="https://ftp.gnu.org/gnu/inetutils/inetutils-$VERS.tar.xz"
-UPST="https://ftp.gnu.org/gnu/inetutils/?C=M;O=D"
+UPST="https://git.savannah.gnu.org/git/inetutils.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n1"
 DEPS=""
 
 

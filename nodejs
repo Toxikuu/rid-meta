@@ -1,7 +1,7 @@
 #!/bin/bash
 NAME="nodejs"
 VERS="23.3.0"
-UPST="https://github.com/nodejs/node/releases/latest"
+UPST="https://github.com/nodejs/node.git"
 DEPS="pnpm"
 
 

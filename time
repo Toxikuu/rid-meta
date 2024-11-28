@@ -2,7 +2,7 @@
 NAME="time"
 VERS="1.9"
 LINK="https://ftp.gnu.org/gnu/time/time-$VERS.tar.gz"
-UPST="https://ftp.gnu.org/gnu/time/?C=M;O=D"
+UPST="https://git.savannah.gnu.org/git/time.git"
 DEPS=""
 
 

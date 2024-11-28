@@ -2,7 +2,7 @@
 NAME="bc"
 VERS="7.0.3"
 LINK="https://github.com/gavinhoward/bc/releases/download/$VERS/bc-$VERS.tar.xz"
-UPST="https://github.com/gavinhoward/bc/tags"
+UPST="https://github.com/gavinhoward/bc.git"
 DEPS=""
 
 

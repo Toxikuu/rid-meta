@@ -2,7 +2,7 @@
 NAME="flac"
 VERS="1.4.3"
 LINK="https://downloads.xiph.org/releases/flac/flac-$VERS.tar.xz"
-UPST="https://github.com/xiph/flac/releases/latest"
+UPST="https://github.com/xiph/flac.git"
 DEPS=""
 
 

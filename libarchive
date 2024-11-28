@@ -2,7 +2,7 @@
 NAME="libarchive"
 VERS="3.7.7"
 LINK="https://github.com/$NAME/$NAME/releases/download/v$VERS/$NAME-$VERS.tar.xz"
-UPST="https://github.com/$NAME/$NAME/tags"
+UPST="https://github.com/$NAME/$NAME.git"
 DEPS=""
 
 

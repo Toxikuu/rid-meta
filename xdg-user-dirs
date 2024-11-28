@@ -2,8 +2,7 @@
 NAME="xdg-user-dirs"
 VERS="0.18"
 LINK="https://user-dirs.freedesktop.org/releases/xdg-user-dirs-$VERS.tar.gz"
-UPST="https://user-dirs.freedesktop.org/releases/?C=M;O=D"
-SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(2) > a:nth-child(1)"
+UPST="https://gitlab.freedesktop.org/xdg/xdg-user-dirs.git"
 DEPS=""
 
 

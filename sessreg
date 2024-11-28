@@ -3,7 +3,8 @@ NAME="sessreg"
 VERS="1.1.3"
 LINK="https://www.x.org/pub/individual/app/sessreg-$VERS.tar.xz"
 DEPS="util-macros xorgproto"
-UPST="https://gitlab.freedesktop.org/xorg/app/sessreg/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/app/sessreg.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 xf86-4_3_0_1 | tail -n2 | head -n1 | cut -d- -f2"
 
 
 idir() {

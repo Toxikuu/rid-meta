@@ -2,7 +2,7 @@
 NAME="sysklogd"
 VERS="2.6.2"
 LINK="https://github.com/troglobit/sysklogd/releases/download/v$VERS/sysklogd-$VERS.tar.gz"
-UPST="https://github.com/troglobit/sysklogd/tags"
+UPST="https://github.com/troglobit/sysklogd.git"
 DEPS=""
 
 

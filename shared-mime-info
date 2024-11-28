@@ -2,7 +2,7 @@
 NAME="shared-mime-info"
 VERS="2.4"
 LINK="https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/$VERS/shared-mime-info-$VERS.tar.gz"
-UPST="https://gitlab.freedesktop.org/xdg/shared-mime-info/-/tags"
+UPST="https://gitlab.freedesktop.org/xdg/shared-mime-info.git"
 DEPS="glib libxml2"
 
 

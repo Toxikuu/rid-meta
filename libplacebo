@@ -2,7 +2,7 @@
 NAME="libplacebo"
 VERS="7.349.0"
 LINK="https://github.com/haasn/libplacebo/archive/v$VERS/libplacebo-$VERS.tar.gz"
-UPST="https://github.com/haasn/libplacebo/tags"
+UPST="https://github.com/haasn/libplacebo.git"
 DEPS="ffmpeg glad"
 
 

@@ -2,8 +2,7 @@
 NAME="dbus1"
 VERS="1.14.10" # odd minor versions represent development branches; although 1.15 is the latest, it's not stable; i may use 1.15 here
 LINK="https://dbus.freedesktop.org/releases/dbus/dbus-$VERS.tar.xz"
-UPST="https://dbus.freedesktop.org/releases/dbus/?C=M;O=D"
-SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(2) > a:nth-child(1)"
+UPST="https://gitlab.freedesktop.org/dbus/dbus.git"
 DEPS=""
 
 # dbus pass 1

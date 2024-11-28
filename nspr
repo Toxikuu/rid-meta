@@ -2,7 +2,8 @@
 NAME="nspr"
 VERS="4.36"
 LINK="https://archive.mozilla.org/pub/nspr/releases/v$VERS/src/nspr-$VERS.tar.gz"
-UPST="https://repology.org/project/nspr/information"
+UPST="https://gitlab.archlinux.org/archlinux/packaging/packages/nspr.git" # probably unreliable
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | cut -d- -f1 | sort -V | tail -n1"
 DEPS=""
 
 

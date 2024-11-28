@@ -2,7 +2,7 @@
 NAME="simde"
 VERS="0.8.2"
 LINK="https://github.com/simd-everywhere/simde/archive/refs/tags/v$VERS.tar.gz"
-UPST="https://github.com/simd-everywhere/simde/releases/latest"
+UPST="https://github.com/simd-everywhere/simde.git"
 DEPS=""
 
 

@@ -2,7 +2,8 @@
 NAME="font-util"
 VERS="1.4.1"
 LINK="https://www.x.org/pub/individual/font/$NAME-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/font/util/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/font/util.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B 1 'font-util-1_0_1' | head -n1 | cut -d- -f3"
 DEPS="util-macros glibc"
 
 

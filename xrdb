@@ -2,7 +2,8 @@
 NAME="xrdb"
 VERS="1.2.2"
 LINK="https://www.x.org/pub/individual/app/xrdb-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/app/xrdb/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/app/xrdb.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n2 | head -n1 | cut -d- -f2"
 DEPS="libx11 libxmu util-macros"
 
 

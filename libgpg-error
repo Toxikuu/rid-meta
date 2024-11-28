@@ -2,7 +2,7 @@
 NAME="libgpg-error"
 VERS="1.51"
 LINK="https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-$VERS.tar.gz"
-UPST="https://repology.org/project/libgpg-error/information"
+UPST="https://github.com/gpg/libgpg-error.git"
 DEPS=""
 
 

@@ -3,7 +3,8 @@ NAME="glibc"
 VERS="2.40"
 LINK="https://ftp.gnu.org/gnu/glibc/glibc-$VERS.tar.xz"
 DOWN="https://www.linuxfromscratch.org/patches/lfs/development/glibc-$VERS-fhs-1.patch"
-UPST="https://ftp.gnu.org/gnu/glibc/?C=M;O=D"
+UPST="git://sourceware.org/git/glibc.git"
+VCMD="git ls-remote --tags 'git://sourceware.org/git/glibc.git' | sed 's:.*/::' | sort -V | grep -B 1 glibc-2_0_2 | head -n1 | cut -d- -f2"
 DEPS=""
 
 

@@ -2,7 +2,8 @@
 NAME="xinit"
 VERS="1.4.2"
 LINK="https://www.x.org/pub/individual/app/xinit-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/app/xinit/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/app/xinit.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n3 | head -n1 | cut -d- -f2"
 DEPS="libx11 util-macros"
 
 

@@ -2,7 +2,8 @@
 NAME="libxdmcp"
 VERS="1.1.5"
 LINK="https://www.x.org/pub/individual/lib/libXdmcp-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/lib/libxdmcp/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxdmcp.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 libXdmcp-1_0_1 | head -n1 | cut -d- -f2"
 DEPS="xorgproto"
 
 

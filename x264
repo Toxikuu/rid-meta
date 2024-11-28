@@ -2,7 +2,8 @@
 NAME="x264"
 VERS="20240812"
 LINK="https://anduin.linuxfromscratch.org/BLFS/x264/x264-$VERS.tar.xz"
-# there is like no upstream for this package lol
+UPST="https://anduin.linuxfromscratch.org/BLFS/x264/"
+VCMD="curl -s '$UPST' | grep x264- | tail -n1 | cut -d- -f2 | cut -d. -f1"
 DEPS="nasm"
 
 

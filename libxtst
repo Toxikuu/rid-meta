@@ -2,7 +2,8 @@
 NAME="libxtst"
 VERS="1.2.5"
 LINK="https://www.x.org/pub/individual/lib/libXtst-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/lib/libxtst/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxtst.git"
+VCMD="git ls-remote --tags 'https://gitlab.freedesktop.org/xorg/lib/libxtst.git' | sed 's:.*/::' | sed 's/\^{}//' | sort -V | grep -B1 rel-0-6-1 | head -n1 | cut -d- -f2"
 DEPS="libxext libxi libx11 glibc xorgproto util-macros"
 
 

@@ -2,7 +2,7 @@
 NAME="man-db"
 VERS="2.13.0"
 LINK="https://download.savannah.gnu.org/releases/man-db/man-db-$VERS.tar.xz"
-UPST="https://gitlab.com/man-db/man-db/-/tags"
+UPST="https://gitlab.com/man-db/man-db.git"
 DEPS=""
 
 

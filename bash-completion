@@ -2,7 +2,8 @@
 NAME="bash-completion"
 VERS="2.15.0"
 LINK="https://github.com/scop/bash-completion/archive/refs/tags/$VERS.tar.gz"
-UPST="https://github.com/scop/bash-completion/releases/latest"
+UPST="https://github.com/scop/bash-completion.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B 1 '20031125-alt01' | head -n1"
 DEPS="bash autoconf"
 NEWS="Bash completions are installed in '/usr/share/bash-completion/completions'. A script is installed in '/etc/profile.d/bash_completion.sh'."
 

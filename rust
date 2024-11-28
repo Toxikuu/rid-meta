@@ -1,7 +1,7 @@
 #!/bin/bash
 NAME="rust"  # rustup
-VERS="1.82.0"
-UPST="https://github.com/rust-lang/rust/releases/latest"
+VERS="1.83.0"
+UPST="https://github.com/rust-lang/rust.git"
 DEPS="curl"
 
 

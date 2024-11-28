@@ -2,7 +2,7 @@
 NAME="fzf"
 VERS="0.56.3"
 LINK="https://github.com/junegunn/fzf/archive/refs/tags/v$VERS.tar.gz"
-UPST="https://github.com/junegunn/fzf/releases/latest"
+UPST="https://github.com/junegunn/fzf.git"
 DEPS="go"
 
 

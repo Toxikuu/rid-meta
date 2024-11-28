@@ -2,7 +2,6 @@
 NAME="tf"
 VERS="9999"
 LINK="https://github.com/Toxikuu/tf/archive/refs/heads/main.tar.gz"
-UPST=""
 DEPS="python"
 
 

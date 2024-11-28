@@ -3,8 +3,6 @@ NAME="docbook-xsl-nons"
 VERS="1.79.2"
 LINK="https://github.com/docbook/xslt10-stylesheets/releases/download/release/$VERS/docbook-xsl-nons-$VERS.tar.bz2"
 DOWN="https://www.linuxfromscratch.org/patches/blfs/svn/docbook-xsl-nons-$VERS-stack_fix-1.patch"
-UPST="https://cdn.docbook.org/release/xsl-nons"
-SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1) > a:nth-child(1)"
 DEPS="libxml2"
 
 

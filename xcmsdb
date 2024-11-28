@@ -2,7 +2,8 @@
 NAME="xcmsdb"
 VERS="1.0.7"
 LINK="https://www.x.org/pub/individual/app/xcmsdb-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/app/xcmsdb/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/app/xcmsdb.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 xf86-4_3_0_1 | tail -n2 | head -n1 | cut -d- -f2"
 DEPS="libx11 util-macros"
 
 

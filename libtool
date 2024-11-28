@@ -2,7 +2,8 @@
 NAME="libtool"
 VERS="2.5.4"
 LINK="https://ftp.gnu.org/gnu/libtool/libtool-$VERS.tar.xz"
-UPST="https://ftp.gnu.org/gnu/libtool/?C=M;O=D"
+UPST="git://git.savannah.gnu.org/libtool.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n1"
 DEPS=""
 
 

@@ -2,7 +2,8 @@
 NAME="libxaw"
 VERS="1.0.16"
 LINK="https://www.x.org/pub/individual/lib/libXaw-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/lib/libxaw/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxaw.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 libXaw-1_0_2 | head -n1 | cut -d- -f2"
 DEPS="libxmu libxpm libx11 libxt libxext xorgproto glibc util-macros"
 
 

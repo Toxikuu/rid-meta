@@ -2,7 +2,7 @@
 NAME="pcre2"
 VERS="10.44"
 LINK="https://github.com/PCRE2Project/pcre2/releases/download/pcre2-$VERS/pcre2-$VERS.tar.bz2"
-UPST="https://github.com/PCRE2Project/pcre2/tags"
+UPST="https://github.com/PCRE2Project/pcre2.git"
 DEPS=""
 
 

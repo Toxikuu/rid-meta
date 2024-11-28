@@ -2,8 +2,8 @@
 NAME="python"
 VERS="3.13.0"
 LINK="https://www.python.org/ftp/python/$VERS/Python-$VERS.tar.xz"
-UPST="https://www.python.org/downloads"
-SELE="#touchnav-wrapper > header > div > div.header-banner > div > div.download-os-macos > p > a"
+UPST="https://github.com/python/cpython.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -Ev 'a|b|rc' | tail -n1" # ignores alphas, betas, and release candidates
 DEPS=""
 
 

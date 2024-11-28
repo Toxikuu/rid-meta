@@ -2,7 +2,7 @@
 NAME="x265"
 VERS="4.1"
 LINK="https://bitbucket.org/multicoreware/x265_git/downloads/x265_$VERS.tar.gz"
-UPST="https://repology.org/project/x265/information"
+UPST="https://bitbucket.org/multicoreware/x265_git.git"
 DEPS="cmake nasm"
 
 

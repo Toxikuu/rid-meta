@@ -3,7 +3,7 @@ NAME="libepoxy"
 VERS="1.5.10"
 ver="${VERS%.*}"
 LINK="https://download.gnome.org/sources/libepoxy/$ver/libepoxy-$VERS.tar.xz"
-UPST="https://github.com/anholt/libepoxy/releases/latest"
+UPST="https://github.com/anholt/libepoxy.git"
 DEPS="mesa"
 
 

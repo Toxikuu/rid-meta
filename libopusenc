@@ -2,7 +2,7 @@
 NAME="libopusenc"
 VERS="0.2.1"
 LINK="https://github.com/xiph/libopusenc/archive/refs/tags/v$VERS.tar.gz"
-UPST="https://github.com/xiph/libopusenc/tags"
+UPST="https://github.com/xiph/libopusenc.git"
 DEPS=""
 
 

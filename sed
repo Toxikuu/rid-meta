@@ -2,7 +2,7 @@
 NAME="sed"
 VERS="4.9"
 LINK="https://ftp.gnu.org/gnu/sed/sed-$VERS.tar.xz"
-UPST="https://ftp.gnu.org/gnu/sed/?C=M;O=D"
+UPST="git://git.savannah.gnu.org/sed.git"
 DEPS=""
 
 

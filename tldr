@@ -2,7 +2,7 @@
 NAME="tldr"
 VERS="1.7.1"
 LINK="https://github.com/tealdeer-rs/tealdeer/archive/refs/tags/v$VERS.tar.gz"
-UPST="https://github.com/tealdeer-rs/tealdeer/releases/latest"
+UPST="https://github.com/tealdeer-rs/tealdeer.git"
 DEPS="rust" # optionally cargo strip
 
 

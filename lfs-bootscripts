@@ -2,8 +2,8 @@
 NAME="lfs-bootscripts"
 VERS="20240825"
 LINK="https://www.linuxfromscratch.org/lfs/downloads/development/lfs-bootscripts-$VERS.tar.xz"
-UPST="https://www.linuxfromscratch.org/lfs/downloads/development"
-SELE="body > ul:nth-child(2) > li:nth-child(5) > a:nth-child(1)"
+UPST="https://www.linuxfromscratch.org/~thomas/multilib-m32/chapter09/bootscripts.html"
+VCMD="curl -s 'https://www.linuxfromscratch.org/~thomas/multilib-m32/chapter09/bootscripts.html' | grep LFS-Bootscripts- | tail -n1 | cut -d- -f3"
 DEPS=""
 
 

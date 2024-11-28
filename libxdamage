@@ -2,7 +2,8 @@
 NAME="libxdamage"
 VERS="1.1.6"
 LINK="https://www.x.org/pub/individual/lib/libXdamage-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/lib/libxdamage/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxdamage.git"
+VCMD="git ls-remote --tags 'https://gitlab.freedesktop.org/xorg/lib/libxdamage.git' | sed 's:.*/::' | sed 's/\^{}//' | sort -V | grep -B1 libXdamage-1_0_3 | head -n1 | cut -d- -f2"
 DEPS="libxfixes xorgproto libx11 glibc"
 
 

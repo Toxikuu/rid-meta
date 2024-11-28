@@ -2,7 +2,8 @@
 NAME="libva"
 VERS="2.22.0"
 LINK="https://github.com/intel/libva/archive/$VERS/libva-$VERS.tar.gz"
-UPST="https://github.com/intel/libva/tags"
+UPST="https://github.com/intel/libva.git"
+VCMD="git ls-remote --tags 'https://github.com/intel/libva.git' | sed 's:.*/::' | sort -V | grep -B1 4.1-video | head -n1"
 DEPS="libdrm"
 
 

@@ -2,7 +2,7 @@
 NAME="iniparser"
 VERS="4.2.4"
 LINK="https://github.com/ndevilla/iniparser/archive/refs/tags/v$VERS.tar.gz"
-UPST="https://github.com/ndevilla/iniparser/releases/latest"
+UPST="https://github.com/ndevilla/iniparser.git"
 DEPS=""
 
 

@@ -2,7 +2,8 @@
 NAME="xvinfo"
 VERS="1.1.5"
 LINK="https://www.x.org/pub/individual/app/xvinfo-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/app/xvinfo/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/app/xvinfo.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n2 | head -n1 | cut -d- -f2"
 DEPS="libx11 libxv util-macros"
 
 

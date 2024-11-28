@@ -2,7 +2,7 @@
 NAME="libxshmfence"
 VERS="1.3.2"
 LINK="https://www.x.org/pub/individual/lib/libxshmfence-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/lib/libxshmfence/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxshmfence.git"
 DEPS="util-macros xorgproto glibc"
 
 

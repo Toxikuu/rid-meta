@@ -2,7 +2,7 @@
 NAME="glad"
 VERS="2.0.8"
 LINK="https://github.com/Dav1dde/glad/archive/v$VERS/glad-$VERS.tar.gz"
-UPST="https://github.com/Dav1dde/glad/tags"
+UPST="https://github.com/Dav1dde/glad.git"
 DEPS=""
 
 

@@ -2,7 +2,7 @@
 NAME="wget" # wget2, technically
 VERS="2.2.0"
 LINK="https://gnuwget.gitlab.io/wget2/wget2-latest.tar.gz"
-UPST="https://gitlab.com/gnuwget/wget2/-/tags"
+UPST="https://gitlab.com/gnuwget/wget2.git"
 DEPS="libpsl make-ca libidn2 python tar autoconf automake gettext"
 
 

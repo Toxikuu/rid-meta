@@ -1,9 +1,8 @@
 #!/bin/bash
 NAME="prism"
 VERS="9.1"
-DOWN="https://github.com/PrismLauncher/PrismLauncher/releases/download/$VERS/PrismLauncher-Linux-Qt6-Portable-$VERS.tar.gz \
-      https://another_link_woah"
-UPST="https://github.com/PrismLauncher/PrismLauncher/releases/latest"
+DOWN="https://github.com/PrismLauncher/PrismLauncher/releases/download/$VERS/PrismLauncher-Linux-Qt6-Portable-$VERS.tar.gz"
+UPST="https://github.com/PrismLauncher/PrismLauncher.git"
 DEPS="krb5"
 
 

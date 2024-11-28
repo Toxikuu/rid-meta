@@ -6,7 +6,8 @@ gobjver=1.82.0
 gobjv="${gobjver%.*}"
 LINK="https://download.gnome.org/sources/glib/$ver/glib-$VERS.tar.xz"
 DOWN="https://download.gnome.org/sources/gobject-introspection/$gobjv/gobject-introspection-$gobjver.tar.xz"
-UPST="https://repology.org/project/glib/information"
+UPST="https://github.com/GNOME/glib.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B 1 EAZEL-NAUTILUS-MS-AUG07 | head -n1"
 DEPS="meson-toolchain-files pcre2"
 
 

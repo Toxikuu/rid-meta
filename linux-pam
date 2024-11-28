@@ -2,7 +2,7 @@
 NAME="linux-pam"
 VERS="1.7.0"
 LINK="https://github.com/linux-pam/linux-pam/releases/download/v$VERS/Linux-PAM-$VERS.tar.xz"
-UPST="https://github.com/linux-pam/linux-pam/tags"
+UPST="https://github.com/linux-pam/linux-pam.git"
 DEPS=""
 
 

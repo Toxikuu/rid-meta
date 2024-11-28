@@ -2,7 +2,8 @@
 NAME="libaom"
 VERS="3.11.0"
 LINK="https://storage.googleapis.com/aom-releases/libaom-$VERS.tar.gz"
-UPST="https://repology.org/project/aom/information"
+UPST="https://aomedia.googlesource.com/aom.git"
+VCMD="git ls-remote --tags 'https://aomedia.googlesource.com/aom.git' | sed 's:.*/::' | sort -V | tail -n1"
 DEPS="yasm"
 
 

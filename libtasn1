@@ -2,7 +2,7 @@
 NAME="libtasn1"
 VERS="4.19.0"
 LINK="https://ftp.gnu.org/gnu/$NAME/$NAME-$VERS.tar.gz"
-UPST="https://ftp.gnu.org/gnu/$NAME/?C=M;O=D"
+UPST="https://gitlab.com/gnutls/libtasn1.git"
 DEPS=""
 
 

@@ -3,14 +3,14 @@ NAME="librsvg"
 VERS="2.59.2"
 ver="${VERS%.*}"
 LINK="https://download.gnome.org/sources/librsvg/$ver/librsvg-$VERS.tar.xz"
-UPST="https://gitlab.gnome.org/GNOME/librsvg/-/tags"
+UPST="https://github.com/GNOME/librsvg.git"
 DEPS="cairo cargo-c gdk-pixbuf pango rust glib vala"
 
 
 idir() {
 
-sed -e "/OUTDIR/s|,| / 'librsvg-2.59.1', '--no-namespace-dir',|" \
-    -e '/output/s|Rsvg-2.0|librsvg-2.59.1|'                      \
+sed -e "/OUTDIR/s|,| / 'librsvg-$VERS', '--no-namespace-dir',|" \
+    -e "/output/s|Rsvg-2.0|librsvg-$VERS|"                     \
     -i doc/meson.build
 
 mn

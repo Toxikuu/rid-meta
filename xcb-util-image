@@ -2,7 +2,8 @@
 NAME="xcb-util-image"
 VERS="0.4.1"
 LINK="https://xcb.freedesktop.org/dist/xcb-util-image-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/lib/libxcb-image/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxcb-image.git"
+VCMD="git ls-remote --tags 'https://gitlab.freedesktop.org/xorg/lib/libxcb-image.git' | sed 's:.*/::' | sort -V | tail -n1 | cut -d- -f4"
 DEPS="xcb-util"
 
 

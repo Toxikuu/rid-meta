@@ -2,7 +2,7 @@
 NAME="fribidi"
 VERS="1.0.16"
 LINK="https://github.com/fribidi/fribidi/releases/download/v$VERS/fribidi-$VERS.tar.xz"
-UPST="https://github.com/fribidi/fribidi/tags"
+UPST="https://github.com/fribidi/fribidi.git"
 DEPS=""
 
 

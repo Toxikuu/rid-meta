@@ -2,7 +2,7 @@
 NAME="playerctl"
 VERS="2.4.1"
 LINK="https://github.com/altdesktop/$NAME/archive/refs/tags/v$VERS.tar.gz"
-UPST="https://github.com/altdesktop/$NAME/tags"
+UPST="https://github.com/altdesktop/$NAME.git"
 DEPS=""
 
 

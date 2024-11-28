@@ -2,8 +2,7 @@
 NAME="gawk"
 VERS="5.3.1"
 LINK="https://ftp.gnu.org/gnu/gawk/gawk-$VERS.tar.xz"
-UPST="https://ftp.gnu.org/gnu/gawk/?C=M;O=D"
-SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(6) > td:nth-child(2) > a:nth-child(1)"
+UPST="https://git.savannah.gnu.org/git/gawk.git"
 DEPS=""
 
 

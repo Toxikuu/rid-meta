@@ -2,8 +2,7 @@
 NAME="uchardet"
 VERS="0.0.8"
 LINK="https://www.freedesktop.org/software/uchardet/releases/uchardet-$VERS.tar.xz"
-UPST="https://www.freedesktop.org/software/uchardet/releases/?C=M;O=D"
-SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(2) > a:nth-child(1)"
+UPST="https://gitlab.freedesktop.org/uchardet/uchardet.git"
 DEPS="cmake"
 
 

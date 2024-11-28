@@ -2,7 +2,7 @@
 NAME="xclip"
 VERS="0.13"
 LINK="https://github.com/astrand/xclip/archive/refs/tags/$VERS.tar.gz"
-UPST="https://github.com/astrand/xclip/tags"
+UPST="https://github.com/astrand/xclip.git"
 DEPS=""
 
 

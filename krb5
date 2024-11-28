@@ -2,8 +2,8 @@
 NAME="krb5"
 VERS="1.21.3"
 LINK="https://kerberos.org/dist/krb5/${VERS%.*}/krb5-$VERS.tar.gz"
-UPST="https://web.mit.edu/kerberos/"
-SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > ul:nth-child(1) > li:nth-child(1) > a:nth-child(1)"
+UPST="https://github.com/krb5/krb5.git"
+VCMD="git ls-remote --tags 'https://github.com/krb5/krb5.git' | sed 's:.*/::' | sort -V | tail -n2 | head -n1 | cut -d- -f2"
 DEPS=""
 
 

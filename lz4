@@ -2,7 +2,8 @@
 NAME="lz4"
 VERS="1.10.0"
 LINK="https://github.com/lz4/lz4/releases/download/v$VERS/lz4-$VERS.tar.gz"
-UPST="https://github.com/lz4/lz4/tags"
+UPST="https://github.com/lz4/lz4.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n1"
 DEPS=""
 
 

@@ -2,7 +2,8 @@
 NAME="xz"
 VERS="5.6.3"
 LINK="https://github.com/tukaani-project/xz/releases/download/v$VERS/xz-$VERS.tar.xz"
-UPST="https://github.com/tukaani-project/xz/tags"
+UPST="https://github.com/tukaani-project/xz.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -v alpha | tail -n1"
 DEPS=""
 
 

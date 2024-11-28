@@ -2,7 +2,7 @@
 NAME="dosfstools"
 VERS="4.2"
 LINK="https://github.com/dosfstools/dosfstools/releases/download/v$VERS/dosfstools-$VERS.tar.gz"
-UPST="https://github.com/dosfstools/dosfstools/tags"
+UPST="https://github.com/dosfstools/dosfstools.git"
 DEPS=""
 
 

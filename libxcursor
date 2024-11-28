@@ -2,7 +2,8 @@
 NAME="libxcursor"
 VERS="1.2.3"
 LINK="https://www.x.org/pub/individual/lib/libXcursor-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/lib/libxcursor/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxcursor.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 libXcursor-1_1_6 | head -n1 | cut -d- -f2"
 DEPS="libxfixes libxrender libx11 glibc xorgproto util-macros"
 
 

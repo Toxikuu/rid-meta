@@ -2,7 +2,7 @@
 NAME="alsa-plugins"
 VERS="1.2.12"
 LINK="https://www.alsa-project.org/files/pub/plugins/alsa-plugins-$VERS.tar.bz2"
-UPST="https://github.com/alsa-project/alsa-plugins/tags"
+UPST="https://github.com/alsa-project/alsa-plugins.git"
 DEPS="alsa-lib"
 
 

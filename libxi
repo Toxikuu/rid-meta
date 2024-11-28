@@ -2,7 +2,8 @@
 NAME="libxi"
 VERS="1.8.2"
 LINK="https://www.x.org/pub/individual/lib/libXi-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/lib/libxi/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxi.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sed 's/\^{}//' | sort -V | grep libXi- | tail -n2 | head -n1 | cut -d- -f2"
 DEPS="libxext libxfixes libx11 glibc xorgproto util-macros"
 
 

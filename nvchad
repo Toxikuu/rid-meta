@@ -1,6 +1,7 @@
 #!/bin/bash
 NAME="nvchad"
-VERS="9999"
+VERS="2.5"
+UPST="https://github.com/NvChad/NvChad.git"
 DEPS="nvim git"
 
 idir() {

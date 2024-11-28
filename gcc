@@ -1,9 +1,10 @@
 #!/bin/bash
 NAME="gcc"
-VERS="14.2.0"
+VERS="14.2.0" # see news
 LINK="https://ftp.gnu.org/gnu/gcc/gcc-$VERS/gcc-$VERS.tar.xz"
-UPST="https://ftp.gnu.org/gnu/gcc/?C=M;O=D"
-SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(2) > a:nth-child(1)"
+UPST="git://gcc.gnu.org/git/gcc.git"
+VCMD="git ls-remote --tags 'git://gcc.gnu.org/git/gcc.git' | sed 's:.*/::' | sort -V | grep gcc- | tail -n1 | cut -d- -f2"
+NEWS="Note GCC-15 is not released and is likely to lead to breakage (you probably shouldn't use it yet)"
 DEPS=""
 
 

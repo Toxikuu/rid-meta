@@ -5,7 +5,8 @@ ver="${VERS//./}"
 LINK="https://downloads.sourceforge.net/project/infozip/UnZip%206.x%20%28latest%29/UnZip%20$VERS/unzip$ver.tar.gz"
 DOWN="https://www.linuxfromscratch.org/patches/blfs/svn/unzip-$VERS-consolidated_fixes-1.patch \
       https://www.linuxfromscratch.org/patches/blfs/svn/unzip-$VERS-gcc14-1.patch"
-UPST="https://sourceforge.net/projects/infozip/files/UnZip%206.x%20%28latest%29"
+UPST="https://infozip.sourceforge.net/UnZip.html"
+VCMD="curl -s '$UPST' | grep 'UnZip ' | head -n1 | cut -d' ' -f2"
 SELE=".name"
 DEPS="wget"
 

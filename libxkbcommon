@@ -2,7 +2,7 @@
 NAME="libxkbcommon"
 VERS="1.7.0"
 LINK="https://xkbcommon.org/download/$NAME-$VERS.tar.xz"
-UPST="https://github.com/xkbcommon/libxkbcommon/releases/latest"
+UPST="https://github.com/xkbcommon/libxkbcommon.git"
 DEPS="xkeyboard-config libxcb wayland wayland-protocols"
 
 

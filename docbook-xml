@@ -1,9 +1,7 @@
 #!/bin/bash
 NAME="docbook-xml"
 VERS="4.5"
-UPST="https://docbook.org/schemas/4x.html"
 DOWN="https://www.docbook.org/xml/$VERS/docbook-xml-$VERS.zip"
-SELE="body > div.article > dl:nth-child(5) > dd:nth-child(2) > ul > li:nth-child(1) > a"
 DEPS="unzip libxml2"
 
 

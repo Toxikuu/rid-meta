@@ -2,7 +2,7 @@
 NAME="wheel"
 VERS="0.45.1"
 LINK="https://pypi.org/packages/source/w/wheel/wheel-$VERS.tar.gz"
-UPST="https://pypi.org/project/wheel"
+UPST="https://github.com/pypa/wheel.git"
 DEPS="python"
 
 

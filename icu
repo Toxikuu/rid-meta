@@ -4,8 +4,8 @@ VERS="76.1"
 ver1="${VERS//./-}"
 ver2="${VERS//./_}"
 LINK="https://github.com/unicode-org/icu/releases/download/release-$ver1/icu4c-$ver2-src.tgz"
-UPST="https://github.com/unicode-org/icu/releases/latest"
-SELE="h1.d-inline"
+UPST="https://github.com/unicode-org/icu.git"
+VCMD="git ls-remote --tags 'https://github.com/unicode-org/icu.git' | sed 's:.*/::' | sort -V | grep -B2 tools-milestone-49-0-2 | head -n1 | cut -d- -f2- | sed 's/-/./g'"
 DEPS=""
 
 

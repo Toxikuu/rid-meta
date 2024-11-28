@@ -1,9 +1,9 @@
 #!/bin/bash
 NAME="file"
-VERS="5.45"
+VERS="5.46"
 LINK="https://astron.com/pub/file/file-$VERS.tar.gz"
-UPST="https://astron.com/pub/file/?C=M;O=D"
-SELE="body > pre:nth-child(2) > a:nth-child(7)"
+UPST="https://github.com/file/file.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n2 | head -n1 | sed 's/FILE//' | sed 's/_/./g'"
 DEPS=""
 
 

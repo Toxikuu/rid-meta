@@ -2,7 +2,7 @@
 NAME="efivar"
 VERS="39"
 LINK="https://github.com/rhboot/efivar/archive/$VERS/efivar-$VERS.tar.gz"
-UPST="https://github.com/rhboot/efivar/tags"
+UPST="https://github.com/rhboot/efivar.git"
 DEPS="" # doc dep on mandoc
 
 

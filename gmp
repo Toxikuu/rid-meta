@@ -2,7 +2,8 @@
 NAME="gmp"
 VERS="6.3.0"
 LINK="https://ftp.gnu.org/gnu/gmp/gmp-$VERS.tar.xz"
-UPST="https://ftp.gnu.org/gnu/gmp/?C=M;O=D"
+UPST="https://gmplib.org/repo/gmp" # mercurial
+VCMD="curl -s 'https://ftp.gnu.org/gnu/gmp/?C=M;O=D' | grep gmp- | head -n1 | cut -d'\"' -f8 | cut -d- -f2 | cut -d. -f1-3" # not optimal, but i don't have mercurial and mirrors are dead
 DEPS=""
 
 

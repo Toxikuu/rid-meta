@@ -2,7 +2,7 @@
 NAME="xdotool"
 VERS="3.20211022.1"
 LINK="https://github.com/jordansissel/xdotool/releases/download/v$VERS/xdotool-$VERS.tar.gz"
-UPST="https://github.com/jordansissel/xdotool/tags"
+UPST="https://github.com/jordansissel/xdotool.git"
 DEPS=""
 
 

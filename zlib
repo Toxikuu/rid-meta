@@ -2,8 +2,7 @@
 NAME="zlib"
 VERS="1.3.1"
 LINK="https://zlib.net/fossils/zlib-$VERS.tar.gz"
-UPST="https://zlib.net/fossils/?C=M;O=D"
-SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(2) > a:nth-child(1)"
+UPST="https://github.com/madler/zlib.git"
 DEPS=""
 
 

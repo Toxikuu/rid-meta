@@ -2,7 +2,8 @@
 NAME="xprop"
 VERS="1.2.8"
 LINK="https://www.x.org/pub/individual/app/xprop-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/app/xprop/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/app/xprop.git"
+VCMD="git ls-remote --tags 'https://gitlab.freedesktop.org/xorg/app/xprop.git' | sed 's:.*/::' | sort -V | tail -n1 | cut -d- -f2"
 DEPS="util-macros libx11"
 
 

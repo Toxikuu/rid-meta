@@ -2,7 +2,8 @@
 NAME="xlsclients"
 VERS="1.1.5"
 LINK="https://www.x.org/pub/individual/app/xlsclients-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/app/xlsclients/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/app/xlsclients.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n2 | head -n1 | cut -d- -f2"
 DEPS="util-macros xorgproto libxcb"
 
 

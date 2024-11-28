@@ -3,7 +3,8 @@ NAME="util-linux"
 VERS="2.40.2"
 ver=${VERS%.*}
 LINK="https://www.kernel.org/pub/linux/utils/util-linux/v$ver/util-linux-$VERS.tar.xz"
-UPST="https://repology.org/project/util-linux/information"
+UPST="https://github.com/util-linux/util-linux.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sed 's/\^{}//' | sort -V | grep -v -- -devel | grep -v -- -rc | tail -n1"
 DEPS=""
 
 

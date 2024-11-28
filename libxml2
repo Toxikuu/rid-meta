@@ -3,7 +3,8 @@ NAME="libxml2"
 VERS="2.13.5"
 ver="${VERS%.*}"
 LINK="https://download.gnome.org/sources/libxml2/$ver/libxml2-$VERS.tar.xz"
-UPST="https://gitlab.gnome.org/GNOME/libxml2/-/tags"
+UPST="https://github.com/GNOME/libxml2.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n1"
 DEPS="icu"
 
 

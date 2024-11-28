@@ -1,9 +1,9 @@
 #!/bin/bash
 NAME="luajit"
-VERS="20240917"
+VERS="20240917" # luajit is weird
 LINK="https://anduin.linuxfromscratch.org/BLFS/luajit/luajit-$VERS.tar.xz"
-UPST="https://www.linuxfromscratch.org/blfs/view/svn/general/luajit"
-SELE=".ulink"
+UPST="https://anduin.linuxfromscratch.org/BLFS/luajit/"
+VCMD="curl -s '$UPST' | grep luajit- | head -n1 | cut -d- -f2 | cut -d. -f1"
 DEPS=""
 
 

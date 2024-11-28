@@ -2,7 +2,7 @@
 NAME="libpsl"
 VERS="0.21.5"
 LINK="https://github.com/rockdaboot/$NAME/releases/download/$VERS/$NAME-$VERS.tar.gz"
-UPST="https://github.com/rockdaboot/$NAME/tags"
+UPST="https://github.com/rockdaboot/$NAME.git"
 DEPS="libidn2 libunistring"
 
 

@@ -2,7 +2,7 @@
 NAME="xdg-utils"
 VERS="1.2.1"
 LINK="https://gitlab.freedesktop.org/xdg/xdg-utils/-/archive/v$VERS/xdg-utils-v$VERS.tar.gz"
-UPST="https://gitlab.freedesktop.org/xdg/xdg-utils/-/tags"
+UPST="https://gitlab.freedesktop.org/xdg/xdg-utils.git"
 DEPS="xmlto lynx xset xprop"
 
 

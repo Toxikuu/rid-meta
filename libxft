@@ -2,7 +2,8 @@
 NAME="libxft"
 VERS="2.3.8"
 LINK="https://www.x.org/pub/individual/lib/libXft-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/lib/libxft/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxft.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep libXft- | tail -n1 | cut -d- -f2"
 DEPS="fontconfig libxrender libx11 freetype2 glibc xorgproto"
 
 

@@ -2,7 +2,8 @@
 NAME="xset"
 VERS="1.2.5"
 LINK="https://www.x.org/pub/individual/app/xset-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/app/xset/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/app/xset.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n2 | head -n1 | cut -d- -f2"
 DEPS="libxmu util-macros"
 
 

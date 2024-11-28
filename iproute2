@@ -2,7 +2,8 @@
 NAME="iproute2"
 VERS="6.12.0"
 LINK="https://www.kernel.org/pub/linux/utils/net/iproute2/iproute2-$VERS.tar.xz"
-UPST="https://github.com/iproute2/iproute2/tags"
+UPST="https://github.com/iproute2/iproute2.git"
+VCMD="git ls-remote --tags 'https://github.com/iproute2/iproute2.git' | sed 's:.*/::' | sort -V | tail -n1"
 DEPS=""
 
 

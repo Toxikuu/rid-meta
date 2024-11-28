@@ -2,7 +2,8 @@
 NAME="libwebp"
 VERS="1.4.0"
 LINK="https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-$VERS.tar.gz"
-UPST="https://repology.org/project/libwebp/information"
+UPST="https://chromium.googlesource.com/webm/libwebp.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 webp-rfc9649 | head -n1"
 DEPS="libjpeg-turbo libpng libtiff" # also sdl12-compat
 
 

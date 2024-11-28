@@ -2,7 +2,8 @@
 NAME="vulkan-loader"
 VERS="1.3.302"
 LINK="https://github.com/KhronosGroup/Vulkan-Loader/archive/v$VERS/Vulkan-Loader-$VERS.tar.gz"
-UPST="https://github.com/KhronosGroup/Vulkan-Loader/tags"
+UPST="https://github.com/KhronosGroup/Vulkan-Loader.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 vulkan-sdk-1.3.268.0 | head -n1"
 DEPS="cmake vulkan-headers libx11 libxrandr"
 
 

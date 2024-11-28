@@ -2,7 +2,7 @@
 NAME="efibootmgr"
 VERS="18"
 LINK="https://github.com/rhboot/efibootmgr/archive/$VERS/efibootmgr-$VERS.tar.gz"
-UPST="https://github.com/rhboot/efibootmgr/tags"
+UPST="https://github.com/rhboot/efibootmgr.git"
 DEPS="efivar popt"
 
 

@@ -3,7 +3,8 @@ NAME="libxslt"
 VERS="1.1.42"
 ver="${VERS%.*}"
 LINK="https://download.gnome.org/sources/libxslt/$ver/libxslt-$VERS.tar.xz"
-UPST="https://gitlab.gnome.org/GNOME/libxslt/-/tags"
+UPST="https://github.com/GNOME/libxslt.git"
+VCMD="git ls-remote --tags 'https://gitlab.gnome.org/GNOME/libxslt.git' | sed 's:.*/::' | sort -V | tail -n1"
 DEPS="libxml2 docbook-xml docbook-xsl-nons"
 
 

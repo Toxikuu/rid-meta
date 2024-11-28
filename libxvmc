@@ -2,7 +2,8 @@
 NAME="libxvmc"
 VERS="1.0.14"
 LINK="https://www.x.org/pub/individual/lib/libXvMC-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/lib/libxvmc/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxvmc.git"
+VCMD="git ls-remote --tags 'https://gitlab.freedesktop.org/xorg/lib/libxvmc.git' | sed 's:.*/::' | sed 's/\^{}//' | sort -V | grep -B1 libXvMC-1_0_2 | head -n1 | cut -d- -f2"
 DEPS="libxext libxv libx11 xorgproto glibc"
 
 

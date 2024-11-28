@@ -2,7 +2,8 @@
 NAME="xtrans"
 VERS="1.5.2"
 LINK="https://www.x.org/releases/individual/lib/xtrans-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/lib/libxtrans/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxtrans.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n2 | head -n1 | cut -d- -f2"
 DEPS=""
 
 

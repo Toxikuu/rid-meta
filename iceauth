@@ -2,7 +2,8 @@
 NAME="iceauth"
 VERS="1.0.10"
 LINK="https://www.x.org/pub/individual/app/iceauth-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/app/iceauth/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/app/iceauth.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep iceauth- | tail -n1 | cut -d- -f2"
 DEPS="util-macros xorgproto"
 
 

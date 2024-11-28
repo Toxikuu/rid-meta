@@ -2,7 +2,8 @@
 NAME="setuptools"
 VERS="75.6.0"
 LINK="https://pypi.org/packages/source/s/setuptools/setuptools-$VERS.tar.gz"
-UPST="https://pypi.org/project/setuptools/"
+UPST="https://github.com/pypa/setuptools.git"
+VCMD="git ls-remote --tags 'https://github.com/pypa/setuptools.git' | sed 's:.*/::' | sort -V | tail -n1"
 DEPS="python"
 
 

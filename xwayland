@@ -2,8 +2,8 @@
 NAME="xwayland"
 VERS="24.1.4"
 LINK="https://www.x.org/pub/individual/xserver/xwayland-$VERS.tar.xz"
-UPST="https://www.x.org/releases/individual/xserver/?C=N;O=D"
-SELE="body > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(2) > a:nth-child(1)"
+UPST="https://gitlab.freedesktop.org/xorg/xserver.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n1 | cut -d- -f2"
 DEPS="libxcvt libxfont2 libglvnd libxau wayland libdrm libxshmfence xtrans xorgproto dbus2 pixman wayland-protocols libepoxy mesa"
 
 

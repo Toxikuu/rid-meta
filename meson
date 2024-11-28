@@ -2,7 +2,7 @@
 NAME="meson"
 VERS="1.6.0"
 LINK="https://github.com/mesonbuild/meson/releases/download/$VERS/meson-$VERS.tar.gz"
-UPST="https://github.com/mesonbuild/meson/tags"
+UPST="https://github.com/mesonbuild/meson.git"
 DEPS="python"
 
 

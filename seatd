@@ -2,7 +2,7 @@
 NAME="seatd"
 VERS="0.9.1"
 LINK="https://git.sr.ht/~kennylevinsen/seatd/archive/$VERS.tar.gz"
-UPST="https://github.com/kennylevinsen/seatd/tags"
+UPST="https://github.com/kennylevinsen/seatd.git"
 DEPS="elogind"
 
 

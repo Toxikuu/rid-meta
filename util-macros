@@ -2,7 +2,8 @@
 NAME="util-macros"
 VERS="1.20.2"
 LINK="https://www.x.org/pub/individual/util/util-macros-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/util/macros/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/util/macros.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n2 | head -n1 | cut -d- -f3"
 DEPS=""
 
 

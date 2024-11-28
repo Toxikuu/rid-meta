@@ -1,9 +1,7 @@
 #!/bin/bash
 NAME="rid"
-VERS="0.20.2"
-LINK=""
-DOWN=""
-UPST="https://github.com/toxikuu/rid/tags"
+VERS="0.20.5"
+UPST="https://github.com/Toxikuu/rid.git"
 DEPS="curl tar xz bash coreutils glibc gcc"
 
 

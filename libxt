@@ -2,7 +2,8 @@
 NAME="libxt"
 VERS="1.3.1"
 LINK="https://www.x.org/pub/individual/lib/libXt-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/lib/libxt/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/lib/libxt.git"
+VCMD="git ls-remote --tags 'https://gitlab.freedesktop.org/xorg/lib/libxt.git' | sed 's:.*/::' | sed 's/\^{}//' | sort -V | grep -B1 libXt-1_0_1 | head -n1 | cut -d- -f2"
 DEPS="libsm libx11 libice glibc xorgproto util-macros"
 
 

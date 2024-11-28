@@ -2,7 +2,7 @@
 NAME="glew"
 VERS="2.2.0"
 LINK="https://downloads.sourceforge.net/glew/glew-$VERS.tgz"
-UPST=""
+UPST="https://github.com/nigels-com/glew.git"
 DEPS="mesa"
 
 

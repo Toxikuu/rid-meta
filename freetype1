@@ -2,7 +2,8 @@
 NAME="freetype1"
 VERS="2.13.3"
 LINK="https://downloads.sourceforge.net/project/freetype/freetype2/$VERS/freetype-$VERS.tar.xz"
-UPST="https://sourceforge.net/projects/freetype/files"
+UPST="https://gitlab.freedesktop.org/freetype/freetype.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B 1 VER-2-BETA2 | head -n1 | cut -d- -f2- | sed 's/-/./g'"
 DEPS="libpng which"
 
 idir() {

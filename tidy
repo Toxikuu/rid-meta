@@ -2,7 +2,8 @@
 NAME="tidy"
 VERS="5.8.0"
 LINK="https://github.com/htacg/tidy-html5/archive/$VERS/tidy-html5-$VERS.tar.gz"
-UPST=""
+UPST="https://github.com/htacg/tidy-html5.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -v next | tail -n1"
 DEPS="cmake libxslt"
 
 

@@ -2,7 +2,7 @@
 NAME="markupsafe"
 VERS="3.0.2"
 LINK="https://pypi.org/packages/source/M/MarkupSafe/markupsafe-$VERS.tar.gz"
-UPST="https://pypi.org/project/MarkupSafe"
+UPST="https://github.com/pallets/markupsafe.git"
 DEPS=""
 
 

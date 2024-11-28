@@ -2,7 +2,8 @@
 NAME="xcursor-themes"
 VERS="1.0.7"
 LINK="https://www.x.org/pub/individual/data/xcursor-themes-$VERS.tar.xz"
-UPST="https://repology.org/project/xcursor-themes/information"
+UPST="https://gitlab.freedesktop.org/xorg/data/cursors.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 xf86-4_3_0_1 | head -n1 | cut -d- -f3"
 DEPS="util-macros xcursorgen pkgconf"
 
 

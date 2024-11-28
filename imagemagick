@@ -1,8 +1,8 @@
 #!/bin/bash
 NAME="imagemagick"
-VERS="7.1.1-41"
+VERS="7.1.1.41" # upstream uses x.x.x-x, but using . is easier for me
 LINK="https://github.com/ImageMagick/ImageMagick/archive/refs/tags/$VERS.tar.gz"
-UPST="https://github.com/ImageMagick/ImageMagick/releases/latest"
+UPST="https://github.com/ImageMagick/ImageMagick.git"
 DEPS="cairo fontconfig freetype2 glib lcms2 libpng libxext librsvg libtiff libwebp libjpeg-turbo pango"
 
 

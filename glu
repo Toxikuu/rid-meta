@@ -2,7 +2,7 @@
 NAME="glu"
 VERS="9.0.3"
 LINK="https://archive.mesa3d.org/glu/glu-$VERS.tar.xz"
-UPST=""
+UPST="https://gitlab.freedesktop.org/mesa/glu.git"
 DEPS="mesa"
 
 

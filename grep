@@ -2,7 +2,7 @@
 NAME="grep"
 VERS="3.11"
 LINK="https://ftp.gnu.org/gnu/grep/grep-$VERS.tar.xz"
-UPST="https://ftp.gnu.org/gnu/grep/?C=M;O=D"
+UPST="https://git.savannah.gnu.org/git/grep.git"
 DEPS=""
 
 

@@ -2,7 +2,8 @@
 NAME="cython"
 VERS="3.1.0a1"
 LINK="https://github.com/cython/cython/releases/download/$VERS/cython-$VERS.tar.gz"
-UPST="https://github.com/cython/cython/tags"
+UPST="https://github.com/cython/cython.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n1"
 DEPS=""
 
 

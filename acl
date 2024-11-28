@@ -2,7 +2,7 @@
 NAME="acl"
 VERS="2.3.2"
 LINK="https://download.savannah.gnu.org/releases/acl/acl-$VERS.tar.xz"
-UPST="http://download.savannah.gnu.org/releases/acl/?C=M&O=D"
+UPST="https://git.savannah.nongnu.org/git/acl.git"
 DEPS=""
 
 

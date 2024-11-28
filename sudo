@@ -1,10 +1,9 @@
 #!/bin/bash
 NAME="sudo"
-VERS="1.9.16"
+VERS="1.9.16p2"
 LINK="https://www.sudo.ws/dist/sudo-$VERS.tar.gz"
 DEPS="linux-pam"
-UPST="https://www.sudo.ws"
-SELE=".gdoc-markdown > p:nth-child(6) > a:nth-child(2)"
+UPST="https://github.com/sudo-project/sudo.git"
 NEWS="Feel free to edit the sudo and badpass prompts in $RIDMETA/sudo and rebuild. Also, the default instructions disable year 2038 support."
 
 

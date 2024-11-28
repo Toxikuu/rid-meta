@@ -2,7 +2,8 @@
 NAME="xf86-input-evdev"
 VERS="2.11.0"
 LINK="https://www.x.org/pub/individual/driver/xf86-input-evdev-$VERS.tar.xz"
-UPST="https://repology.org/project/xdrv:evdev/information"
+UPST="https://gitlab.freedesktop.org/xorg/driver/xf86-input-evdev.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n2 | head -n1 | cut -d- -f4"
 DEPS="libevdev mtdev xorg-server"
 
 

@@ -2,7 +2,7 @@
 NAME="opus-tools"
 VERS="0.2"
 LINK="https://ftp.osuosl.org/pub/xiph/releases/opus/opus-tools-$VERS.tar.gz"
-UPST="https://github.com/xiph/opus-tools/tags"
+UPST="https://github.com/xiph/opus-tools.git"
 DEPS="flac libogg opus libopusenc"
 
 

@@ -2,8 +2,7 @@
 NAME="imlib2"
 VERS="1.12.3"
 LINK="https://downloads.sourceforge.net/project/enlightenment/imlib2-src/$VERS/imlib2-$VERS.tar.xz"
-UPST="https://sourceforge.net/projects/enlightenment/files/imlib2-src"
-SELE="tr.folder:nth-child(1) > th:nth-child(1) > a:nth-child(1) > span:nth-child(2)"
+UPST="https://git.enlightenment.org/old/legacy-imlib2.git" # this upstream looks old but it has the latest version :shrug:
 DEPS="giflib librsvg freetype2 libjpeg-turbo libpng libtiff libxext librsvg libwebp"
 
 

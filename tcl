@@ -2,7 +2,8 @@
 NAME="tcl"
 VERS="8.6.15"
 LINK="https://downloads.sourceforge.net/tcl/tcl$VERS-src.tar.gz"
-UPST="https://sourceforge.net/projects/tcl/files"
+UPST="https://github.com/tcltk/tcl.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -E \"core-[0-9]+-[0-9]+-[0-9]+\" | tail -n1 | cut -d- -f2- | sed 's/-/./g'"
 DEPS=""
 
 

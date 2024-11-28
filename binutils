@@ -3,7 +3,8 @@ NAME="binutils"
 VERS="2.43.1"
 LINK="https://sourceware.org/pub/binutils/releases/binutils-$VERS.tar.xz"
 DOWN="https://www.linuxfromscratch.org/patches/downloads/binutils/binutils-$VERS-upstream_fix-1.patch"
-UPST="https://ftp.gnu.org/gnu/binutils/?C=M;O=D"
+UPST="git://sourceware.org/git/binutils-gdb.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B 1 binutils-arc-20080908-branchpoint | head -n1 | cut -d'-' -f2 | sed 's/_/./g'"
 DEPS=""
 
 

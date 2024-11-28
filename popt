@@ -3,7 +3,8 @@ NAME="popt"
 VERS="1.19"
 ver="${VERS%.*}"
 LINK="http://ftp.rpm.org/popt/releases/popt-$ver.x/popt-$VERS.tar.gz"
-UPST="https://github.com/rpm-software-management/popt/releases/latest"
+UPST="https://github.com/rpm-software-management/popt.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | grep -- -release | grep '\.' | sort -V | tail -n1 | cut -d- -f2"
 DEPS=""
 
 

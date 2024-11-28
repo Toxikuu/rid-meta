@@ -2,7 +2,8 @@
 NAME="xbitmaps"
 VERS="1.1.3"
 LINK="https://www.x.org/pub/individual/data/$NAME-$VERS.tar.xz"
-UPST="https://archlinux.org/packages/extra/any/xbitmaps/" # the actual upstream is annoying to parse
+UPST="https://gitlab.freedesktop.org/xorg/data/bitmaps.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 xf86-4_3_0_1 | tail -n2 | head -n1 | cut -d- -f2"
 DEPS="util-macros"
 
 

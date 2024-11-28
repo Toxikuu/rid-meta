@@ -2,7 +2,8 @@
 NAME="xinput"
 VERS="1.6.4"
 LINK="https://www.x.org/pub/individual/app/xinput-$VERS.tar.xz"
-UPST="https://gitlab.freedesktop.org/xorg/app/xinput/-/tags"
+UPST="https://gitlab.freedesktop.org/xorg/app/xinput.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n2 | head -n1 | cut -d- -f2"
 DEPS="util-macros xorgproto libxfixes libxi libx11 libxinerama"
 
 

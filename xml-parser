@@ -2,8 +2,7 @@
 NAME="xml-parser"
 VERS="2.47"
 LINK="https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-$VERS.tar.gz"
-UPST="https://metacpan.org/pod/XML::Parser"
-SELE="body > div.page-content > div.content-navigation > div > div.release.dist-release.status-latest.maturity-released > a"
+UPST="https://github.com/cpan-authors/XML-Parser.git"
 DEPS=""
 
 

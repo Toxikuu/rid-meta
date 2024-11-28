@@ -2,7 +2,7 @@
 NAME="libvpx"
 VERS="1.15.0"
 LINK="https://github.com/webmproject/libvpx/archive/v$VERS/libvpx-$VERS.tar.gz"
-UPST="https://github.com/webmproject/libvpx/tags"
+UPST="https://github.com/webmproject/libvpx.git"
 DEPS="yasm which"
 
 

@@ -3,6 +3,7 @@ NAME="expect"
 VERS="5.45.4"
 LINK="https://prdownloads.sourceforge.net/expect/expect$VERS.tar.gz"
 UPST="https://sourceforge.net/projects/expect/files"
+VCMD="curl -s https://sourceforge.net/projects/expect/files/Expect/ | rg 'tr title=' | head -n1 | cut -d'\"' -f2"
 DEPS=""
 
 

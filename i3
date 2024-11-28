@@ -2,7 +2,7 @@
 NAME="i3"
 VERS="4.24"
 LINK="https://github.com/i3/i3/archive/refs/tags/$VERS.tar.gz"
-UPST="https://github.com/i3/i3/tags"
+UPST="https://github.com/i3/i3.git"
 DEPS="xcb-util-keysyms xcb-util-wm libev yajl startup-notification pango perl xcb-util-cursor xcb-util-xrm libxkbcommon"
 
 

@@ -2,8 +2,8 @@
 NAME="zip"
 VERS="3.0"
 LINK="https://downloads.sourceforge.net/infozip/zip${VERS//./}.tar.gz"
-UPST="https://sourceforge.net/projects/infozip/files/Zip%203.x%20%28latest%29/3.0/"
-SELE=".current-dir"
+UPST="https://infozip.sourceforge.net/Zip.html" # 3.0 is from 2008, but I'll include upstream anyway
+VCMD="curl -s '$UPST' | grep -oE 'Zip [0-9]+\.[0-9]+' | head -n1 | cut -d' ' -f2"
 DEPS=""
 
 

@@ -2,7 +2,7 @@
 NAME="glow"
 VERS="2.0.0"
 LINK="https://github.com/charmbracelet/glow/archive/refs/tags/v$VERS.tar.gz"
-UPST="https://github.com/charmbracelet/glow/tags"
+UPST="https://github.com/charmbracelet/glow.git"
 DEPS="go"
 
 

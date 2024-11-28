@@ -2,7 +2,8 @@
 NAME="bison"
 VERS="3.8.2"
 LINK="https://ftp.gnu.org/gnu/bison/bison-$VERS.tar.xz"
-UPST="https://ftp.gnu.org/gnu/bison/?C=M;O=D"
+UPST="https://git.savannah.gnu.org/git/bison.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n2 | head -n1"
 DEPS=""
 
 
