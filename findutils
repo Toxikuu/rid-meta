@@ -3,7 +3,7 @@ NAME="findutils"
 VERS="4.10.0"
 LINK="https://ftp.gnu.org/gnu/findutils/findutils-$VERS.tar.xz"
 UPST="https://git.savannah.gnu.org/git/findutils.git"
-VCMD="git ls-remote --tags 'https://git.savannah.gnu.org/git/findutils.git' | sed 's:.*/::' | sort -V | tail -n1"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n1"
 DEPS=""
 
 

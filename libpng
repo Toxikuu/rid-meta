@@ -4,7 +4,7 @@ VERS="1.6.44"
 LINK="https://github.com/pnggroup/libpng/archive/refs/tags/v$VERS.tar.gz"
 DOWN="https://sourceforge.net/projects/libpng-apng/files/latest/download" # apng patch
 UPST="https://github.com/pnggroup/libpng.git"
-VCMD="git ls-remote --tags 'https://github.com/pnggroup/libpng.git' | sed 's:.*/::' | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' | sort -V | tail -n 1" # not using betas bc of the patch
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' | sort -V | tail -n 1" # not using betas bc of the patch
 DEPS=""
 
 

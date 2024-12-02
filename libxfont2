@@ -3,7 +3,7 @@ NAME="libxfont2"
 VERS="2.0.7"
 LINK="https://www.x.org/pub/individual/lib/libXfont2-$VERS.tar.xz"
 UPST="https://gitlab.freedesktop.org/xorg/lib/libxfont.git"
-VCMD="git ls-remote --tags 'https://gitlab.freedesktop.org/xorg/lib/libxfont.git' | sed 's:.*/::' | sort -V | grep libXfont2 | tail -n1 | cut -d- -f2"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep libXfont2 | tail -n1 | cut -d- -f2"
 DEPS="freetype2 libfontenc xorgproto glibc xtrans util-macros"
 
 

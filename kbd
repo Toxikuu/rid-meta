@@ -4,6 +4,7 @@ VERS="2.6.4"
 LINK="https://www.kernel.org/pub/linux/utils/kbd/kbd-$VERS.tar.xz"
 DOWN="https://www.linuxfromscratch.org/patches/lfs/development/kbd-$VERS-backspace-1.patch"
 UPST="https://git.kernel.org/pub/scm/linux/kernel/git/legion/kbd.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sed 's/\^{}//' | grep -Ev 'rc|alt|dev' | sort -V | tail -n1"
 DEPS=""
 
 

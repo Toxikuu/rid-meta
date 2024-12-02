@@ -3,7 +3,7 @@ NAME="libxcomposite"
 VERS="0.4.6"
 LINK="https://www.x.org/pub/individual/lib/libXcomposite-$VERS.tar.xz"
 UPST="https://gitlab.freedesktop.org/xorg/lib/libxcomposite.git"
-VCMD="git ls-remote --tags 'https://gitlab.freedesktop.org/xorg/lib/libxcomposite.git' | sed 's:.*/::' | sort -V | grep -B1 rel-0-6-1 | head -n1 | cut -d- -f2"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 rel-0-6-1 | head -n1 | cut -d- -f2"
 DEPS="libxfixes xorgproto libx11 glibc util-macros"
 
 

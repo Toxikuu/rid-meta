@@ -3,7 +3,7 @@ NAME="openssl"
 VERS="3.4.0"
 LINK="https://github.com/openssl/openssl/releases/download/openssl-$VERS/openssl-$VERS.tar.gz"
 UPST="https://github.com/openssl/openssl.git"
-VCMD="git ls-remote --tags 'https://github.com/openssl/openssl.git' | sed 's:.*/::' | sort -V | tail -n2 | head -n1 | cut -d- -f2"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n2 | head -n1 | cut -d- -f2"
 DEPS=""
 
 

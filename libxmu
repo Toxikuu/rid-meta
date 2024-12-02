@@ -3,7 +3,7 @@ NAME="libxmu"
 VERS="1.2.1"
 LINK="https://www.x.org/pub/individual/lib/libXmu-$VERS.tar.xz"
 UPST="https://gitlab.freedesktop.org/xorg/lib/libxmu.git"
-VCMD="git ls-remote --tags 'https://gitlab.freedesktop.org/xorg/lib/libxmu.git' | sed 's:.*/::' | sed 's/\^{}//' | sort -V | grep -B1 libXmu-1_0_1 | head -n1 | cut -d- -f2"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sed 's/\^{}//' | sort -V | grep -B1 libXmu-1_0_1 | head -n1 | cut -d- -f2"
 DEPS="libxext libxt libx11 xorgproto glibc util-macros"
 
 

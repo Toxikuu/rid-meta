@@ -3,7 +3,7 @@ NAME="cups"
 VERS="2.4.11"
 LINK="https://github.com/OpenPrinting/cups/releases/download/v$VERS/cups-$VERS-source.tar.gz"
 UPST="https://github.com/OpenPrinting/cups.git"
-VCMD="git ls-remote --tags https://github.com/OpenPrinting/cups.git | sed 's:.*/::' | sort -V | tail -n1"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n1"
 DEPS="gnutls"
 
 

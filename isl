@@ -3,7 +3,7 @@ NAME="isl"
 VERS="0.27"
 LINK="https://libisl.sourceforge.io/isl-$VERS.tar.xz"
 UPST="git://repo.or.cz/isl.git"
-VCMD="git ls-remote --tags 'git://repo.or.cz/isl.git' | sed 's:.*/::' | sort -V | tail -n1 | cut -d- -f2"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n1 | cut -d- -f2"
 DEPS=""
 
 

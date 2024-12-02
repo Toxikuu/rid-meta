@@ -2,7 +2,7 @@
 NAME="pnpm"
 VERS="9.14.2" # this may not be used, but it is helpful for knowing when to self-update pnpm
 UPST="https://github.com/pnpm/pnpm.git"
-VCMD="git ls-remote --tags 'https://github.com/pnpm/pnpm.git' | sed 's:.*/::' | sort -V | tail -n1"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n1"
 DEPS="curl"
 
 

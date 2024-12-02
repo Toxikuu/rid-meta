@@ -4,7 +4,7 @@ VERS="5.2.2"
 LINK="https://downloads.sourceforge.net/project/giflib/giflib-$VERS.tar.gz"
 DOWN="https://www.linuxfromscratch.org/patches/blfs/svn/giflib-$VERS-upstream_fixes-1.patch"
 UPST="https://git.code.sf.net/p/giflib/code.git"
-VCMD="git ls-remote --tags 'https://git.code.sf.net/p/giflib/code.git' | sed 's:.*/::' | sort -V | grep -B 1 giflib-4_1_4 | head -n1"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B 1 giflib-4_1_4 | head -n1"
 DEPS="xmlto"
 
 

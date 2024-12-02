@@ -4,6 +4,7 @@ VERS="7.1"
 LINK="https://ffmpeg.org/releases/ffmpeg-$VERS.tar.xz"
 DOWN="https://www.linuxfromscratch.org/patches/blfs/svn/ffmpeg-$VERS-chromium_method-1.patch"
 UPST="https://git.ffmpeg.org/ffmpeg.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sed 's/\^{}//' | uniq | grep -Ev 'dev|v' | sort -V | tail -n1 | cut -d'n' -f2" # exclude 'v' as ffmpeg uses 'n' for recent versions for some reason?
 
 cuda_deps="nv-codec-headers gcc13 cuda"
 DEPS="libaom libass fdk-aac freetype2 lame libvorbis libvpx opus x264 x265 yasm alsa-lib libva sdl2 pulseaudio ${cuda_deps}"

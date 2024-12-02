@@ -3,7 +3,7 @@ NAME="groff"
 VERS="1.23.0"
 LINK="https://ftp.gnu.org/gnu/groff/groff-$VERS.tar.gz"
 UPST="https://git.savannah.gnu.org/git/groff.git"
-VCMD="git ls-remote --tags 'https://git.savannah.gnu.org/git/groff.git' | sed 's:.*/::' | sort -V | grep -B1 FDL | head -n1"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 FDL | head -n1"
 DEPS=""
 
 

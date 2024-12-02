@@ -3,7 +3,7 @@ NAME="libice"
 VERS="1.1.1"
 LINK="https://www.x.org/pub/individual/lib/libICE-$VERS.tar.xz"
 UPST="https://gitlab.freedesktop.org/xorg/lib/libice.git"
-VCMD="git ls-remote --tags 'https://gitlab.freedesktop.org/xorg/lib/libice.git' | sed 's:.*/::' | sort -V | grep -B1 libICE-1_0_1 | head -n1 | cut -d- -f2"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 libICE-1_0_1 | head -n1 | cut -d- -f2"
 DEPS="glibc xorgproto xtrans util-macros"
 
 

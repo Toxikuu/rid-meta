@@ -2,7 +2,7 @@
 NAME="at-spi2-core"
 VERS="2.54.0"
 LINK="https://download.gnome.org/sources/at-spi2-core/${VERS%.*}/at-spi2-core-$VERS.tar.xz"
-UPST="https://github.com/at-spi2-core.git"
+UPST="https://github.com/GNOME/at-spi2-core.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n3 | head -n1 | cut -d'_' -f4- | sed 's/_/./g' | cut -d'^' -f1" # fuck at-spi2-core's tagging system
 DEPS="bash dbus2 glib libx11 libxi libxtst xprop gsettings-desktop-schemas"
 

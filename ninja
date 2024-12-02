@@ -3,7 +3,7 @@ NAME="ninja"
 VERS="1.12.1"
 LINK="https://github.com/ninja-build/ninja/archive/v$VERS/ninja-$VERS.tar.gz"
 UPST="https://github.com/ninja-build/ninja.git"
-VCMD="git ls-remote --tags 'https://github.com/ninja-build/ninja.git' | sed 's:.*/::' | sort -V | tail -n1"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n1"
 DEPS="python"
 
 

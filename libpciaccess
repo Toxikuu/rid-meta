@@ -3,7 +3,7 @@ NAME="libpciaccess"
 VERS="0.18.1"
 LINK="https://www.x.org/pub/individual/lib/libpciaccess-$VERS.tar.xz"
 UPST="https://gitlab.freedesktop.org/xorg/lib/libpciaccess.git"
-VCMD="git ls-remote --tags 'https://gitlab.freedesktop.org/xorg/lib/libpciaccess.git' | sed 's:.*/::' | sed 's/\^{}//' | sort -V | uniq | tail -n2 | head -n1 | cut -d- -f2"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sed 's/\^{}//' | sort -V | uniq | tail -n2 | head -n1 | cut -d- -f2"
 DEPS=""
 
 

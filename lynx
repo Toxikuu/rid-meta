@@ -2,8 +2,8 @@
 NAME="lynx"
 VERS="2.9.2"
 LINK="https://invisible-mirror.net/archives/lynx/tarballs/lynx$VERS.tar.bz2"
-UPST="https://invisible-mirror.net/archives/lynx/tarballs/?C=M;O=D"
-VCMD="curl -s 'https://lynx.invisible-island.net/lynx.html' | grep 'stable release is' | cut -d' ' -f9 | cut -d';' -f1"
+UPST="https://lynx.invisible-island.net/lynx.html"
+VCMD="curl -s '$UPST' | grep 'stable release is' | cut -d' ' -f9 | cut -d';' -f1"
 DEPS=""
 
 

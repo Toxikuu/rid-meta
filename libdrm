@@ -3,7 +3,7 @@ NAME="libdrm"
 VERS="2.4.123"
 LINK="https://dri.freedesktop.org/libdrm/libdrm-$VERS.tar.xz"
 UPST="https://gitlab.freedesktop.org/mesa/drm.git"
-VCMD="git ls-remote --tags 'https://gitlab.freedesktop.org/mesa/drm.git' | sed 's:.*/::' | sort -V | grep -B1 libdrm-2_0_0 | head -n1 | cut -d- -f2"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 libdrm-2_0_0 | head -n1 | cut -d- -f2"
 DEPS="libpciaccess"
 
 

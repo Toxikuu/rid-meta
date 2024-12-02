@@ -3,13 +3,20 @@ NAME="socat"
 VERS="1.8.0.1"
 LINK="http://www.dest-unreach.org/socat/download/socat-$VERS.tar.gz"
 UPST="https://repo.or.cz/socat.git"
-VCMD="git ls-remote --tags 'https://repo.or.cz/socat.git' | sed 's:.*/::' | sort -V | tail -n1 | cut -d- -f2-"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | grep -v b | sort -V | tail -n1 | cut -d- -f2-"
 DEPS="glibc openssl readline"
 
 
 idir() {
 
-cm --mandir=/usr/share/man
+mkdir -pv ridbuild && cd ridbuild
+
+../configure --prefix=/usr    \
+             --disable-static \
+             --mandir=/usr/share/man
+
+make
+make install || : # make install likes to fail
 
 }
 

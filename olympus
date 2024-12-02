@@ -1,8 +1,8 @@
 #!/bin/bash
 NAME="olympus"
-VERS="9999"
-DOWN='https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds/4338/artifacts?artifactName=linux.main&api-version=5.0&%24format=zip'
-DEPS="unzip xdg-utils desktop-file-utils"
+VERS="4373"
+DOWN="https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds/$VERS/artifacts?artifactName=linux.main"'&api-version=5.0&%24format=zip'
+DEPS="unzip xdg-utils desktop-file-utils fuse2"
 
 
 idir() {
