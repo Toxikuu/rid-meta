@@ -1,0 +1,21 @@
+#!/bin/bash
+NAME="ani-cli"
+VERS="4.9" # 9999 is used
+LINK=""
+UPST="https://github.com/pystardust/ani-cli.git"
+DEPS="mpv grep sed curl yt-dlp fzf patch"
+
+
+idir() {
+
+git clone "https://github.com/pystardust/ani-cli.git"
+sudo cp ani-cli/ani-cli /usr/bin
+rm -rf ani-cli
+
+}
+
+rdir() {
+
+rm -vf /usr/bin/ani-cli
+
+}

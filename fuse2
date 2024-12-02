@@ -1,0 +1,28 @@
+#!/bin/bash
+NAME="fuse2"
+VERS="2.9.9"
+LINK="https://github.com/libfuse/libfuse/releases/download/fuse-$VERS/fuse-$VERS.tar.gz"
+# UPST="" # upstream is ignored for fuse2
+DOWN="https://gitlab.archlinux.org/archlinux/packaging/packages/fuse2/-/raw/main/conditionally-define-closefrom.patch"
+DEPS="glibc"
+
+
+idir() {
+
+patch -Np1 -i "$RIDSOURCES"/conditionally-define-closefrom.patch
+autoreconf -i
+
+UDEV_RULES_PATH=/etc/udev/rules.d \
+MOUNT_FUSE_PATH=/usr/bin          \
+cm --libdir=/usr/lib              \
+   --enable-lib                   \
+   --enable-util                  \
+   --disable-example
+
+}
+
+rdir() {
+
+echo "not implemented"
+
+}
