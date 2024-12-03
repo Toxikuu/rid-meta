@@ -1,5 +1,6 @@
 #!/bin/bash
 NAME="tree"
+DESC="Utility for viewing file trees"
 VERS="2.2.1"
 LINK="https://gitlab.com/OldManProgrammer/unix-tree/-/archive/$VERS/unix-tree-$VERS.tar.bz2"
 UPST="https://gitlab.com/OldManProgrammer/unix-tree.git"

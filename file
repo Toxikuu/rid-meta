@@ -1,5 +1,6 @@
 #!/bin/bash
 NAME="file"
+DESC="Utility for divining file type"
 VERS="5.46"
 LINK="https://astron.com/pub/file/file-$VERS.tar.gz"
 UPST="https://github.com/file/file.git"

@@ -1,5 +1,6 @@
 #!/bin/bash
 NAME="sudo"
+DESC="Tool for privilege escalation"
 VERS="1.9.16p2"
 LINK="https://www.sudo.ws/dist/sudo-$VERS.tar.gz"
 DEPS="linux-pam"

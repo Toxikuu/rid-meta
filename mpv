@@ -1,5 +1,6 @@
 #!/bin/bash
 NAME="mpv"
+DESC="A wonderful media player"
 VERS="0.39.0"
 LINK="https://github.com/mpv-player/mpv/archive/v$VERS/mpv-$VERS.tar.gz"
 UPST="https://github.com/mpv-player/mpv.git"

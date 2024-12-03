@@ -1,5 +1,6 @@
 #!/bin/bash
 NAME="zip"
+DESC="Utility for creating zip archives"
 VERS="3.0"
 LINK="https://downloads.sourceforge.net/infozip/zip${VERS//./}.tar.gz"
 UPST="https://infozip.sourceforge.net/Zip.html" # 3.0 is from 2008, but I'll include upstream anyway

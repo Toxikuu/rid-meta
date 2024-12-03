@@ -1,5 +1,6 @@
 #!/bin/bash
 NAME="i3"
+DESC="Simple window manager"
 VERS="4.24"
 LINK="https://github.com/i3/i3/archive/refs/tags/$VERS.tar.gz"
 UPST="https://github.com/i3/i3.git"
