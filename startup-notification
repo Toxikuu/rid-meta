@@ -2,7 +2,7 @@
 NAME="startup-notification"
 VERS="0.12"
 LINK="https://www.freedesktop.org/software/startup-notification/releases/startup-notification-$VERS.tar.gz"
-UPST="git://anongit.freedesktop.org/git/startup-notification.git"
+UPST="https://gitlab.freedesktop.org/xdg/startup-notification"
 DEPS="libx11 libxcb xcb-util"
 
 
