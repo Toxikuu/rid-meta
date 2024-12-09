@@ -5,7 +5,7 @@ LINK="https://www.freedesktop.org/software/$NAME/releases/$NAME-$VERS.tar.xz"
 UPST="https://github.com/pulseaudio/pulseaudio.git"
 DEPS="libsndfile alsa-lib check dbus2 glib meson-toolchain-files"
 
-# this piece of shit still doesn't build in 32-bit
+# TODO: try using abstractions
 idir() {
 
 mkdir build && cd build
