@@ -1,24 +1,45 @@
 #!/bin/bash
 NAME="dbus2"
-VERS="1.14.10"
+VERS="1.15.90"
 DEPS="dbus1 @xorg-libs"
+DOWN="https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20240913.tar.xz"
 
 
 idir() {
+
 tar xvf "$RIDSOURCES"/dbus1-$VERS.tar &&
 cd dbus-$VERS                         ||
 die "Failed to extract tarball"
 
-cm \
-    --sysconfdir=/etc               \
-    --localstatedir=/var            \
-    --runstatedir=/run              \
-    --disable-doxygen-docs          \
-    --disable-xml-docs              \
-    --with-systemduserunitdir=no    \
-    --with-systemdsystemunitdir=no  \
-    --docdir=/tmp/rid/trash         \
-    --with-system-socket=/run/dbus/system_bus_socket
+# cm \
+#     --sysconfdir=/etc               \
+#     --localstatedir=/var            \
+#     --runstatedir=/run              \
+#     --disable-doxygen-docs          \
+#     --disable-xml-docs              \
+#     --with-systemduserunitdir=no    \
+#     --with-systemdsystemunitdir=no  \
+#     --docdir=/tmp/rid/trash         \
+#     --with-system-socket=/run/dbus/system_bus_socket
+
+mn \
+  -D localstatedir=/var           \
+  -D runtime_dir=/run             \
+  -D sysconfdir=/etc              \
+  -D doxygen_docs=disabled        \
+  -D modular_tests=disabled       \
+  -D qt_help=disabled             \
+  -D selinux=disabled             \
+  -D stats=false                  \
+  -D systemd_user_unitdir=''      \
+  -D systemd_system_unitdir=''    \
+  -D systemd=disabled             \
+  -D tools=true                   \
+  -D traditional_activation=true  \
+  -D user_session=false           \
+  -D valgrind=disabled            \
+  -D xml_docs=disabled            \
+  -D system_socket=/run/dbus/system_bus_socket
 
 chown -v root:messagebus /usr/libexec/dbus-daemon-launch-helper
 chmod -v      4750       /usr/libexec/dbus-daemon-launch-helper

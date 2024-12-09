@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="dbus1"
-VERS="1.14.10" # odd minor versions represent development branches; although 1.15 is the latest, it's not stable; i may use 1.15 here
+VERS="1.15.90" # odd minor versions represent development branches; although 1.15 is the latest, it's not stable; i may use 1.15 here
 LINK="https://dbus.freedesktop.org/releases/dbus/dbus-$VERS.tar.xz"
 UPST="https://gitlab.freedesktop.org/dbus/dbus.git"
 DEPS=""
@@ -9,16 +9,35 @@ DEPS=""
 
 idir() {
 
-cm \
-    --sysconfdir=/etc               \
-    --localstatedir=/var            \
-    --runstatedir=/run              \
-    --disable-doxygen-docs          \
-    --disable-xml-docs              \
-    --with-systemduserunitdir=no    \
-    --with-systemdsystemunitdir=no  \
-    --docdir=/tmp/rid/trash         \
-    --with-system-socket=/run/dbus/system_bus_socket
+# cm \
+#     --sysconfdir=/etc               \
+#     --localstatedir=/var            \
+#     --runstatedir=/run              \
+#     --disable-doxygen-docs          \
+#     --disable-xml-docs              \
+#     --with-systemduserunitdir=no    \
+#     --with-systemdsystemunitdir=no  \
+#     --docdir=/tmp/rid/trash         \
+#     --with-system-socket=/run/dbus/system_bus_socket
+
+mn \
+  -D localstatedir=/var           \
+  -D runtime_dir=/run             \
+  -D sysconfdir=/etc              \
+  -D doxygen_docs=disabled        \
+  -D modular_tests=disabled       \
+  -D qt_help=disabled             \
+  -D selinux=disabled             \
+  -D stats=false                  \
+  -D systemd_user_unitdir=''      \
+  -D systemd_system_unitdir=''    \
+  -D systemd=disabled             \
+  -D tools=true                   \
+  -D traditional_activation=true  \
+  -D user_session=false           \
+  -D valgrind=disabled            \
+  -D xml_docs=disabled            \
+  -D system_socket=/run/dbus/system_bus_socket
 
 chown -v root:messagebus /usr/libexec/dbus-daemon-launch-helper &&
 chmod -v      4750       /usr/libexec/dbus-daemon-launch-helper
@@ -26,26 +45,47 @@ chmod -v      4750       /usr/libexec/dbus-daemon-launch-helper
 dbus-uuidgen --ensure
 ln -sfv /var/lib/dbus/machine-id /etc
 
-CC="gcc -m32" CXX="g++ -m32"                     \
-PKG_CONFIG_PATH="/usr/lib32/pkgconfig"           \
-./configure --prefix=/usr                        \
-            --libdir=/usr/lib32                  \
-            --host=i686-pc-linux-gnu             \
-            --sysconfdir=/etc                    \
-            --localstatedir=/var                 \
-            --runstatedir=/run                   \
-            --disable-doxygen-docs               \
-            --disable-xml-docs                   \
-            --disable-static                     \
-            --with-systemduserunitdir=no         \
-            --with-systemdsystemunitdir=no       \
-            --with-system-socket=/run/dbus/system_bus_socket &&
+# CC="gcc -m32" CXX="g++ -m32"                     \
+# PKG_CONFIG_PATH="/usr/lib32/pkgconfig"           \
+# ./configure --prefix=/usr                        \
+#             --libdir=/usr/lib32                  \
+#             --host=i686-pc-linux-gnu             \
+#             --sysconfdir=/etc                    \
+#             --localstatedir=/var                 \
+#             --runstatedir=/run                   \
+#             --disable-doxygen-docs               \
+#             --disable-xml-docs                   \
+#             --disable-static                     \
+#             --with-systemduserunitdir=no         \
+#             --with-systemdsystemunitdir=no       \
+#             --with-system-socket=/run/dbus/system_bus_socket &&
+#
+# make  || die "Make failed"
+# make DESTDIR=$PWD/DESTDIR install     &&
+# cp -vR DESTDIR/usr/lib32/* /usr/lib32 &&
+# rm -rf DESTDIR                        &&
+# ldconfig  || die "Install failed"
 
-make  || die "Make failed"
-make DESTDIR=$PWD/DESTDIR install     &&
-cp -vR DESTDIR/usr/lib32/* /usr/lib32 &&
-rm -rf DESTDIR                        &&
-ldconfig  || die "Install failed"
+32mn \
+  --cross-file=/usr/share/meson/cross/lib32 \
+  --libdir=/usr/lib32             \
+  -D localstatedir=/var           \
+  -D runtime_dir=/run             \
+  -D sysconfdir=/etc              \
+  -D doxygen_docs=disabled        \
+  -D modular_tests=disabled       \
+  -D qt_help=disabled             \
+  -D selinux=disabled             \
+  -D stats=false                  \
+  -D systemd_user_unitdir=''      \
+  -D systemd_system_unitdir=''    \
+  -D systemd=disabled             \
+  -D tools=true                   \
+  -D traditional_activation=true  \
+  -D user_session=false           \
+  -D valgrind=disabled            \
+  -D xml_docs=disabled            \
+  -D system_socket=/run/dbus/system_bus_socket
 
 }
 
