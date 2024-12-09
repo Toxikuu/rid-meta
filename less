@@ -1,13 +1,15 @@
 #!/bin/bash
 NAME="less"
-VERS="668"
-LINK="https://www.greenwoodsoftware.com/less/less-$VERS.tar.gz"
+VERS="671"
+LINK="https://github.com/gwsw/less/archive/refs/tags/v$VERS.tar.gz"
 UPST="https://github.com/gwsw/less.git"
 DEPS=""
 
 
 idir() {
 
+make -f Makefile.aut distfiles
+autoreconf -fiv
 cm --sysconfdir=/etc
 
 }
