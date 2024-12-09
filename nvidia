@@ -1,10 +1,9 @@
 #!/bin/bash
 NAME="nvidia"
-VERS="560.35.03"
-DOWN="https://us.download.nvidia.com/XFree86/Linux-x86_64/$VERS/NVIDIA-Linux-x86_64-$VERS.run \
-      https://github.com/Binary-Eater/open-gpu-kernel-modules/commit/8ac26d3c66ea88b0f80504bdd1e907658b41609d.patch"
+VERS="565.77"
+DOWN="https://us.download.nvidia.com/XFree86/Linux-x86_64/$VERS/NVIDIA-Linux-x86_64-$VERS.run"
 UPST="https://github.com/NVIDIA/nvidia-installer.git"
-DEPS="" # nvidia does have dependencies i just dont wanna deal with them rn
+DEPS="kernel" # nvidia does have dependencies i just dont wanna deal with them rn
 NEWS="Must be rebuilt after kernel sources change, else X11 won't start. It's also recommended you restart after installing this package for the drivers to take effect."
 
 
@@ -16,8 +15,6 @@ echo "Detected kernel version '$kver'"
 
 "$RIDSOURCES"/NVIDIA-Linux-x86_64-$VERS.run --extract-only || die "Failed to extract NVIDIA's .run"
 cd NVIDIA-Linux-x86_64-$VERS
-
-# patch -Np1 -i "$RIDSOURCES"/8ac26d3c66ea88b0f80504bdd1e907658b41609d.patch
 
 ./nvidia-installer                              \
     --silent                                    \
@@ -39,7 +36,7 @@ cd NVIDIA-Linux-x86_64-$VERS
     --no-install-libglvnd                       \
     --no-rebuild-initramfs                      \
     --install-compat32-libs                     \
-    --kernel-module-type=proprietary                   \
+    --kernel-module-type=proprietary            \
     --no-check-for-alternate-installs           \
     --kernel-source-path=/usr/src/linux         \
     --documentation-prefix=/tmp/rid/trash       \
