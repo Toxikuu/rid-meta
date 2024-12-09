@@ -2,7 +2,7 @@
 NAME="nvidia"
 VERS="565.77"
 DOWN="https://us.download.nvidia.com/XFree86/Linux-x86_64/$VERS/NVIDIA-Linux-x86_64-$VERS.run"
-UPST="https://github.com/NVIDIA/nvidia-installer.git"
+UPST="https://github.com/NVIDIA/open-gpu-kernel-modules.git"
 DEPS="kernel" # nvidia does have dependencies i just dont wanna deal with them rn
 NEWS="Must be rebuilt after kernel sources change, else X11 won't start. It's also recommended you restart after installing this package for the drivers to take effect."
 
