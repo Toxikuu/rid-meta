@@ -1,10 +1,11 @@
 #!/bin/bash
 NAME="kernel"
-VERS="6.11.10" # fuck nvidia (causes breakage with newer kernels)
+VERS="6.12.3" # fuck nvidia (causes breakage with newer kernels)
 # ver="${VERS//\.0/}"
 LINK="https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-$VERS.tar.gz"
 DOWN="https://raw.githubusercontent.com/Toxikuu/rid/refs/heads/master/defaults/kernelconfig"
-UPST="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git"
+UPST="https://kernel.org/" # i'd use the git repo, but it doesn't tag patches
+VCMD="curl -s 'https://kernel.org/' | grep linux- | head -n1 | cut -d'>' -f2 | cut -d'<' -f1"
 NEWS='You can edit your kernel config at /usr/src/linux/.config and run `rid -fu kernel` to use the new config. NVIDIA drivers must be rebuilt after the kernel sources are changed. Rid does not provide removal instructions for the kernel.'
 DEPS=""
 

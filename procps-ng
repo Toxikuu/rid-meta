@@ -3,6 +3,7 @@ NAME="procps-ng"
 VERS="4.0.4"
 LINK="https://sourceforge.net/projects/procps-ng/files/Production/procps-ng-$VERS.tar.xz"
 UPST="https://gitlab.com/procps-ng/procps.git"
+VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | grep -v rc | sort -V | tail -n1"
 DEPS=""
 
 

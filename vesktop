@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="vesktop"
-VERS="1.5.3"
+VERS="1.5.4"
 LINK="https://github.com/Vencord/Vesktop/archive/refs/tags/v$VERS.tar.gz"
 UPST="https://github.com/Vencord/Vesktop.git"
 DEPS="nodejs cups pnpm gtk3" # cups necessary bc electron

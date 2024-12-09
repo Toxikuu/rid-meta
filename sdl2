@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="sdl2"
-VERS="2.30.9"
+VERS="2.30.10"
 LINK="https://www.libsdl.org/release/SDL2-$VERS.tar.gz"
 DEPS="libxkbcommon wayland-protocols libxext libxrender libx11 libxcursor libxrandr libxinerama libxss alsa-lib"
 UPST="https://github.com/libsdl-org/SDL.git"

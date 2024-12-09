@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="mako"
-VERS="1.3.6"
+VERS="1.3.8"
 LINK="https://github.com/sqlalchemy/mako/archive/refs/tags/rel_${VERS//./_}.tar.gz"
 UPST="https://github.com/sqlalchemy/mako.git"
 DEPS=""

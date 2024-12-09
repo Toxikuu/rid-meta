@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="mesa"
-VERS="24.3.0"
+VERS="24.3.1"
 LINK="https://mesa.freedesktop.org/archive/mesa-$VERS.tar.xz"
 UPST="https://gitlab.freedesktop.org/mesa/mesa.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 mesa_3_1 | head -n1 | cut -d- -f2"
