@@ -1,0 +1,20 @@
+#!/bin/bash
+NAME="cargo-strip"
+VERS="0.2.3"
+UPST="https://raw.githubusercontent.com/guedou/cargo-strip/refs/heads/master/Cargo.toml"
+VCMD="curl -s '$UPST' | grep version | cut -d'\"' -f2"
+DEPS="rust curl"
+
+# i've decided to use just abstract cargo here
+# i'd let cargo handle it as a rustacean anyway
+idir() {
+
+cargo install --force cargo-strip
+
+}
+
+rdir() {
+
+cargo uninstall cargo-strip
+
+}
