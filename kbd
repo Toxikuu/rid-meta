@@ -1,8 +1,9 @@
 #!/bin/bash
 NAME="kbd"
-VERS="2.6.4"
+VERS="2.7"
 LINK="https://www.kernel.org/pub/linux/utils/kbd/kbd-$VERS.tar.xz"
-DOWN="https://www.linuxfromscratch.org/patches/lfs/development/kbd-$VERS-backspace-1.patch"
+PATCHVERS="2.6.4"
+DOWN="https://www.linuxfromscratch.org/patches/lfs/development/kbd-$PATCHVERS-backspace-1.patch"
 UPST="https://git.kernel.org/pub/scm/linux/kernel/git/legion/kbd.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sed 's/\^{}//' | grep -Ev 'rc|alt|dev' | sort -V | tail -n1"
 DEPS=""
@@ -10,7 +11,7 @@ DEPS=""
 
 idir() {
 
-patch -Np1 -i "$RIDSOURCES"/kbd-$VERS-backspace-1.patch
+patch -Np1 -i "$RIDSOURCES"/kbd-$PATCHVERS-backspace-1.patch
 
 sed -i '/RESIZECONS_PROGS=/s/yes/no/' configure
 sed -i 's/resizecons.8 //' docs/man/man8/Makefile.in
