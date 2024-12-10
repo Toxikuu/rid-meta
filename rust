@@ -58,7 +58,7 @@ sed -i '/    # rust/,/    # rust end/d' /etc/env
 
 udir() {
 
-VERS="9999" # satisfies personal preferenc
+VERS="9999" # satisfies personal preference
 if [ "$VERS" = "9999" ]; then
     export VERS="nightly"
 fi
