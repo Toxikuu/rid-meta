@@ -1,11 +1,13 @@
 #!/bin/bash
 NAME="cuda"
 VERS="12.6.3"
-# NV=$(gv nvidia) # this no longer works because nvidia refuses to follow its own fucking versioning scheme
+# i must cycle between manually specifying the nvidia version and letting gv handle it because nvidia is special
+# NV=$(gv nvidia)
 NV="560.35.05"
 DOWN="https://developer.download.nvidia.com/compute/cuda/$VERS/local_installers/cuda_${VERS}_${NV}_linux.run"
-UPST="https://github.com/NVIDIA/open-gpu-kernel-modules.git"
-DEPS="nvidia"
+# TODO: Fix cuda upstream
+# UPST="https://github.com/NVIDIA/open-gpu-kernel-modules.git"
+DEPS="nvidia gcc13"
 
 
 idir() {
