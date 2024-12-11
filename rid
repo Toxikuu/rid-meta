@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="rid"
-VERS="0.22.5"
+VERS="0.23.4"
 UPST="https://github.com/Toxikuu/rid.git"
 DEPS="curl tar xz bash coreutils glibc gcc"
 
