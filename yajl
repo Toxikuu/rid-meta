@@ -6,6 +6,7 @@ DOWN="https://gitlab.archlinux.org/archlinux/packaging/packages/yajl/-/raw/main/
       https://gitlab.archlinux.org/archlinux/packaging/packages/yajl/-/raw/main/yajl-2.1.0-CVE-2022-24795.patch \
       https://gitlab.archlinux.org/archlinux/packaging/packages/yajl/-/raw/main/yajl-2.1.0-memory_leak.patch"
 UPST="https://github.com/lloyd/yajl.git"
+DESC="Yet another json library"
 DEPS="cmake"
 
 
