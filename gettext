@@ -1,14 +1,26 @@
 #!/bin/bash
 NAME="gettext"
-VERS="0.22.5"
+VERS="0.23"
 LINK="https://ftp.gnu.org/gnu/gettext/gettext-$VERS.tar.xz"
 UPST="https://git.savannah.gnu.org/git/gettext.git"
-DEPS=""
+DEPS="bison libxml2 ncurses"
 
 
 idir() {
 
-cm --docdir=/tmp/rid/trash
+cm \
+  --docdir=/tmp/rid/trash   \
+  --enable-curses           \
+  --disable-csharp          \
+  --disable-java            \
+  --disable-native-java     \
+  --disable-rpath           \
+  --disable-static          \
+  --without-cvs             \
+  --without-git             \
+  --without-included-gettext  \
+  --with-included-libxml    \
+  --enable-nls
 chmod -v 0755 /usr/lib/preloadable_libintl.so
 
 }
