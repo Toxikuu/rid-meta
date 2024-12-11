@@ -12,3 +12,9 @@ make
 make PREFIX=/usr install
 
 }
+
+rdir() {
+
+echo "not implemented"
+
+}
