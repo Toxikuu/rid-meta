@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="pango"
-VERS="1.55.4"
+VERS="1.55.5"
 ver="${VERS%.*}"
 LINK="https://github.com/GNOME/pango/archive/refs/tags/$VERS.tar.gz"
 UPST="https://github.com/GNOME/pango.git"
