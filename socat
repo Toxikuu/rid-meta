@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="socat"
-VERS="1.8.0.1"
+VERS="1.8.0.2"
 LINK="http://www.dest-unreach.org/socat/download/socat-$VERS.tar.gz"
 UPST="https://repo.or.cz/socat.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | grep -v b | sort -V | tail -n1 | cut -d- -f2-"
@@ -12,11 +12,10 @@ idir() {
 mkdir -pv ridbuild && cd ridbuild
 
 ../configure --prefix=/usr    \
-             --disable-static \
              --mandir=/usr/share/man
 
 make
-make install || : # make install likes to fail
+make install || true # make install likes to fail
 
 }
 
