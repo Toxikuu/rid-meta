@@ -1,13 +1,12 @@
 #!/bin/bash
-NAME="rust"  # rustup
-VERS="1.83.0"
+NAME="rust" # rustup
+VERS="9999"
 UPST="https://github.com/rust-lang/rust.git"
 DEPS="curl"
 
 
 idir() {
 
-VERS="9999" # satisfies personal preference
 if [ "$VERS" = "9999" ]; then
     export VERS="nightly"
 fi
@@ -58,7 +57,6 @@ sed -i '/    # rust/,/    # rust end/d' /etc/env
 
 udir() {
 
-VERS="9999" # satisfies personal preference
 if [ "$VERS" = "9999" ]; then
     export VERS="nightly"
 fi
