@@ -11,10 +11,15 @@ idir() {
 make
 make PREFIX=/usr install
 
+# fixes a make install bug where the mandir is /usr/man :shrug:
+mv -vf /usr/man/man1/tree.1 /usr/share/man/man1/tree.1
+rm -rvf /usr/man
+
 }
 
 rdir() {
 
-echo "not implemented"
+rm -vf /usr/bin/tree
+rm -vf /usr/share/man/man1/tree.1
 
 }
