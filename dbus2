@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="dbus2"
-VERS="1.15.90"
+VERS="1.15.92"
 DEPS="dbus1 @xorg-libs"
 DOWN="https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20240913.tar.xz"
 
