@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libjpeg-turbo"
-VERS="3.0.90" # beta
+VERS="3.1.0"
 LINK="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/$VERS/libjpeg-turbo-$VERS.tar.gz"
 UPST="https://github.com/libjpeg-turbo/libjpeg-turbo.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 jpeg-1 | head -n1"
