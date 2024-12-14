@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="glslang"
-VERS="15.0.0"
+VERS="15.0.0" # 15.1.0 fails in ninja install
 LINK="https://github.com/KhronosGroup/glslang/archive/$VERS/glslang-$VERS.tar.gz"
 UPST="https://github.com/KhronosGroup/glslang.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B 1 GL_EXT_shader_subgroup_extended_types-2016-05-10 | head -n1"
