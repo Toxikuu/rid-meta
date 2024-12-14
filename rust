@@ -1,7 +1,7 @@
 #!/bin/bash
 NAME="rust" # rustup
 VERS="9999"
-UPST="https://github.com/rust-lang/rust.git"
+# UPST="https://github.com/rust-lang/rust.git" # TODO: make rid disable upstream checks for 9999
 DEPS="curl"
 
 
