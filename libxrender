@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libxrender"
-VERS="0.9.11"
+VERS="0.9.12"
 LINK="https://www.x.org/pub/individual/lib/libXrender-$VERS.tar.xz"
 UPST="https://gitlab.freedesktop.org/xorg/lib/libxrender.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sed 's/\^{}//' | sort -V | grep -B1 libXrender-0_9_1 | head -n1 | cut -d- -f2"
