@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libsm"
-VERS="1.2.4"
+VERS="1.2.5"
 LINK="https://www.x.org/pub/individual/lib/libSM-$VERS.tar.xz"
 UPST="https://gitlab.freedesktop.org/xorg/lib/libsm.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 libSM-1_0_1 | head -n1 | cut -d- -f2"
