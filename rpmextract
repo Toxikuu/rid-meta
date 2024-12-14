@@ -1,0 +1,21 @@
+#!/bin/bash
+NAME="rpmextract"
+VERS="1.0"
+DOWN="https://gitlab.archlinux.org/archlinux/packaging/packages/rpmextract/-/raw/main/rpm2cpio \
+https://gitlab.archlinux.org/archlinux/packaging/packages/rpmextract/-/raw/main/rpmextract.sh"
+UPST=""
+DEPS=""
+
+
+idir() {
+
+install -m755 "$RIDSOURCES"/rpmextract.sh /usr/bin/
+install -m755 "$RIDSOURCES"/rpm2cpio /usr/bin/
+
+}
+
+rdir() {
+
+rm -vf /usr/bin/{rpm2cpio,rpmextract.sh}
+
+}
