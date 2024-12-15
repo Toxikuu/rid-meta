@@ -8,6 +8,12 @@ DEPS="p11-kit libtasn1 nss"
 
 idir() {
 
+[ -e /etc/resolv.conf ] || {
+cat >> /etc/resolv.conf << "EOF"
+nameserver 1.1.1.1
+EOF
+}
+
 cat >> make-ca << "EOF"
 ln -svf /etc/pki/tls/certs/ca-bundle.crt /etc/ssl/certs/ca-certificates.crt
 EOF
