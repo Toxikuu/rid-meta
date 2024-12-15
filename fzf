@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="fzf"
-VERS="0.56.3"
+VERS="0.57.0"
 LINK="https://github.com/junegunn/fzf/archive/refs/tags/v$VERS.tar.gz"
 UPST="https://github.com/junegunn/fzf.git"
 DEPS="go"
