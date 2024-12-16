@@ -1,0 +1,22 @@
+#!/bin/bash
+NAME="noto-math"
+VERS="3.000"
+UPST="https://github.com/notofonts/math"
+DEPS="python" # pip and an internet connection
+
+
+idir() {
+
+git clone "$UPST" . # make build assumes a git repo, and this is easier than sed
+make build
+
+mkdir -pv /usr/share/fonts/noto/math
+cp -rvf fonts/NotoSansMath/full/*tf/*.*tf /usr/share/fonts/noto/math/
+
+}
+
+rdir() {
+
+rm -rvf /usr/share/fonts/noto/math
+
+}
