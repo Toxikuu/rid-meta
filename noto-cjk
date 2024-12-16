@@ -18,6 +18,8 @@ done
 mkdir -pv /usr/share/fonts/noto/CJK
 cp -rvf OTF/* /usr/share/fonts/noto/CJK/
 
+fc-cache -v
+
 }
 
 rdir() {
