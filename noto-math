@@ -13,6 +13,8 @@ make build
 mkdir -pv /usr/share/fonts/noto/math
 cp -rvf fonts/NotoSansMath/full/*tf/*.*tf /usr/share/fonts/noto/math/
 
+fc-cache -v
+
 }
 
 rdir() {
