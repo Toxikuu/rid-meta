@@ -1,0 +1,35 @@
+#!/bin/bash
+NAME="pm-utils"
+DESC="Power management utilities"
+VERS="1.4.1"
+LINK="https://pm-utils.freedesktop.org/releases/pm-utils-$VERS.tar.gz"
+DOWN="https://www.linuxfromscratch.org/patches/blfs/svn/pm-utils-1.4.1-bugfixes-1.patch"
+UPST="git://anongit.freedesktop.org/git/pm-utils"
+DEPS="" # requires support for suspension/hibernation in the kernel
+
+
+idir() {
+
+patch -Np1 -i "$RIDSOURCES"/pm-utils-1.4.1-bugfixes-1.patch
+
+cm --sysconfdir=/etc --docdir=/tmp/rid/trash
+
+}
+
+rdir() {
+
+rm -rvf /etc/pm \
+        /usr/lib/pm-utils
+
+rm -vf  /usr/{s,}bin/{on_ac_power,pm-hibernate,pm-is-supported,pm-powersave,pm-suspend,pm-suspend-hybrid}  \
+        /usr/share/man/man8/pm-*
+
+}
+
+# necessary since idir() breaks on reruns
+udir() {
+
+  rdir
+  idir
+
+}
