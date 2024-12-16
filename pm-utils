@@ -4,9 +4,8 @@ DESC="Power management utilities"
 VERS="1.4.1"
 LINK="https://pm-utils.freedesktop.org/releases/pm-utils-$VERS.tar.gz"
 DOWN="https://www.linuxfromscratch.org/patches/blfs/svn/pm-utils-1.4.1-bugfixes-1.patch"
-UPST="git://anongit.freedesktop.org/git/pm-utils"
-VCMD="curl '$UPST' | grep pm-utils- | tail -n1 | cut -d- -f3 | cut -d. -f1-3"
-DEPS="" # requires support for suspension/hibernation in the kernel
+UPST="https://pm-utils.freedesktop.org/releases/"
+VCMD="curl -s '$UPST' | grep pm-utils- | tail -n1 | cut -d- -f3 | cut -d. -f1-3"
 NEWS="This package requires kernel config options. You may check availability by running pm-is-supported and checking its return status."
 
 
