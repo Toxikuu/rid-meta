@@ -5,7 +5,9 @@ VERS="1.4.1"
 LINK="https://pm-utils.freedesktop.org/releases/pm-utils-$VERS.tar.gz"
 DOWN="https://www.linuxfromscratch.org/patches/blfs/svn/pm-utils-1.4.1-bugfixes-1.patch"
 UPST="git://anongit.freedesktop.org/git/pm-utils"
+VCMD="curl '$UPST' | grep pm-utils- | tail -n1 | cut -d- -f3 | cut -d. -f1-3"
 DEPS="" # requires support for suspension/hibernation in the kernel
+NEWS="This package requires kernel config options. You may check availability by running pm-is-supported and checking its return status."
 
 
 idir() {
@@ -13,6 +15,14 @@ idir() {
 patch -Np1 -i "$RIDSOURCES"/pm-utils-1.4.1-bugfixes-1.patch
 
 cm --sysconfdir=/etc --docdir=/tmp/rid/trash
+
+pm-is-supported --suspend         || rm -vf /usr/sbin/pm-suspend
+pm-is-supported --hibernate       || rm -vf /usr/sbin/pm-hibernate
+pm-is-supported --suspend-hybrid  || rm -vf /usr/sbin/pm-suspend-hybrid
+
+if [ $(find /usr/sbin -type l -name 'pm-*' | wc -l) -lt 3 ] ; then
+  echo "Unsupported pm utilities have been removed. You may want to reconfigure your kernel." >&2
+fi
 
 }
 
