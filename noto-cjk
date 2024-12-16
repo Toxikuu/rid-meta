@@ -1,0 +1,27 @@
+#!/bin/bash
+NAME="noto-cjk"
+VERS="0"
+DOWN="https://github.com/notofonts/noto-cjk/releases/download/Serif2.003/07_NotoSerifCJKjp.zip  \
+      https://github.com/notofonts/noto-cjk/releases/download/Serif2.003/08_NotoSerifCJKkr.zip  \
+      https://github.com/notofonts/noto-cjk/releases/download/Serif2.003/09_NotoSerifCJKsc.zip  \
+      https://github.com/notofonts/noto-cjk/releases/download/Serif2.003/10_NotoSerifCJKtc.zip  \
+      https://github.com/notofonts/noto-cjk/releases/download/Serif2.003/11_NotoSerifCJKhk.zip  "
+DEPS="fontconfig freetype2 unzip"
+
+
+idir() {
+
+for f in "$RIDSOURCES"/[0-9]*_NotoSerifCJK*.zip; do
+  unzip -o "$f" -x LICENSE
+done
+
+mkdir -pv /usr/share/fonts/noto/CJK
+cp -rvf OTF/* /usr/share/fonts/noto/CJK/
+
+}
+
+rdir() {
+
+rm -rvf /usr/share/fonts/noto/CJK
+
+}
