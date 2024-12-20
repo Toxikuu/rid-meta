@@ -2,6 +2,7 @@
 NAME="expect"
 VERS="5.45.4"
 LINK="https://prdownloads.sourceforge.net/expect/expect$VERS.tar.gz"
+DOWN="https://www.linuxfromscratch.org/patches/lfs/development/expect-5.45.4-gcc14-1.patch"
 UPST="https://sourceforge.net/projects/expect/files"
 VCMD="curl -s https://sourceforge.net/projects/expect/files/Expect/ | rg 'tr title=' | head -n1 | cut -d'\"' -f2"
 DEPS=""
