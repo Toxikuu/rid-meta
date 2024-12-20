@@ -1,0 +1,21 @@
+#!/bin/bash
+NAME="upx"
+VERS="4.2.4"
+DOWN="https://github.com/upx/upx/releases/download/v$VERS/upx-$VERS-amd64_linux.tar.xz"
+UPST="https://github.com/upx/upx"
+DEPS="cmake git perl xz zlib"
+
+
+# using upx's precompiled binaries because their proprietary compression algorithm is superior to their open one
+idir() {
+
+tar xvf "$RIDSOURCES"/upx-"$VERS"-amd64_linux.tar.xz
+cp -vf upx-"$VERS"-amd64_linux/upx /usr/bin/
+
+}
+
+rdir() {
+
+rm -vf /usr/bin/upx
+
+}
