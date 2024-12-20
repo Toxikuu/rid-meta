@@ -18,7 +18,7 @@ cd       build
 echo "rootsbindir=/usr/sbin" > configparms
 ../configure --prefix=/usr                            \
              --disable-werror                         \
-             --enable-kernel=6.10                     \
+             --enable-kernel=6.11                     \
              --enable-stack-protector=strong          \
              --disable-nscd                           \
              libc_cv_slibdir=/usr/lib
@@ -103,7 +103,7 @@ CXX="g++ -m32 -mstackrealign -fno-omit-frame-pointer -mno-omit-leaf-frame-pointe
       --prefix=/usr                      \
       --host=i686-pc-linux-gnu           \
       --build=$(../scripts/config.guess) \
-      --enable-kernel=6.10               \
+      --enable-kernel=6.11               \
       --disable-nscd                     \
       --libdir=/usr/lib32                \
       --libexecdir=/usr/lib32            \
@@ -142,7 +142,7 @@ cd       build
 echo "rootsbindir=/usr/sbin" > configparms
 ../configure --prefix=/usr                            \
              --disable-werror                         \
-             --enable-kernel=6.10                     \
+             --enable-kernel=6.11                     \
              --enable-stack-protector=strong          \
              --disable-nscd                           \
              libc_cv_slibdir=/usr/lib
@@ -166,7 +166,7 @@ CXX="g++ -m32 -mstackrealign -fno-omit-frame-pointer -mno-omit-leaf-frame-pointe
       --prefix=/usr                      \
       --host=i686-pc-linux-gnu           \
       --build=$(../scripts/config.guess) \
-      --enable-kernel=6.10               \
+      --enable-kernel=6.11               \
       --disable-nscd                     \
       --libdir=/usr/lib32                \
       --libexecdir=/usr/lib32            \
