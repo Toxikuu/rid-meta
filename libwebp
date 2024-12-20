@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libwebp"
-VERS="1.4.0"
+VERS="1.5.0"
 LINK="https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-$VERS.tar.gz"
 UPST="https://chromium.googlesource.com/webm/libwebp.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | grep -v 'rc' | sort -V | grep -B1 webp-rfc9649 | head -n1"
