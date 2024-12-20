@@ -2,6 +2,8 @@
 NAME="help2man"
 VERS="1.49.3"
 LINK="https://ftp.gnu.org/gnu/help2man/help2man-$VERS.tar.xz"
+UPST="https://ftp.gnu.org/gnu/help2man/?C=M;O=D"
+VCMD="curl -s '$UPST' | grep help2man- | head -n1 | cut -d- -f2 | cut -d. -f1-3"
 DEPS="perl gettext"
 
 
