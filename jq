@@ -2,7 +2,7 @@
 NAME="jq"
 VERS="1.7.1"
 LINK="https://github.com/jqlang/jq/releases/download/jq-$VERS/jq-$VERS.tar.gz"
-UPST=""
+UPST="https://github.com/jqlang/jq"
 DEPS="autoconf automake bison flex python glibc"
 
 
