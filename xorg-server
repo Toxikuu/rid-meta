@@ -1,7 +1,7 @@
 #!/bin/bash
 NAME="xorg-server"
-VERS="21.1.14"
-LINK="https://www.x.org/pub/individual/xserver/xorg-server-$VERS.tar.xz"
+VERS="21.1.15"
+LINK="https://www.x.org/archive/individual/xserver/xorg-server-$VERS.tar.xz"
 UPST="https://gitlab.freedesktop.org/xorg/xserver.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B1 xo-6_7_0 | head -n1 | cut -d- -f3"
 DEPS="libxcvt pixman xkeyboard-config dbus2 elogind libepoxy libunwind nettle xcb-util-keysyms xcb-util-image xcb-util-renderutil xcb-util-wm font-util"
