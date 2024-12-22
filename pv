@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="pv"
-VERS="1.9.24"
+VERS="1.9.25"
 LINK="http://www.ivarch.com/programs/sources/pv-$VERS.tar.gz"
 UPST="https://codeberg.org/a-j-wood/pv.git"
 DEPS=""
