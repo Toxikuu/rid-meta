@@ -3,6 +3,7 @@ NAME="noto-emoji"
 VERS="2.047"
 DOWN="https://github.com/googlefonts/noto-emoji/raw/main/fonts/NotoColorEmoji.ttf"
 UPST="https://github.com/googlefonts/noto-emoji"
+VCMD="git ls-remote --tags '$UPST' | grep -Ev '\^\{\}|unicode|-' | sed 's:.*/::' | sort -V | tail -n1"
 DEPS="python"
 
 # a source-based install requires build dependencies and i dont care enough to get them
