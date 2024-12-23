@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="texinfo"
-VERS="7.1.1"
+VERS="7.2"
 LINK="https://ftp.gnu.org/gnu/texinfo/texinfo-$VERS.tar.xz"
 UPST="https://git.savannah.gnu.org/git/texinfo.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n1 | cut -d- -f2"
