@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="bash-completion"
-VERS="2.15.0"
+VERS="2.16.0"
 LINK="https://github.com/scop/bash-completion/archive/refs/tags/$VERS.tar.gz"
 UPST="https://github.com/scop/bash-completion.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B 1 '20031125-alt01' | head -n1"
