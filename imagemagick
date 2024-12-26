@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="imagemagick"
-VERS="7.1.1.41" # upstream uses x.x.x-x, but using . is easier for me
+VERS="7.1.1.43" # upstream uses x.x.x-x, but using . is easier for me
 ver="${VERS%.*}-${VERS##*.}"
 LINK="https://github.com/ImageMagick/ImageMagick/archive/refs/tags/$ver.tar.gz"
 UPST="https://github.com/ImageMagick/ImageMagick.git"
