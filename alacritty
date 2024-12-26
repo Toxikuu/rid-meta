@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="alacritty"
-VERS="0.14.0"
+VERS="0.14.1-rc1"
 LINK="https://github.com/alacritty/alacritty/archive/refs/tags/v$VERS.tar.gz"
 UPST="https://github.com/alacritty/alacritty.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n1"
