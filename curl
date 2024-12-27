@@ -2,11 +2,14 @@
 NAME="curl"
 VERS="8.11.1"
 LINK="https://curl.se/download/curl-$VERS.tar.xz"
+DOWN="https://glfs-book.github.io/glfs/patches/curl-eventfd_regression-1.patch"
 UPST="https://github.com/curl/curl.git"
 DEPS="libpsl"
 
 
 idir() {
+
+patch -Np1 -i "$RIDSOURCES"/curl-eventfd_regression-1.patch
 
 cm --with-openssl                \
    --with-ca-path=/etc/ssl/certs \
