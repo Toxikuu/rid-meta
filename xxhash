@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="xxhash"
-VERS="0.8.2"
+VERS="0.8.3"
 LINK="https://github.com/Cyan4973/xxHash/archive/refs/tags/v$VERS.tar.gz"
 UPST="https://github.com/Cyan4973/xxHash.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n1"
