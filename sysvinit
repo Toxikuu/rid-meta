@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="sysvinit"
-VERS="3.11" # wait until patch for 3.12 exists
+VERS="3.12" # updated to use a custom patch rather than waiting for lfs
 LINK="https://github.com/slicer69/sysvinit/releases/download/$VERS/sysvinit-$VERS.tar.xz"
 DOWN="https://www.linuxfromscratch.org/patches/lfs/development/sysvinit-$VERS-consolidated-1.patch"
 UPST="https://github.com/slicer69/sysvinit.git"
@@ -9,6 +9,7 @@ DEPS=""
 
 idir() {
 
+set -e
 patch -Np1 -i "$RIDSOURCES"/sysvinit-$VERS-consolidated-1.patch
 
 make
@@ -34,6 +35,7 @@ ca:12345:ctrlaltdel:/sbin/shutdown -t1 -a -r now
 su:S06:once:/sbin/sulogin
 s1:1:respawn:/sbin/sulogin
 
+# the below line is specific to my system
 1:2345:respawn:/sbin/agetty --noclear --autologin t tty1
 2:2345:respawn:/sbin/agetty tty2
 3:2345:respawn:/sbin/agetty tty3
