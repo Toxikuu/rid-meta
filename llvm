@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="llvm"
-VERS="19.1.5"
+VERS="19.1.6" # untested
 ver="${VERS%.*.*}"
 LINK="https://github.com/llvm/llvm-project/releases/download/llvmorg-$VERS/llvm-$VERS.src.tar.xz"
 DOWN="https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-cmake-$ver.src.tar.xz 		\
