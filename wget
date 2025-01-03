@@ -16,6 +16,7 @@ cm  \
   --without-brotlidec     \
   --disable-doc           \
   --disable-rpath         \
+  --disable-fuzzing       \
   --enable-threads=posix  \
   --disable-nls           \
   --enable-year2038       \
@@ -23,6 +24,7 @@ cm  \
   --without-plugin-support
 
 ln -sfv wget2 /usr/bin/wget
+rm -vf /usr/bin/wget2_noinstall # delete a useless testing binary
 
 }
 
