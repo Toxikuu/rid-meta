@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="gettext"
-VERS="0.23"
+VERS="0.23.1"
 LINK="https://ftp.gnu.org/gnu/gettext/gettext-$VERS.tar.xz"
 UPST="https://git.savannah.gnu.org/git/gettext.git"
 DEPS="bison libxml2 ncurses"
