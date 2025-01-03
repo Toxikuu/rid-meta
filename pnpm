@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="pnpm"
-VERS="9.15.1" # this may not be used, but it is helpful for knowing when to self-update pnpm
+VERS="9.15.2"
 UPST="https://github.com/pnpm/pnpm.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | grep -Ev 'beta|alpha|rc|\^\{\}' | sort -V | tail -n1"
 DEPS="curl"
