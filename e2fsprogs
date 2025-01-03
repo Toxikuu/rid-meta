@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="e2fsprogs"
-VERS="1.47.1"
+VERS="1.47.2"
 LINK="https://github.com/tytso/e2fsprogs/archive/refs/tags/v$VERS.tar.gz"
 UPST="https://github.com/tytso/e2fsprogs.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | grep -v rc | sort -V | tail -n1"
