@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="kernel"
-VERS="6.12.6"
+VERS="6.12.8"
 LINK="https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-$VERS.tar.gz"
 DOWN="https://raw.githubusercontent.com/Toxikuu/rid/refs/heads/master/defaults/kernelconfig"
 UPST="https://kernel.org/" # i'd use the git repo, but it doesn't tag patches
