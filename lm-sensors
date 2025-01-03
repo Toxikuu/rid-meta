@@ -1,0 +1,46 @@
+#!/bin/bash
+NAME="lm-sensors"
+VERS="3.6.0"
+ver="${VERS//./-}"
+LINK="https://github.com/lm-sensors/lm-sensors/archive/V${ver}/lm-sensors-${ver}.tar.gz"
+UPST="https://github.com/lm-sensors/lm-sensors/" # dead anyway
+DEPS="which"
+NEWS="You may need to reconfigure your kernel for this to work"
+
+idir() {
+
+make PREFIX=/usr           \
+     BUILD_STATIC_LIB=0    \
+     MANDIR=/usr/share/man \
+     EXLDFLAGS=
+
+make PREFIX=/usr        \
+     BUILD_STATIC_LIB=0 \
+     MANDIR=/usr/share/man install &&
+
+install -v -m755 -d /usr/share/doc/lm-sensors-${VERS} &&
+cp -rv              README INSTALL doc/* \
+                    /usr/share/doc/lm-sensors-${VERS}
+
+}
+
+rdir() {
+
+rm -rvf /etc/sensors.d        \
+        /usr/include/sensors  \
+        /usr/share/doc/lm-sensors-*
+
+rm -vf /usr/lib/libsensors.so*
+
+pushd /usr/bin
+rm -vf  fancontrol  \
+        isadump     \
+        isaset      \
+        pwmconfig   \
+        sensors     \
+        sensord     \
+        sensors-detect  \
+        sensors-conf-convert
+popd
+
+}
