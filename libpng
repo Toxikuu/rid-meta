@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libpng"
-VERS="1.6.44"
+VERS="1.6.44" # wait until apng patch is updated
 LINK="https://github.com/pnggroup/libpng/archive/refs/tags/v$VERS.tar.gz"
 DOWN="https://sourceforge.net/projects/libpng-apng/files/latest/download" # apng patch
 UPST="https://github.com/pnggroup/libpng.git"

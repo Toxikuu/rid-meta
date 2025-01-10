@@ -31,6 +31,8 @@ make BUILD_OPT=1                      \
   $([ -f /usr/lib/libsqlite3.so ] && echo NSS_USE_SYSTEM_SQLITE=1)  ||
 die "Make failed"
 
+mkdir -pv D/usr/{lib,32}/pkgconfig D/usr/{bin,include}
+
 cd ../dist                                                          &&
 
 install -v -m755 Linux*/lib/*.so              /usr/lib              &&

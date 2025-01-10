@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="hwdata"
-VERS="0.390"
+VERS="0.391"
 LINK="https://github.com/vcrhonek/$NAME/archive/v$VERS/$NAME-$VERS.tar.gz"
 UPST="https://github.com/vcrhonek/$NAME.git"
 DEPS=""

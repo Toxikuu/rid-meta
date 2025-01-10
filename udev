@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="udev"
-VERS="257.1"
+VERS="257.2"
 LINK="https://github.com/systemd/systemd/archive/v$VERS/systemd-$VERS.tar.gz"
 DOWN="https://anduin.linuxfromscratch.org/LFS/udev-lfs-20230818.tar.xz"
 UPST="https://github.com/systemd/systemd.git"

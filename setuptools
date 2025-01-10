@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="setuptools"
-VERS="75.6.0"
+VERS="75.8.0"
 LINK="https://pypi.org/packages/source/s/setuptools/setuptools-$VERS.tar.gz"
 UPST="https://github.com/pypa/setuptools.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n1"

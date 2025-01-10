@@ -3,6 +3,7 @@ NAME="git"
 VERS="2.47.1"
 LINK="https://www.kernel.org/pub/software/scm/git/git-$VERS.tar.xz"
 UPST="https://github.com/git/git.git"
+DOWN="https://www.kernel.org/pub/software/scm/git/git-manpages-$VERS.tar.xz"
 DEPS="curl perl"
 
 
@@ -15,6 +16,9 @@ make  || die "Make failed"
 
 PV=$(gv perl)
 make perllibdir=/usr/lib/perl${PV%.*.*}/${PV%.*}/site_perl install || die "Make install failed"
+
+tar -xvf "$RIDSOURCES"/git-manpages-$VERS.tar.xz \
+    -C /usr/share/man --no-same-owner --no-overwrite-dir
 
 }
 
