@@ -1,0 +1,27 @@
+#!/bin/bash
+NAME="graphviz"
+VERS="12.2.1"
+LINK="https://gitlab.com/graphviz/graphviz/-/archive/$VERS/graphviz-$VERS.tar.bz2"
+UPST="https://gitlab.com/graphviz/graphviz.git"
+DEPS=""
+
+
+idir() {
+
+sed -i '/LIBPOSTFIX="64"/s/64//' configure.ac &&
+
+./autogen.sh              &&
+./configure --prefix=/usr \
+            --docdir=/usr/share/doc/graphviz-$VERS
+
+sed -i "s/0/$(date +%Y%m%d)/" builddate.h
+make
+make install
+
+}
+
+rdir() {
+
+echo "not implemented"
+
+}
