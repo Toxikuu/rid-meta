@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="libuv"
-VERS="1.49.2"
+VERS="1.50.0"
 LINK="https://dist.libuv.org/dist/v$VERS/libuv-v$VERS.tar.gz"
 UPST="https://github.com/libuv/libuv.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | tail -n1"

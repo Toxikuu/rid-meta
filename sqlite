@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="sqlite"
-VERS="3.47.2"
+VERS="3.48.0"
 ver="${VERS//./}000"
 UPST="https://github.com/sqlite/sqlite.git"
 LINK="https://sqlite.org/2024/sqlite-autoconf-3470000.tar.gz"

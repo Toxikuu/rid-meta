@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="go"
-VERS="1.23.4"
+VERS="1.23.5"
 LINK="https://go.dev/dl/go$VERS.linux-amd64.tar.gz"
 UPST="https://github.com/golang/go.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | grep -v 'rc' | sort -V | grep -B1 release.r56 | head -n1 | sed 's/go//'"

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="tzdata"
-VERS="2024b"
+VERS="2025a"
 DOWN="https://data.iana.org/time-zones/releases/tzdata$VERS.tar.gz"
 UPST="https://data.iana.org/time-zones/releases/?C=M;O=D"
 VCMD="curl -s '$UPST' | grep tzdb- | head -n1 | cut -d- -f2 | cut -d. -f1"
@@ -10,24 +10,26 @@ NEWS='To change your time zone, rebuild tzdata with the desired zone set in $TZ.
 
 idir() {
 
-cp -vf "$RIDSOURCES"/tzdata$VERS.tar.gz .
-tar xvf tzdata$VERS.tar.gz
+TZ=America/New_York
+
+cp -vf "$RIDSOURCES"/tzdata"$VERS".tar.gz .
+tar xvf tzdata"$VERS".tar.gz
 
 ZONEINFO=/usr/share/zoneinfo
-mkdir -pv $ZONEINFO/{posix,right}
+mkdir -pv "$ZONEINFO"/{posix,right}
 
 for tz in etcetera southamerica northamerica europe africa antarctica  \
           asia australasia backward; do
-    zic -L /dev/null   -d $ZONEINFO       ${tz}
-    zic -L /dev/null   -d $ZONEINFO/posix ${tz}
-    zic -L leapseconds -d $ZONEINFO/right ${tz}
+    zic -L /dev/null   -d "$ZONEINFO"       "$tz"
+    zic -L /dev/null   -d "$ZONEINFO"/posix "$tz"
+    zic -L leapseconds -d "$ZONEINFO"/right "$tz"
 done
 
-cp -v zone.tab zone1970.tab iso3166.tab $ZONEINFO
-zic -d $ZONEINFO -p America/New_York
+cp -v zone.tab zone1970.tab iso3166.tab "$ZONEINFO"
+zic -d "$ZONEINFO" -p "$TZ"
 unset ZONEINFO
 
-ln -sfv /usr/share/zoneinfo/$TZ /etc/localtime
+ln -sfv /usr/share/zoneinfo/"$TZ" /etc/localtime
 echo "Set timezone to $TZ"
 
 }

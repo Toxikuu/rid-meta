@@ -1,8 +1,8 @@
 #!/bin/bash
 NAME="libpng"
-VERS="1.6.44" # wait until apng patch is updated
+VERS="1.6.46"
 LINK="https://github.com/pnggroup/libpng/archive/refs/tags/v$VERS.tar.gz"
-DOWN="https://sourceforge.net/projects/libpng-apng/files/latest/download" # apng patch
+DOWN="https://sourceforge.net/projects/libpng-apng/files/libpng16/$VERS/libpng-$VERS-apng.patch.gz/download" # apng patch
 UPST="https://github.com/pnggroup/libpng.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' | sort -V | tail -n 1" # not using betas bc of the patch
 DEPS=""

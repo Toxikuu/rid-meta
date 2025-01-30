@@ -1,17 +1,13 @@
 #!/bin/bash
 NAME="coreutils"
-VERS="9.5"
+VERS="9.6"
 LINK="https://ftp.gnu.org/gnu/coreutils/coreutils-$VERS.tar.xz"
-DOWN="https://www.linuxfromscratch.org/patches/lfs/development/coreutils-$VERS-i18n-2.patch"
 UPST="git://git.savannah.gnu.org/coreutils.git"
 DEPS=""
 
 
 idir() {
 
-patch -Np1 -i "$RIDSOURCES"/coreutils-$VERS-i18n-2.patch
-
-autoreconf -fiv
 FORCE_UNSAFE_CONFIGURE=1 cm --enable-no-install-program=kill,uptime
 
 mv -vf /usr/bin/chroot /usr/sbin

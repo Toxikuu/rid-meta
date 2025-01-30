@@ -1,7 +1,7 @@
 #!/bin/bash
 NAME="gtk3"
-VERS="3.24.43"
-LINK="https://download.gnome.org/sources/gtk+/${VERS%.*}/gtk+-$VERS.tar.xz"
+VERS="3.24.48"
+LINK="https://download.gnome.org/sources/gtk/${VERS%.*}/gtk-$VERS.tar.xz"
 # ive yet to find a functional upstream + selector combination because gnome enjoys making my life difficult
 DEPS="at-spi2-core gdk-pixbuf libepoxy pango"
 

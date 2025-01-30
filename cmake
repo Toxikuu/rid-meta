@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="cmake"
-VERS="3.31.3"
+VERS="3.31.5"
 ver="${VERS%.*}"
 LINK="https://cmake.org/files/v$ver/cmake-$VERS.tar.gz"
 UPST="https://gitlab.kitware.com/cmake/cmake.git"

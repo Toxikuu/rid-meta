@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="perl"
-VERS="5.40.0"
+VERS="5.40.1"
 ver="${VERS%.*.*}"
 LINK="https://www.cpan.org/src/$ver.0/perl-$VERS.tar.xz"
 UPST="https://github.com/Perl/perl5.git"

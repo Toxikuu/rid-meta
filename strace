@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="strace"
-VERS="6.12"
+VERS="6.13"
 LINK="https://github.com/strace/strace/releases/download/v$VERS/strace-$VERS.tar.xz"
 UPST="https://github.com/strace/strace.git"
 DEPS="glibc libunwind" # optionally, libunwind

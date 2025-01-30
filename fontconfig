@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="fontconfig"
-VERS="2.15.0"
+VERS="2.16.0"
 LINK="https://www.freedesktop.org/software/fontconfig/release/fontconfig-$VERS.tar.xz"
 UPST="https://gitlab.freedesktop.org/fontconfig/fontconfig.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | sort -V | grep -B 1 'ah-20021030' | head -n1"

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="cbindgen"
-VERS="0.27.0"
+VERS="0.28.0"
 LINK="https://github.com/mozilla/cbindgen/archive/v$VERS/cbindgen-$VERS.tar.gz"
 UPST="https://github.com/mozilla/cbindgen.git"
 DEPS="rust"
