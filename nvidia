@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="nvidia"
-VERS="565.77"
+VERS="570.86.16"
 DOWN="https://us.download.nvidia.com/XFree86/Linux-x86_64/$VERS/NVIDIA-Linux-x86_64-$VERS.run"
 UPST="https://github.com/NVIDIA/open-gpu-kernel-modules.git"
 DEPS="kernel" # nvidia does have dependencies i just dont wanna deal with them rn

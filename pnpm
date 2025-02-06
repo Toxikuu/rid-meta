@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="pnpm"
-VERS="10.1.0"
+VERS="10.2.0"
 UPST="https://github.com/pnpm/pnpm.git"
 VCMD="git ls-remote --tags '$UPST' | sed 's:.*/::' | grep -Ev 'beta|alpha|rc|\^\{\}' | sort -V | tail -n1"
 DEPS="curl"

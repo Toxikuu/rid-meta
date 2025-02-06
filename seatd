@@ -8,7 +8,9 @@ DEPS="elogind"
 
 idir() {
 
-mn
+mn \
+  -D server=disabled \
+  -D libseat-seatd=disabled
 
 }
 

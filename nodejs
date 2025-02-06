@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="nodejs"
-VERS="23.6.1"
+VERS="23.7.0"
 UPST="https://github.com/nodejs/node.git"
 DEPS="pnpm"
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="curl"
-VERS="8.11.1"
+VERS="8.12.0"
 LINK="https://curl.se/download/curl-$VERS.tar.xz"
 DOWN="https://glfs-book.github.io/glfs/patches/curl-eventfd_regression-1.patch"
 UPST="https://github.com/curl/curl.git"
